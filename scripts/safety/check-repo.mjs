@@ -20,7 +20,7 @@ const dir = path.join(ROOT, 'public/photos');
 const files = fs.existsSync(dir) ? fs.readdirSync(dir) : [];
 for (const f of files) if (!listedIds.has(f.replace(/-[ls]\.webp$/, ''))) problems.push(`public/photos/${f} is not listed in data/images.json`);
 
-const toScan = [...files.filter((f) => f.endsWith('-l.webp')).map((f) => path.join(dir, f)),
+const toScan = [...files.filter((f) => f.endsWith('.webp')).map((f) => path.join(dir, f)),
   ...fs.readdirSync(path.join(ROOT, 'public')).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).map((f) => path.join(ROOT, 'public', f))];
 let n = 0;
 for (const f of toScan) {

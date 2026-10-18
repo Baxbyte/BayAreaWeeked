@@ -37,6 +37,11 @@ async function download(id, url) {
     if (((await img.metadata()).width || 0) < 1000) return false;
     await img.clone().resize(1280, 720, { fit: 'cover', position: 'attention' }).webp({ quality: 78 }).toFile(large);
     await img.clone().resize(640, 400, { fit: 'cover', position: 'attention' }).webp({ quality: 72 }).toFile(small);
+    // Re-check the exact crops the site will show (cropping can change what's in frame).
+    for (const f of [large, small]) {
+      const v = await checkImage(f);
+      if (!v.safe) { console.log(`✘ rejected ${id} after crop (${v.reason})`); fs.rmSync(large, { force: true }); fs.rmSync(small, { force: true }); return false; }
+    }
     await sleep(200);
     return true;
   } catch {
