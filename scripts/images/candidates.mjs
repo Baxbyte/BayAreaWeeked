@@ -53,12 +53,24 @@ for (const [k, cats] of Object.entries(PLACE_CATS)) targets.push([`place:${k}`, 
 for (const [k, cats] of Object.entries(HOOD_CATS)) targets.push([`hood:${k}`, cats.map((c) => `cat:${c}`), 10]);
 for (const [k, cats] of Object.entries(CITY_TARGETS)) targets.push([`city:${k}`, cats.map((c) => `cat:${c}`), 10]);
 
+// Only gather what still needs photos (genres with < 4 picks, anything without a photo), within a time budget.
+let have = { places: {}, categories: {}, regions: {}, cities: {}, hoods: {}, vibes: {} };
+try { have = { ...have, ...JSON.parse(fs.readFileSync('data/images.json', 'utf8')) }; } catch { /* none yet */ }
+const group = { genre: 'categories', place: 'places', region: 'regions', city: 'cities', hood: 'hoods', vibe: 'vibes' };
+const needs = ([key]) => {
+  const [kind, ...rest] = key.split(':');
+  const v = have[group[kind]]?.[rest.join(':')];
+  return kind === 'genre' ? !v || v.length < 4 : !v;
+};
+const deadline = Date.now() + Number(process.env.CANDIDATE_BUDGET_MIN || 18) * 60000;
 const result = {};
 for (const [key, specs, n] of targets) {
   if (only && !only.test(key)) continue;
+  if (!only && !needs([key])) continue;
+  if (Date.now() > deadline) { console.log(`(time budget reached — stopping before ${key})`); break; }
   let pool = [];
   for (const spec of specs) {
-    if (spec.startsWith('cat:')) pool = pool.concat(await fromCategory(spec.slice(4), { width: 330 }));
+    if (spec.startsWith('cat:')) pool = pool.concat(await fromCategory(spec.slice(4), { width: 330, depth: key.startsWith('genre:') || key.startsWith('region:') ? 1 : 0 }));
     else if (spec.startsWith('q:')) { const [q, must] = spec.slice(2).split('|'); pool = pool.concat(await fromSearch(q, (must || '').split(',').filter(Boolean), { width: 330 })); }
   }
   const seen = new Set();
