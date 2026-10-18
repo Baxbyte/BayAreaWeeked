@@ -53,28 +53,19 @@ jobs:
           GEOCODE_MAX: '120'
         run: npm run scrape
 
-      - name: Fill in photos for anything new
-        if: ${{ !inputs.skip_scrape }}
-        timeout-minutes: 15
-        continue-on-error: true
-        env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          IMAGES_MAX_NEW: '15'
-        run: node scripts/images/build-images.mjs
+      - name: Family-friendly image check (blocks deploy on any problem)
+        run: npm run safety
 
       - name: Save fresh data to the repo
         if: ${{ !inputs.skip_scrape }}
         run: |
           git config user.name "bayarea-weekend-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/events.json data/scrape-report.json data/geocache.json data/image-safety.json data/images.json public/photos 2>/dev/null || true
+          git add data/events.json data/scrape-report.json data/geocache.json data/image-safety.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "data: daily event refresh $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase -X theirs origin main && git push origin HEAD:main
           fi
-
-      - name: Family-friendly image check (blocks deploy on any problem)
-        run: npm run safety
 
       - name: Configure GitHub Pages
         id: pages
