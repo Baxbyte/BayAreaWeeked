@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { link } from '../lib/site.mjs';
+import { DEALS, EVENTS, W, inWindow, topPicks, sponsoredFor } from '../lib/data.mjs';
+import { formatRange } from '../lib/time.mjs';
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const featured = sponsoredFor('deals-feature');
+const deals = [...featured, ...DEALS.filter((d) => !featured.includes(d))];
+const upcoming = inWindow(EVENTS, { start: W.today.start, end: W.nextWeek.end });
+const free = topPicks(upcoming.filter((i) => i.flags.free), 12);
+const cheap = topPicks(upcoming.filter((i) => !i.flags.free && i.priceMin != null && i.priceMin <= 20), 12);
+---
+<Base title={`Bay Area Ticket Deals, Promo Codes & Free Events (${wk})`} description="Discounted tickets and promo codes from Bay Area organizers, plus the best free and under-$20 events this week in San Francisco, Oakland, San Jose and beyond." path="/deals/" nav="deals">
+  <div class="wrap">
+    <header class="page-head">
+      <Crumbs items={[['Deals', '/deals/']]} />
+      <div class="eyebrow">🎟️ Save on your weekend</div>
+      <h1>Bay Area deals &amp; cheap thrills</h1>
+      <p class="lead">Exclusive promo codes from local organizers, plus every free and under-$20 pick we can find this week.</p>
+    </header>
+    <section class="section">
+      <div class="section-head"><h2>🔥 Live ticket deals</h2><a class="btn btn-ghost btn-sm" href={link('/advertise/')}>Offer a deal →</a></div>
+      {deals.length ? <div class="grid">{deals.map((i) => <Card item={i} showDeal />)}</div> : (
+        <div class="empty">
+          <p style="font-size:1.1rem;color:var(--ink)"><strong>Organizer deals are launching now.</strong></p>
+          <p>Promoters and venues can list exclusive discounts here — and bid to appear at the top of any page.</p>
+          <a class="btn btn-primary" href={link('/advertise/')}>List your deal</a>
+        </div>
+      )}
+    </section>
+    {free.length > 0 && (
+      <section class="section"><div class="section-head"><h2>🆓 Free this week</h2><a href={link('/free/')}>All free events →</a></div><div class="grid">{free.map((i) => <Card item={i} />)}</div></section>
+    )}
+    {cheap.length > 0 && (
+      <section class="section"><div class="section-head"><h2>💸 $20 or less</h2><a href={link('/explore/?max=20')}>More under $20 →</a></div><div class="grid">{cheap.map((i) => <Card item={i} />)}</div></section>
+    )}
+  </div>
+</Base>

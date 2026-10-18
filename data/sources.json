@@ -1,0 +1,46 @@
+{
+  "_readme": "Event sources scraped daily by scripts/scrape/index.mjs. Set enabled:false to pause one. Adapter types: jsonld, rss, ical, localist, tribe, ticketmaster, seatgeek, nineteenhz, roundups. See docs/SOURCES.md.",
+  "sources": [
+    { "id": "ticketmaster", "type": "ticketmaster", "name": "Ticketmaster", "home": "https://www.ticketmaster.com", "enabled": true, "weeks": 4, "pages": 4, "radiusMiles": 55 },
+    { "id": "seatgeek", "type": "seatgeek", "name": "SeatGeek", "home": "https://seatgeek.com", "enabled": true, "days": 28 },
+
+    { "id": "eventbrite-sf", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-francisco",
+      "urls": ["https://www.eventbrite.com/d/ca--san-francisco/events--this-weekend/", "https://www.eventbrite.com/d/ca--san-francisco/events--next-week/", "https://www.eventbrite.com/d/ca--san-francisco/all-events/?page={page}"], "pages": 3 },
+    { "id": "eventbrite-oakland", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "oakland",
+      "urls": ["https://www.eventbrite.com/d/ca--oakland/events--this-weekend/", "https://www.eventbrite.com/d/ca--berkeley/events--this-weekend/", "https://www.eventbrite.com/d/ca--oakland/events--next-week/"] },
+    { "id": "eventbrite-southbay", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-jose",
+      "urls": ["https://www.eventbrite.com/d/ca--san-jose/events--this-weekend/", "https://www.eventbrite.com/d/ca--san-jose/events--next-week/", "https://www.eventbrite.com/d/ca--palo-alto/events--this-weekend/", "https://www.eventbrite.com/d/ca--mountain-view/events--this-weekend/"] },
+    { "id": "eventbrite-peninsula", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-mateo",
+      "urls": ["https://www.eventbrite.com/d/ca--san-mateo/events--this-weekend/", "https://www.eventbrite.com/d/ca--redwood-city/events--this-weekend/"] },
+    { "id": "eventbrite-northbay", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-rafael",
+      "urls": ["https://www.eventbrite.com/d/ca--san-rafael/events--this-weekend/", "https://www.eventbrite.com/d/ca--santa-rosa/events--this-weekend/", "https://www.eventbrite.com/d/ca--napa/events--this-weekend/"] },
+
+    { "id": "dothebay", "type": "jsonld", "name": "DoTheBay", "home": "https://dothebay.com", "enabled": true, "defaultCity": "san-francisco",
+      "urlTemplate": "https://dothebay.com/events/{yyyy}/{mm}/{dd}", "days": 10 },
+    { "id": "allevents", "type": "jsonld", "name": "AllEvents", "home": "https://allevents.in", "enabled": true,
+      "urls": ["https://allevents.in/san-francisco/all", "https://allevents.in/oakland/all", "https://allevents.in/san-jose/all", "https://allevents.in/berkeley/all"] },
+    { "id": "sfstation", "type": "jsonld", "name": "SF Station", "home": "https://www.sfstation.com", "enabled": true, "defaultCity": "san-francisco",
+      "urls": ["https://www.sfstation.com/calendar/"] },
+    { "id": "funcheap", "type": "rss", "name": "SF Funcheap", "home": "https://sf.funcheap.com", "enabled": true, "pubDateIsEventDate": true,
+      "urls": ["https://sf.funcheap.com/feed/"] },
+    { "id": "funcheap-days", "type": "jsonld", "name": "SF Funcheap", "home": "https://sf.funcheap.com", "enabled": true, "defaultCity": "san-francisco",
+      "urlTemplate": "https://sf.funcheap.com/{yyyy}/{mm}/{dd}/", "days": 7 },
+    { "id": "19hz", "type": "nineteenhz", "name": "19hz", "home": "https://19hz.info", "enabled": true,
+      "url": "https://19hz.info/eventlisting_BayArea.php", "days": 21 },
+    { "id": "stanford", "type": "localist", "name": "Stanford Events", "home": "https://events.stanford.edu", "enabled": true,
+      "base": "https://events.stanford.edu", "defaultCityName": "Stanford", "days": 21, "pages": 4 },
+
+    { "id": "roundups", "type": "roundups", "name": "News roundups", "enabled": true, "maxArticles": 14,
+      "feeds": [
+        { "id": "sfist", "name": "SFist", "url": "https://sfist.com/rss/", "max": 3 },
+        { "id": "secretsf", "name": "Secret San Francisco", "url": "https://secretsanfrancisco.com/feed/", "max": 3 },
+        { "id": "kqed", "name": "KQED Arts", "url": "https://www.kqed.org/arts/feed", "max": 2 },
+        { "id": "oaklandside", "name": "The Oaklandside", "url": "https://oaklandside.org/feed/", "max": 2 },
+        { "id": "berkeleyside", "name": "Berkeleyside", "url": "https://www.berkeleyside.org/feed", "max": 2 },
+        { "id": "funcheap-blog", "name": "SF Funcheap", "url": "https://sf.funcheap.com/feed/", "max": 2 }
+      ] },
+
+    { "id": "example-ical", "type": "ical", "name": "Example iCal feed", "enabled": false, "urls": ["https://example.org/calendar.ics"], "days": 30 },
+    { "id": "example-tribe", "type": "tribe", "name": "Example WordPress events site", "enabled": false, "sites": ["https://example.org"], "defaultCityName": "Oakland" }
+  ]
+}

@@ -1,0 +1,45 @@
+---
+import HubPage from '../../../components/HubPage.astro';
+import { CITIES, COUNTS, W, cityBySlug, regionBySlug } from '../../../lib/data.mjs';
+import { facetDefs, facetFilter, facetQuery } from '../../../lib/facets.mjs';
+import { formatRange } from '../../../lib/time.mjs';
+
+export function getStaticPaths() {
+  return CITIES.filter((c) => (COUNTS.city[c.slug] || 0) > 0)
+    .flatMap((c) => facetDefs({ city: c.slug }, { includeHoods: true }).map((f) => ({ params: { city: c.slug, sub: f.slug }, props: { f } })));
+}
+const { f } = Astro.props;
+const c = cityBySlug[Astro.params.city];
+const r = regionBySlug[c.region];
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const isHood = f.kind === 'hood';
+const where = isHood ? (c.slug === 'san-francisco' ? `${f.name}, San Francisco` : `${f.name}, ${c.name}`) : c.name;
+const h1 = isHood ? `Things to do in ${f.name} this weekend`
+  : f.kind === 'vibe'
+    ? ({ 'kid-friendly': `Kid-friendly things to do in ${c.name}`, nightlife: `${c.name} nightlife: bars, clubs & late shows`, free: `Free things to do in ${c.name}`,
+        'hot-day': `Things to do in ${c.name} when it’s hot`, 'rainy-day': `Rainy day things to do in ${c.name}`, 'fog-escape': `Sunny fog-escape plans in ${c.name}`,
+        'date-night': `Date night ideas in ${c.name}`, 'near-bart': `${c.name} events near BART` })[f.slug]
+    : `${f.name} in ${c.name} this weekend`;
+const siblings = facetDefs({ city: c.slug }, { includeHoods: true }).filter((x) => x.slug !== f.slug);
+const subFacets = isHood ? facetDefs({ city: c.slug, hood: f.slug }).map((x) => [x.label, `/explore/?city=${c.slug}&hood=${f.slug}&${facetQuery(x)}`, x.n]) : siblings.map((x) => [x.label, `/city/${c.slug}/${x.slug}/`, x.n]);
+const lead = isHood ? `Events, hangouts and local favorites in ${where} — this weekend, next week and always-open spots nearby.` : f.def.blurb;
+const otherCities = CITIES.filter((x) => x.slug !== c.slug && x.region === c.region && (COUNTS.city[x.slug] || 0) > 0 && !isHood && facetDefs({ city: x.slug }).some((d) => d.slug === f.slug));
+---
+<HubPage
+  h1={h1}
+  seoTitle={`${h1.replace(/ this weekend$/, '')} — This Weekend (${wk})`}
+  description={isHood ? `The best things to do in ${where} this weekend (${wk}) and next week: events, food, music, family outings and nightlife. Updated daily.`
+    : `${h1}. ${f.def.blurb || ''} Fresh listings for this weekend (${wk}) and next week, updated daily.`}
+  path={`/city/${c.slug}/${f.slug}/`}
+  crumbs={[...(r.slug === c.slug ? [] : [[r.name, `/region/${r.slug}/`]]), [c.name, `/city/${c.slug}/`], [f.name, `/city/${c.slug}/${f.slug}/`]]}
+  eyebrow={`${f.label} · ${c.name}`}
+  lead={lead}
+  filter={{ city: c.slug, ...facetFilter(f) }}
+  sponsorSlot={isHood ? 'region-top' : f.kind === 'vibe' ? 'vibe-top' : 'category-top'}
+  sponsorCtx={{ city: c.slug, ...(f.kind === 'vibe' ? { vibe: f.slug } : f.kind === 'category' ? { category: f.slug } : {}) }}
+  placeLabel={`in ${where}`}
+  facets={subFacets}
+  exploreQuery={`city=${c.slug}&${facetQuery(f)}`}
+  related={[[`All ${c.name} events`, `/city/${c.slug}/`], ...siblings.filter((x) => x.kind === f.kind).map((x) => [`${x.name}${isHood ? '' : ` in ${c.name}`}`, `/city/${c.slug}/${x.slug}/`]),
+    ...otherCities.map((x) => [`${f.name} in ${x.name}`, `/city/${x.slug}/${f.slug}/`])]}
+/>

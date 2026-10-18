@@ -1,0 +1,16 @@
+---
+import { link, absolute } from '../lib/site.mjs';
+interface Props { items: [string, string][] }
+const { items } = Astro.props;
+const all: [string, string][] = [['Home', '/'], ...items];
+const ld = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: all.map(([name, href], i) => ({ '@type': 'ListItem', position: i + 1, name, item: absolute(href) })),
+};
+---
+<nav aria-label="Breadcrumb">
+  <ol class="crumbs">
+    {all.map(([name, href], i) => <li>{i < all.length - 1 ? <a href={link(href)}>{name}</a> : <span aria-current="page">{name}</span>}</li>)}
+  </ol>
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(ld)} />

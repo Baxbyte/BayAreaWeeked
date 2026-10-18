@@ -1,0 +1,31 @@
+---
+import HubPage from '../../../components/HubPage.astro';
+import { REGIONS, CITIES, COUNTS, W, regionBySlug } from '../../../lib/data.mjs';
+import { facetDefs } from '../../../lib/facets.mjs';
+import { formatRange } from '../../../lib/time.mjs';
+
+export function getStaticPaths() {
+  return REGIONS.map((r) => ({ params: { region: r.slug } }));
+}
+const r = regionBySlug[Astro.params.region];
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const facets = facetDefs({ region: r.slug }).map((f) => [f.label, `/region/${r.slug}/${f.slug}/`, f.n]);
+const cities = CITIES.filter((c) => c.region === r.slug && (COUNTS.city[c.slug] || 0) > 0);
+const cityFacets = cities.map((c) => [`📍 ${c.name}`, `/city/${c.slug}/`, COUNTS.city[c.slug]]);
+const name = r.slug === 'san-francisco' ? 'San Francisco' : `the ${r.name}`;
+---
+<HubPage
+  h1={`Things to do in ${name} this weekend`}
+  seoTitle={`Things to Do in ${r.name} This Weekend (${wk})`}
+  description={`The best events and things to do in ${name} this weekend (${wk}) and next week — concerts, festivals, kid-friendly outings, nightlife, free events and more. Updated daily.`}
+  path={`/region/${r.slug}/`}
+  crumbs={[[r.name, `/region/${r.slug}/`]]}
+  eyebrow={`${r.emoji} ${r.name}`}
+  lead={r.blurb}
+  filter={{ region: r.slug }}
+  sponsorSlot="region-top" sponsorCtx={{ region: r.slug }}
+  placeLabel={`in ${name}`}
+  facets={[...(r.slug === 'san-francisco' ? [] : cityFacets), ...facets]}
+  exploreQuery={`region=${r.slug}`}
+  related={[...cities.map((c) => [`Things to do in ${c.name}`, `/city/${c.slug}/`]), ...REGIONS.filter((x) => x.slug !== r.slug).map((x) => [`${x.name} events`, `/region/${x.slug}/`])]}
+/>

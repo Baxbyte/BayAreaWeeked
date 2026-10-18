@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { link } from '../lib/site.mjs';
+---
+<Base title="My Weekend Plan" description="Your saved Bay Area events and activities, organized into a day-by-day plan you can share or add to your calendar." path="/plan/" noindex>
+  <div class="wrap">
+    <header class="page-head">
+      <Crumbs items={[['My plan', '/plan/']]} />
+      <div class="eyebrow">❤️ Your plan</div>
+      <h1 data-plan-title>My weekend plan</h1>
+      <p class="lead">Tap the heart on anything to add it here. We’ll line it up by day, flag time clashes, and export it to your calendar.</p>
+      <div class="chips" style="margin-top:12px">
+        <button class="btn btn-primary btn-sm" type="button" data-export>📅 Add all to calendar</button>
+        <button class="btn btn-ghost btn-sm" type="button" data-share-plan>🔗 Share my plan</button>
+        <button class="btn btn-ghost btn-sm" type="button" data-save-shared hidden>❤️ Save this plan</button>
+        <button class="btn btn-ghost btn-sm" type="button" data-clear>Clear</button>
+      </div>
+    </header>
+    <section class="section" data-plan>
+      <div class="empty">Nothing saved yet. Start with <a href={link('/this-weekend/')}>this weekend’s picks</a> or <a href={link('/explore/?spin=1')}>spin the Bay 🎰</a>.</div>
+    </section>
+  </div>
+  <script>
+    import { getSaved, setSaved, toast } from '../scripts/saves.js';
+    import { loadIndex, cardHTML } from '../scripts/render.js';
+    import { downloadIcs } from '../scripts/ics.js';
+    const params = new URLSearchParams(location.search);
+    const sharedIds = (params.get('ids') || '').split(',').filter(Boolean);
+    const root = document.querySelector('[data-plan]');
+    let current = [];
+    async function render() {
+      const idx = await loadIndex();
+      const byId = new Map(idx.map((i) => [i.id, i]));
+      const ids = sharedIds.length ? sharedIds : getSaved().map((s) => s.id);
+      current = ids.map((id) => byId.get(id)).filter(Boolean);
+      if (sharedIds.length) {
+        document.querySelector('[data-plan-title]').textContent = 'A shared weekend plan';
+        document.querySelector('[data-save-shared]').hidden = false;
+      }
+      if (!current.length) return;
+      const groups = new Map();
+      for (const i of [...current].sort((a, b) => (a.s || '9').localeCompare(b.s || '9'))) {
+        const k = i.s ? new Date(i.s).toLocaleDateString('en-US', { timeZone: 'America/Los_Angeles', weekday: 'long', month: 'long', day: 'numeric' }) : 'Anytime';
+        if (!groups.has(k)) groups.set(k, []);
+        groups.get(k).push(i);
+      }
+      const clash = (list) => list.some((a, n) => list.slice(n + 1).some((b) => a.s && b.s && !a.ad && !b.ad && Date.parse(a.s) < (b.e ? Date.parse(b.e) : Date.parse(b.s) + 2 * 3600000) && Date.parse(b.s) < (a.e ? Date.parse(a.e) : Date.parse(a.s) + 2 * 3600000)));
+      root.innerHTML = [...groups].map(([day, list]) => `<div class="day-group"><h3>${day} <small>${list.length} plan${list.length > 1 ? 's' : ''}${clash(list) ? ' · ⚠️ time clash' : ''}</small></h3><div class="grid">${list.map(cardHTML).join('')}</div></div>`).join('');
+      document.dispatchEvent(new Event('cards:rendered'));
+    }
+    document.querySelector('[data-export]').addEventListener('click', () => {
+      const ev = current.filter((i) => i.s).map((i) => ({ t: i.t, s: i.s, e: i.e, ad: i.ad, loc: i.v || '', u: location.origin + i.u }));
+      if (!ev.length) return toast('Save some dated events first');
+      downloadIcs(ev, 'my-bay-area-weekend.ics');
+    });
+    document.querySelector('[data-share-plan]').addEventListener('click', async () => {
+      const url = `${location.origin}${location.pathname}?ids=${current.map((i) => i.id).join(',')}`;
+      try { if (navigator.share) await navigator.share({ title: 'My Bay Area weekend plan', url }); else { await navigator.clipboard.writeText(url); toast('🔗 Plan link copied'); } } catch {}
+    });
+    document.querySelector('[data-save-shared]').addEventListener('click', () => {
+      const saved = getSaved();
+      const have = new Set(saved.map((s) => s.id));
+      current.forEach((i) => { if (!have.has(i.id)) saved.push({ id: i.id, t: i.t, u: i.u, s: i.s, c: i.c, img: i.img }); });
+      setSaved(saved); toast('❤️ Saved to your plan');
+    });
+    document.querySelector('[data-clear]').addEventListener('click', () => { if (confirm('Clear your saved plan?')) { setSaved([]); location.href = location.pathname; } });
+    document.addEventListener('saves:changed', () => { if (!sharedIds.length) render(); });
+    render();
+  </script>
+</Base>

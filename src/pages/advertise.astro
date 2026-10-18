@@ -1,0 +1,103 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import Faq from '../components/Faq.astro';
+import { SITE, link } from '../lib/site.mjs';
+import { SPONSORS, topBidFor, COUNTS, REGIONS, EVENTS, ACTIVITIES } from '../lib/data.mjs';
+const slots = SPONSORS.slots.map((s) => ({ ...s, top: topBidFor(s.id) }));
+const faq = [
+  { q: 'How does bidding for the top spot work?', a: 'Each placement is a simple weekly auction. Pick a slot, set your weekly bid (at or above the floor), and the highest active bids win the top positions on the next daily update. If you are outbid, we let you know so you can raise your bid.' },
+  { q: 'Are sponsored listings labeled?', a: 'Always. Sponsored listings carry a clear “★ Sponsored” label and a gold outline, in line with FTC guidelines. Organic listings are never sold.' },
+  { q: 'Can I target a city, neighborhood or audience?', a: 'Yes — target any region, city, neighborhood, genre or vibe page (for example: Kid-Friendly in the East Bay, or Nightlife in the Mission).' },
+  { q: 'Can I offer a discount or promo code?', a: 'Please do! Deals appear on your listing, the Deals page and inside the interactive map. Readers love them and they lift ticket sales.' },
+  { q: 'How do I pay?', a: 'After we confirm your placement we email an invoice. Your campaign goes live with the next daily update after payment.' },
+];
+---
+<Base title="Advertise on Bay Area Weekend — Bid for Top Spots & Offer Ticket Deals" description="Promote your Bay Area event to people actively planning their weekend. Bid for the top spot on city, neighborhood, genre and vibe pages, and offer ticket deals." path="/advertise/">
+  <div class="wrap">
+    <header class="page-head">
+      <Crumbs items={[['Advertise', '/advertise/']]} />
+      <div class="eyebrow">📣 For organizers, venues &amp; promoters</div>
+      <h1>Get your event in front of people planning their weekend.</h1>
+      <p class="lead">{SITE.name} reaches Bay Area locals at the exact moment they’re deciding what to do. Bid for the top of the list, pin your event on the map, and drop a deal to fill seats.</p>
+      <div class="chips" style="margin-top:14px">
+        <span class="tag">📅 {EVENTS.length + ACTIVITIES.length} listings</span><span class="tag">🗺️ {REGIONS.length} regions</span><span class="tag">🔄 Updated daily</span><span class="tag">★ Always labeled</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
+        <div class="panel"><div style="font-size:2rem">1️⃣</div><h3>Pick a spot</h3><p class="muted">Homepage, This Weekend, a city or neighborhood, a genre, a vibe like Kid-Friendly or Date Night — or the map.</p></div>
+        <div class="panel"><div style="font-size:2rem">2️⃣</div><h3>Place your weekly bid</h3><p class="muted">Bid at or above the floor. Highest active bids win the top positions on each page.</p></div>
+        <div class="panel"><div style="font-size:2rem">3️⃣</div><h3>Add a deal (optional)</h3><p class="muted">Promo codes and discounts get a 🎟️ badge, a spot on the Deals page and extra clicks.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="bid-board">
+      <div class="section-head"><div><div class="eyebrow">📈 Live bid board</div><h2>Current top bids</h2></div><p>Per week, USD. Updated with every daily build.</p></div>
+      <div class="table-wrap panel" style="padding:6px 12px">
+        <table class="table">
+          <thead><tr><th>Placement</th><th>Where it shows</th><th>Winners</th><th>Floor</th><th>Top bid now</th></tr></thead>
+          <tbody>
+            {slots.map((s) => (
+              <tr>
+                <td><strong>{s.name}</strong></td><td class="muted">{s.where}</td><td>{s.maxWinners}</td><td>${s.floorBid}</td>
+                <td>{s.top ? <strong style="color:var(--accent)">${s.top}</strong> : <span class="tag free">Open — be first!</span>}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="bid">
+      <div class="split">
+        <div>
+          <div class="eyebrow">📝 Place a bid</div>
+          <h2>Tell us about your event</h2>
+          <p class="muted">We review every bid by hand (usually within one business day) to keep the guide trustworthy. No charge until your placement is confirmed.</p>
+          <ul class="muted">
+            <li>Events must be real, in the Bay Area, and open to the public.</li>
+            <li>Sponsored listings are always clearly labeled.</li>
+            <li>Outbid? We’ll email you so you can raise your bid.</li>
+          </ul>
+        </div>
+        <form class="panel" data-sponsor data-endpoint={SITE.sponsorEndpoint} data-contact={SITE.contactEmail} style="display:grid;gap:12px" novalidate>
+          <div class="form-row">
+            <label class="field" style="flex:1 1 200px">Your name<input class="input" name="name" required autocomplete="name" /></label>
+            <label class="field" style="flex:1 1 200px">Email<input class="input" name="email" type="email" required autocomplete="email" /></label>
+          </div>
+          <div class="form-row">
+            <label class="field" style="flex:1 1 200px">Organization<input class="input" name="organization" /></label>
+            <label class="field" style="flex:1 1 200px">Event name<input class="input" name="event_name" required /></label>
+          </div>
+          <label class="field">Event link<input class="input" name="event_url" type="url" required placeholder="https://" /></label>
+          <div class="form-row">
+            <label class="field" style="flex:1 1 140px">Event date<input class="input" name="event_date" type="date" /></label>
+            <label class="field" style="flex:1 1 140px">Weekly bid (USD)<input class="input" name="bid" type="number" min="20" step="5" placeholder="75" /></label>
+            <label class="field" style="flex:1 1 140px">Target area
+              <select class="input" name="target"><option value="">Whole Bay</option>{REGIONS.map((r) => <option value={r.slug}>{r.name}</option>)}</select>
+            </label>
+          </div>
+          <fieldset style="border:0;padding:0;margin:0">
+            <legend class="field" style="margin-bottom:6px">Placements</legend>
+            <div class="chips">{slots.map((s) => <button type="button" class="chip" data-pick="slots" data-val={s.id} aria-pressed="false">{s.name} · ${s.top || s.floorBid}+</button>)}</div>
+          </fieldset>
+          <div class="form-row">
+            <label class="field" style="flex:2 1 220px">Deal headline <span class="hint">(optional)</span><input class="input" name="deal_headline" placeholder="25% off GA tickets" /></label>
+            <label class="field" style="flex:1 1 140px">Promo code<input class="input" name="deal_code" placeholder="BAYWKND25" /></label>
+          </div>
+          <label class="field">Anything else?<textarea class="input" name="notes" rows="3"></textarea></label>
+          <input type="text" name="company_website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+          <button class="btn btn-primary" type="submit">Submit bid</button>
+          <p class="form-msg" data-msg role="status"></p>
+        </form>
+      </div>
+    </section>
+    <Faq items={faq} />
+  </div>
+  <script>
+    import { initSponsorForm } from '../scripts/forms.js';
+    initSponsorForm();
+  </script>
+</Base>

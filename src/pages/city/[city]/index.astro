@@ -1,0 +1,34 @@
+---
+import HubPage from '../../../components/HubPage.astro';
+import { CITIES, COUNTS, W, cityBySlug, regionBySlug } from '../../../lib/data.mjs';
+import { facetDefs } from '../../../lib/facets.mjs';
+import { formatRange } from '../../../lib/time.mjs';
+
+export function getStaticPaths() {
+  return CITIES.filter((c) => (COUNTS.city[c.slug] || 0) > 0).map((c) => ({ params: { city: c.slug } }));
+}
+const c = cityBySlug[Astro.params.city];
+const r = regionBySlug[c.region];
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const defs = facetDefs({ city: c.slug }, { includeHoods: true });
+const hoods = defs.filter((d) => d.kind === 'hood');
+const nearby = CITIES.filter((x) => x.region === c.region && x.slug !== c.slug && (COUNTS.city[x.slug] || 0) > 0);
+const lead = c.slug === 'san-francisco'
+  ? 'From Mission murals and Golden Gate Park museums to North Beach comedy and SoMa dance floors — here’s everything happening in the city.'
+  : `Events, festivals, live music, family outings and nightlife in ${c.name}, ${c.county} County — updated every day.`;
+---
+<HubPage
+  h1={`Things to do in ${c.name} this weekend`}
+  seoTitle={`Things to Do in ${c.name} This Weekend (${wk}) — Events & Activities`}
+  description={`What’s happening in ${c.name}, CA this weekend (${wk}) and next week: concerts, festivals, kid-friendly activities, nightlife, free events and local favorites. Updated daily.`}
+  path={`/city/${c.slug}/`}
+  crumbs={r.slug === c.slug ? [[c.name, `/city/${c.slug}/`]] : [[r.name, `/region/${r.slug}/`], [c.name, `/city/${c.slug}/`]]}
+  eyebrow={`📍 ${c.name} · ${r.name}`}
+  lead={lead}
+  filter={{ city: c.slug }}
+  sponsorSlot="region-top" sponsorCtx={{ city: c.slug }}
+  placeLabel={`in ${c.name}`}
+  facets={[...hoods, ...defs.filter((d) => d.kind !== 'hood')].map((f) => [f.label, `/city/${c.slug}/${f.slug}/`, f.n])}
+  exploreQuery={`city=${c.slug}`}
+  related={[...hoods.map((h) => [`Things to do in ${h.name}`, `/city/${c.slug}/${h.slug}/`]), ...nearby.map((x) => [`Things to do in ${x.name}`, `/city/${x.slug}/`]), [`All ${r.name} events`, `/region/${r.slug}/`]]}
+/>

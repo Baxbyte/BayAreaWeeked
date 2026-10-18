@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { link } from '../lib/site.mjs';
+---
+<Base title="Page not found" description="This page wandered off into the fog." path="/404/" noindex>
+  <div class="wrap" style="text-align:center;padding:80px 16px">
+    <div style="font-size:4rem">🌫️</div>
+    <h1>Lost in the fog</h1>
+    <p class="lead" style="margin:0 auto 20px">This page has ended or moved. Events disappear once they’re over — but there’s plenty more happening.</p>
+    <div class="chips" style="justify-content:center">
+      <a class="btn btn-primary" href={link('/this-weekend/')}>This weekend</a>
+      <a class="btn btn-ghost" href={link('/explore/')}>Explore the map</a>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,8 @@
+---
+import Detail from '../../components/Detail.astro';
+import { EVENTS, PAST } from '../../lib/data.mjs';
+export function getStaticPaths() {
+  return [...EVENTS, ...PAST].map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}
+---
+<Detail item={Astro.props.item} />

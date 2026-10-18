@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import Faq from '../components/Faq.astro';
+import { SITE } from '../lib/site.mjs';
+import { W, COUNTS } from '../lib/data.mjs';
+import { formatRange } from '../lib/time.mjs';
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const items = [
+  { q: 'What is the best way to find things to do in the Bay Area this weekend?', a: `Start with our This Weekend page (${wk}, ${COUNTS.weekend} events), then narrow down by region, neighborhood or vibe. The Explore map lets you type plain-English searches like “free kids stuff in Oakland Saturday.”` },
+  { q: 'Which areas does the guide cover?', a: 'All of the Bay Area: San Francisco and its neighborhoods, the East Bay (Oakland, Berkeley, Tri-Valley, Contra Costa), the Peninsula (Daly City to Palo Alto and the coast), the South Bay (San Jose and Silicon Valley) and the North Bay (Marin, Sonoma, Napa, Solano).' },
+  { q: 'How do I find kid-friendly events?', a: 'Use the Kid-Friendly page or flip on the 👶 toggle on the map. We flag family events, storytimes, festivals and hands-on museums, and hide 21+ events.' },
+  { q: 'How do I find adult nightlife?', a: 'The Nightlife page and 🍸 toggle show clubs, DJ nights, cocktail bars, late comedy and 21+ parties.' },
+  { q: 'What should I do in the Bay Area on a rainy day?', a: 'Our Rainy Day page lists indoor events and places — museums, theaters, cinemas, climbing gyms, food halls and more — updated daily.' },
+  { q: 'What should I do in the Bay Area when it’s hot?', a: 'The Hot Day page highlights beaches, water activities, shady redwood hikes, cool coastal spots and air-conditioned attractions.' },
+  { q: 'What is a “fog escape”?', a: 'When San Francisco is socked in by fog (locals call it Karl), the Mission, the East Bay valleys, the South Bay and wine country are usually sunny. Our Fog Escape page gathers outdoor plans in those sunnier spots.' },
+  { q: 'Can I save events and plan my weekend?', a: 'Yes — tap the heart on any event to add it to My Plan. You can export your plan to Google, Apple or Outlook calendars and share it with friends.' },
+  { q: 'Is there a daily email?', a: 'A personalized daily email is coming soon. Join early access on the Daily Email page to choose your regions and interests.' },
+  { q: 'How can I promote my event?', a: 'Organizers can bid for top placement on any page and offer ticket deals. See the Advertise page for the live bid board.' },
+];
+---
+<Base title={`FAQ — ${SITE.name}`} description="Answers to common questions about finding things to do in the San Francisco Bay Area with Bay Area Weekend." path="/faq/">
+  <div class="wrap" style="max-width:860px">
+    <header class="page-head"><Crumbs items={[['FAQ', '/faq/']]} /><h1>Frequently asked questions</h1></header>
+    <Faq items={items} title="Bay Area Weekend FAQ" />
+  </div>
+</Base>

@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import SignupBand from '../components/SignupBand.astro';
+import Faq from '../components/Faq.astro';
+const faq = [
+  { q: 'What will the daily email include?', a: 'A short list of events and activities matched to the regions and interests you pick — including weather-smart suggestions (rainy-day or hot-day plans) and the best free events.' },
+  { q: 'How often will I get it?', a: 'Daily by default, with a bigger weekend edition on Thursdays. You can switch to weekend-only at any time.' },
+  { q: 'Is it free?', a: 'Yes — totally free. Unsubscribe with one click.' },
+];
+---
+<Base title="Get Personalized Bay Area Events in Your Inbox Every Day" description="Sign up for early access to a free, personalized daily email of things to do in the San Francisco Bay Area — picked for your neighborhood, interests and the weather." path="/subscribe/">
+  <div class="wrap">
+    <header class="page-head">
+      <Crumbs items={[['Daily email', '/subscribe/']]} />
+      <div class="eyebrow">✉️ Early access</div>
+      <h1>Your own Bay Area events list, every morning.</h1>
+      <p class="lead">Tell us where you hang out and what you’re into. We’ll do the digging and send a short, personalized list — kid-friendly, nightlife, free, rainy-day… whatever your week needs.</p>
+    </header>
+    <div class="section"><SignupBand /></div>
+    <Faq items={faq} />
+  </div>
+</Base>

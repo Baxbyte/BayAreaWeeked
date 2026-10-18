@@ -1,0 +1,25 @@
+{
+  "name": "bayareaweekend",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/postbuild.mjs",
+    "preview": "astro preview",
+    "scrape": "node scripts/scrape/index.mjs",
+    "indexnow": "node scripts/indexnow.mjs",
+    "test": "node --test scripts/test/*.test.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.0",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
+    "minisearch": "^7.2.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.11.2",
+    "node-ical": "^0.27.3"
+  }
+}

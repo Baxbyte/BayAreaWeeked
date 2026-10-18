@@ -1,0 +1,36 @@
+---
+import HubPage from '../components/HubPage.astro';
+import { VIBES, REGIONS, W, vibeBySlug } from '../lib/data.mjs';
+import { facetDefs } from '../lib/facets.mjs';
+import { formatRange } from '../lib/time.mjs';
+
+export function getStaticPaths() {
+  return VIBES.map((v) => ({ params: { vibe: v.slug } }));
+}
+const v = vibeBySlug[Astro.params.vibe];
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const regions = REGIONS.filter((r) => facetDefs({ region: r.slug }).some((d) => d.slug === v.slug));
+const extraFaq = {
+  'hot-day': [{ q: 'Where is it cooler in the Bay Area on a hot day?', a: 'The coast stays coolest: Ocean Beach, Lands End and the Presidio in SF, Pacifica and Half Moon Bay on the Peninsula, and Stinson Beach or Muir Woods in Marin. Redwood groves and air-conditioned museums are great heat escapes too.' }],
+  'rainy-day': [{ q: 'What can you do in San Francisco when it rains?', a: 'Head indoors: the California Academy of Sciences, Exploratorium, de Young, SFMOMA, the Musée Mécanique arcade, Japantown’s indoor malls, a movie at the Castro Theatre or a soak at Kabuki Springs.' }],
+  'fog-escape': [{ q: 'Where do you go when San Francisco is foggy?', a: 'The fog usually stays west. The Mission and Potrero Hill are sunnier within SF; across the bay, Oakland, Berkeley, Walnut Creek and the Tri-Valley are often 10–25°F warmer, and the South Bay and wine country are reliably sunny.' }],
+  'kid-friendly': [{ q: 'What are the best free things to do with kids in the Bay Area?', a: 'Watch the sea lions at Pier 39, play at Presidio Tunnel Tops, explore Tilden Park’s Little Farm, wade at Crown Memorial Beach in Alameda, and visit free museum days and library storytimes.' }],
+  nightlife: [{ q: 'Where is the best nightlife in the Bay Area?', a: 'In SF, the Mission, SoMa and North Beach lead for bars, clubs and live music; Oakland’s Uptown and Downtown have the Fox Theater and buzzy bars; San Jose’s SoFA district and San Pedro Square come alive on weekends.' }],
+  'near-bart': [{ q: 'Which Bay Area neighborhoods are easiest to visit by BART?', a: 'Downtown SF (Embarcadero–Civic Center), the Mission (16th & 24th St), Downtown Berkeley, Downtown Oakland (12th & 19th St), Rockridge, Walnut Creek and Fruitvale are all walkable from their stations.' }],
+}[v.slug] || [];
+---
+<HubPage
+  h1={v.title}
+  seoTitle={`${v.title} — This Weekend (${wk})`}
+  description={`${v.blurb} Updated daily with events for this weekend (${wk}) and next week across SF, Oakland, San Jose and beyond.`}
+  path={`/${v.slug}/`}
+  crumbs={[[v.name, `/${v.slug}/`]]}
+  eyebrow={`${v.emoji} ${v.name}`}
+  lead={v.blurb}
+  filter={{ vibe: v.slug }}
+  sponsorSlot="vibe-top" sponsorCtx={{ vibe: v.slug }}
+  facets={regions.map((r) => [`${r.emoji} ${r.name}`, `/region/${r.slug}/${v.slug}/`, ''])}
+  exploreQuery={`vibe=${v.slug}`}
+  faq={extraFaq}
+  related={VIBES.filter((x) => x.slug !== v.slug).map((x) => [`${x.emoji} ${x.title}`, `/${x.slug}/`])}
+/>

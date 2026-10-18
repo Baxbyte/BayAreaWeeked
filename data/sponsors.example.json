@@ -1,0 +1,32 @@
+{
+  "_readme": "Example campaign. Copy an object into data/sponsors.json → campaigns[]. Dates are inclusive (Pacific time). 'bid' is USD per week. Either reference a scraped event with eventId, or describe the event inline.",
+  "campaigns": [
+    {
+      "id": "acme-jazz-fest-2026",
+      "sponsor": "Acme Presents",
+      "contact": "marketing@example.com",
+      "slots": ["weekend-top", "vibe-top", "deals-feature", "explore-pin"],
+      "bid": 120,
+      "start": "2026-10-19",
+      "end": "2026-10-26",
+      "match": { "regions": ["east-bay"], "categories": ["live-music"], "vibes": ["date-night"] },
+      "eventId": null,
+      "event": {
+        "title": "Lakeside Jazz Festival",
+        "start": "2026-10-24T14:00",
+        "end": "2026-10-24T21:00",
+        "venueName": "Lakeside Park",
+        "address": "666 Bellevue Ave, Oakland, CA",
+        "city": "oakland",
+        "lat": 37.8087,
+        "lng": -122.2606,
+        "url": "https://example.com/jazzfest",
+        "image": "https://example.com/jazzfest.jpg",
+        "description": "Two stages of jazz, soul and food trucks on the shores of Lake Merritt.",
+        "priceText": "$35–$80",
+        "categories": ["live-music", "festivals"]
+      },
+      "deal": { "headline": "25% off GA tickets", "code": "BAYWKND25", "url": "https://example.com/jazzfest?promo=BAYWKND25", "expires": "2026-10-23" }
+    }
+  ]
+}

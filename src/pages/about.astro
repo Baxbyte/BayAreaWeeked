@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { SITE, link } from '../lib/site.mjs';
+import { DATA, EVENTS, ACTIVITIES, UPDATED } from '../lib/data.mjs';
+import { fmtLongDay } from '../lib/time.mjs';
+const sources = (DATA.sources || []).filter((s) => s.status === 'ok' && s.kept > 0);
+const ld = [{ '@context': 'https://schema.org', '@type': 'AboutPage', name: `About ${SITE.name}`, dateModified: UPDATED.toISOString() }];
+---
+<Base title={`About ${SITE.name} & Our Sources`} description={`How ${SITE.name} finds, checks and organizes things to do across the San Francisco Bay Area every day.`} path="/about/" jsonld={ld}>
+  <div class="wrap" style="max-width:860px">
+    <header class="page-head">
+      <Crumbs items={[['About', '/about/']]} />
+      <h1>About {SITE.name}</h1>
+      <p class="lead">A fast, friendly, always-fresh guide to what’s happening around the Bay — built so you can decide what to do in under a minute.</p>
+    </header>
+    <section class="section prose">
+      <h2>How it works</h2>
+      <p>Every day we check public event calendars, ticketing platforms, venue listings, community calendars and local news roundups across all nine Bay Area counties. Each listing is cleaned up, de-duplicated, mapped, and tagged by city, neighborhood, genre, and vibe — kid-friendly, adult nightlife, free, rainy-day, hot-day, fog escape, date night and near BART. Events disappear once they end.</p>
+      <p>Today’s guide has <strong>{EVENTS.length} upcoming events</strong> and <strong>{ACTIVITIES.length} always-open favorites</strong>, last updated <strong>{fmtLongDay.format(UPDATED)}</strong>.</p>
+      <h2>Where listings come from</h2>
+      {sources.length ? <ul>{sources.map((s) => <li>{s.name} — {s.kept} events today</li>)}</ul> : <p>Public event calendars, ticketing platforms, venue sites, community listings and local news roundups.</p>}
+      <p>We link back to the original listing on every page. Always confirm times and prices with the organizer before heading out.</p>
+      <h2>Sponsored listings</h2>
+      <p>Organizers can pay to feature events at the top of pages. Those listings are always marked “★ Sponsored.” Everything else is ranked automatically by date and quality. <a href={link('/advertise/')}>Learn about advertising</a>.</p>
+      <h2>Corrections &amp; removals</h2>
+      <p>Spot a mistake, or want your event removed or added? {SITE.contactEmail ? <a href={`mailto:${SITE.contactEmail}`}>Email us</a> : 'Use the form on our advertise page'} and we’ll fix it within a day.</p>
+    </section>
+  </div>
+</Base>

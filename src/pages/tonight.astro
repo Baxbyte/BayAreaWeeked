@@ -1,0 +1,22 @@
+---
+import HubPage from '../components/HubPage.astro';
+import { EVENTS, ACTIVITIES, W, inWindow, filterItems } from '../lib/data.mjs';
+import { formatRange, fmtLongDay } from '../lib/time.mjs';
+const win = W.tonight;
+const all = inWindow(EVENTS, win);
+const label = `Tonight, ${fmtLongDay.format(W.today.start)}`;
+const title = `Things to do in the Bay Area tonight`;
+---
+<HubPage
+  h1={title}
+  seoTitle={`${title} (${label})`}
+  description={`${title} — ${label}: ${all.length} events across San Francisco, Oakland, San Jose and the whole Bay Area. Concerts, festivals, kid-friendly fun, nightlife and free events, updated daily.`}
+  path="/tonight/"
+  crumbs={[[title, '/tonight/']]}
+  eyebrow={`🗓️ ${label}`}
+  mode="window" windowLabel={label}
+  sections={{ all, weekend: all, activities: filterItems(ACTIVITIES, { vibe: 'nightlife' }) }}
+  sponsorSlot="weekend-top"
+  exploreQuery="when=tonight"
+  related={[['Today', '/today/'], ['Tonight', '/tonight/'], ['This weekend', '/this-weekend/'], ['Next week', '/next-week/'], ['Next weekend', '/next-weekend/'], ['Rainy day ideas', '/rainy-day/'], ['Hot day ideas', '/hot-day/']]}
+/>

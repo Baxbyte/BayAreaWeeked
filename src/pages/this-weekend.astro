@@ -1,0 +1,19 @@
+---
+import HubPage from '../components/HubPage.astro';
+import { REGIONS, VIBES, W, COUNTS } from '../lib/data.mjs';
+import { formatRange } from '../lib/time.mjs';
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+---
+<HubPage
+  h1={`Things to do in the Bay Area this weekend`}
+  seoTitle={`Things to Do in the Bay Area This Weekend (${wk}) — SF, Oakland, San Jose`}
+  description={`The best things to do in the San Francisco Bay Area this weekend (${wk}): ${COUNTS.weekend} events including concerts, festivals, kid-friendly outings, nightlife, free events and rainy-day ideas. Updated daily.`}
+  path="/this-weekend/"
+  crumbs={[['This weekend', '/this-weekend/']]}
+  eyebrow={`🎉 ${wk}`}
+  lead="Fresh every morning: the concerts, festivals, markets, family outings and late nights worth leaving the house for — across all nine Bay Area counties."
+  filter={{}}
+  sponsorSlot="weekend-top"
+  facets={[...REGIONS.map((r) => [`${r.emoji} ${r.name}`, `/region/${r.slug}/`, COUNTS.region[r.slug] || 0]), ...VIBES.map((v) => [`${v.emoji} ${v.name}`, `/${v.slug}/`, COUNTS.vibe[v.slug]])]}
+  related={[['Today', '/today/'], ['Tonight', '/tonight/'], ['Next week', '/next-week/'], ['Next weekend', '/next-weekend/'], ...REGIONS.map((r) => [`${r.name} this weekend`, `/region/${r.slug}/`])]}
+/>

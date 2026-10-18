@@ -1,0 +1,29 @@
+---
+import HubPage from '../../components/HubPage.astro';
+import { CATEGORIES, REGIONS, W, COUNTS, categoryBySlug } from '../../lib/data.mjs';
+import { facetDefs } from '../../lib/facets.mjs';
+import { formatRange } from '../../lib/time.mjs';
+
+export function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { cat: c.slug } }));
+}
+const c = categoryBySlug[Astro.params.cat];
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const regionLinks = REGIONS.filter((r) => facetDefs({ region: r.slug }).some((d) => d.slug === c.slug && d.kind === 'category'))
+  .map((r) => [`📍 ${r.name}`, `/region/${r.slug}/${c.slug}/`, 0]);
+const others = CATEGORIES.filter((x) => x.slug !== c.slug && COUNTS.category[x.slug] > 0);
+---
+<HubPage
+  h1={`${c.name} in the Bay Area this weekend`}
+  seoTitle={`${c.name} in the Bay Area This Weekend (${wk}) — SF, Oakland, San Jose`}
+  description={`Find the best ${c.name.toLowerCase()} events across San Francisco, the East Bay, Peninsula, South Bay and North Bay this weekend (${wk}) and next week. Updated daily.`}
+  path={`/category/${c.slug}/`}
+  crumbs={[['Genres', '/directory/#genres'], [c.name, `/category/${c.slug}/`]]}
+  eyebrow={`${c.emoji} ${c.name}`}
+  lead={`Every ${c.name.toLowerCase()} pick we could find across the Bay, from the city to wine country.`}
+  filter={{ category: c.slug }}
+  sponsorSlot="category-top" sponsorCtx={{ category: c.slug }}
+  facets={regionLinks.map(([l, h]) => [l, h, ''])}
+  exploreQuery={`cat=${c.slug}`}
+  related={others.map((x) => [`${x.emoji} ${x.name}`, `/category/${x.slug}/`])}
+/>

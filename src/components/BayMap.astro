@@ -1,0 +1,50 @@
+---
+// Stylized, clickable Bay Area map (pure SVG, no JS). Land shapes are simplified on purpose.
+import { link } from '../lib/site.mjs';
+import { REGIONS, CITIES, COUNTS } from '../lib/data.mjs';
+
+const W0 = -123.12, N0 = 38.72, K = 0.79; // projection origin + cos(lat)
+const S = 520; // px per degree
+const P = ([lat, lng]) => [((lng - W0) * K * S).toFixed(1), ((N0 - lat) * S).toFixed(1)];
+const poly = (pts) => pts.map((p) => P(p).join(',')).join(' ');
+
+const shapes = {
+  'north-bay': [[37.83, -122.48], [37.87, -122.45], [37.9, -122.47], [37.95, -122.49], [38.02, -122.49], [38.08, -122.42], [38.1, -122.3], [38.06, -122.24], [38.06, -122.12], [38.2, -122.05], [38.55, -122.15], [38.7, -122.45], [38.68, -122.85], [38.45, -123.07], [38.25, -123.02], [38.08, -123.0], [37.98, -122.83], [37.9, -122.68], [37.86, -122.58]],
+  'san-francisco': [[37.81, -122.515], [37.812, -122.477], [37.808, -122.41], [37.795, -122.388], [37.77, -122.385], [37.74, -122.378], [37.708, -122.39], [37.708, -122.502], [37.735, -122.508], [37.78, -122.513]],
+  peninsula: [[37.704, -122.502], [37.704, -122.39], [37.66, -122.38], [37.6, -122.36], [37.56, -122.29], [37.5, -122.2], [37.455, -122.115], [37.41, -122.13], [37.33, -122.2], [37.2, -122.4], [37.32, -122.42], [37.46, -122.45], [37.55, -122.52], [37.64, -122.5]],
+  'south-bay': [[37.452, -122.11], [37.43, -122.0], [37.46, -121.93], [37.44, -121.8], [37.3, -121.62], [37.05, -121.5], [36.98, -121.62], [37.08, -121.88], [37.18, -122.08], [37.33, -122.196], [37.405, -122.125]],
+  'east-bay': [[37.463, -121.925], [37.53, -122.06], [37.62, -122.15], [37.7, -122.2], [37.775, -122.285], [37.84, -122.305], [37.92, -122.4], [38.0, -122.37], [38.04, -122.26], [38.05, -122.1], [38.06, -121.88], [38.02, -121.58], [37.8, -121.52], [37.55, -121.62], [37.46, -121.79]],
+};
+const labelAt = {
+  'north-bay': [38.32, -122.62], 'san-francisco': [37.765, -122.45], peninsula: [37.52, -122.36], 'south-bay': [37.24, -121.86], 'east-bay': [37.82, -122.06],
+};
+const dots = ['oakland', 'berkeley', 'san-jose', 'palo-alto', 'san-mateo', 'walnut-creek', 'fremont', 'san-rafael', 'napa', 'santa-rosa', 'half-moon-bay', 'mountain-view', 'sausalito', 'livermore']
+  .map((s) => CITIES.find((c) => c.slug === s)).filter(Boolean);
+const [vbW, vbH] = [((-121.45 - W0) * K * S).toFixed(0), ((N0 - 36.95) * S).toFixed(0)];
+---
+<svg class="baymap" viewBox={`0 0 ${vbW} ${vbH}`} role="img" aria-labelledby="bm-t">
+  <title id="bm-t">Map of Bay Area regions — choose one to see events</title>
+  <defs>
+    <pattern id="waves" width="16" height="10" patternUnits="userSpaceOnUse"><path d="M0 5 Q4 2 8 5 T16 5" fill="none" stroke="currentColor" stroke-opacity=".08" /></pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#waves)" />
+  {REGIONS.map((r) => {
+    const [lx, ly] = P(labelAt[r.slug]);
+    return (
+      <a href={link(`/region/${r.slug}/`)} aria-label={`${r.name}: ${COUNTS.region[r.slug] || 0} listings`}>
+        <polygon class="region" points={poly(shapes[r.slug])} stroke-linejoin="round" />
+        <text class="label" x={lx} y={ly} text-anchor="middle">{r.emoji} {r.short}</text>
+        <text class="count" x={lx} y={+ly + 17} text-anchor="middle">{COUNTS.region[r.slug] || 0} things to do</text>
+      </a>
+    );
+  })}
+  {dots.map((c) => {
+    const [x, y] = P([c.lat, c.lng]);
+    return (
+      <a href={link(`/city/${c.slug}/`)} aria-label={c.name}>
+        <circle class="dot" cx={x} cy={y} r="4.5" />
+        <text class="city-label" x={+x + 7} y={+y + 3}>{c.name}</text>
+      </a>
+    );
+  })}
+</svg>

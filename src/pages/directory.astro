@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { link } from '../lib/site.mjs';
+import { REGIONS, CITIES, NEIGHBORHOODS, CATEGORIES, VIBES, COUNTS } from '../lib/data.mjs';
+const citiesBy = (r) => CITIES.filter((c) => c.region === r && (COUNTS.city[c.slug] || 0) > 0);
+const hoodsBy = (c) => NEIGHBORHOODS.filter((n) => n.city === c && (COUNTS.hood[n.slug] || 0) > 0);
+---
+<Base title="Bay Area Directory: Things to Do by City, Neighborhood & Region" description="Browse things to do in every corner of the San Francisco Bay Area: SF neighborhoods, East Bay, Peninsula, South Bay and North Bay cities, plus every genre and vibe." path="/directory/" nav="directory">
+  <div class="wrap">
+    <header class="page-head">
+      <Crumbs items={[['Directory', '/directory/']]} />
+      <div class="eyebrow">📍 The whole Bay, organized</div>
+      <h1>Bay Area directory</h1>
+      <p class="lead">Pick a region, city or neighborhood — each page is updated daily with this weekend, next week and always-open favorites.</p>
+    </header>
+    {REGIONS.map((r) => (
+      <section class="section" id={r.slug}>
+        <div class="section-head"><div><h2>{r.emoji} <a href={link(`/region/${r.slug}/`)}>{r.name}</a></h2><p>{r.blurb}</p></div><span class="tag">{COUNTS.region[r.slug] || 0} listings</span></div>
+        <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
+          {citiesBy(r.slug).map((c) => (
+            <div class="panel" style="padding:16px">
+              <h3><a href={link(`/city/${c.slug}/`)}>{c.name}</a> <span class="muted" style="font-size:.8rem">· {COUNTS.city[c.slug]}</span></h3>
+              {hoodsBy(c.slug).length > 0 && (
+                <div class="link-cloud" style="font-size:.86rem">{hoodsBy(c.slug).map((n) => <a href={link(`/city/${c.slug}/${n.slug}/`)}>{n.name} ({COUNTS.hood[n.slug]})</a>)}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+    <section class="section" id="genres">
+      <h2>🎭 Genres</h2>
+      <div class="chips">{CATEGORIES.map((c) => <a class="chip" href={link(`/category/${c.slug}/`)}>{c.emoji} {c.name} <span class="count">{COUNTS.category[c.slug]}</span></a>)}</div>
+    </section>
+    <section class="section" id="vibes">
+      <h2>✨ Vibes</h2>
+      <div class="chips">{VIBES.map((v) => <a class="chip" href={link(`/${v.slug}/`)}>{v.emoji} {v.name} <span class="count">{COUNTS.vibe[v.slug]}</span></a>)}</div>
+    </section>
+  </div>
+</Base>

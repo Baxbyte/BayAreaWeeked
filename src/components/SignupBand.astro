@@ -1,0 +1,40 @@
+---
+// Early-access signup for the V2 personalized daily email. Posts JSON to PUBLIC_SIGNUP_ENDPOINT when configured.
+import { SITE, link } from '../lib/site.mjs';
+import { REGIONS } from '../lib/geo.mjs';
+interface Props { compact?: boolean; region?: string }
+const { compact = false, region } = Astro.props;
+const interests = [
+  ['kids', '👶 Kid-friendly'], ['nightlife', '🍸 Nightlife'], ['free', '🆓 Free stuff'], ['live-music', '🎸 Live music'],
+  ['food-drink', '🍜 Food & drink'], ['outdoors', '🌲 Outdoors'], ['arts', '🎨 Arts'], ['comedy', '😂 Comedy'], ['weather', '🌦️ Weather-smart picks'],
+];
+---
+<section class="band" id="signup">
+  <div class="eyebrow" style="color:var(--sun)">✉️ Early access · Daily email</div>
+  <h2>Your Bay Area weekend, picked for you — every morning.</h2>
+  <p>Choose your regions and vibes, and we’ll send a short, personalized list of things to do. Free. Unsubscribe anytime.</p>
+  <form data-signup data-endpoint={SITE.signupEndpoint} data-contact={SITE.contactEmail} novalidate>
+    {!compact && (
+      <>
+        <div class="chips" style="margin:6px 0 12px" role="group" aria-label="Regions">
+          {REGIONS.map((r) => <button type="button" class="chip" data-pick="regions" data-val={r.slug} aria-pressed={region === r.slug ? 'true' : 'false'}>{r.emoji} {r.short}</button>)}
+        </div>
+        <div class="chips" style="margin-bottom:16px" role="group" aria-label="Interests">
+          {interests.map(([v, l]) => <button type="button" class="chip" data-pick="interests" data-val={v} aria-pressed="false">{l}</button>)}
+        </div>
+      </>
+    )}
+    <div class="form-row">
+      <label class="sr-only" for="su-email">Email</label>
+      <input class="input" id="su-email" name="email" type="email" required placeholder="you@email.com" autocomplete="email" />
+      <input type="text" name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+      <button class="btn btn-primary" type="submit">Get early access</button>
+    </div>
+    <p class="form-msg" data-msg role="status"></p>
+    {compact && <p style="font-size:.85rem;margin:0"><a href={link('/subscribe/')} style="color:inherit">Customize your picks →</a></p>}
+  </form>
+</section>
+<script>
+  import { initSignup } from '../scripts/forms.js';
+  initSignup();
+</script>

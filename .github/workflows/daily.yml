@@ -1,0 +1,143 @@
+name: Daily scrape, build & deploy
+
+on:
+  schedule:
+    - cron: '17 12 * * *'   # ~5am Pacific: morning refresh
+    - cron: '47 0 * * *'    # ~5pm Pacific: evening refresh (new "tonight" + weekend listings)
+  workflow_dispatch:
+    inputs:
+      skip_scrape:
+        description: 'Rebuild from committed data without scraping'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths-ignore: ['data/events.json', 'data/scrape-report.json', 'data/geocache.json', 'data/indexnow-state.json', '**.md']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      site_url: ${{ steps.url.outputs.site_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+      - name: Scrape event sources
+        if: ${{ !inputs.skip_scrape }}
+        env:
+          TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
+          SEATGEEK_CLIENT_ID: ${{ secrets.SEATGEEK_CLIENT_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
+          GEOCODE: '1'
+          GEOCODE_MAX: '200'
+        run: npm run scrape
+
+      - name: Save fresh data to the repo
+        if: ${{ !inputs.skip_scrape }}
+        run: |
+          git config user.name "bayarea-weekend-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/events.json data/scrape-report.json data/geocache.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "data: daily event refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin main && git push origin HEAD:main
+          fi
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+        continue-on-error: true
+
+      - name: Pick the public site URL
+        id: url
+        run: |
+          URL="${{ vars.SITE_URL }}"
+          if [ -z "$URL" ]; then URL="${{ steps.pages.outputs.base_url }}"; fi
+          if [ -z "$URL" ]; then URL="https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${GITHUB_REPOSITORY#*/}"; fi
+          echo "site_url=${URL%/}" >> "$GITHUB_OUTPUT"
+          echo "Building for ${URL%/}"
+
+      - name: Build site
+        env:
+          SITE_URL: ${{ steps.url.outputs.site_url }}
+          SITE_NAME: ${{ vars.SITE_NAME }}
+          PUBLIC_SIGNUP_ENDPOINT: ${{ vars.PUBLIC_SIGNUP_ENDPOINT }}
+          PUBLIC_SPONSOR_ENDPOINT: ${{ vars.PUBLIC_SPONSOR_ENDPOINT }}
+          PUBLIC_CONTACT_EMAIL: ${{ vars.PUBLIC_CONTACT_EMAIL }}
+          GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+          BING_SITE_VERIFICATION: ${{ vars.BING_SITE_VERIFICATION }}
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY }}
+          PUBLIC_ANALYTICS_SNIPPET_URL: ${{ vars.PUBLIC_ANALYTICS_SNIPPET_URL }}
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sitemaps
+          path: dist/sitemap*.xml
+          retention-days: 3
+
+  deploy:
+    needs: build
+    if: ${{ vars.DEPLOY_TARGET == '' || vars.DEPLOY_TARGET == 'github-pages' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  ping-search-engines:
+    needs: [build, deploy]
+    if: ${{ always() && needs.build.result == 'success' && (needs.deploy.result == 'success' || needs.deploy.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/download-artifact@v4
+        with:
+          name: sitemaps
+          path: dist
+      - name: Wait for CDN to pick up the new deploy
+        run: sleep 60
+      - name: IndexNow + WebSub (+ optional Google Indexing API)
+        env:
+          SITE_URL: ${{ needs.build.outputs.site_url }}
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY }}
+          GOOGLE_INDEXING_SA_JSON: ${{ secrets.GOOGLE_INDEXING_SA_JSON }}
+        run: node scripts/indexnow.mjs
+      - name: Remember what was submitted
+        run: |
+          git config user.name "bayarea-weekend-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/indexnow-state.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: indexnow state"
+            git pull --rebase origin main && git push origin HEAD:main
+          fi

@@ -1,0 +1,8 @@
+---
+import Detail from '../../components/Detail.astro';
+import { ACTIVITIES } from '../../lib/data.mjs';
+export function getStaticPaths() {
+  return ACTIVITIES.map((item) => ({ params: { slug: item.slug }, props: { item } }));
+}
+---
+<Detail item={Astro.props.item} />

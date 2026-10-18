@@ -1,0 +1,174 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from './Card.astro';
+import Crumbs from './Crumbs.astro';
+import Faq from './Faq.astro';
+import SignupBand from './SignupBand.astro';
+import { link, absolute, SITE } from '../lib/site.mjs';
+import { sectionsFor, collapseRepeats, topPicks, sponsoredFor, W, UPDATED, MIN_INDEXABLE } from '../lib/data.mjs';
+import { formatRange, fmtDay, fmtLongDay } from '../lib/time.mjs';
+import { placeLine } from '../lib/format.mjs';
+
+interface Props {
+  h1: string;
+  seoTitle: string;
+  description: string;
+  path: string;
+  crumbs: [string, string][];
+  eyebrow?: string;
+  lead?: string;
+  filter?: any;
+  sections?: any;
+  sponsorSlot?: string;
+  sponsorCtx?: any;
+  placeLabel?: string; // "in Oakland"
+  facets?: [string, string, number][];
+  related?: [string, string][];
+  faq?: { q: string; a: string }[];
+  exploreQuery?: string;
+  mode?: 'hub' | 'window';
+  windowLabel?: string;
+}
+const p = Astro.props;
+const s = p.sections || sectionsFor(p.filter || {});
+const weekendLabel = formatRange(W.weekend.fri, W.weekend.end);
+const nextWeekLabel = formatRange(W.nextWeek.start, W.nextWeek.end);
+const sponsored = p.sponsorSlot ? sponsoredFor(p.sponsorSlot, p.sponsorCtx || {}) : [];
+const sponsoredIds = new Set(sponsored.map((x) => x.id));
+const strip = (l) => collapseRepeats(l.filter((x) => !sponsoredIds.has(x.id)));
+const weekend = strip(s.weekend);
+const soon = strip(s.soon || []);
+const nextWeek = strip(s.nextWeek || []);
+const later = strip(s.later || []).slice(0, 18);
+const acts = s.activities || [];
+const total = (s.all?.length || 0) + acts.length;
+const picks = topPicks(s.weekend.length ? s.weekend : s.all?.length ? s.all : acts, 5);
+const placeLabel = p.placeLabel || 'in the Bay Area';
+
+// Group the weekend by day for scannable "Friday / Saturday / Sunday" sections.
+const byDay = new Map();
+for (const i of weekend) {
+  const k = fmtLongDay.format(new Date(Math.max(Date.parse(i.start), W.now.getTime())));
+  if (!byDay.has(k)) byDay.set(k, []);
+  byDay.get(k).push(i);
+}
+
+const answerIntro = p.mode === 'window'
+  ? `${p.windowLabel}: ${s.all.length} things to do ${placeLabel}.`
+  : s.weekend.length
+    ? `This weekend (${weekendLabel}) there are ${s.weekend.length} events ${placeLabel}${acts.length ? `, plus ${acts.length} always-open favorites` : ''}. Top picks:`
+    : acts.length ? `Top always-open things to do ${placeLabel}:` : `We’re gathering events ${placeLabel} — check back soon.`;
+
+const itemList = [...sponsored, ...(s.weekend.length ? s.weekend : s.all || []), ...acts].slice(0, 40);
+const jsonld = [{
+  '@context': 'https://schema.org', '@type': 'CollectionPage', name: p.seoTitle, description: p.description, url: absolute(p.path),
+  dateModified: UPDATED.toISOString(), isPartOf: { '@type': 'WebSite', name: SITE.name, url: absolute('/') },
+  about: { '@type': 'Place', name: p.placeLabel?.replace(/^in /, '') || 'San Francisco Bay Area' },
+  mainEntity: { '@type': 'ItemList', numberOfItems: itemList.length,
+    itemListElement: itemList.map((i, idx) => ({ '@type': 'ListItem', position: idx + 1, url: absolute(i.path), name: i.title })) },
+}];
+
+const defaultFaq = [
+  { q: `What is there to do ${placeLabel} this weekend?`,
+    a: picks.length ? `Popular picks for ${weekendLabel} include ${picks.slice(0, 4).map((i) => `${i.title}${i.start ? ` (${fmtDay.format(new Date(i.start))})` : ''}`).join(', ')}. See the full, daily-updated list on this page.` : `Browse the always-open favorites on this page and check back — new events are added every day.` },
+  { q: `Are there free things to do ${placeLabel}?`,
+    a: `Yes — ${[...(s.all || []), ...acts].filter((i) => i.flags.free).length} free events and activities are listed ${placeLabel} right now. Use the “Free” filter or visit our Free page.` },
+  { q: `How often is this list updated?`, a: `Every day. ${SITE.name} checks dozens of Bay Area event calendars, venues and local news sources daily and removes events once they’ve ended. Last update: ${fmtLongDay.format(UPDATED)}.` },
+];
+const faq = [...(p.faq || []), ...defaultFaq];
+---
+<Base title={p.seoTitle} description={p.description} path={p.path} jsonld={jsonld} noindex={total < MIN_INDEXABLE}>
+  <div class="wrap">
+    <header class="page-head">
+      <Crumbs items={p.crumbs} />
+      {p.eyebrow && <div class="eyebrow">{p.eyebrow}</div>}
+      <h1>{p.h1}</h1>
+      {p.lead && <p class="lead">{p.lead}</p>}
+      <p class="updated">Updated {fmtLongDay.format(UPDATED)} · {total} listings</p>
+
+      <div class="answer">
+        <h2>Quick answer</h2>
+        <p>{answerIntro}</p>
+        {picks.length > 0 && (
+          <ol>{picks.map((i) => <li><a href={link(i.path)}><strong>{i.title}</strong></a>{i.start ? ` — ${fmtDay.format(new Date(i.start))}` : ''}, {placeLine(i)}{i.flags.free ? ' (free)' : ''}</li>)}</ol>
+        )}
+      </div>
+
+      {p.facets && p.facets.length > 0 && (
+        <div class="chips scroll" aria-label="Narrow down">
+          {p.facets.map(([label, href, n]) => <a class="chip" href={link(href)}>{label} <span class="count">{n}</span></a>)}
+        </div>
+      )}
+    </header>
+
+    {sponsored.length > 0 && (
+      <section class="section" aria-label="Sponsored">
+        <div class="section-head"><h2 style="font-size:1.2rem">★ Featured</h2><a class="muted" href={link('/advertise/')} style="font-size:.85rem">Sponsored · Get featured</a></div>
+        <div class="grid">{sponsored.map((i) => <Card item={i} showDeal />)}</div>
+      </section>
+    )}
+
+    {p.mode === 'window' ? (
+      <section class="section">
+        {s.all.length ? <div class="grid">{collapseRepeats(s.all).filter((x) => !sponsoredIds.has(x.id)).slice(0, 60).map((i, n) => <Card item={i} eager={n < 4} />)}</div>
+          : <div class="empty">Nothing listed for this window yet — new events are added daily. Try the <a href={link('/this-weekend/')}>weekend list</a> or the always-on picks below.</div>}
+      </section>
+    ) : (
+      <>
+        <section class="section" id="this-weekend">
+          <div class="section-head">
+            <div><div class="eyebrow">🎉 This weekend</div><h2>{weekendLabel}</h2></div>
+            <a class="btn btn-ghost btn-sm" href={link(`/explore/?when=weekend${p.exploreQuery ? '&' + p.exploreQuery : ''}`)}>See on the map →</a>
+          </div>
+          {weekend.length ? [...byDay].map(([day, list]) => (
+            <div class="day-group">
+              <h3>{day} <small>{list.length} picks</small></h3>
+              <div class="grid">{list.slice(0, 24).map((i, n) => <Card item={i} eager={n < 3} />)}</div>
+            </div>
+          )) : <div class="empty">No dated events {placeLabel} this weekend yet. Scroll down for always-open favorites, or <a href={link('/explore/')}>explore the whole Bay</a>.</div>}
+        </section>
+
+        {soon.length > 0 && (
+          <section class="section">
+            <div class="section-head"><div><div class="eyebrow">⏩ Before the weekend</div><h2>Coming up this week</h2></div></div>
+            <div class="grid">{soon.slice(0, 12).map((i) => <Card item={i} />)}</div>
+          </section>
+        )}
+
+        {nextWeek.length > 0 && (
+          <section class="section" id="next-week">
+            <div class="section-head"><div><div class="eyebrow">🗓️ Plan ahead</div><h2>Next week · {nextWeekLabel}</h2></div>
+              <a class="btn btn-ghost btn-sm" href={link(`/explore/?when=next-week${p.exploreQuery ? '&' + p.exploreQuery : ''}`)}>All next week →</a></div>
+            <div class="grid">{nextWeek.slice(0, 16).map((i) => <Card item={i} />)}</div>
+          </section>
+        )}
+
+        {later.length > 0 && (
+          <section class="section">
+            <div class="section-head"><div><div class="eyebrow">🔭 Further out</div><h2>Coming soon</h2></div></div>
+            <div class="grid">{later.map((i) => <Card item={i} />)}</div>
+          </section>
+        )}
+      </>
+    )}
+
+    {acts.length > 0 && (
+      <section class="section" id="always-on">
+        <div class="section-head"><div><div class="eyebrow">⭐ Always-on picks</div><h2>Classic things to do {placeLabel}</h2></div>
+          <p>Open most days — perfect when you want a sure thing.</p></div>
+        <div class="grid">{acts.slice(0, 16).map((i) => <Card item={i} />)}</div>
+      </section>
+    )}
+
+    <Faq items={faq} />
+
+    {p.related && p.related.length > 0 && (
+      <section class="section">
+        <h2 style="font-size:1.2rem">Keep exploring</h2>
+        <div class="link-cloud">{p.related.map(([label, href]) => <a href={link(href)}>{label}</a>)}</div>
+      </section>
+    )}
+
+    <div class="section"><SignupBand compact region={p.filter?.region} /></div>
+  </div>
+</Base>

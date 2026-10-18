@@ -1,0 +1,36 @@
+---
+import HubPage from '../../../components/HubPage.astro';
+import { REGIONS, W, regionBySlug } from '../../../lib/data.mjs';
+import { facetDefs, facetFilter, facetQuery } from '../../../lib/facets.mjs';
+import { formatRange } from '../../../lib/time.mjs';
+
+export function getStaticPaths() {
+  return REGIONS.flatMap((r) => facetDefs({ region: r.slug }).map((f) => ({ params: { region: r.slug, facet: f.slug }, props: { f } })));
+}
+const { f } = Astro.props;
+const r = regionBySlug[Astro.params.region];
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const name = r.slug === 'san-francisco' ? 'San Francisco' : `the ${r.name}`;
+const topic = f.kind === 'vibe' ? f.def.name : f.def.name;
+const h1 = f.kind === 'vibe'
+  ? ({ 'kid-friendly': `Kid-friendly things to do in ${name}`, nightlife: `${r.name} nightlife this weekend`, free: `Free things to do in ${name}`,
+      'hot-day': `What to do in ${name} when it’s hot`, 'rainy-day': `Rainy day activities in ${name}`, 'fog-escape': `Fog escape: sunny plans in ${name}`,
+      'date-night': `Date night ideas in ${name}`, 'near-bart': `${r.name} events near BART` })[f.slug]
+  : `${topic} in ${name} this weekend`;
+const others = facetDefs({ region: r.slug }).filter((x) => x.slug !== f.slug).map((x) => [x.label, `/region/${r.slug}/${x.slug}/`, x.n]);
+---
+<HubPage
+  h1={h1}
+  seoTitle={`${h1.replace(/ this weekend$/, '')} — This Weekend (${wk})`}
+  description={`${h1.replace(/ this weekend$/, '')}: ${f.def.blurb || `the best ${topic.toLowerCase()} events`} Updated daily with this weekend (${wk}) and next week.`}
+  path={`/region/${r.slug}/${f.slug}/`}
+  crumbs={[[r.name, `/region/${r.slug}/`], [topic, `/region/${r.slug}/${f.slug}/`]]}
+  eyebrow={`${f.label} · ${r.name}`}
+  lead={f.def.blurb}
+  filter={{ region: r.slug, ...facetFilter(f) }}
+  sponsorSlot={f.kind === 'vibe' ? 'vibe-top' : 'category-top'} sponsorCtx={{ region: r.slug, ...(f.kind === 'vibe' ? { vibe: f.slug } : { category: f.slug }) }}
+  placeLabel={`in ${name}`}
+  facets={others}
+  exploreQuery={`region=${r.slug}&${facetQuery(f)}`}
+  related={[[`All ${r.name} events`, `/region/${r.slug}/`], ...REGIONS.filter((x) => x.slug !== r.slug && facetDefs({ region: x.slug }).some((d) => d.slug === f.slug)).map((x) => [`${topic} in ${x.name}`, `/region/${x.slug}/${f.slug}/`])]}
+/>

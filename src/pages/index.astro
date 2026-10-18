@@ -1,0 +1,228 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import BayMap from '../components/BayMap.astro';
+import Faq from '../components/Faq.astro';
+import SignupBand from '../components/SignupBand.astro';
+import { SITE, link, absolute } from '../lib/site.mjs';
+import { EVENTS, ACTIVITIES, REGIONS, VIBES, CATEGORIES, COUNTS, W, UPDATED, inWindow, topPicks, sponsoredFor, filterItems, DEALS, DATA } from '../lib/data.mjs';
+import { formatRange, fmtDay, fmtLongDay } from '../lib/time.mjs';
+import { placeLine } from '../lib/format.mjs';
+
+const wk = formatRange(W.weekend.fri, W.weekend.end);
+const weekend = inWindow(EVENTS, W.weekend);
+const spotlight = sponsoredFor('home-spotlight');
+const featured = sponsoredFor('weekend-top');
+const ids = new Set([...spotlight, ...featured].map((i) => i.id));
+const picks = topPicks(weekend.filter((i) => !ids.has(i.id)), 12);
+const tonight = topPicks(inWindow(EVENTS, W.tonight), 8);
+const nextWeek = topPicks(inWindow(EVENTS, W.nextWeek), 10);
+const fresh = EVENTS.filter((i) => i.firstSeen === DATA.generatedAt).slice(0, 10);
+const classics = topPicks(ACTIVITIES, 10);
+const kidsPick = topPicks(filterItems([...weekend, ...ACTIVITIES], { vibe: 'kid-friendly' }), 4);
+const nightPick = topPicks(filterItems(weekend, { vibe: 'nightlife' }), 4);
+const answerPicks = topPicks(weekend.length ? weekend : ACTIVITIES, 6);
+const vibeColors = { 'kid-friendly': '#ffe9a8', nightlife: '#e1d8ff', free: '#c9f2ea', 'hot-day': '#ffd9b8', 'rainy-day': '#d3e4ff', 'fog-escape': '#e6e9ef', 'date-night': '#ffd6e0', 'near-bart': '#d6e6ff' };
+const examples = ['free kids stuff in Oakland Saturday', 'techno tonight in the Mission', 'rainy day ideas in San Jose', 'date night in North Beach under $60', 'hikes near me this weekend', 'jazz in Berkeley next week', 'fog escape with the kids'];
+
+const ld = [
+  { '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE.url}/#website`, name: SITE.name, alternateName: SITE.shortName, url: absolute('/'),
+    description: SITE.tagline, inLanguage: 'en-US',
+    potentialAction: { '@type': 'SearchAction', target: { '@type': 'EntryPoint', urlTemplate: `${absolute('/explore/')}?q={search_term_string}` }, 'query-input': 'required name=search_term_string' } },
+  { '@context': 'https://schema.org', '@type': 'ItemList', name: `Things to do in the Bay Area this weekend (${wk})`,
+    itemListElement: answerPicks.map((i, n) => ({ '@type': 'ListItem', position: n + 1, url: absolute(i.path), name: i.title })) },
+];
+const faq = [
+  { q: 'What is there to do in the Bay Area this weekend?', a: answerPicks.length ? `Highlights for ${wk}: ${answerPicks.map((i) => `${i.title}${i.start ? ` (${fmtDay.format(new Date(i.start))}, ${placeLine(i)})` : ` (${placeLine(i)})`}`).join('; ')}. ${SITE.name} lists ${COUNTS.weekend} events this weekend, updated daily.` : 'See our daily-updated weekend list.' },
+  { q: 'What are fun things to do in San Francisco when it rains?', a: 'Go indoors: the California Academy of Sciences, the Exploratorium, SFMOMA, the de Young, the Musée Mécanique arcade, a movie at the Castro Theatre, or a soak at Kabuki Springs. Our Rainy Day page is updated daily with indoor events.' },
+  { q: 'Where can I go to beat the heat in the Bay Area?', a: 'Head to the coast — Ocean Beach, Lands End, Pacifica, Half Moon Bay or Stinson Beach are often 20°F cooler than inland — or find shade in Muir Woods and Redwood Regional Park. Air-conditioned museums like The Tech Interactive are great too.' },
+  { q: 'What are the best kid-friendly things to do in the Bay Area?', a: 'Family favorites include the Exploratorium, Children’s Fairyland, Tilden Park’s Little Farm, the Bay Area Discovery Museum, the sea lions at Pier 39 and the Children’s Discovery Museum of San Jose — plus dozens of dated family events every weekend on our Kid-Friendly page.' },
+  { q: 'How does Bay Area Weekend find events?', a: `We check public event calendars, ticketing sites, venue listings, community calendars and local news roundups every day, then sort everything by city, neighborhood, genre, weather and vibe. Last updated ${fmtLongDay.format(UPDATED)}.` },
+];
+---
+<Base title={`${SITE.name}: Things to Do in the Bay Area This Weekend (${wk})`} description={`What to do in San Francisco, Oakland, San Jose and the whole Bay Area this weekend (${wk}): ${COUNTS.weekend} events plus kid-friendly picks, nightlife, free events, and hot- or rainy-day ideas. Updated daily.`} path="/" jsonld={ld}>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">🌉 {wk} · {COUNTS.weekend} events this weekend</div>
+      <h1>What are we doing <span class="hl">this weekend</span>, Bay Area?</h1>
+      <p class="lead">Every concert, festival, street fair, family outing and late night across SF, the East Bay, Peninsula, South Bay and North Bay — sorted by neighborhood, vibe and even the weather. Fresh every morning.</p>
+      <form class="smart-search" action={link('/explore/')} method="get" role="search" data-home-search>
+        <label class="sr-only" for="home-q">Search the Bay</label>
+        <input id="home-q" name="q" type="search" autocomplete="off" placeholder={examples[0]} data-examples={JSON.stringify(examples)} />
+        <button class="btn btn-primary" type="submit"><span aria-hidden="true">🔎</span><span class="label">Find plans</span></button>
+      </form>
+      <div class="parsed" data-home-parsed aria-live="polite"></div>
+      <div class="chips scroll" style="margin-top:6px">
+        {VIBES.map((v) => <a class="chip" href={link(`/${v.slug}/`)}>{v.emoji} {v.name} <span class="count">{COUNTS.vibe[v.slug]}</span></a>)}
+        <a class="chip" href={link('/explore/')} data-home-spin>🎰 Spin the Bay</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="section" style="padding-top:6px" aria-label="Weekend forecast">
+      <div class="section-head"><div><div class="eyebrow">🌦️ Weather-smart</div><h2 style="font-size:1.35rem">The forecast says…</h2></div>
+        <p>We match plans to the weather. Tap a day.</p></div>
+      <div class="weather" data-weather>
+        <a class="day" href={link('/rainy-day/')}><span class="wx">🌧️</span><br /><b>Rainy day?</b><div class="tip">Indoor picks →</div></a>
+        <a class="day" href={link('/hot-day/')}><span class="wx">☀️</span><br /><b>Heat wave?</b><div class="tip">Cool-off picks →</div></a>
+        <a class="day" href={link('/fog-escape/')}><span class="wx">🌫️</span><br /><b>Foggy city?</b><div class="tip">Chase the sun →</div></a>
+      </div>
+    </section>
+
+    {spotlight.length > 0 && (
+      <section class="section" aria-label="Spotlight">
+        <div class="section-head"><div class="eyebrow">★ Spotlight</div><a class="muted" href={link('/advertise/')} style="font-size:.85rem">Sponsored</a></div>
+        <div class="grid">{spotlight.map((i) => <Card item={i} eager showDeal />)}</div>
+      </section>
+    )}
+
+    <section class="section" id="weekend">
+      <div class="section-head">
+        <div><div class="eyebrow">🎉 This weekend · {wk}</div><h2>Top picks across the Bay</h2></div>
+        <a class="btn btn-ghost btn-sm" href={link('/this-weekend/')}>All {COUNTS.weekend} weekend events →</a>
+      </div>
+      {featured.length > 0 && <div class="grid" style="margin-bottom:18px">{featured.map((i) => <Card item={i} showDeal />)}</div>}
+      {picks.length ? <div class="rail">{picks.map((i, n) => <Card item={i} eager={n < 3} />)}</div>
+        : <div class="empty">This weekend’s events are loading in with the next daily update. Meanwhile, here are the Bay Area classics ↓</div>}
+    </section>
+
+    <section class="section" aria-labelledby="where-h">
+      <div class="section-head"><div><div class="eyebrow">🗺️ Pick your corner of the Bay</div><h2 id="where-h">Where do you want to go?</h2></div>
+        <a class="btn btn-ghost btn-sm" href={link('/explore/')}>Open the interactive map →</a></div>
+      <div class="baymap-wrap">
+        <BayMap />
+        <div class="region-list">
+          {REGIONS.map((r) => (
+            <a class="region-link" href={link(`/region/${r.slug}/`)}>
+              <span class="emoji">{r.emoji}</span>
+              <span><strong>{r.name}</strong><small>{r.blurb}</small></span>
+              <span class="n">{COUNTS.region[r.slug] || 0}</span>
+            </a>
+          ))}
+          <a class="region-link" href={link('/directory/')}><span class="emoji">📍</span><span><strong>Every city &amp; neighborhood</strong><small>From the Mission to Temescal to Willow Glen.</small></span><span class="n">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="vibe-h">
+      <div class="section-head"><div><div class="eyebrow">✨ Choose your vibe</div><h2 id="vibe-h">What kind of day is it?</h2></div></div>
+      <div class="vibes">
+        {VIBES.map((v) => (
+          <a class="vibe" href={link(`/${v.slug}/`)} style={`--vc:${vibeColors[v.slug]}`}>
+            <span class="e">{v.emoji}</span>
+            <span><strong>{v.name}</strong><br /><small>{COUNTS.vibe[v.slug]} picks</small></span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {tonight.length > 0 && (
+      <section class="section">
+        <div class="section-head"><div><div class="eyebrow">🌙 Tonight</div><h2>Last-minute plans</h2></div><a class="btn btn-ghost btn-sm" href={link('/tonight/')}>All tonight →</a></div>
+        <div class="rail">{tonight.map((i) => <Card item={i} />)}</div>
+      </section>
+    )}
+
+    {(kidsPick.length > 0 || nightPick.length > 0) && (
+      <section class="section split">
+        {kidsPick.length > 0 && (
+          <div class="panel">
+            <div class="section-head"><div><div class="eyebrow">👶 With the kids</div><h2 style="font-size:1.4rem">Family-friendly</h2></div><a href={link('/kid-friendly/')}>More →</a></div>
+            <div style="display:grid;gap:12px">{kidsPick.map((i) => <Card item={i} compact />)}</div>
+          </div>
+        )}
+        {nightPick.length > 0 && (
+          <div class="panel">
+            <div class="section-head"><div><div class="eyebrow" style="color:var(--night)">🍸 Adults only</div><h2 style="font-size:1.4rem">After dark</h2></div><a href={link('/nightlife/')}>More →</a></div>
+            <div style="display:grid;gap:12px">{nightPick.map((i) => <Card item={i} compact />)}</div>
+          </div>
+        )}
+      </section>
+    )}
+
+    <section class="section" aria-labelledby="genre-h">
+      <div class="section-head"><div><div class="eyebrow">🎭 Browse by genre</div><h2 id="genre-h">Into something specific?</h2></div></div>
+      <div class="chips">{CATEGORIES.map((c) => <a class="chip" href={link(`/category/${c.slug}/`)}>{c.emoji} {c.name} <span class="count">{COUNTS.category[c.slug]}</span></a>)}</div>
+    </section>
+
+    {nextWeek.length > 0 && (
+      <section class="section">
+        <div class="section-head"><div><div class="eyebrow">🗓️ Plan ahead</div><h2>Next week · {formatRange(W.nextWeek.start, W.nextWeek.end)}</h2></div><a class="btn btn-ghost btn-sm" href={link('/next-week/')}>See next week →</a></div>
+        <div class="rail">{nextWeek.map((i) => <Card item={i} />)}</div>
+      </section>
+    )}
+
+    {fresh.length > 0 && (
+      <section class="section">
+        <div class="section-head"><div><div class="eyebrow">🆕 Just added</div><h2>Fresh on the list today</h2></div></div>
+        <div class="rail">{fresh.map((i) => <Card item={i} />)}</div>
+      </section>
+    )}
+
+    <section class="section">
+      <div class="section-head"><div><div class="eyebrow">⭐ Always a good idea</div><h2>Bay Area classics</h2></div><p>Open most days — rain, shine or fog.</p></div>
+      <div class="rail">{classics.map((i) => <Card item={i} />)}</div>
+    </section>
+
+    <section class="section split">
+      <div class="panel" style="background:linear-gradient(135deg,#fff4cc,#ffe6dc);border-color:#ffd9a8;color:#3b2a00">
+        <div class="eyebrow">🎟️ Deals</div>
+        <h2 style="font-size:1.5rem">Ticket deals &amp; promo codes</h2>
+        <p>{DEALS.length ? `${DEALS.length} live deals from Bay Area organizers right now.` : 'Exclusive discounts from local organizers — plus free events every day.'}</p>
+        <a class="btn btn-dark" href={link('/deals/')}>See deals</a>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">📣 For organizers</div>
+        <h2 style="font-size:1.5rem">Put your event at the top</h2>
+        <p class="muted">Bid for the top spot on any city, neighborhood, genre or vibe page, and offer a deal to fill seats.</p>
+        <a class="btn btn-primary" href={link('/advertise/')}>Advertise &amp; bid</a>
+      </div>
+    </section>
+
+    <div class="section"><SignupBand /></div>
+
+    <section class="answer" style="max-width:none">
+      <h2>Quick answer: things to do in the Bay Area this weekend</h2>
+      <p>For {wk}, {SITE.name} lists {COUNTS.weekend} events across {REGIONS.length} regions. Highlights:</p>
+      <ol>{answerPicks.map((i) => <li><a href={link(i.path)}>{i.title}</a>{i.start ? ` — ${fmtDay.format(new Date(i.start))}` : ''}, {placeLine(i)}</li>)}</ol>
+    </section>
+    <Faq items={faq} />
+  </div>
+
+  <script>
+    import { parseQuery, describe, toParams } from '../scripts/smart.js';
+    import { fetchForecast, moodFor } from '../scripts/weather.js';
+    const form = document.querySelector('[data-home-search]');
+    const input = form.querySelector('input');
+    const out = document.querySelector('[data-home-parsed]');
+    const examples = JSON.parse(input.dataset.examples);
+    let n = 0;
+    const rot = setInterval(() => { if (document.activeElement !== input && !input.value) input.placeholder = examples[++n % examples.length]; }, 2600);
+    input.addEventListener('input', () => {
+      const chips = input.value.trim() ? describe(parseQuery(input.value)) : [];
+      out.innerHTML = chips.map((c) => `<span class="tag">${c.replace(/</g, '&lt;')}</span>`).join('');
+    });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      clearInterval(rot);
+      const p = toParams(parseQuery(input.value || input.placeholder));
+      location.href = `${form.action}${p.toString() ? `?${p}` : ''}`;
+    });
+    document.querySelector('[data-home-spin]')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      location.href = `${form.action}?when=weekend&spin=1`;
+    });
+    // Live forecast strip
+    fetchForecast().then((days) => {
+      const base = document.body.dataset.base;
+      const el = document.querySelector('[data-weather]');
+      el.innerHTML = days.slice(0, 7).map((d) => {
+        const m = moodFor(d);
+        const name = new Date(`${d.date}T12:00:00`).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+        const href = m ? `${base}${m.mood}/` : `${base}explore/?when=${d.date}`;
+        return `<a class="day" href="${href}"><span class="wx">${d.icon}</span><br><b>${name}</b><div class="muted" style="font-size:.84rem">SF ${d.hi}° · Inland ${d.inlandHi}°${d.pop >= 20 ? ` · ${d.pop}% rain` : ''}</div><div class="tip">${m ? `${m.icon} ${m.mood.replace('-', ' ')} picks →` : 'Great day out →'}</div></a>`;
+      }).join('');
+    }).catch(() => {});
+  </script>
+</Base>

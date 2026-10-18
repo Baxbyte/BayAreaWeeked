@@ -1,0 +1,2302 @@
+[
+ {
+  "title": "Exploratorium",
+  "description": "Hundreds of hands-on science, art and perception exhibits on the waterfront at Pier 15, plus an outdoor bay observatory. Adults-only After Dark evenings run on select Thursday nights.",
+  "url": "https://www.exploratorium.edu/",
+  "venue": {
+   "name": "Exploratorium, Pier 15",
+   "address": "Pier 15, The Embarcadero, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8017,
+   "lng": -122.3973
+  },
+  "cats": [
+   "arts",
+   "learning",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor"
+  },
+  "price": "Paid admission",
+  "schedule": "Open most days; check site for hours",
+  "tip": "Grab a timed ticket online on weekends and pair it with a walk to the Ferry Building."
+ },
+ {
+  "title": "California Academy of Sciences",
+  "description": "An aquarium, planetarium, natural history museum and four-story rainforest under one living roof in Golden Gate Park. Thursday NightLife evenings are 21+ with DJs and drinks among the exhibits.",
+  "url": "https://www.calacademy.org/",
+  "venue": {
+   "name": "California Academy of Sciences",
+   "address": "55 Music Concourse Dr, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7699,
+   "lng": -122.4661
+  },
+  "cats": [
+   "learning",
+   "family",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "hot": true
+  },
+  "price": "Paid admission",
+  "schedule": "Open daily; NightLife on Thursdays (21+)",
+  "tip": "Head to the rainforest dome first — the line grows by midday."
+ },
+ {
+  "title": "de Young Museum & Hamon Observation Tower",
+  "description": "Fine arts museum in Golden Gate Park known for American art, textiles and blockbuster exhibitions. The ninth-floor observation tower offers free 360° views over the park and city.",
+  "url": "https://www.famsf.org/visit/de-young",
+  "venue": {
+   "name": "de Young Museum",
+   "address": "50 Hagiwara Tea Garden Dr, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7715,
+   "lng": -122.4686
+  },
+  "cats": [
+   "arts"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Paid admission; tower is free",
+  "schedule": "Tuesday–Sunday",
+  "tip": "The free observation tower is one of the best rainy-day views in SF."
+ },
+ {
+  "title": "Legion of Honor",
+  "description": "European art, Rodin sculptures and a neoclassical palace perched above Lands End with Golden Gate Bridge views.",
+  "url": "https://www.famsf.org/visit/legion-of-honor",
+  "venue": {
+   "name": "Legion of Honor",
+   "address": "100 34th Ave, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7845,
+   "lng": -122.5008
+  },
+  "cats": [
+   "arts"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Paid admission",
+  "schedule": "Tuesday–Sunday",
+  "tip": "Combine with the Lands End Trail right outside for a perfect half-day."
+ },
+ {
+  "title": "SFMOMA",
+  "description": "Seven floors of modern and contemporary art, from Warhol to Kahlo, plus a living wall and rooftop sculpture terraces in SoMa.",
+  "url": "https://www.sfmoma.org/",
+  "venue": {
+   "name": "San Francisco Museum of Modern Art",
+   "address": "151 Third St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7857,
+   "lng": -122.4011
+  },
+  "cats": [
+   "arts"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Paid admission",
+  "schedule": "Open most days; check site",
+  "tip": "The ground-floor galleries are free to wander — great for a quick art fix."
+ },
+ {
+  "title": "Ferry Building Marketplace & Ferry Plaza Farmers Market",
+  "description": "The Bay's most famous food hall: oysters, bread, cheese, coffee and local makers inside a historic 1898 terminal. The CUESA farmers market sets up outside on Saturday mornings (plus Tuesdays and Thursdays).",
+  "url": "https://www.ferrybuildingmarketplace.com/",
+  "venue": {
+   "name": "Ferry Building",
+   "address": "1 Ferry Building, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7955,
+   "lng": -122.3937
+  },
+  "cats": [
+   "markets",
+   "food-drink"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "mixed",
+   "free": true
+  },
+  "price": "Free to browse",
+  "schedule": "Daily; farmers market Tue, Thu & Sat",
+  "tip": "Saturday before 10am is the sweet spot for the market."
+ },
+ {
+  "title": "Lands End Trail & Sutro Baths",
+  "description": "A rugged coastal trail with cypress groves, shipwreck views and the ruins of the Sutro Baths. One of the most dramatic free walks in the city.",
+  "url": "https://www.nps.gov/goga/planyourvisit/landsend.htm",
+  "venue": {
+   "name": "Lands End Lookout",
+   "address": "680 Point Lobos Ave, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7801,
+   "lng": -122.5112
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Daily, sunrise to sunset",
+  "tip": "Hunt for the hidden Lands End labyrinth on the cliffs."
+ },
+ {
+  "title": "Ocean Beach",
+  "description": "Three-plus miles of wide, wild beach along the Outer Sunset and Richmond — made for long walks, kite flying and fiery sunsets (bundle up; the wind is real).",
+  "url": "https://www.nps.gov/goga/planyourvisit/oceanbeach.htm",
+  "venue": {
+   "name": "Ocean Beach",
+   "address": "Great Hwy, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7594,
+   "lng": -122.5107
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Swimming is dangerous here — come for the views, not the waves."
+ },
+ {
+  "title": "Japanese Tea Garden",
+  "description": "The oldest public Japanese garden in the U.S., with koi ponds, a drum bridge, pagoda and a tea house serving green tea and snacks.",
+  "url": "https://japaneseteagardensf.com/",
+  "venue": {
+   "name": "Japanese Tea Garden, Golden Gate Park",
+   "address": "75 Hagiwara Tea Garden Dr, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.77,
+   "lng": -122.4703
+  },
+  "cats": [
+   "outdoors",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "date": true
+  },
+  "price": "Paid admission (SF residents discounted)",
+  "schedule": "Daily",
+  "tip": "Go early on weekdays for quiet, misty mornings."
+ },
+ {
+  "title": "Conservatory of Flowers",
+  "description": "A Victorian glass greenhouse in Golden Gate Park filled with orchids, carnivorous plants and a steamy lowland tropics room — a warm, green escape on a gray day.",
+  "url": "https://conservatoryofflowers.org/",
+  "venue": {
+   "name": "Conservatory of Flowers",
+   "address": "100 John F Kennedy Dr, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7726,
+   "lng": -122.4603
+  },
+  "cats": [
+   "outdoors",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "rainy": true
+  },
+  "price": "Paid admission",
+  "schedule": "Tuesday–Sunday",
+  "tip": "It's warm and humid inside — perfect when the fog is in."
+ },
+ {
+  "title": "Presidio Tunnel Tops",
+  "description": "Fourteen acres of parkland built over the Presidio Parkway with picnic lawns, campfire circles, Golden Gate Bridge views and the nature-play Outpost for kids.",
+  "url": "https://www.presidio.gov/tunnel-tops",
+  "venue": {
+   "name": "Presidio Tunnel Tops",
+   "address": "210 Lincoln Blvd, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8016,
+   "lng": -122.4559
+  },
+  "cats": [
+   "outdoors",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Weekend food trucks and Crissy Field are steps away."
+ },
+ {
+  "title": "Musée Mécanique",
+  "description": "A free-entry, coin-operated wonderland of antique arcade machines, fortune tellers and player pianos on the wharf. Bring quarters.",
+  "url": "https://www.museemecaniquesf.com/",
+  "venue": {
+   "name": "Musée Mécanique, Pier 45",
+   "address": "Pier 45, Fisherman's Wharf, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8094,
+   "lng": -122.4157
+  },
+  "cats": [
+   "family",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "free": true,
+   "rainy": true,
+   "date": true
+  },
+  "price": "Free entry; games cost quarters",
+  "schedule": "Daily",
+  "tip": "Laughing Sal is the star — and slightly terrifying."
+ },
+ {
+  "title": "Alcatraz Island",
+  "description": "Tour the infamous federal penitentiary with the award-winning audio guide, then explore gardens and bird colonies on the Rock. Ferries leave from Pier 33.",
+  "url": "https://www.nps.gov/alca/",
+  "venue": {
+   "name": "Alcatraz Landing, Pier 33",
+   "address": "Pier 33, The Embarcadero, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8076,
+   "lng": -122.4053
+  },
+  "cats": [
+   "learning",
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "mixed"
+  },
+  "price": "Ferry ticket required",
+  "schedule": "Daily; book ahead",
+  "tip": "Night tours sell out weeks ahead and are the most atmospheric."
+ },
+ {
+  "title": "Coit Tower & Telegraph Hill",
+  "description": "Climb to Coit Tower for New Deal-era murals and panoramic views, then take the Filbert Steps down through hidden gardens (listen for the wild parrots).",
+  "url": "https://sfrecpark.org/",
+  "venue": {
+   "name": "Coit Tower",
+   "address": "1 Telegraph Hill Blvd, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8024,
+   "lng": -122.4058
+  },
+  "cats": [
+   "outdoors",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "mixed",
+   "date": true
+  },
+  "price": "Free grounds; elevator fee",
+  "schedule": "Daily",
+  "tip": "Walk up via the Greenwich or Filbert Steps instead of driving."
+ },
+ {
+  "title": "Mission Dolores Park",
+  "description": "SF's sunniest social scene: picnic lawns, skyline views, a big playground and peak people-watching — usually warm when the west side is fogged in.",
+  "url": "https://sfrecpark.org/",
+  "venue": {
+   "name": "Mission Dolores Park",
+   "address": "Dolores St & 19th St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7596,
+   "lng": -122.4269
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "fog": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Grab burritos or Bi-Rite ice cream on the way."
+ },
+ {
+  "title": "Alamo Square & the Painted Ladies",
+  "description": "Picnic on the hill facing the famous row of Victorian houses with the downtown skyline behind — a quintessential SF postcard moment.",
+  "url": "https://sfrecpark.org/",
+  "venue": {
+   "name": "Alamo Square Park",
+   "address": "Steiner St & Hayes St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7764,
+   "lng": -122.4346
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Golden hour makes the best photos."
+ },
+ {
+  "title": "Twin Peaks Summit",
+  "description": "Two windswept hilltops near the geographic center of SF with sweeping views of downtown, the bay and both bridges.",
+  "url": "https://sfrecpark.org/",
+  "venue": {
+   "name": "Twin Peaks",
+   "address": "501 Twin Peaks Blvd, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7544,
+   "lng": -122.4477
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "setting": "outdoor",
+   "free": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Check for fog first — on a clear night the city lights are unreal."
+ },
+ {
+  "title": "Ride a Cable Car",
+  "description": "Hop on the Powell–Hyde line for clanging bells, steep hills and bay views on the way to Ghirardelli Square. A rolling National Historic Landmark.",
+  "url": "https://www.sfmta.com/getting-around/muni/cable-cars",
+  "venue": {
+   "name": "Powell & Market Cable Car Turnaround",
+   "address": "Powell St & Market St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7849,
+   "lng": -122.4078
+  },
+  "cats": [
+   "outdoors",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor"
+  },
+  "price": "Muni fare",
+  "schedule": "Daily",
+  "tip": "Board at the California St line for shorter lines."
+ },
+ {
+  "title": "Chinatown Walk from the Dragon Gate",
+  "description": "Wander the oldest Chinatown in North America: dim sum, tea shops, herbal pharmacies, temples and alleyway murals along Grant Ave and Stockton St.",
+  "url": "https://www.sftravel.com/",
+  "venue": {
+   "name": "Dragon Gate",
+   "address": "Grant Ave & Bush St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7906,
+   "lng": -122.4058
+  },
+  "cats": [
+   "food-drink",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true
+  },
+  "price": "Free to wander",
+  "schedule": "Daily",
+  "tip": "Watch fortune cookies being folded at the Golden Gate Fortune Cookie Factory on Ross Alley."
+ },
+ {
+  "title": "Castro Theatre",
+  "description": "The landmark 1922 movie palace, restored and reopened, now hosting film series, concerts and comedy beneath its grand ceiling.",
+  "url": "https://www.castrotheatre.com/",
+  "venue": {
+   "name": "Castro Theatre",
+   "address": "429 Castro St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7621,
+   "lng": -122.435
+  },
+  "cats": [
+   "film",
+   "live-music"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Check calendar",
+  "tip": "Check the calendar for sing-alongs and classic film nights."
+ },
+ {
+  "title": "Roxie Theater",
+  "description": "One of the oldest continuously operating cinemas in the country, screening indie, documentary and cult films in the Mission.",
+  "url": "https://roxie.com/",
+  "venue": {
+   "name": "Roxie Theater",
+   "address": "3117 16th St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.765,
+   "lng": -122.4224
+  },
+  "cats": [
+   "film"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Daily screenings",
+  "tip": "Pair a late show with tacos on Valencia."
+ },
+ {
+  "title": "The Fillmore",
+  "description": "The legendary rock hall where the '60s psychedelic scene was born. Still one of the best rooms in the country to catch a touring act — grab a free poster on sold-out nights.",
+  "url": "https://www.thefillmore.com/",
+  "venue": {
+   "name": "The Fillmore",
+   "address": "1805 Geary Blvd, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.784,
+   "lng": -122.433
+  },
+  "cats": [
+   "live-music",
+   "nightlife"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "nightlife": true,
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Show nights",
+  "tip": "Don't skip the apple bucket by the door."
+ },
+ {
+  "title": "San Francisco Symphony at Davies Symphony Hall",
+  "description": "World-class orchestra performances, film-with-live-orchestra nights and holiday concerts at Davies Symphony Hall in Civic Center.",
+  "url": "https://www.sfsymphony.org/",
+  "venue": {
+   "name": "Davies Symphony Hall",
+   "address": "201 Van Ness Ave, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7777,
+   "lng": -122.4205
+  },
+  "cats": [
+   "live-music",
+   "theater"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Season performances",
+  "tip": "Look for rush and under-40 ticket deals."
+ },
+ {
+  "title": "Punch Line Comedy Club",
+  "description": "A cozy, long-running Financial District club where big names test new material and rising comics cut their teeth.",
+  "url": "https://www.punchlinecomedyclub.com/",
+  "venue": {
+   "name": "Punch Line San Francisco",
+   "address": "444 Battery St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7951,
+   "lng": -122.4004
+  },
+  "cats": [
+   "comedy",
+   "nightlife"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "nightlife": true,
+   "date": true,
+   "adult": true
+  },
+  "price": "Ticketed (21+ or 18+ depending on show)",
+  "schedule": "Most nights",
+  "tip": "Weeknight showcases are cheap and often have surprise headliners."
+ },
+ {
+  "title": "Smuggler's Cove",
+  "description": "A three-level, shipwreck-themed tiki bar with one of the deepest rum collections anywhere. Dangerous in the best way.",
+  "url": "https://www.smugglerscovesf.com/",
+  "venue": {
+   "name": "Smuggler's Cove",
+   "address": "650 Gough St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7795,
+   "lng": -122.4234
+  },
+  "cats": [
+   "nightlife",
+   "food-drink"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "nightlife": true,
+   "adult": true,
+   "date": true
+  },
+  "price": "$$",
+  "schedule": "Nightly (21+)",
+  "tip": "Arrive right at opening to skip the line."
+ },
+ {
+  "title": "Bourbon & Branch",
+  "description": "A Prohibition-style speakeasy behind an unmarked door in the Tenderloin — you'll need the password (and ideally a reservation).",
+  "url": "https://www.bourbonandbranch.com/",
+  "venue": {
+   "name": "Bourbon & Branch",
+   "address": "501 Jones St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7863,
+   "lng": -122.4134
+  },
+  "cats": [
+   "nightlife",
+   "food-drink"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "nightlife": true,
+   "adult": true,
+   "date": true
+  },
+  "price": "$$$",
+  "schedule": "Nightly (21+)",
+  "tip": "Book the library room for a date night."
+ },
+ {
+  "title": "The Midway",
+  "description": "A Dogpatch creative complex with multiple rooms for dance parties, immersive art, live shows and late-night DJ sets.",
+  "url": "https://themidwaysf.com/",
+  "venue": {
+   "name": "The Midway",
+   "address": "900 Marin St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7486,
+   "lng": -122.3876
+  },
+  "cats": [
+   "nightlife",
+   "arts"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "nightlife": true,
+   "adult": true
+  },
+  "price": "Ticketed",
+  "schedule": "Event nights",
+  "tip": "Check the calendar — themed parties sell out."
+ },
+ {
+  "title": "Golden State Warriors at Chase Center",
+  "description": "Catch the Warriors (and the WNBA's Valkyries) at Chase Center in Mission Bay, plus big concerts and the surrounding Thrive City plaza.",
+  "url": "https://www.chasecenter.com/",
+  "venue": {
+   "name": "Chase Center",
+   "address": "1 Warriors Way, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.768,
+   "lng": -122.3877
+  },
+  "cats": [
+   "sports",
+   "live-music"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor"
+  },
+  "price": "Ticketed",
+  "schedule": "Game & show days",
+  "tip": "Thrive City hosts free outdoor watch parties on some game days."
+ },
+ {
+  "title": "San Francisco Giants at Oracle Park",
+  "description": "Baseball with the best view in the majors: garlic fries, kayakers in McCovey Cove and the bay glittering past right field.",
+  "url": "https://www.mlb.com/giants",
+  "venue": {
+   "name": "Oracle Park",
+   "address": "24 Willie Mays Plaza, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7786,
+   "lng": -122.3893
+  },
+  "cats": [
+   "sports"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor"
+  },
+  "price": "Ticketed",
+  "schedule": "Home games (spring–fall)",
+  "tip": "Bring a jacket — evening games get cold fast."
+ },
+ {
+  "title": "Japantown & Japan Center Malls",
+  "description": "Ramen, mochi, Japanese bookstores, photo booths and Peace Pagoda in one of only three remaining Japantowns in the U.S.",
+  "url": "https://www.sfjapantown.org/",
+  "venue": {
+   "name": "Japan Center",
+   "address": "1737 Post St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7853,
+   "lng": -122.4294
+  },
+  "cats": [
+   "food-drink",
+   "markets"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "rainy": true,
+   "free": true
+  },
+  "price": "Free to browse",
+  "schedule": "Daily",
+  "tip": "The indoor malls make it a great rainy-day food crawl."
+ },
+ {
+  "title": "Balmy Alley Murals",
+  "description": "A block-long outdoor gallery of vivid murals in the Mission, many tied to Central American history and community struggles.",
+  "url": "https://precitaeyes.org/",
+  "venue": {
+   "name": "Balmy Alley",
+   "address": "Balmy St & 24th St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.752,
+   "lng": -122.4123
+  },
+  "cats": [
+   "arts",
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "fog": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Precita Eyes offers guided mural walks on weekends."
+ },
+ {
+  "title": "Pier 39 Sea Lions",
+  "description": "Hundreds of barking California sea lions lounging on the K-Dock floats — free, loud and guaranteed to delight kids.",
+  "url": "https://www.pier39.com/",
+  "venue": {
+   "name": "Pier 39",
+   "address": "Beach St & The Embarcadero, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8087,
+   "lng": -122.4098
+  },
+  "cats": [
+   "family",
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Numbers peak in fall and winter."
+ },
+ {
+  "title": "Aquarium of the Bay",
+  "description": "Walk through clear tunnels as sharks, rays and local fish glide overhead — a compact aquarium focused on San Francisco Bay wildlife.",
+  "url": "https://www.aquariumofthebay.org/",
+  "venue": {
+   "name": "Aquarium of the Bay, Pier 39",
+   "address": "2 Beach St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8087,
+   "lng": -122.4094
+  },
+  "cats": [
+   "family",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "hot": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily",
+  "tip": "Pair with the sea lions next door."
+ },
+ {
+  "title": "Children's Creativity Museum",
+  "description": "Hands-on studios for kids to make claymation films, music videos and inventions, next to the historic carousel in Yerba Buena Gardens.",
+  "url": "https://creativity.org/",
+  "venue": {
+   "name": "Children's Creativity Museum",
+   "address": "221 4th St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7837,
+   "lng": -122.4022
+  },
+  "cats": [
+   "family",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor"
+  },
+  "price": "Paid admission",
+  "schedule": "Check site for hours",
+  "tip": "Ride the 1906 Looff carousel out front."
+ },
+ {
+  "title": "San Francisco Zoo & Gardens",
+  "description": "Lemurs, grizzlies, penguins and a lovingly restored carousel and little puffer steam train near Ocean Beach.",
+  "url": "https://www.sfzoo.org/",
+  "venue": {
+   "name": "San Francisco Zoo",
+   "address": "Sloat Blvd & Great Hwy, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.733,
+   "lng": -122.503
+  },
+  "cats": [
+   "family",
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "hot": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily",
+  "tip": "It stays cool here even on hot days thanks to the ocean breeze."
+ },
+ {
+  "title": "Mission Cliffs Climbing Gym",
+  "description": "A huge indoor climbing gym with ropes, bouldering, yoga and fitness — a great rainy-day workout or first-climb date.",
+  "url": "https://touchstoneclimbing.com/mission-cliffs/",
+  "venue": {
+   "name": "Mission Cliffs",
+   "address": "2295 Harrison St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7608,
+   "lng": -122.4127
+  },
+  "cats": [
+   "wellness",
+   "sports"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Day pass",
+  "schedule": "Daily",
+  "tip": "Intro classes include gear and belay basics."
+ },
+ {
+  "title": "Kabuki Springs & Spa",
+  "description": "Japanese-style communal baths with hot and cold plunges, steam and sauna in Japantown — the ultimate cozy reset on a drizzly day.",
+  "url": "https://kabukisprings.com/",
+  "venue": {
+   "name": "Kabuki Springs & Spa",
+   "address": "1750 Geary Blvd, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7853,
+   "lng": -122.4321
+  },
+  "cats": [
+   "wellness"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "rainy": true,
+   "date": true,
+   "adult": true
+  },
+  "price": "$$",
+  "schedule": "Daily; check co-ed and gender days",
+  "tip": "Reserve bath entry ahead on weekends."
+ },
+ {
+  "title": "Yerba Buena Gardens",
+  "description": "A downtown oasis of lawns, fountains and public art (including the MLK Jr. memorial waterfall), hosting free outdoor performances in warmer months.",
+  "url": "https://yerbabuenagardens.com/",
+  "venue": {
+   "name": "Yerba Buena Gardens",
+   "address": "750 Howard St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7849,
+   "lng": -122.4027
+  },
+  "cats": [
+   "outdoors",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "The rooftop playground and ice rink are on the Howard St side."
+ },
+ {
+  "title": "Baker Beach",
+  "description": "A mile of sand facing the Golden Gate Bridge with wildflower bluffs and the Batteries to Bluffs trail above.",
+  "url": "https://www.nps.gov/goga/planyourvisit/bakerbeach.htm",
+  "venue": {
+   "name": "Baker Beach",
+   "address": "1504 Pershing Dr, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7936,
+   "lng": -122.4837
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "The north end is clothing-optional — FYI for families."
+ },
+ {
+  "title": "Grace Cathedral",
+  "description": "A Gothic cathedral atop Nob Hill with stained glass, Keith Haring's altarpiece and indoor and outdoor labyrinths open to all.",
+  "url": "https://gracecathedral.org/",
+  "venue": {
+   "name": "Grace Cathedral",
+   "address": "1100 California St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7919,
+   "lng": -122.4134
+  },
+  "cats": [
+   "arts",
+   "wellness"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "rainy": true,
+   "free": true
+  },
+  "price": "Free to visit",
+  "schedule": "Daily",
+  "tip": "Walk the outdoor terrazzo labyrinth at sunset."
+ },
+ {
+  "title": "City Lights Booksellers",
+  "description": "The legendary Beat Generation bookstore and publisher in North Beach — browse poetry upstairs, then grab espresso next door.",
+  "url": "https://citylights.com/",
+  "venue": {
+   "name": "City Lights Booksellers",
+   "address": "261 Columbus Ave, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.7976,
+   "lng": -122.4065
+  },
+  "cats": [
+   "learning",
+   "arts"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "rainy": true,
+   "free": true,
+   "date": true
+  },
+  "price": "Free to browse",
+  "schedule": "Daily",
+  "tip": "Vesuvio Cafe across Jack Kerouac Alley is the classic follow-up."
+ },
+ {
+  "title": "The Walt Disney Family Museum",
+  "description": "An immersive museum of Walt Disney's life and the art of animation, inside historic barracks in the Presidio.",
+  "url": "https://www.waltdisney.org/",
+  "venue": {
+   "name": "The Walt Disney Family Museum",
+   "address": "104 Montgomery St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8014,
+   "lng": -122.4586
+  },
+  "cats": [
+   "arts",
+   "family",
+   "film"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor"
+  },
+  "price": "Paid admission",
+  "schedule": "Thursday–Sunday",
+  "tip": "Allow two hours — the galleries are deeper than you'd expect."
+ },
+ {
+  "title": "San Francisco Public Library – Main Library",
+  "description": "A free, five-story civic hub with storytimes, a huge kids' center, teen lab, exhibits and author talks.",
+  "url": "https://sfpl.org/",
+  "venue": {
+   "name": "SF Main Library",
+   "address": "100 Larkin St, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.779,
+   "lng": -122.4157
+  },
+  "cats": [
+   "learning",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "free": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Check the events calendar for free museum passes and workshops."
+ },
+ {
+  "title": "Golden Gate Bridge Walk",
+  "description": "Walk or bike across the 1.7-mile span for jaw-dropping views of the city, Alcatraz and the Marin Headlands.",
+  "url": "https://www.goldengate.org/",
+  "venue": {
+   "name": "Golden Gate Bridge Welcome Center",
+   "address": "Golden Gate Bridge Plaza, San Francisco, CA",
+   "city": "san-francisco",
+   "lat": 37.8078,
+   "lng": -122.475
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Daily (pedestrian hours vary)",
+  "tip": "Bikers use the west sidewalk on weekends — check before you go."
+ },
+ {
+  "title": "Lake Merritt Loop",
+  "description": "A 3.4-mile loop around Oakland's tidal lake with picnics, pedal boats, gardens and some of the best people-watching in the East Bay.",
+  "url": "https://www.oaklandca.gov/",
+  "venue": {
+   "name": "Lake Merritt",
+   "address": "Lakeside Dr, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.8027,
+   "lng": -122.2585
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "fog": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Rent a gondola or pedal boat at the Lake Merritt Boating Center."
+ },
+ {
+  "title": "Oakland Museum of California",
+  "description": "Art, history and natural sciences of California under one roof, with terraced rooftop gardens and lively community celebrations.",
+  "url": "https://museumca.org/",
+  "venue": {
+   "name": "Oakland Museum of California",
+   "address": "1000 Oak St, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.7987,
+   "lng": -122.2638
+  },
+  "cats": [
+   "arts",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor"
+  },
+  "price": "Paid admission",
+  "schedule": "Wednesday–Sunday",
+  "tip": "Its Día de los Muertos exhibit each fall is a Bay Area tradition."
+ },
+ {
+  "title": "Chabot Space & Science Center",
+  "description": "Hilltop planetarium, hands-on space exhibits and giant historic telescopes in the Oakland hills, with public telescope viewing on select evenings.",
+  "url": "https://chabotspace.org/",
+  "venue": {
+   "name": "Chabot Space & Science Center",
+   "address": "10000 Skyline Blvd, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.8186,
+   "lng": -122.181
+  },
+  "cats": [
+   "learning",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Paid admission",
+  "schedule": "Check site",
+  "tip": "Clear nights + telescopes = an epic date or family night."
+ },
+ {
+  "title": "Children's Fairyland",
+  "description": "A storybook theme park on Lake Merritt for little kids, with puppet shows, gentle rides and whimsical sets (said to have inspired Disneyland).",
+  "url": "https://fairyland.org/",
+  "venue": {
+   "name": "Children's Fairyland",
+   "address": "699 Bellevue Ave, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.809,
+   "lng": -122.2603
+  },
+  "cats": [
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "fog": true
+  },
+  "price": "Paid admission",
+  "schedule": "Check seasonal hours",
+  "tip": "Adults need a child with them to enter."
+ },
+ {
+  "title": "Oakland Zoo",
+  "description": "Animals in spacious habitats, a hilltop gondola with bay views and the California Trail exhibit of native wildlife.",
+  "url": "https://www.oaklandzoo.org/",
+  "venue": {
+   "name": "Oakland Zoo",
+   "address": "9777 Golf Links Rd, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.75,
+   "lng": -122.144
+  },
+  "cats": [
+   "family",
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "fog": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily",
+  "tip": "The gondola ride is worth it on a clear day."
+ },
+ {
+  "title": "Redwood Regional Park",
+  "description": "Shady second-growth redwood trails just minutes from downtown Oakland — the Stream Trail stays cool even on the hottest days.",
+  "url": "https://www.ebparks.org/parks/redwood",
+  "venue": {
+   "name": "Redwood Regional Park",
+   "address": "7867 Redwood Rd, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.813,
+   "lng": -122.165
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true
+  },
+  "price": "Free (parking fee at some lots)",
+  "schedule": "Daily",
+  "tip": "Start at Skyline Gate for an easier, mostly-downhill loop."
+ },
+ {
+  "title": "Tilden Regional Park",
+  "description": "Berkeley's backyard wilderness: a Little Farm, steam trains, a vintage carousel, botanic garden and Lake Anza for summer swims.",
+  "url": "https://www.ebparks.org/parks/tilden",
+  "venue": {
+   "name": "Tilden Regional Park",
+   "address": "2501 Grizzly Peak Blvd, Berkeley, CA",
+   "city": "berkeley",
+   "lat": 37.893,
+   "lng": -122.245
+  },
+  "cats": [
+   "outdoors",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true,
+   "fog": true
+  },
+  "price": "Free; small fees for rides",
+  "schedule": "Daily",
+  "tip": "Bring lettuce or celery for the Little Farm animals."
+ },
+ {
+  "title": "Lawrence Hall of Science",
+  "description": "UC Berkeley's hands-on science center with interactive exhibits, a planetarium and a hilltop plaza with sweeping bay views.",
+  "url": "https://lawrencehallofscience.org/",
+  "venue": {
+   "name": "Lawrence Hall of Science",
+   "address": "1 Centennial Dr, Berkeley, CA",
+   "city": "berkeley",
+   "lat": 37.8794,
+   "lng": -122.2463
+  },
+  "cats": [
+   "learning",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor"
+  },
+  "price": "Paid admission",
+  "schedule": "Check site",
+  "tip": "The view from the outdoor plaza alone is worth the drive."
+ },
+ {
+  "title": "UC Botanical Garden at Berkeley",
+  "description": "Thirty-four acres of plants from around the world in Strawberry Canyon, from cactus gardens to a redwood grove.",
+  "url": "https://botanicalgarden.berkeley.edu/",
+  "venue": {
+   "name": "UC Botanical Garden",
+   "address": "200 Centennial Dr, Berkeley, CA",
+   "city": "berkeley",
+   "lat": 37.875,
+   "lng": -122.239
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "date": true,
+   "fog": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily",
+  "tip": "Check for free admission days."
+ },
+ {
+  "title": "Fox Theater Oakland",
+  "description": "A dazzling 1928 movie palace turned concert hall in Uptown Oakland, hosting top touring bands and comedians.",
+  "url": "https://thefoxoakland.com/",
+  "venue": {
+   "name": "Fox Theater",
+   "address": "1807 Telegraph Ave, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.808,
+   "lng": -122.27
+  },
+  "cats": [
+   "live-music",
+   "nightlife"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "nightlife": true,
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Show nights",
+  "tip": "Uptown's bars and restaurants make easy pre-show stops."
+ },
+ {
+  "title": "Paramount Theatre Oakland",
+  "description": "An Art Deco masterpiece hosting the Oakland Symphony, concerts, comedy and classic-movie nights with an organ overture.",
+  "url": "https://www.paramounttheatre.com/",
+  "venue": {
+   "name": "Paramount Theatre",
+   "address": "2025 Broadway, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.8094,
+   "lng": -122.2685
+  },
+  "cats": [
+   "film",
+   "live-music",
+   "theater"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Check calendar",
+  "tip": "Join a docent-led building tour to see the Deco details up close."
+ },
+ {
+  "title": "Yoshi's Oakland",
+  "description": "A storied jazz club and Japanese restaurant at Jack London Square with intimate sets from jazz, soul, R&B and funk greats.",
+  "url": "https://yoshis.com/",
+  "venue": {
+   "name": "Yoshi's",
+   "address": "510 Embarcadero West, Oakland, CA",
+   "city": "oakland",
+   "lat": 37.795,
+   "lng": -122.278
+  },
+  "cats": [
+   "live-music",
+   "food-drink",
+   "nightlife"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "nightlife": true,
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Most nights",
+  "tip": "Dinner reservations get you better seats."
+ },
+ {
+  "title": "Freight & Salvage",
+  "description": "Berkeley's nonprofit home for folk, bluegrass, blues and world music in a warm, all-ages listening room.",
+  "url": "https://thefreight.org/",
+  "venue": {
+   "name": "Freight & Salvage",
+   "address": "2020 Addison St, Berkeley, CA",
+   "city": "berkeley",
+   "lat": 37.871,
+   "lng": -122.27
+  },
+  "cats": [
+   "live-music"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "kids": false,
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Most nights",
+  "tip": "Steps from Downtown Berkeley BART."
+ },
+ {
+  "title": "Berkeley Repertory Theatre",
+  "description": "Tony Award-winning regional theater premiering bold new plays and musicals, many of which head to Broadway.",
+  "url": "https://www.berkeleyrep.org/",
+  "venue": {
+   "name": "Berkeley Rep",
+   "address": "2025 Addison St, Berkeley, CA",
+   "city": "berkeley",
+   "lat": 37.871,
+   "lng": -122.2687
+  },
+  "cats": [
+   "theater"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true
+  },
+  "price": "Ticketed",
+  "schedule": "Season performances",
+  "tip": "Under-30 discounts are generous."
+ },
+ {
+  "title": "USS Hornet Sea, Air & Space Museum",
+  "description": "Explore a WWII aircraft carrier that recovered the Apollo 11 astronauts — flight deck, hangar bays and vintage aircraft.",
+  "url": "https://uss-hornet.org/",
+  "venue": {
+   "name": "USS Hornet",
+   "address": "707 W Hornet Ave, Alameda, CA",
+   "city": "alameda",
+   "lat": 37.7726,
+   "lng": -122.302
+  },
+  "cats": [
+   "learning",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "rainy": true
+  },
+  "price": "Paid admission",
+  "schedule": "Check site",
+  "tip": "Kids love the flight simulators."
+ },
+ {
+  "title": "Crown Memorial State Beach",
+  "description": "Alameda's calm, shallow bay beach — warm-water wading, sandcastles and bike paths, with the Crab Cove visitor center nearby.",
+  "url": "https://www.ebparks.org/parks/crown-beach",
+  "venue": {
+   "name": "Crown Memorial State Beach",
+   "address": "8th St & Otis Dr, Alameda, CA",
+   "city": "alameda",
+   "lat": 37.764,
+   "lng": -122.264
+  },
+  "cats": [
+   "outdoors",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true,
+   "fog": true
+  },
+  "price": "Free (parking fee)",
+  "schedule": "Daily",
+  "tip": "Low tide at Crab Cove reveals tide-pool critters."
+ },
+ {
+  "title": "Mount Diablo State Park",
+  "description": "Climb (or drive) to a 3,849-ft summit with one of the widest views in North America. The sunny-side escape when the coast is fogged in.",
+  "url": "https://www.parks.ca.gov/?page_id=517",
+  "venue": {
+   "name": "Mount Diablo State Park",
+   "address": "96 Mitchell Canyon Rd, Clayton, CA",
+   "city": "walnut-creek",
+   "lat": 37.8816,
+   "lng": -121.9142
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "setting": "outdoor",
+   "fog": true,
+   "hot": false
+  },
+  "price": "Vehicle day-use fee",
+  "schedule": "Daily",
+  "tip": "Avoid midday hikes in summer — it gets hot."
+ },
+ {
+  "title": "Livermore Valley Wine Country",
+  "description": "One of California's oldest wine regions, with 50+ relaxed, uncrowded tasting rooms just over the hills from the East Bay.",
+  "url": "https://www.lvwine.org/",
+  "venue": {
+   "name": "Livermore Valley Wine Country",
+   "address": "Livermore, CA",
+   "city": "livermore",
+   "lat": 37.665,
+   "lng": -121.74
+  },
+  "cats": [
+   "food-drink"
+  ],
+  "flags": {
+   "setting": "outdoor",
+   "date": true,
+   "fog": true,
+   "adult": true
+  },
+  "price": "Tasting fees",
+  "schedule": "Most tasting rooms open daily",
+  "tip": "Way less crowded than Napa — and often sunnier."
+ },
+ {
+  "title": "Ardenwood Historic Farm",
+  "description": "A working 1890s farm in Fremont with farm animals, a horse-drawn train, Victorian house tours and seasonal harvest events.",
+  "url": "https://www.ebparks.org/parks/ardenwood",
+  "venue": {
+   "name": "Ardenwood Historic Farm",
+   "address": "34600 Ardenwood Blvd, Fremont, CA",
+   "city": "fremont",
+   "lat": 37.556,
+   "lng": -122.051
+  },
+  "cats": [
+   "family",
+   "outdoors",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "fog": true
+  },
+  "price": "Small admission fee",
+  "schedule": "Tuesday–Sunday",
+  "tip": "Fall brings a pumpkin patch and corn harvest."
+ },
+ {
+  "title": "Pillar Point Harbor & Half Moon Bay",
+  "description": "Watch fishing boats unload, eat fresh fish and chips, walk the harbor bluffs and peek at Mavericks surf break on the San Mateo coast.",
+  "url": "https://www.visithalfmoonbay.org/",
+  "venue": {
+   "name": "Pillar Point Harbor",
+   "address": "1 Johnson Pier, Half Moon Bay, CA",
+   "city": "half-moon-bay",
+   "lat": 37.502,
+   "lng": -122.481
+  },
+  "cats": [
+   "outdoors",
+   "food-drink"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Buy crab right off the boats in season."
+ },
+ {
+  "title": "Fitzgerald Marine Reserve Tide Pools",
+  "description": "Some of the richest tide pools in California: sea stars, anemones, crabs and harbor seals at low tide in Moss Beach.",
+  "url": "https://www.smcgov.org/parks/fitzgerald-marine-reserve",
+  "venue": {
+   "name": "Fitzgerald Marine Reserve",
+   "address": "200 Nevada Ave, Moss Beach, CA",
+   "city": "half-moon-bay",
+   "lat": 37.525,
+   "lng": -122.517
+  },
+  "cats": [
+   "outdoors",
+   "family",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true
+  },
+  "price": "Free",
+  "schedule": "Daily; go at low tide",
+  "tip": "Check a tide chart — aim for a minus tide."
+ },
+ {
+  "title": "CuriOdyssey",
+  "description": "A small, hands-on science museum and wildlife center at Coyote Point with rescued animals and bay views.",
+  "url": "https://curiodyssey.org/",
+  "venue": {
+   "name": "CuriOdyssey at Coyote Point",
+   "address": "1651 Coyote Point Dr, San Mateo, CA",
+   "city": "san-mateo",
+   "lat": 37.588,
+   "lng": -122.324
+  },
+  "cats": [
+   "family",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "mixed"
+  },
+  "price": "Paid admission",
+  "schedule": "Wednesday–Sunday",
+  "tip": "Combine with the Coyote Point playground next door."
+ },
+ {
+  "title": "Filoli Historic House & Garden",
+  "description": "A 1917 Georgian-style estate with 16 acres of formal gardens in Woodside — spectacular in tulip season and during the holidays.",
+  "url": "https://filoli.org/",
+  "venue": {
+   "name": "Filoli",
+   "address": "86 Cañada Rd, Woodside, CA",
+   "city": "woodside",
+   "lat": 37.47,
+   "lng": -122.311
+  },
+  "cats": [
+   "outdoors",
+   "arts"
+  ],
+  "flags": {
+   "setting": "outdoor",
+   "date": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily; timed tickets",
+  "tip": "The holiday light displays are magical."
+ },
+ {
+  "title": "Cantor Arts Center at Stanford",
+  "description": "A free museum with a 38,000-piece collection spanning 5,000 years, plus the Rodin Sculpture Garden outside.",
+  "url": "https://museum.stanford.edu/",
+  "venue": {
+   "name": "Cantor Arts Center",
+   "address": "328 Lomita Dr, Stanford, CA",
+   "city": "palo-alto",
+   "lat": 37.433,
+   "lng": -122.1704
+  },
+  "cats": [
+   "arts"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "free": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Wednesday–Sunday",
+  "tip": "Don't miss the Anderson Collection next door, also free."
+ },
+ {
+  "title": "Hiller Aviation Museum",
+  "description": "A century of flight at the San Carlos airport — vintage planes, a 747 cockpit and flight simulators.",
+  "url": "https://www.hiller.org/",
+  "venue": {
+   "name": "Hiller Aviation Museum",
+   "address": "601 Skyway Rd, San Carlos, CA",
+   "city": "san-carlos",
+   "lat": 37.5145,
+   "lng": -122.251
+  },
+  "cats": [
+   "learning",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "rainy": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily",
+  "tip": "Check for special 'Open Cockpit' days."
+ },
+ {
+  "title": "Mori Point",
+  "description": "A short, dramatic coastal trail in Pacifica with wildflowers, endangered frog ponds and big ocean views.",
+  "url": "https://www.nps.gov/goga/planyourvisit/moripoint.htm",
+  "venue": {
+   "name": "Mori Point",
+   "address": "Mori Point Rd, Pacifica, CA",
+   "city": "pacifica",
+   "lat": 37.617,
+   "lng": -122.49
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Pair it with a walk on Pacifica Pier or a stop at Linda Mar Beach."
+ },
+ {
+  "title": "Winchester Mystery House",
+  "description": "Sarah Winchester's sprawling, eccentric mansion with stairs to nowhere and doors that open onto walls — extra spooky in October.",
+  "url": "https://winchestermysteryhouse.com/",
+  "venue": {
+   "name": "Winchester Mystery House",
+   "address": "525 S Winchester Blvd, San Jose, CA",
+   "city": "san-jose",
+   "lat": 37.3184,
+   "lng": -121.9511
+  },
+  "cats": [
+   "learning",
+   "festivals"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "rainy": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily",
+  "tip": "Flashlight tours run on select nights."
+ },
+ {
+  "title": "The Tech Interactive",
+  "description": "A hands-on science and technology center in downtown San Jose: design a robot, explore bioengineering and catch an IMAX dome film.",
+  "url": "https://www.thetech.org/",
+  "venue": {
+   "name": "The Tech Interactive",
+   "address": "201 S Market St, San Jose, CA",
+   "city": "san-jose",
+   "lat": 37.3316,
+   "lng": -121.8901
+  },
+  "cats": [
+   "learning",
+   "family",
+   "tech"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "hot": true
+  },
+  "price": "Paid admission",
+  "schedule": "Daily",
+  "tip": "Great air-conditioned escape on a hot South Bay day."
+ },
+ {
+  "title": "Computer History Museum",
+  "description": "The world's leading museum of computing history, from ancient calculators to the first Google server rack, in Mountain View.",
+  "url": "https://computerhistory.org/",
+  "venue": {
+   "name": "Computer History Museum",
+   "address": "1401 N Shoreline Blvd, Mountain View, CA",
+   "city": "mountain-view",
+   "lat": 37.4143,
+   "lng": -122.0774
+  },
+  "cats": [
+   "tech",
+   "learning"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "hot": true
+  },
+  "price": "Paid admission",
+  "schedule": "Wednesday–Sunday",
+  "tip": "Catch the working Babbage Difference Engine demo if it's running."
+ },
+ {
+  "title": "Children's Discovery Museum of San Jose",
+  "description": "A big purple museum packed with water play, a mammoth exhibit and hands-on zones for toddlers through tweens.",
+  "url": "https://www.cdm.org/",
+  "venue": {
+   "name": "Children's Discovery Museum",
+   "address": "180 Woz Way, San Jose, CA",
+   "city": "san-jose",
+   "lat": 37.3268,
+   "lng": -121.892
+  },
+  "cats": [
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "hot": true,
+   "rainy": true
+  },
+  "price": "Paid admission",
+  "schedule": "Wednesday–Sunday",
+  "tip": "Bring a change of clothes for the water exhibit."
+ },
+ {
+  "title": "San Pedro Square Market",
+  "description": "An indoor-outdoor food hall in downtown San Jose with dozens of vendors, beer, live music and game-day crowds.",
+  "url": "https://sanpedrosquaremarket.com/",
+  "venue": {
+   "name": "San Pedro Square Market",
+   "address": "87 N San Pedro St, San Jose, CA",
+   "city": "san-jose",
+   "lat": 37.3363,
+   "lng": -121.8945
+  },
+  "cats": [
+   "food-drink",
+   "nightlife"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "mixed",
+   "fog": true
+  },
+  "price": "$",
+  "schedule": "Daily",
+  "tip": "Busy before Sharks games at SAP Center."
+ },
+ {
+  "title": "Santana Row",
+  "description": "A European-style outdoor shopping and dining district with patios, fire pits, a cinema and seasonal ice skating.",
+  "url": "https://www.santanarow.com/",
+  "venue": {
+   "name": "Santana Row",
+   "address": "377 Santana Row, San Jose, CA",
+   "city": "san-jose",
+   "lat": 37.321,
+   "lng": -121.9479
+  },
+  "cats": [
+   "markets",
+   "food-drink"
+  ],
+  "flags": {
+   "setting": "outdoor",
+   "date": true,
+   "fog": true,
+   "free": true
+  },
+  "price": "Free to stroll",
+  "schedule": "Daily",
+  "tip": "Evenings are lively — great for a dinner date."
+ },
+ {
+  "title": "Shoreline Lake & Park",
+  "description": "Rent sailboats, kayaks or paddleboards on a breezy saltwater lake in Mountain View, with bayside trails and birding.",
+  "url": "https://www.mountainview.gov/",
+  "venue": {
+   "name": "Shoreline Lake",
+   "address": "3160 N Shoreline Blvd, Mountain View, CA",
+   "city": "mountain-view",
+   "lat": 37.432,
+   "lng": -122.087
+  },
+  "cats": [
+   "outdoors",
+   "sports"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "hot": true,
+   "fog": true
+  },
+  "price": "Free park; rental fees",
+  "schedule": "Daily",
+  "tip": "Afternoon winds are great for sailing lessons."
+ },
+ {
+  "title": "Japanese Friendship Garden San Jose",
+  "description": "A peaceful, free Japanese-style garden in Kelley Park with koi ponds, bridges and waterfalls.",
+  "url": "https://www.sanjoseca.gov/",
+  "venue": {
+   "name": "Japanese Friendship Garden, Kelley Park",
+   "address": "1300 Senter Rd, San Jose, CA",
+   "city": "san-jose",
+   "lat": 37.3258,
+   "lng": -121.861
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "fog": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "History Park is right next door."
+ },
+ {
+  "title": "Hakone Estate & Gardens",
+  "description": "One of the oldest Japanese gardens in the Western Hemisphere, tucked into the Saratoga hills with tea ceremonies and moon viewing events.",
+  "url": "https://www.hakone.com/",
+  "venue": {
+   "name": "Hakone Gardens",
+   "address": "21000 Big Basin Way, Saratoga, CA",
+   "city": "saratoga",
+   "lat": 37.2533,
+   "lng": -122.042
+  },
+  "cats": [
+   "outdoors",
+   "arts"
+  ],
+  "flags": {
+   "setting": "outdoor",
+   "date": true,
+   "fog": true
+  },
+  "price": "Paid admission",
+  "schedule": "Check site",
+  "tip": "Pair with lunch in Saratoga Village."
+ },
+ {
+  "title": "California's Great America",
+  "description": "Roller coasters, a water park in summer and spooky Halloween Haunt nights in the fall, in Santa Clara.",
+  "url": "https://www.cagreatamerica.com/",
+  "venue": {
+   "name": "California's Great America",
+   "address": "4701 Great America Pkwy, Santa Clara, CA",
+   "city": "santa-clara",
+   "lat": 37.3979,
+   "lng": -121.974
+  },
+  "cats": [
+   "family",
+   "festivals"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "hot": true
+  },
+  "price": "Ticketed",
+  "schedule": "Seasonal; check calendar",
+  "tip": "Weekday visits mean much shorter lines."
+ },
+ {
+  "title": "Rancho San Antonio Preserve",
+  "description": "Miles of oak-studded foothill trails plus Deer Hollow Farm, beloved by South Bay hikers and kids alike.",
+  "url": "https://www.openspace.org/preserves/rancho-san-antonio",
+  "venue": {
+   "name": "Rancho San Antonio",
+   "address": "22500 Cristo Rey Dr, Cupertino, CA",
+   "city": "cupertino",
+   "lat": 37.333,
+   "lng": -122.087
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "fog": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Lots fill early on weekends — arrive before 9am."
+ },
+ {
+  "title": "San Francisco 49ers at Levi's Stadium",
+  "description": "NFL game days, mega-concerts and big events at Levi's Stadium in Santa Clara.",
+  "url": "https://www.levisstadium.com/",
+  "venue": {
+   "name": "Levi's Stadium",
+   "address": "4900 Marie P DeBartolo Way, Santa Clara, CA",
+   "city": "santa-clara",
+   "lat": 37.403,
+   "lng": -121.97
+  },
+  "cats": [
+   "sports",
+   "live-music"
+  ],
+  "flags": {
+   "setting": "outdoor"
+  },
+  "price": "Ticketed",
+  "schedule": "Game & event days",
+  "tip": "Take VTA light rail or Caltrain + shuttle to skip parking."
+ },
+ {
+  "title": "San Jose Sharks at SAP Center",
+  "description": "NHL hockey in 'The Shark Tank,' one of the loudest arenas in the league, plus concerts and family shows.",
+  "url": "https://www.sapcenter.com/",
+  "venue": {
+   "name": "SAP Center",
+   "address": "525 W Santa Clara St, San Jose, CA",
+   "city": "san-jose",
+   "lat": 37.3327,
+   "lng": -121.901
+  },
+  "cats": [
+   "sports"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor"
+  },
+  "price": "Ticketed",
+  "schedule": "Game & event days",
+  "tip": "Diridon Caltrain station is across the street."
+ },
+ {
+  "title": "Muir Woods National Monument",
+  "description": "Walk among towering old-growth coast redwoods in a cool, hushed canyon just north of the Golden Gate. Parking or shuttle reservations required.",
+  "url": "https://www.nps.gov/muwo/",
+  "venue": {
+   "name": "Muir Woods",
+   "address": "1 Muir Woods Rd, Mill Valley, CA",
+   "city": "mill-valley",
+   "lat": 37.897,
+   "lng": -122.5811
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "hot": true
+  },
+  "price": "Entry fee + reservation",
+  "schedule": "Daily",
+  "tip": "Reserve parking ahead — you can't just show up."
+ },
+ {
+  "title": "Sausalito Waterfront",
+  "description": "Stroll Bridgeway's galleries and cafés, gaze back at the SF skyline and peek at the colorful houseboat community. Arrive by ferry for the full experience.",
+  "url": "https://www.sausalito.gov/",
+  "venue": {
+   "name": "Downtown Sausalito",
+   "address": "Bridgeway, Sausalito, CA",
+   "city": "sausalito",
+   "lat": 37.859,
+   "lng": -122.485
+  },
+  "cats": [
+   "outdoors",
+   "food-drink",
+   "arts"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "date": true,
+   "hot": true
+  },
+  "price": "Free to stroll",
+  "schedule": "Daily",
+  "tip": "Take the Golden Gate Ferry from the Ferry Building."
+ },
+ {
+  "title": "Point Reyes National Seashore",
+  "description": "Wild beaches, elk herds, a cliffside lighthouse and seasonal whale watching across 70,000+ acres on the Marin coast.",
+  "url": "https://www.nps.gov/pore/",
+  "venue": {
+   "name": "Point Reyes National Seashore",
+   "address": "1 Bear Valley Rd, Point Reyes Station, CA",
+   "city": "point-reyes-station",
+   "lat": 38.04,
+   "lng": -122.8
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Grab picnic supplies in Point Reyes Station first."
+ },
+ {
+  "title": "Stinson Beach",
+  "description": "A long, sandy Marin beach reached by a twisty coastal drive — the classic Bay Area summer beach day.",
+  "url": "https://www.nps.gov/goga/planyourvisit/stinson-beach.htm",
+  "venue": {
+   "name": "Stinson Beach",
+   "address": "Hwy 1, Stinson Beach, CA",
+   "city": "stinson-beach",
+   "lat": 37.9005,
+   "lng": -122.6444
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "hot": true,
+   "date": true
+  },
+  "price": "Free",
+  "schedule": "Daily",
+  "tip": "Go early on hot weekends — Hwy 1 traffic backs up."
+ },
+ {
+  "title": "Mount Tamalpais State Park",
+  "description": "Hike to East Peak for sunrise or sunset views over the whole Bay, or catch a summer show at the stone Mountain Theater.",
+  "url": "https://www.parks.ca.gov/?page_id=471",
+  "venue": {
+   "name": "Mount Tamalpais State Park",
+   "address": "3801 Panoramic Hwy, Mill Valley, CA",
+   "city": "mill-valley",
+   "lat": 37.9235,
+   "lng": -122.5965
+  },
+  "cats": [
+   "outdoors"
+  ],
+  "flags": {
+   "setting": "outdoor",
+   "date": true,
+   "fog": true
+  },
+  "price": "Day-use fee",
+  "schedule": "Daily",
+  "tip": "Above-the-fog sunsets here are unforgettable."
+ },
+ {
+  "title": "Bay Area Discovery Museum",
+  "description": "A sprawling children's museum at the foot of the Golden Gate Bridge with a tot spot, lookout cove and art studios for kids under 10.",
+  "url": "https://bayareadiscoverymuseum.org/",
+  "venue": {
+   "name": "Bay Area Discovery Museum",
+   "address": "557 McReynolds Rd, Sausalito, CA",
+   "city": "sausalito",
+   "lat": 37.835,
+   "lng": -122.477
+  },
+  "cats": [
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "mixed"
+  },
+  "price": "Paid admission",
+  "schedule": "Check site",
+  "tip": "Pack a picnic for the bridge-view lawn."
+ },
+ {
+  "title": "Marin Country Mart",
+  "description": "A breezy open-air market of shops, restaurants and a weekly farmers market at the Larkspur ferry terminal.",
+  "url": "https://marincountrymart.com/",
+  "venue": {
+   "name": "Marin Country Mart",
+   "address": "2257 Larkspur Landing Cir, Larkspur, CA",
+   "city": "larkspur",
+   "lat": 37.946,
+   "lng": -122.509
+  },
+  "cats": [
+   "markets",
+   "food-drink"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true
+  },
+  "price": "Free to browse",
+  "schedule": "Daily",
+  "tip": "Take the ferry from SF and walk right in."
+ },
+ {
+  "title": "Sonoma Plaza",
+  "description": "California's largest town plaza, ringed by tasting rooms, historic adobes, cafés and the Sonoma Mission — wine-country charm on foot.",
+  "url": "https://www.sonomavalley.com/",
+  "venue": {
+   "name": "Sonoma Plaza",
+   "address": "453 1st St E, Sonoma, CA",
+   "city": "sonoma",
+   "lat": 38.293,
+   "lng": -122.458
+  },
+  "cats": [
+   "food-drink",
+   "outdoors"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "free": true,
+   "date": true,
+   "fog": true
+  },
+  "price": "Free to stroll",
+  "schedule": "Daily",
+  "tip": "Tuesday evening farmers markets run in summer."
+ },
+ {
+  "title": "Napa Valley Wine Train",
+  "description": "Gourmet dining aboard restored vintage rail cars on a scenic ride through Napa Valley vineyards.",
+  "url": "https://www.winetrain.com/",
+  "venue": {
+   "name": "Napa Valley Wine Train",
+   "address": "1275 McKinstry St, Napa, CA",
+   "city": "napa",
+   "lat": 38.305,
+   "lng": -122.281
+  },
+  "cats": [
+   "food-drink"
+  ],
+  "flags": {
+   "setting": "indoor",
+   "date": true,
+   "adult": true,
+   "rainy": true
+  },
+  "price": "$$$",
+  "schedule": "Daily departures",
+  "tip": "Book a window table for the best vineyard views."
+ },
+ {
+  "title": "Oxbow Public Market",
+  "description": "A Napa food hall with oysters, tacos, coffee, spices and wine bars along the Napa River — an easy rainy-day wine-country stop.",
+  "url": "https://oxbowpublicmarket.com/",
+  "venue": {
+   "name": "Oxbow Public Market",
+   "address": "610 1st St, Napa, CA",
+   "city": "napa",
+   "lat": 38.301,
+   "lng": -122.281
+  },
+  "cats": [
+   "food-drink",
+   "markets"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "rainy": true,
+   "fog": true
+  },
+  "price": "$$",
+  "schedule": "Daily",
+  "tip": "Hog Island oysters by the river is the move."
+ },
+ {
+  "title": "Charles M. Schulz Museum",
+  "description": "A cheerful museum devoted to Peanuts creator Charles Schulz, with original strips, a Snoopy labyrinth and the ice arena next door.",
+  "url": "https://schulzmuseum.org/",
+  "venue": {
+   "name": "Charles M. Schulz Museum",
+   "address": "2301 Hardies Ln, Santa Rosa, CA",
+   "city": "santa-rosa",
+   "lat": 38.46,
+   "lng": -122.736
+  },
+  "cats": [
+   "arts",
+   "family"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "indoor",
+   "rainy": true,
+   "hot": true
+  },
+  "price": "Paid admission",
+  "schedule": "Check site",
+  "tip": "Skate at Snoopy's Home Ice across the street."
+ },
+ {
+  "title": "Six Flags Discovery Kingdom",
+  "description": "A combined theme park and animal park in Vallejo with coasters, marine shows and seasonal Fright Fest.",
+  "url": "https://www.sixflags.com/discoverykingdom",
+  "venue": {
+   "name": "Six Flags Discovery Kingdom",
+   "address": "1001 Fairgrounds Dr, Vallejo, CA",
+   "city": "vallejo",
+   "lat": 38.138,
+   "lng": -122.233
+  },
+  "cats": [
+   "family",
+   "festivals"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor"
+  },
+  "price": "Ticketed",
+  "schedule": "Seasonal; check calendar",
+  "tip": "Take the SF Bay Ferry to Vallejo for a car-free trip."
+ },
+ {
+  "title": "Angel Island State Park",
+  "description": "Ferry to the largest island in the bay for hiking, biking, picnics with 360° views and the moving Immigration Station museum.",
+  "url": "https://www.parks.ca.gov/?page_id=468",
+  "venue": {
+   "name": "Angel Island (Tiburon ferry)",
+   "address": "21 Main St, Tiburon, CA",
+   "city": "tiburon",
+   "lat": 37.873,
+   "lng": -122.4566
+  },
+  "cats": [
+   "outdoors",
+   "learning"
+  ],
+  "flags": {
+   "kids": true,
+   "setting": "outdoor",
+   "hot": true
+  },
+  "price": "Ferry fare",
+  "schedule": "Daily ferries (seasonal schedule)",
+  "tip": "Bikes are allowed on the ferry — ride the 5-mile perimeter road."
+ }
+]

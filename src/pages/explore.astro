@@ -1,0 +1,114 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, absolute } from '../lib/site.mjs';
+import { REGIONS, CITIES, NEIGHBORHOODS, CATEGORIES, VIBES, COUNTS } from '../lib/data.mjs';
+const whenOpts = [['any', 'Any time'], ['today', 'Today'], ['tonight', 'Tonight'], ['tomorrow', 'Tomorrow'], ['weekend', 'This weekend'], ['next-week', 'Next week'], ['next-weekend', 'Next weekend']];
+const mustHaves = [['kid-friendly', '👶 Kid-friendly'], ['nightlife', '🍸 Adult nightlife'], ['free', '🆓 Free'], ['near-bart', '🚇 Near BART']];
+const moods = [['hot-day', '☀️ Hot day'], ['rainy-day', '🌧️ Rainy day'], ['fog-escape', '🌫️ Fog escape'], ['date-night', '💘 Date night']];
+const cities = CITIES.filter((c) => (COUNTS.city[c.slug] || 0) > 0);
+const hoods = NEIGHBORHOODS.filter((n) => (COUNTS.hood[n.slug] || 0) > 0);
+const ld = [{ '@context': 'https://schema.org', '@type': 'WebPage', name: 'Explore Bay Area events', url: absolute('/explore/') }];
+---
+<Base title="Explore the Bay Area Events Map — Search by Neighborhood, Vibe & Date" description="Interactive map of Bay Area events and things to do. Filter by region, city, neighborhood, kid-friendly, nightlife, free, weather (hot or rainy day), genre and date — or just type what you’re in the mood for." path="/explore/" nav="explore" jsonld={ld} fullWidth>
+  <div class="explore" data-view="list" data-explore data-tiles={SITE.tiles} data-attr={SITE.tilesAttribution}>
+    <aside class="filters" data-collapsed="false" aria-label="Filters">
+      <div>
+        <h1 style="font-size:1.6rem;margin-bottom:6px">Explore the Bay 🗺️</h1>
+        <p class="muted" style="margin:0 0 10px;font-size:.92rem">Tap the map, pick a vibe, or just type what you want.</p>
+        <form data-smart role="search">
+          <label class="sr-only" for="sq">Search</label>
+          <input class="input" id="sq" name="q" type="search" placeholder="e.g. free kids stuff in Oakland Saturday" autocomplete="off" style="width:100%" />
+        </form>
+        <div class="parsed" data-parsed></div>
+      </div>
+      <div class="filter-body" style="display:grid;gap:18px">
+        <div>
+          <h2>📅 When</h2>
+          <div class="chips">{whenOpts.map(([v, l]) => <button type="button" class="chip" data-when={v} aria-pressed={v === 'any' ? 'true' : 'false'}>{l}</button>)}</div>
+          <label class="field" style="margin-top:8px"><span class="hint">…or pick a date</span><input class="input" type="date" data-date style="height:40px" /></label>
+        </div>
+        <div>
+          <h2>📍 Where</h2>
+          <div class="chips">
+            <button type="button" class="chip" data-region="" aria-pressed="true">All Bay</button>
+            {REGIONS.map((r) => <button type="button" class="chip" data-region={r.slug} aria-pressed="false">{r.emoji} {r.short}</button>)}
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+            <select class="input" data-city aria-label="City" style="height:40px">
+              <option value="">Any city</option>
+              {cities.map((c) => <option value={c.slug} data-region={c.region}>{c.name}</option>)}
+            </select>
+            <select class="input" data-hood aria-label="Neighborhood" style="height:40px">
+              <option value="">Any neighborhood</option>
+              {hoods.map((n) => <option value={n.slug} data-city={n.city}>{n.name}</option>)}
+            </select>
+          </div>
+        </div>
+        <div>
+          <h2>✅ Must-haves</h2>
+          <div class="toggle-row">{mustHaves.map(([v, l]) => <label class="toggle"><input type="checkbox" data-vibe={v} /> {l}</label>)}</div>
+        </div>
+        <div>
+          <h2>🌦️ Weather &amp; mood</h2>
+          <div class="chips">{moods.map(([v, l]) => <button type="button" class="chip" data-mood={v} aria-pressed="false">{l}</button>)}</div>
+          <p class="muted" data-wx-hint style="font-size:.82rem;margin:8px 0 0"></p>
+        </div>
+        <div>
+          <h2>🎭 Genre</h2>
+          <div class="chips">{CATEGORIES.map((c) => <button type="button" class="chip" data-cat={c.slug} aria-pressed="false">{c.emoji} {c.name}</button>)}</div>
+        </div>
+        <div style="display:grid;gap:8px">
+          <h2>💸 Budget</h2>
+          <select class="input" data-max aria-label="Budget" style="height:40px">
+            <option value="">Any price</option><option value="0">Free only</option><option value="20">Under $20</option><option value="50">Under $50</option><option value="100">Under $100</option>
+          </select>
+          <label class="toggle"><input type="checkbox" data-acts checked /> ⭐ Include always-open spots</label>
+          <button type="button" class="btn btn-ghost btn-sm" data-reset>Reset all filters</button>
+        </div>
+      </div>
+    </aside>
+
+    <section class="results" aria-live="polite">
+      <div class="results-head">
+        <div><strong data-count>Loading…</strong> <span class="muted" data-summary></span></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <div class="view-switch">
+            <button class="chip" type="button" data-view-btn="list" aria-pressed="true">☰ List</button>
+            <button class="chip" type="button" data-view-btn="map" aria-pressed="false">🗺️ Map</button>
+            <button class="chip" type="button" data-toggle-filters>⚙️ Filters</button>
+          </div>
+          <select class="input" data-sort aria-label="Sort" style="height:36px;flex:0 0 auto">
+            <option value="date">Soonest</option><option value="picks">Top picks</option><option value="near">Nearest to me</option>
+          </select>
+          <button class="btn btn-dark btn-sm" type="button" data-spin>🎰 Spin the Bay</button>
+        </div>
+      </div>
+      <div class="list">
+        <div class="grid" data-grid></div>
+        <div style="text-align:center;margin:24px 0"><button class="btn btn-ghost" type="button" data-more hidden>Show more</button></div>
+      </div>
+      <noscript><p>Turn on JavaScript to use the interactive map, or browse the <a href="/this-weekend/">weekend list</a> and <a href="/directory/">directory</a>.</p></noscript>
+    </section>
+
+    <div class="map-pane"><div id="map" role="region" aria-label="Map of events"></div></div>
+  </div>
+
+  <dialog class="spin" data-spin-dialog>
+    <div class="spin-inner">
+      <div class="eyebrow" style="justify-content:center">🎰 Spin the Bay</div>
+      <h2 style="font-size:1.4rem">Can’t decide? Let fate pick.</h2>
+      <div class="slot" data-slot>Ready?</div>
+      <p class="muted" data-slot-meta style="min-height:2.6em"></p>
+      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary" type="button" data-spin-again>Spin again</button>
+        <a class="btn btn-ghost" data-slot-link href="#">Let’s go →</a>
+        <button class="btn btn-ghost" type="button" data-spin-close>Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    import { initExplore } from '../scripts/explore.js';
+    initExplore();
+  </script>
+</Base>

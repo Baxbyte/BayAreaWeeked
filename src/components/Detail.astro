@@ -1,0 +1,162 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from './Card.astro';
+import Crumbs from './Crumbs.astro';
+import { SITE, link, absolute } from '../lib/site.mjs';
+import { EVENTS, ACTIVITIES, filterItems, collapseRepeats, W, cityBySlug, hoodBySlug, regionBySlug, categoryBySlug } from '../lib/data.mjs';
+import { emojiFor, hueFor, primaryCat } from '../lib/format.mjs';
+import { fmtLongDay, fmtTime, formatWhen } from '../lib/time.mjs';
+
+interface Props { item: any }
+const { item: i } = Astro.props;
+const city = cityBySlug[i.city];
+const region = regionBySlug[i.region];
+const hood = i.neighborhood ? hoodBySlug[i.neighborhood] : null;
+const cat = primaryCat(i);
+const isEvent = i.type === 'event';
+const where = hood ? `${hood.name}, ${city.name}` : city.name;
+const start = i.start ? new Date(i.start) : null;
+const end = i.end ? new Date(i.end) : null;
+const whenLong = start ? (i.allDay ? fmtLongDay.format(start) : `${fmtLongDay.format(start)} at ${fmtTime.format(start)}`) : i.schedule || 'Open regularly';
+const priceLabel = i.flags.free ? 'Free' : i.priceText || 'See official site';
+const crumbs: [string, string][] = region.slug === city.slug ? [[city.name, `/region/${region.slug}/`]] : [[region.name, `/region/${region.slug}/`], [city.name, `/city/${city.slug}/`]];
+if (hood) crumbs.push([hood.name, `/city/${city.slug}/${hood.slug}/`]);
+crumbs.push([i.title, i.path]);
+
+const typeMap = { 'live-music': 'MusicEvent', comedy: 'ComedyEvent', theater: 'TheaterEvent', festivals: 'Festival', 'food-drink': 'FoodEvent', sports: 'SportsEvent',
+  film: 'ScreeningEvent', arts: 'ExhibitionEvent', learning: 'EducationEvent', nightlife: 'SocialEvent', family: 'ChildrensEvent', wellness: 'Event', tech: 'BusinessEvent' };
+const place = {
+  '@type': 'Place', name: i.venue?.name || where,
+  address: { '@type': 'PostalAddress', streetAddress: i.venue?.address?.split(',')[0] || undefined, addressLocality: city.name, addressRegion: 'CA', addressCountry: 'US' },
+  geo: i.venue?.approx ? undefined : { '@type': 'GeoCoordinates', latitude: i.venue.lat, longitude: i.venue.lng },
+};
+const ld = isEvent ? {
+  '@context': 'https://schema.org', '@type': typeMap[i.categories[0]] || 'Event', name: i.title,
+  description: i.description || `${i.title} in ${where}.`, startDate: i.start, endDate: i.end || undefined,
+  eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: place, image: i.image ? [i.image] : [absolute('/og-default.png')], url: absolute(i.path),
+  isAccessibleForFree: i.flags.free || undefined,
+  typicalAgeRange: i.flags.adult ? '21-' : i.flags.kids ? '0-' : undefined,
+  offers: { '@type': 'Offer', url: i.ticketUrl || i.url || absolute(i.path), price: i.priceMin ?? (i.flags.free ? 0 : undefined), priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock', validFrom: i.firstSeen || undefined },
+  organizer: { '@type': 'Organization', name: i.organizer || i.sources?.[0]?.name || SITE.name, url: i.url || absolute('/') },
+  performer: i.categories.includes('live-music') ? { '@type': 'PerformingGroup', name: i.title.split(/[:@|–-]/)[0].trim() } : undefined,
+} : {
+  '@context': 'https://schema.org', '@type': 'TouristAttraction', name: i.title, description: i.description, url: absolute(i.path), sameAs: i.url || undefined,
+  address: place.address, geo: place.geo, image: i.image || undefined, isAccessibleForFree: i.flags.free || undefined, publicAccess: true,
+  touristType: i.flags.kids ? ['Families', 'Kids'] : undefined,
+};
+
+const summary = isEvent
+  ? `${i.title} is ${/^[aeiou]/i.test(cat.name) ? 'an' : 'a'} ${cat.name.toLowerCase()} event${i.venue?.name ? ` at ${i.venue.name}` : ''} in ${where} on ${whenLong}.`
+  : `${i.title} is one of our always-open picks in ${where} — ${cat.name.toLowerCase()} you can enjoy most days.`;
+
+const qa = [
+  { q: 'When is it?', a: isEvent ? `${whenLong}${end && !i.allDay ? ` until ${fmtTime.format(end)}` : ''}${i.moreDates ? '' : ''}.` : `${i.schedule || 'Open most days'} — check the official site for current hours.` },
+  { q: 'Where is it?', a: `${i.venue?.name ? `${i.venue.name}, ` : ''}${i.venue?.address && !i.venue.address.includes(city.name) ? `${i.venue.address}, ` : i.venue?.address ? `${i.venue.address} ` : ''}${where}${i.venue?.address?.includes(city.name) ? '' : ', CA'}.` },
+  { q: 'How much does it cost?', a: i.flags.free ? 'It’s free.' : i.priceText ? `${i.priceText}. Prices can change — confirm on the ticket page.` : 'Pricing isn’t listed — check the official page.' },
+  { q: 'Is it kid-friendly?', a: i.flags.adult ? 'No — this one is for adults (21+ or 18+).' : i.flags.kids ? 'Yes! It’s a good pick for families and kids.' : 'It’s not specifically aimed at kids; check with the organizer about age limits.' },
+  { q: 'Is it good for a rainy or hot day?', a: i.flags.rainy ? 'Yes — it’s indoors, so it works rain or shine.' : i.flags.hot ? 'It’s a nice way to beat the heat.' : i.flags.setting === 'outdoor' ? 'It’s outdoors, so check the forecast and dress in layers.' : 'Check the venue details for indoor/outdoor info.' },
+  { q: 'How do I get there?', a: i.flags.bart ? `Take BART — ${i.flags.bart} station is a short walk away.` : `It’s in ${where}. Use the map link for driving, transit or biking directions.` },
+];
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: qa.map((f) => ({ '@type': 'Question', name: f.q.replace(' it', ` ${i.title}`), acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+
+const pool = isEvent ? EVENTS : ACTIVITIES;
+const sameCity = collapseRepeats(filterItems(EVENTS, { city: i.city })).filter((x) => x.id !== i.id && x.title !== i.title).slice(0, 4);
+const sameCat = collapseRepeats(filterItems(pool, { category: i.categories[0], region: i.region })).filter((x) => x.id !== i.id && x.title !== i.title && !sameCity.includes(x)).slice(0, 4);
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i.venue?.approx ? `${i.venue?.name || ''} ${where}` : `${i.venue.lat},${i.venue.lng}`)}`;
+const gcal = start ? `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(i.title)}&dates=${start.toISOString().replace(/[-:]|\.\d{3}/g, '')}/${(end || new Date(+start + 2 * 3600000)).toISOString().replace(/[-:]|\.\d{3}/g, '')}&details=${encodeURIComponent(absolute(i.path))}&location=${encodeURIComponent([i.venue?.name, where].filter(Boolean).join(', '))}` : null;
+const desc = `${isEvent ? `${whenLong} · ` : ''}${i.venue?.name ? `${i.venue.name}, ` : ''}${where}. ${priceLabel}. ${(i.description || summary).slice(0, 110)}`.slice(0, 158);
+const seoTitle = isEvent ? `${i.title} — ${formatWhen(i).split(' · ')[0]}, ${city.name}` : `${i.title} — ${where}: Hours, Tips & Things to Know`;
+const save = JSON.stringify({ id: i.id, t: i.title, u: link(i.path), s: i.start, c: i.city, img: i.image });
+---
+<Base title={seoTitle} description={desc} path={i.path} image={i.image || undefined} jsonld={[ld, faqLd]} noindex={i.past} ogType={isEvent ? 'article' : 'website'}>
+  <div class="wrap">
+    <div style="padding-top:22px"><Crumbs items={crumbs} /></div>
+    {i.past && <div class="notice">This event has ended. <a href={link(`/city/${city.slug}/`)}>See what’s on in {city.name} this weekend →</a></div>}
+    {i.sponsor && <div class="notice" style="background:#fff4cc;color:#7a5b00">★ Sponsored listing{i.sponsor.deal ? ` · 🎟️ ${i.sponsor.deal.headline}${i.sponsor.deal.code ? ` with code ${i.sponsor.deal.code}` : ''}` : ''}</div>}
+    <div class="detail">
+      <article>
+        <div class="hero-media">
+          {i.image && <img src={i.image} alt={i.title} width="1200" height="675" loading="eager" referrerpolicy="no-referrer" onerror="this.remove()" style="position:relative;z-index:1" />}
+          <div class="art" style={`--h:${hueFor(i)}`} aria-hidden="true"><span>{emojiFor(i)}</span></div>
+        </div>
+        <div class="eyebrow" style="margin-top:22px">{cat.emoji} {cat.name} · {where}</div>
+        <h1 style="font-size:clamp(1.9rem,4.4vw,3rem)">{i.title}</h1>
+        <div class="chips" style="margin:6px 0 18px">
+          {i.categories.map((c) => <a class="chip" href={link(`/category/${c}/`)}>{categoryBySlug[c].emoji} {categoryBySlug[c].name}</a>)}
+          {i.flags.kids && <a class="chip" href={link('/kid-friendly/')}>👶 Kid-friendly</a>}
+          {i.flags.nightlife && <a class="chip" href={link('/nightlife/')}>🍸 Nightlife</a>}
+          {i.flags.free && <a class="chip" href={link('/free/')}>🆓 Free</a>}
+          {i.flags.rainy && <a class="chip" href={link('/rainy-day/')}>🌧️ Rainy-day pick</a>}
+          {i.flags.hot && <a class="chip" href={link('/hot-day/')}>☀️ Hot-day pick</a>}
+          {i.flags.fog && <a class="chip" href={link('/fog-escape/')}>🌫️ Fog escape</a>}
+          {i.flags.date && <a class="chip" href={link('/date-night/')}>💘 Date night</a>}
+          {i.flags.bart && <a class="chip" href={link('/near-bart/')}>🚇 Near {i.flags.bart}</a>}
+        </div>
+        <p class="lead">{summary}</p>
+        {i.description && (
+          <div class="prose">
+            <h2 style="font-size:1.15rem">{isEvent ? 'About this event' : 'Why go'}</h2>
+            <p>{i.description}</p>
+          </div>
+        )}
+        {i.tip && <div class="answer"><h2>Insider tip</h2><p>{i.tip}</p></div>}
+
+        <section class="section faq" aria-labelledby="gtk">
+          <h2 id="gtk" style="font-size:1.3rem">Good to know</h2>
+          {qa.map((f) => <details open><summary>{f.q}</summary><p>{f.a}</p></details>)}
+        </section>
+
+        <p class="muted" style="font-size:.88rem">
+          {isEvent ? 'Found via ' : 'Official site: '}
+          {i.sources.map((s, n) => <>{n > 0 && ', '}<a href={s.url || i.url} rel="nofollow noopener" target="_blank">{s.id === 'editors' ? new URL(i.url).hostname.replace('www.', '') : s.name}</a></>)}.
+          Details can change — please confirm with the organizer before you go.
+        </p>
+      </article>
+
+      <aside>
+        <div class="facts">
+          <dl>
+            <div><dt>{isEvent ? 'When' : 'Hours'}</dt><dd>{whenLong}{end && !i.allDay && isEvent ? ` – ${fmtTime.format(end)}` : ''}</dd></div>
+            <div><dt>Where</dt><dd>{i.venue?.name && <>{i.venue.name}<br /></>}<span class="muted">{i.venue?.address && i.venue.address !== i.venue.name ? i.venue.address : where}</span></dd></div>
+            <div><dt>Price</dt><dd>{priceLabel}</dd></div>
+            {i.flags.bart && <div><dt>Transit</dt><dd>🚇 {i.flags.bart} BART</dd></div>}
+          </dl>
+          <div style="display:grid;gap:8px">
+            {(i.ticketUrl || i.url) && <a class="btn btn-primary" href={i.sponsor?.deal?.url || i.ticketUrl || i.url} target="_blank" rel="noopener sponsored">{isEvent ? (i.flags.free ? 'RSVP / details' : 'Get tickets') : 'Official website'} ↗</a>}
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <button class="btn btn-ghost btn-sm" type="button" data-save={save} aria-pressed="false">❤️ Save</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-share={absolute(i.path)} data-title={i.title}>↗ Share</button>
+            </div>
+            {gcal && (
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+                <a class="btn btn-ghost btn-sm" href={gcal} target="_blank" rel="noopener">+ Google Cal</a>
+                <button class="btn btn-ghost btn-sm" type="button" data-ics={JSON.stringify({ t: i.title, s: i.start, e: i.end, ad: i.allDay, loc: [i.venue?.name, where].filter(Boolean).join(', '), u: absolute(i.path) })}>+ Apple/Outlook</button>
+              </div>
+            )}
+            <a class="btn btn-ghost btn-sm" href={mapsUrl} target="_blank" rel="noopener">🗺️ Directions</a>
+          </div>
+          <div class="mini-map" id="mini-map" data-lat={i.venue.lat} data-lng={i.venue.lng} data-emoji={emojiFor(i)} data-tiles={SITE.tiles} data-attr={SITE.tilesAttribution}></div>
+        </div>
+      </aside>
+    </div>
+
+    {sameCity.length > 0 && (
+      <section class="section">
+        <div class="section-head"><h2>More in {city.name}</h2><a href={link(`/city/${city.slug}/`)}>All {city.name} events →</a></div>
+        <div class="grid">{sameCity.map((x) => <Card item={x} />)}</div>
+      </section>
+    )}
+    {sameCat.length > 0 && (
+      <section class="section">
+        <div class="section-head"><h2>More {cat.name.toLowerCase()} in the {region.name}</h2><a href={link(`/region/${region.slug}/${cat.slug === 'nightlife' ? 'nightlife' : cat.slug}/`)}>See all →</a></div>
+        <div class="grid">{sameCat.map((x) => <Card item={x} />)}</div>
+      </section>
+    )}
+  </div>
+  <script>
+    import { initDetail } from '../scripts/detail.js';
+    initDetail();
+  </script>
+</Base>

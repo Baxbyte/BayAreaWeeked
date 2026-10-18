@@ -1,0 +1,14 @@
+{
+  "_readme": "Sponsored placements + ticket deals. Add a campaign to go live on the next daily build. Highest active bid per slot wins the top spot. See docs/SPONSORS.md and data/sponsors.example.json.",
+  "slots": [
+    { "id": "home-spotlight", "name": "Homepage Spotlight", "where": "Hero card on the homepage", "floorBid": 150, "maxWinners": 1 },
+    { "id": "weekend-top", "name": "This Weekend · Top of List", "where": "Top of This Weekend, Today and Tonight pages", "floorBid": 75, "maxWinners": 2 },
+    { "id": "region-top", "name": "Region & City Top Spot", "where": "Top of a region, city or neighborhood page you choose", "floorBid": 40, "maxWinners": 2 },
+    { "id": "vibe-top", "name": "Vibe Pages Top Spot", "where": "Kid-Friendly, Nightlife, Date Night, Hot Day, Rainy Day pages", "floorBid": 35, "maxWinners": 2 },
+    { "id": "category-top", "name": "Genre Top Spot", "where": "Top of a genre page (Live Music, Comedy, Food & Drink…)", "floorBid": 30, "maxWinners": 2 },
+    { "id": "explore-pin", "name": "Map Pin Boost", "where": "Highlighted golden pin + top result on the interactive map", "floorBid": 25, "maxWinners": 5 },
+    { "id": "deals-feature", "name": "Deals Page Feature", "where": "Featured card on the Deals page", "floorBid": 20, "maxWinners": 6 },
+    { "id": "email-feature", "name": "Daily Email Feature (coming in V2)", "where": "Featured slot in personalized daily emails", "floorBid": 50, "maxWinners": 1 }
+  ],
+  "campaigns": []
+}

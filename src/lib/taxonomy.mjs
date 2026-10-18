@@ -1,0 +1,68 @@
+// Categories ("genres") and "vibes" used for browsing, filtering and SEO hub pages.
+
+export const CATEGORIES = [
+  { slug: 'live-music', name: 'Live Music', emoji: '🎸', hue: 265,
+    words: ['concert', 'live music', 'band', 'jazz', 'blues', 'symphony', 'orchestra', 'opera', 'hip hop', 'hip-hop', 'rock', 'indie', 'punk', 'folk', 'bluegrass', 'singer', 'songwriter', 'acoustic', 'choir', 'tour', 'album release', 'quartet', 'recital', 'musicfest', 'music festival'] },
+  { slug: 'nightlife', name: 'Nightlife & DJs', emoji: '🪩', hue: 300,
+    words: ['dj', 'club', 'nightclub', 'dance party', 'rave', 'techno', 'house music', 'edm', 'disco', 'afterparty', 'after party', 'late night', 'bar crawl', 'pub crawl', 'karaoke', 'drag', 'burlesque', 'cabaret', 'lounge', 'happy hour', 'speakeasy'] },
+  { slug: 'comedy', name: 'Comedy', emoji: '😂', hue: 45,
+    words: ['comedy', 'comedian', 'stand-up', 'standup', 'stand up', 'improv', 'open mic', 'roast', 'sketch'] },
+  { slug: 'theater', name: 'Theater & Dance', emoji: '🎭', hue: 350,
+    words: ['theater', 'theatre', 'musical', 'play', 'ballet', 'dance performance', 'broadway', 'shakespeare', 'circus', 'magic show', 'performance', 'cirque', 'nutcracker'] },
+  { slug: 'arts', name: 'Art & Museums', emoji: '🎨', hue: 20,
+    words: ['art', 'museum', 'gallery', 'exhibit', 'exhibition', 'artist', 'painting', 'sculpture', 'photography', 'mural', 'art walk', 'open studio', 'installation', 'design'] },
+  { slug: 'film', name: 'Film', emoji: '🎬', hue: 210,
+    words: ['film', 'movie', 'cinema', 'screening', 'documentary', 'film festival', 'drive-in', 'premiere'] },
+  { slug: 'food-drink', name: 'Food & Drink', emoji: '🍜', hue: 30,
+    words: ['food', 'tasting', 'wine', 'beer', 'brewery', 'cocktail', 'dinner', 'brunch', 'chef', 'cooking', 'food truck', 'restaurant', 'coffee', 'oyster', 'bbq', 'taco', 'dumpling', 'pop-up', 'popup', 'winery', 'cider', 'sake', 'whiskey', 'mezcal'] },
+  { slug: 'markets', name: 'Markets & Shopping', emoji: '🛍️', hue: 140,
+    words: ['market', 'farmers market', 'flea', 'swap meet', 'craft fair', 'makers', 'vintage', 'bazaar', 'pop-up shop', 'night market', 'holiday market', 'sale', 'thrift'] },
+  { slug: 'festivals', name: 'Festivals & Fairs', emoji: '🎉', hue: 330,
+    words: ['festival', 'fest', 'fair', 'parade', 'street fair', 'block party', 'carnival', 'celebration', 'pride', 'lunar new year', 'dia de los muertos', 'day of the dead', 'oktoberfest', 'halloween', 'diwali'] },
+  { slug: 'outdoors', name: 'Outdoors & Nature', emoji: '🌲', hue: 120,
+    words: ['hike', 'hiking', 'trail', 'park', 'garden', 'nature', 'beach', 'kayak', 'paddle', 'bike', 'cycling', 'camping', 'birding', 'bird walk', 'tide pool', 'redwood', 'outdoor', 'picnic', 'stargazing', 'sail', 'whale watching', 'botanical'] },
+  { slug: 'sports', name: 'Sports & Games', emoji: '🏟️', hue: 0,
+    words: ['giants', 'warriors', '49ers', 'niners', 'sharks', 'valkyries', 'earthquakes', 'a\'s', 'game day', 'match', 'tournament', 'race', 'marathon', '5k', '10k', 'fun run', 'basketball', 'baseball', 'football', 'soccer', 'hockey', 'roller derby', 'wrestling', 'boxing', 'golf', 'esports'] },
+  { slug: 'wellness', name: 'Fitness & Wellness', emoji: '🧘', hue: 170,
+    words: ['yoga', 'meditation', 'fitness', 'workout', 'run club', 'running', 'pilates', 'sound bath', 'wellness', 'breathwork', 'spa', 'climbing', 'bouldering', 'dance class', 'zumba'] },
+  { slug: 'learning', name: 'Talks & Classes', emoji: '📚', hue: 225,
+    words: ['workshop', 'class', 'lecture', 'talk', 'panel', 'seminar', 'book', 'author', 'reading', 'library', 'lesson', 'course', 'discussion', 'poetry', 'science', 'history', 'conversation'] },
+  { slug: 'tech', name: 'Tech & Startups', emoji: '💻', hue: 190,
+    words: ['tech', 'startup', 'ai ', ' ai', 'artificial intelligence', 'hackathon', 'developer', 'coding', 'founder', 'networking', 'meetup', 'product', 'crypto', 'web3', 'demo day', 'pitch'] },
+  { slug: 'community', name: 'Community & Causes', emoji: '🤝', hue: 160,
+    words: ['volunteer', 'community', 'fundraiser', 'benefit', 'cleanup', 'clean-up', 'charity', 'rally', 'town hall', 'meet and greet', 'gala', 'donation', 'mixer'] },
+  { slug: 'family', name: 'Family & Kids', emoji: '🧸', hue: 50,
+    words: ['kids', 'family', 'children', 'toddler', 'storytime', 'story time', 'puppet', 'petting zoo', 'zoo', 'aquarium', 'teen', 'baby', 'all ages fun', 'carousel', 'face painting'] },
+];
+
+export const categoryBySlug = Object.fromEntries(CATEGORIES.map((c) => [c.slug, c]));
+
+// Vibes: special cross-cutting collections. Each has a hub page at /<slug>/.
+export const VIBES = [
+  { slug: 'kid-friendly', name: 'Kid-Friendly', emoji: '👶', flag: 'kids',
+    title: 'Kid-Friendly Things to Do in the Bay Area',
+    blurb: 'Family outings, storytimes, festivals and hands-on fun that work for little ones (and their grown-ups).' },
+  { slug: 'nightlife', name: 'Adult Nightlife', emoji: '🍸', flag: 'nightlife',
+    title: 'Bay Area Nightlife: Clubs, Bars, DJs & Late-Night Shows',
+    blurb: 'Dance floors, cocktail bars, late shows and 21+ parties from the Mission to Uptown Oakland.' },
+  { slug: 'free', name: 'Free', emoji: '🆓', flag: 'free',
+    title: 'Free Things to Do in the Bay Area',
+    blurb: 'Zero-dollar fun: free concerts, museum days, street fairs, hikes and community events.' },
+  { slug: 'hot-day', name: 'Hot Day', emoji: '☀️', flag: 'hot',
+    title: 'What to Do in the Bay Area When It’s Hot',
+    blurb: 'Beat the heat: beaches, water, shade, foggy-coast escapes and blissfully air-conditioned indoor picks.' },
+  { slug: 'rainy-day', name: 'Rainy Day', emoji: '🌧️', flag: 'rainy',
+    title: 'Rainy Day Activities in the Bay Area',
+    blurb: 'Cozy, covered and dry: museums, theaters, cinemas, indoor play and classes for wet-weather days.' },
+  { slug: 'fog-escape', name: 'Fog Escape', emoji: '🌫️', flag: 'fog',
+    title: 'Fog Escape: Sunny Bay Area Plans When Karl the Fog Rolls In',
+    blurb: 'When the city is socked in, chase the sun to the Mission, the East Bay valleys, the South Bay and wine country.' },
+  { slug: 'date-night', name: 'Date Night', emoji: '💘', flag: 'date',
+    title: 'Date Night Ideas in the Bay Area',
+    blurb: 'Shows, tastings, sunset spots and evening plans made for two.' },
+  { slug: 'near-bart', name: 'Near BART', emoji: '🚇', flag: 'bart',
+    title: 'Car-Free Plans: Bay Area Events Near BART',
+    blurb: 'Leave the car (and the parking stress) at home — all of these are a short walk from a BART station.' },
+];
+
+export const vibeBySlug = Object.fromEntries(VIBES.map((v) => [v.slug, v]));
