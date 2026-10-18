@@ -11,7 +11,7 @@ on:
     - cron: '23 13 * * 1'   # weekly, Monday morning Pacific
   push:
     branches: [main]
-    paths: ['scripts/images/**', 'data/evergreen.json', '.github/workflows/images.yml']
+    paths: ['data/photo-picks.json', 'scripts/images/build-images.mjs']
 
 permissions:
   contents: write

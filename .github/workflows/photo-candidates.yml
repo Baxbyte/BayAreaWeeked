@@ -1,0 +1,41 @@
+name: Photo candidates for hand-picking
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Regex of targets to gather (e.g. ^genre:). Empty = all'
+        required: false
+  push:
+    branches: [main]
+    paths: ['scripts/images/candidates.mjs', 'scripts/images/commons.mjs', 'scripts/images/plans.mjs']
+permissions:
+  contents: write
+concurrency:
+  group: photo-candidates
+  cancel-in-progress: true
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: |
+          npm i --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Gather candidates and render sheets
+        env:
+          ONLY: ${{ inputs.only }}
+        run: node scripts/images/candidates.mjs candidates
+      - name: Publish to the photo-candidates branch
+        run: |
+          cd candidates
+          git init -q -b photo-candidates
+          git config user.name "bayarea-weekend-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add . && git commit -qm "Photo candidates"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" photo-candidates
