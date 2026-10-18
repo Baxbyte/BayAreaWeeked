@@ -1,5 +1,6 @@
 // Build-time data access for pages. Everything is computed once per build.
 import crypto from 'node:crypto';
+import { tidyPrice } from './price.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { normalize } from '../../scripts/scrape/normalize.mjs';
@@ -43,7 +44,7 @@ for (const c of activeCampaigns) {
 // Family-friendly gate: organizer images that haven't passed the image-safety check are removed here,
 // so no page, feed or API can ever show them.
 export const ALL = [...(DATA.items || []), ...sponsorItems].map((i) => ({
-  ...i, image: i.imageSafe === true ? i.image : null, path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime(),
+  ...i, image: i.imageSafe === true ? i.image : null, priceText: tidyPrice(i.priceText, i.priceMin, i.priceMax), path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime(),
 }));
 export const byId = new Map(ALL.map((i) => [i.id, i]));
 

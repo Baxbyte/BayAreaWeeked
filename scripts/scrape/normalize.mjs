@@ -1,5 +1,6 @@
 // Turns raw adapter output into clean, classified, geo-tagged directory items.
 import crypto from 'node:crypto';
+import { tidyPrice } from '../../src/lib/price.mjs';
 import { classify } from '../../src/lib/classify.mjs';
 import { cityBySlug, cityFromText, hoodFromText, inBayArea, nearestCity, nearestHood } from '../../src/lib/geo.mjs';
 import { parseWhen, toPTISO } from '../../src/lib/time.mjs';
@@ -151,7 +152,7 @@ export function normalize(raw, defaults = {}) {
     venue: { name: clean(cleanText(raw.venueName || '')) || null, address: cleanText(raw.address || '') || null, lat: geo.lat, lng: geo.lng, approx: geo.approxGeo },
     city: geo.city, region: geo.region, neighborhood: geo.neighborhood,
     priceMin: price.priceMin ?? null, priceMax: price.priceMax ?? null,
-    priceText: raw.priceText ? cleanText(raw.priceText).slice(0, 80) : (price.priceMin === 0 ? 'Free' : price.priceMin != null ? (price.priceMax > price.priceMin ? `$${price.priceMin}–$${price.priceMax}` : `$${price.priceMin}`) : null),
+    priceText: tidyPrice(raw.priceText ? cleanText(raw.priceText).slice(0, 80) : null, price.priceMin ?? null, price.priceMax ?? null),
     organizer: raw.organizer ? clean(cleanText(raw.organizer)).slice(0, 100) : null,
     sourceTags: (raw.tags || []).map((t) => clean(cleanText(t))).filter(Boolean).slice(0, 12),
     sources: [{ id: raw.sourceId, name: raw.sourceName, url: url || raw.sourceHome || null }],

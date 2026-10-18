@@ -10,7 +10,8 @@
     "scrape": "node scripts/scrape/index.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "test": "node --test scripts/test/*.test.mjs",
-    "safety": "node scripts/safety/check-repo.mjs"
+    "safety": "node scripts/safety/check-repo.mjs",
+    "test:browser": "node scripts/test/smoke-browser.mjs"
   },
   "dependencies": {
     "astro": "^7.4.0",

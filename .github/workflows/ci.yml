@@ -17,3 +17,8 @@ jobs:
       - name: Family-friendly image check
         run: npm run safety
       - run: npm run build
+      - name: Browser check of the built site (filters, map, search, forms, SEO files)
+        run: |
+          npm i --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+          node scripts/test/smoke-browser.mjs
