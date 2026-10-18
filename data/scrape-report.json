@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T09:41:00-07:00",
+  "generatedAt": "2026-10-18T09:46:00-07:00",
   "offline": false,
   "reports": [
     {
@@ -10,7 +10,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 157,
+      "ms": 126,
       "reason": "TICKETMASTER_API_KEY not set"
     },
     {
@@ -21,7 +21,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 153,
+      "ms": 121,
       "reason": "SEATGEEK_CLIENT_ID not set"
     },
     {
@@ -29,13 +29,13 @@
       "name": "AllEvents",
       "type": "jsonld",
       "status": "ok",
-      "raw": 1258,
-      "kept": 1137,
+      "raw": 1259,
+      "kept": 1138,
       "warnings": [
         "allevents: HTTP 404 for https://allevents.in/napa/all",
         "allevents: HTTP 404 for https://allevents.in/campbell/all"
       ],
-      "ms": 45962
+      "ms": 45815
     },
     {
       "id": "luma-sf",
@@ -45,7 +45,7 @@
       "raw": 20,
       "kept": 20,
       "warnings": [],
-      "ms": 1332
+      "ms": 1104
     },
     {
       "id": "ferry-building",
@@ -55,7 +55,7 @@
       "raw": 11,
       "kept": 0,
       "warnings": [],
-      "ms": 707
+      "ms": 562
     },
     {
       "id": "ucsf",
@@ -65,7 +65,7 @@
       "raw": 18,
       "kept": 17,
       "warnings": [],
-      "ms": 4918
+      "ms": 2266
     },
     {
       "id": "sjsu",
@@ -75,7 +75,7 @@
       "raw": 257,
       "kept": 248,
       "warnings": [],
-      "ms": 7798
+      "ms": 12899
     },
     {
       "id": "funcheap",
@@ -85,7 +85,7 @@
       "raw": 10,
       "kept": 0,
       "warnings": [],
-      "ms": 598
+      "ms": 887
     },
     {
       "id": "funcheap-days",
@@ -95,7 +95,7 @@
       "raw": 271,
       "kept": 271,
       "warnings": [],
-      "ms": 12589
+      "ms": 12817
     },
     {
       "id": "19hz",
@@ -105,7 +105,7 @@
       "raw": 337,
       "kept": 279,
       "warnings": [],
-      "ms": 1161
+      "ms": 1043
     },
     {
       "id": "stanford",
@@ -115,7 +115,7 @@
       "raw": 209,
       "kept": 207,
       "warnings": [],
-      "ms": 22441
+      "ms": 15066
     },
     {
       "id": "roundups",
@@ -125,7 +125,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 2,
+      "ms": 1,
       "reason": "OPENROUTER_API_KEY not set"
     }
   ]
