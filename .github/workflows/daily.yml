@@ -57,6 +57,7 @@ jobs:
         continue-on-error: true
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          IMAGES_MAX_NEW: '15'
         run: node scripts/images/build-images.mjs
 
       - name: Save fresh data to the repo
@@ -67,7 +68,7 @@ jobs:
           git add data/events.json data/scrape-report.json data/geocache.json data/images.json public/photos 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "data: daily event refresh $(date -u +%Y-%m-%dT%H:%MZ)"
-            git pull --rebase origin main && git push origin HEAD:main
+            git pull --rebase -X theirs origin main && git push origin HEAD:main
           fi
 
       - name: Configure GitHub Pages
@@ -149,5 +150,5 @@ jobs:
           git add data/indexnow-state.json
           if ! git diff --cached --quiet; then
             git commit -m "data: indexnow state"
-            git pull --rebase origin main && git push origin HEAD:main
+            git pull --rebase -X theirs origin main && git push origin HEAD:main
           fi

@@ -21,6 +21,7 @@ const UA = 'BayAreaWeekendBot/1.0 (https://github.com/Baxbyte/BayAreaWeeked; pho
 const PEXELS = process.env.PEXELS_API_KEY || process.env.PEXELS_KEY || '';
 const refresh = process.argv.includes('--refresh');
 const PER_CATEGORY = Number(process.env.IMAGES_PER_CATEGORY || 8);
+let budget = Number(process.env.IMAGES_MAX_NEW || Infinity); // cap new downloads (daily job stays quick)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 fs.mkdirSync(PHOTO_DIR, { recursive: true });
 
@@ -112,6 +113,7 @@ async function download(c) {
   const large = path.join(PHOTO_DIR, `${c.id}-l.webp`);
   const small = path.join(PHOTO_DIR, `${c.id}-s.webp`);
   if (fs.existsSync(large) && fs.existsSync(small)) return true;
+  if (budget <= 0) return false;
   try {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), 30000);
@@ -125,6 +127,7 @@ async function download(c) {
     await img.clone().resize(1280, 720, { fit: 'cover', position: 'attention' }).webp({ quality: 76 }).toFile(large);
     await img.clone().resize(640, 400, { fit: 'cover', position: 'attention' }).webp({ quality: 70 }).toFile(small);
     await sleep(200);
+    budget--;
     return true;
   } catch {
     return false;

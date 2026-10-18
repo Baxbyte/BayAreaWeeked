@@ -45,7 +45,7 @@ jobs:
           git add data/images.json public/photos
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh Bay Area photos"
-            git pull --rebase origin main && git push origin HEAD:main
+            git pull --rebase -X theirs origin main && git push origin HEAD:main
           fi
       - name: Rebuild the site with the new photos
         env:
