@@ -33,6 +33,8 @@ jobs:
           cache: npm
       - run: npm ci
       - name: Find photos (Wikimedia Commons + Pexels)
+        timeout-minutes: 45
+        continue-on-error: true
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: node scripts/images/build-images.mjs ${{ inputs.refresh && '--refresh' || '' }}
