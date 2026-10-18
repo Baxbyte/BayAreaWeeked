@@ -1,1143 +1,2710 @@
 {
  "places": {
+  "Exploratorium": {
+   "alt": "A 'do not push' button at the Exploratorium, with a counter showing how many people have pushed it.",
+   "credit": "Sam Wilson",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Exploratorium_%27Do_not_push_button%27.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-79707692",
+   "file": "/photos/wm-79707692"
+  },
+  "California Academy of Sciences": {
+   "alt": "Luristan Newt (Neurergus kaiseri) at the California Academy of Sciences. Please attribute to Evan Baldonado // AquariumKids.org",
+   "credit": "EvanBaldonado",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Luristan_Newt_(Neurergus_kaiseri)_at_the_California_Academy_of_Sciences_01.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-151461663",
+   "file": "/photos/wm-151461663"
+  },
+  "de Young Museum & Hamon Observation Tower": {
+   "alt": "Land acknowledgement at de Young Museum, San Francisco, California",
+   "credit": "Missvain",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Land_acknowledgement_at_de_Young_Museum_-_Jan_2022_-_Sarah_Stierch.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-115417834",
+   "file": "/photos/wm-115417834"
+  },
+  "Legion of Honor": {
+   "alt": "Ruth Asawa, San Francisco Fountain (detail--Legion of Honor surmounted by Thinker), 1972",
+   "credit": "Steven Saylor",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Ruth_Asawa,_San_Francisco_Fountain_(detail--Legion_of_Honor_surmounted_by_Thinker),_1972.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-98288175",
+   "file": "/photos/wm-98288175"
+  },
+  "SFMOMA": {
+   "alt": "Sam Green and Yo La Tengo premiere \"The Love Song of R. Buckminster Fuller\" at SFMOMA, May 1, 2012",
+   "credit": "Kdkash",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Sam_Green_and_Yo_La_Tengo_premiere_%22The_Love_Song_of_R._Buckminster_Fuller%22_at_SFMOMA,_May_1,_2012.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-22031493",
+   "file": "/photos/wm-22031493"
+  },
   "Lands End Trail & Sutro Baths": {
-   "id": "wm-141536507",
    "alt": "Lands End, San Francisco 11/19/23 - EXPLORED!",
    "credit": "Sharon Mollerus from Minneapolis, United States",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Lands_End,_San_Francisco_11-19-23_-_EXPLORED_-_Flickr_-_Sharon_Mollerus.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-141536507",
    "file": "/photos/wm-141536507"
   },
   "Japanese Tea Garden": {
-   "id": "wm-99892387",
    "alt": "Located within Golden Gate Park, San Francisco, this bridge is decorative only, but that doesn't stop kids playing.",
    "credit": "Mike McBey",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Japanese_Tea_Garden_(50919226293).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-99892387",
    "file": "/photos/wm-99892387"
   },
-  "Presidio Tunnel Tops": {
-   "id": "wm-120738657",
-   "alt": "Presidio Tunnel Tops park view, with Alcatraz Island in the background, on July 18, 2022, the day after it opened to the public",
-   "credit": "Dicklyon",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Tunnel_Tops_Park_with_Alcatraz.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-120738657"
-  },
-  "Musée Mécanique": {
-   "id": "wm-53169657",
-   "alt": "A row of machines at Musee Mecanique in San Francisco.",
-   "credit": "Rhododendrites",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Musee_Mecanique.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-53169657"
-  },
-  "Alcatraz Island": {
-   "id": "wm-94657599",
-   "alt": "Alcatraz island in the San Francisco Bay at dusk",
-   "credit": "Robert Skelton",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_San_Francisco.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-94657599"
-  },
-  "Coit Tower & Telegraph Hill": {
-   "id": "wm-46749101",
-   "alt": "Ships at Pier 9, San Francisco, California, USA",
-   "credit": "Photograph by Mike Peel (www.mikepeel.net).",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:At_San_Francisco_2015_018.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-46749101"
-  },
-  "Chinatown Walk from the Dragon Gate": {
-   "id": "wm-185319507",
-   "alt": "Storefronts on Waverly Place, Chinatown of San Francisco, in late Fabruary 2026",
-   "credit": "Frank Schulenburg",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Waverly_Place,_San_Francisco_(2026)-L1000547.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-185319507"
-  },
-  "The Fillmore": {
-   "id": "wm-78600311",
-   "alt": "Ingrid Michaelson performing live at The Fillmore in San Francisco, California, on Monday, October 24, 2016.",
-   "credit": "Justin Higuchi from Los Angeles, CA, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Ingrid_Michaelson_10_24_2016_-1_(30691810161).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-78600311"
-  },
-  "San Francisco Symphony at Davies Symphony Hall": {
-   "id": "wm-109257808",
-   "alt": "Louise M. Davies Symphony Hall, San Francisco, California",
-   "credit": "Ken Lund",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Louise_M._Davies_Symphony_Hall,_San_Francisco,_California.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "file": "/photos/wm-109257808"
-  },
-  "Golden State Warriors at Chase Center": {
-   "id": "wm-81992614",
-   "alt": "Chase Center - East Side - San Francisco",
-   "credit": "Tony Wasserman from San Francisco, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Chase_Center_-_East_Side_-_San_Francisco.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "file": "/photos/wm-81992614"
-  },
-  "San Francisco Giants at Oracle Park": {
-   "id": "wm-52530331",
-   "alt": "AT&T Park Sign (TK3)",
-   "credit": "Tobias Kleinlercher / Wikipedia",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_Sign_(TK3).JPG",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-52530331"
-  },
-  "Children's Creativity Museum": {
-   "id": "wm-47413891",
-   "alt": "Rides for all!",
-   "credit": "mliu92 from San Mateo",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Children%27s_Creativity_Museum_(was_%27Zeum%27)_(24969394294).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "file": "/photos/wm-47413891"
-  },
-  "Yerba Buena Gardens": {
-   "id": "wm-60388737",
-   "alt": "2017 Yerba Buena Gardens",
-   "credit": "Beyond My Ken",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:2017_Yerba_Buena_Gardens.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-60388737"
-  },
-  "Grace Cathedral": {
-   "id": "wm-197606619",
-   "alt": "California Street - James Flood Mansion and Grace Cathedral, San Francisco",
-   "credit": "Radosław Botev",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:California_Street_-_James_Flood_Mansion_and_Grace_Cathedral,_San_Francisco.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 3.0 pl",
-   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
-   "file": "/photos/wm-197606619"
-  },
-  "The Walt Disney Family Museum": {
-   "id": "wm-52162598",
-   "alt": "The Walt Disney Family Museum in the Presidio, San Francisco (TK1)",
-   "credit": "Tobias Kleinlercher / Wikipedia",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Walt_Disney_Family_Museum_in_the_Presidio,_San_Francisco_(TK1).JPG",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-52162598"
-  },
-  "Golden Gate Bridge Walk": {
-   "id": "wm-21764437",
-   "alt": "US Navy Blue Angel aircraft making a low pass over the crowd at the Golden Gate Bridge during the 2008 San Francisco Fleet Week.",
-   "credit": "Foghorn",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Blue_Angels_-_SF_Fleet_Week_2008.JPG",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-21764437"
-  },
-  "Lake Merritt Loop": {
-   "id": "wm-105267975",
-   "alt": "This is the city of Oakland, Beautiful Lake Merrit. A Cityscape with it's own reflection.",
-   "credit": "AliceChAragon",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Lake_Merrit._Oakland,_Ca.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-105267975"
-  },
-  "Oakland Museum of California": {
-   "id": "wm-149329435",
-   "alt": "An outdoor concert on a Friday evening in a courtyard at Oakland Museum of California in Oakland, California, United States. Background information here: [1]",
-   "credit": "Mx. Granger",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Friday_night_at_OMCA.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "file": "/photos/wm-149329435"
-  },
-  "Children's Fairyland": {
-   "id": "wm-198449132",
-   "alt": "Display of puppets from the 2000s at Children's Fairyland",
-   "credit": "E mln e",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Display_of_puppets_from_the_2000s_at_Children%27s_Fairyland.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-198449132"
-  },
-  "Oakland Zoo": {
-   "id": "wm-106122800",
-   "alt": "This pond had a series of stepping stones decorated as lilypads. They seemed to be made of rubber or plastic and moved a bit when stepping on them.",
-   "credit": "D Coetzee from San Mateo, CA, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Children_crossing_pond_at_Oakland_Zoo_(10540734395).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "file": "/photos/wm-106122800"
-  },
-  "Berkeley Repertory Theatre": {
-   "id": "wm-5051893",
-   "alt": "Berkeley Repertory Theatre, Berkeley, California",
-   "credit": "Photo: Andreas Praefcke",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Berkeley_Rep.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-   "file": "/photos/wm-5051893"
-  },
-  "Filoli Historic House & Garden": {
-   "id": "wm-94970276",
-   "alt": "Filoli mansion - backyard view",
-   "credit": "Laurent Le Gourrierec",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Filoli_mansion_-_backyard_view.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-94970276"
-  },
-  "Winchester Mystery House": {
-   "id": "wm-95666151",
-   "alt": "2017.07.30-Winchester Mystery House Detail NRHP Reference No 74000559",
-   "credit": "Lyla0724",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:2017.07.30-Winchester_Mystery_House_Detail_NRHP_Reference_No_74000559.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-95666151"
-  },
-  "Children's Discovery Museum of San Jose": {
-   "id": "wm-84509194",
-   "alt": "A Wells-Fargo stagecoach display at the Children's Discovery Museum in San Jose, California. Photo by Jim Heaphy.",
-   "credit": "Cullen328",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Stagecoach_at_Children%27s_Discovery_Museum.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-84509194"
-  },
-  "Santana Row": {
-   "id": "wm-68044638",
-   "alt": "Santana Row, SJ",
-   "credit": "Payton Chung from DCA, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Santana_Row_(15371236324).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-68044638"
-  },
-  "Shoreline Lake & Park": {
-   "id": "wm-113450393",
-   "alt": "Eyes in the landscape (35504862500)",
-   "credit": "bluesbby from Mountain View, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Eyes_in_the_landscape_(35504862500).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-113450393"
-  },
-  "Muir Woods National Monument": {
-   "id": "wm-183072542",
-   "alt": "Muir Woods, Early Light, Walking Among the Quiet Giants - Flickr - dalecruse",
-   "credit": "Dale Cruse - 11M SF views from San Francisco, CA, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Muir_Woods,_Early_Light,_Walking_Among_the_Quiet_Giants_-_Flickr_-_dalecruse.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-183072542"
-  },
-  "Sausalito Waterfront": {
-   "id": "wm-13304432",
-   "alt": "Gabrielson Memorial Park, Sausalito, California",
-   "credit": "(User:Wgreaves)",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Gabrielson_Park.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-13304432"
-  },
-  "Stinson Beach": {
-   "id": "wm-8353481",
-   "alt": "Bolinas Bay (left) and Stinson Beach (right) as seen from California State Route 1 looking northwest",
-   "credit": "Stepheng3 (talk)",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Stinson_Beach_3429.jpg",
-   "source": "Wikimedia Commons",
-   "license": "Public domain",
-   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stinson_Beach_3429.jpg",
-   "file": "/photos/wm-8353481"
-  },
-  "Mount Tamalpais State Park": {
-   "id": "wm-56810091",
-   "alt": "Cataract Creek, Mount Tamalpais State Park, Marin County, California",
-   "credit": "Frank Schulenburg",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Cataract_Creek,_Mount_Tamalpais_State_Park.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-56810091"
-  },
-  "Bay Area Discovery Museum": {
-   "id": "wm-116463361",
-   "alt": "2022-03-27 16 10 18 View north along U.S. Route 101 and California State Route 1 (Redwood Highway) from the Marin Headlands within Golden Gate National Recreation Area in Marin County, California",
-   "credit": "Famartin",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:2022-03-27_16_10_18_View_north_along_U.S._Route_101_and_California_State_Route_1_(Redwood_Highway)_from_the_Marin_Headlands_within_Golden_Gate_National_Recreation_Area_in_Marin_County,_California.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-116463361"
-  },
-  "Napa Valley Wine Train": {
-   "id": "wm-25376981",
-   "alt": "Napa Valley Wine Train, Napa Valley, California, USA (6319723539)",
-   "credit": "Jim G from Silicon Valley, CA, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Napa_Valley_Wine_Train,_Napa_Valley,_California,_USA_(6319723539).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-25376981"
-  },
-  "Oxbow Public Market": {
-   "id": "wm-146780441",
-   "alt": "Empress M pop-up at the Oxbow, Napa, California",
-   "credit": "Missvain",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Empress_M_Pop-up_-_March_2024_-_Sarah_Stierch_01.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-146780441"
-  },
-  "Six Flags Discovery Kingdom": {
-   "id": "wm-121942202",
-   "alt": "People watching a show at Six Flags in Vallejo, California",
-   "credit": "Kiddo27",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:People_watching_a_show_at_Six_Flags_in_Vallejo,_California.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-121942202"
-  },
-  "Fitzgerald Marine Reserve Tide Pools": {
-   "id": "wm-49623720",
-   "alt": "Coryphella cooperi from Fitzgerald Marine Reserve, California",
-   "credit": "ANudibranchMom",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:2016-06-20_Fitzgerald_189_PS.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-49623720"
-  },
   "Conservatory of Flowers": {
-   "id": "wm-164145021",
    "alt": "The Conservatory of Flowers, 1920, taken from what is now called John F Kennedy Drive. The photo, and five others, were found amongst old family documents.",
    "credit": "Eric E Castro from San Francisco",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Conservatory_of_Flowers_(2092800123).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-164145021",
    "file": "/photos/wm-164145021"
   },
-  "Tilden Regional Park": {
-   "id": "wm-59289505",
-   "alt": "H20151103-0001—Mount Diablo from Inspiration Point—Tilden Regional Park-1 (22573645050)",
-   "credit": "John Rusk from Berkeley, CA, United States of America",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:H20151103-0001%E2%80%94Mount_Diablo_from_Inspiration_Point%E2%80%94Tilden_Regional_Park-1_(22573645050).jpg",
+  "Presidio Tunnel Tops": {
+   "alt": "Presidio Tunnel Tops park view, with Alcatraz Island in the background, on July 18, 2022, the day after it opened to the public",
+   "credit": "Dicklyon",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Tunnel_Tops_Park_with_Alcatraz.jpg",
    "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-59289505"
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-120738657",
+   "file": "/photos/wm-120738657"
+  },
+  "Musée Mécanique": {
+   "alt": "A row of machines at Musee Mecanique in San Francisco.",
+   "credit": "Rhododendrites",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Musee_Mecanique.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-53169657",
+   "file": "/photos/wm-53169657"
+  },
+  "Alcatraz Island": {
+   "alt": "Alcatraz island in the San Francisco Bay at dusk",
+   "credit": "Robert Skelton",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_San_Francisco.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-94657599",
+   "file": "/photos/wm-94657599"
+  },
+  "Coit Tower & Telegraph Hill": {
+   "alt": "Ships at Pier 9, San Francisco, California, USA",
+   "credit": "Photograph by Mike Peel (www.mikepeel.net).",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:At_San_Francisco_2015_018.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-46749101",
+   "file": "/photos/wm-46749101"
+  },
+  "Chinatown Walk from the Dragon Gate": {
+   "alt": "Storefronts on Waverly Place, Chinatown of San Francisco, in late Fabruary 2026",
+   "credit": "Frank Schulenburg",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Waverly_Place,_San_Francisco_(2026)-L1000547.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-185319507",
+   "file": "/photos/wm-185319507"
   },
   "Castro Theatre": {
-   "id": "wm-74143947",
    "alt": "Ornate Ceiling Lamp (42930868965)",
    "credit": "Billie Grace Ward from New York, USA",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Ornate_Ceiling_Lamp_(42930868965).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-74143947",
    "file": "/photos/wm-74143947"
+  },
+  "The Fillmore": {
+   "alt": "Ingrid Michaelson performing live at The Fillmore in San Francisco, California, on Monday, October 24, 2016.",
+   "credit": "Justin Higuchi from Los Angeles, CA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Ingrid_Michaelson_10_24_2016_-1_(30691810161).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-78600311",
+   "file": "/photos/wm-78600311"
+  },
+  "San Francisco Symphony at Davies Symphony Hall": {
+   "alt": "Louise M. Davies Symphony Hall, San Francisco, California",
+   "credit": "Ken Lund",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Louise_M._Davies_Symphony_Hall,_San_Francisco,_California.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-109257808",
+   "file": "/photos/wm-109257808"
+  },
+  "Golden State Warriors at Chase Center": {
+   "alt": "Chase Center - East Side - San Francisco",
+   "credit": "Tony Wasserman from San Francisco, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Chase_Center_-_East_Side_-_San_Francisco.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-81992614",
+   "file": "/photos/wm-81992614"
+  },
+  "San Francisco Giants at Oracle Park": {
+   "alt": "AT&T Park Sign (TK3)",
+   "credit": "Tobias Kleinlercher / Wikipedia",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_Sign_(TK3).JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-52530331",
+   "file": "/photos/wm-52530331"
+  },
+  "Japantown & Japan Center Malls": {
+   "alt": "The Uoki Apartments Building, formerly The Uoki Sakai Market, in Japantown, San Francisco on Post Street. (2016)",
+   "credit": "Peter Alfred Hess",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Uoki_Apartments_Building_on_Post_Street.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-90167947",
+   "file": "/photos/wm-90167947"
+  },
+  "Aquarium of the Bay": {
+   "alt": "Two Ochre sea stars (Pisaster ochraceus) in the Aquarium of the Bay's Near Shore Tunnel appearing as if they were friends.",
+   "credit": "Coughdrop12",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Best_Starfish_Buddies!.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-81179522",
+   "file": "/photos/wm-81179522"
+  },
+  "Children's Creativity Museum": {
+   "alt": "Rides for all!",
+   "credit": "mliu92 from San Mateo",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Children%27s_Creativity_Museum_(was_%27Zeum%27)_(24969394294).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-47413891",
+   "file": "/photos/wm-47413891"
+  },
+  "San Francisco Zoo & Gardens": {
+   "alt": "International Red Panda Day sign at the San Francisco Zoo",
+   "credit": "David Goehring",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:International_Red_Panda_Day_sign_at_the_San_Francisco_Zoo.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-115852033",
+   "file": "/photos/wm-115852033"
+  },
+  "Yerba Buena Gardens": {
+   "alt": "2017 Yerba Buena Gardens",
+   "credit": "Beyond My Ken",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2017_Yerba_Buena_Gardens.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-60388737",
+   "file": "/photos/wm-60388737"
+  },
+  "Baker Beach": {
+   "alt": "Jackie Martinez crawling in Baker Beach, San Francisco.",
+   "credit": "Mark J Sebastian",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Jackie_Martinez_@_Baker_Beach.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-6837573",
+   "file": "/photos/wm-6837573"
+  },
+  "Grace Cathedral": {
+   "alt": "California Street - James Flood Mansion and Grace Cathedral, San Francisco",
+   "credit": "Radosław Botev",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:California_Street_-_James_Flood_Mansion_and_Grace_Cathedral,_San_Francisco.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 3.0 pl",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+   "id": "wm-197606619",
+   "file": "/photos/wm-197606619"
+  },
+  "The Walt Disney Family Museum": {
+   "alt": "The Walt Disney Family Museum in the Presidio, San Francisco (TK1)",
+   "credit": "Tobias Kleinlercher / Wikipedia",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Walt_Disney_Family_Museum_in_the_Presidio,_San_Francisco_(TK1).JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-52162598",
+   "file": "/photos/wm-52162598"
+  },
+  "Golden Gate Bridge Walk": {
+   "alt": "US Navy Blue Angel aircraft making a low pass over the crowd at the Golden Gate Bridge during the 2008 San Francisco Fleet Week.",
+   "credit": "Foghorn",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Blue_Angels_-_SF_Fleet_Week_2008.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-21764437",
+   "file": "/photos/wm-21764437"
+  },
+  "Lake Merritt Loop": {
+   "alt": "This is the city of Oakland, Beautiful Lake Merrit. A Cityscape with it's own reflection.",
+   "credit": "AliceChAragon",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Lake_Merrit._Oakland,_Ca.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-105267975",
+   "file": "/photos/wm-105267975"
+  },
+  "Oakland Museum of California": {
+   "alt": "An outdoor concert on a Friday evening in a courtyard at Oakland Museum of California in Oakland, California, United States. Background information here: [1]",
+   "credit": "Mx. Granger",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Friday_night_at_OMCA.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-149329435",
+   "file": "/photos/wm-149329435"
+  },
+  "Chabot Space & Science Center": {
+   "alt": "USA Student Speaks - Opening Session - Hacking Space - Science City - Kolkata 2016-03-29 2708",
+   "credit": "Biswarup Ganguly",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:USA_Student_Speaks_-_Opening_Session_-_Hacking_Space_-_Science_City_-_Kolkata_2016-03-29_2708.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "id": "wm-47886070",
+   "file": "/photos/wm-47886070"
+  },
+  "Children's Fairyland": {
+   "alt": "Display of puppets from the 2000s at Children's Fairyland",
+   "credit": "E mln e",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Display_of_puppets_from_the_2000s_at_Children%27s_Fairyland.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-198449132",
+   "file": "/photos/wm-198449132"
+  },
+  "Oakland Zoo": {
+   "alt": "This pond had a series of stepping stones decorated as lilypads. They seemed to be made of rubber or plastic and moved a bit when stepping on them.",
+   "credit": "D Coetzee from San Mateo, CA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Children_crossing_pond_at_Oakland_Zoo_(10540734395).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-106122800",
+   "file": "/photos/wm-106122800"
+  },
+  "Tilden Regional Park": {
+   "alt": "H20151103-0001—Mount Diablo from Inspiration Point—Tilden Regional Park-1 (22573645050)",
+   "credit": "John Rusk from Berkeley, CA, United States of America",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:H20151103-0001%E2%80%94Mount_Diablo_from_Inspiration_Point%E2%80%94Tilden_Regional_Park-1_(22573645050).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-59289505",
+   "file": "/photos/wm-59289505"
+  },
+  "Lawrence Hall of Science": {
+   "alt": "Mathematical Sciences Research Institute from the en:Lawrence Hall of Science",
+   "credit": "Sandrobt",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:MSRI_from_the_Lawrence_Hall_of_Science.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-15299780",
+   "file": "/photos/wm-15299780"
+  },
+  "UC Botanical Garden at Berkeley": {
+   "alt": "Entrance to the Berkeley botanical garden featuring Trachycarpus Palm and large Yucca rostrada",
+   "credit": "Burkhard Mücke",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Botanischer_Garten_in_Berkeley,_California.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-42670426",
+   "file": "/photos/wm-42670426"
+  },
+  "Paramount Theatre Oakland": {
+   "alt": "Grid-ceiling-detail-Paramount",
+   "credit": "Binksternet",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Grid-ceiling-detail-Paramount.jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Grid-ceiling-detail-Paramount.jpg",
+   "id": "wm-5283271",
+   "file": "/photos/wm-5283271"
+  },
+  "Berkeley Repertory Theatre": {
+   "alt": "Berkeley Repertory Theatre, Berkeley, California",
+   "credit": "Photo: Andreas Praefcke",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Berkeley_Rep.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "id": "wm-5051893",
+   "file": "/photos/wm-5051893"
+  },
+  "USS Hornet Sea, Air & Space Museum": {
+   "alt": "Apollo 12 Pacific Recovery (6816500060)",
+   "credit": "NASA Goddard Space Flight Center from Greenbelt, MD, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Apollo_12_Pacific_Recovery_(6816500060).jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Apollo_12_Pacific_Recovery_(6816500060).jpg",
+   "id": "wm-51485311",
+   "file": "/photos/wm-51485311"
+  },
+  "Crown Memorial State Beach": {
+   "alt": "View of Crown Memorial State Beach in Alameda looking towards the city of San Francisco, CA, USA.",
+   "credit": "Allan J. Cronin",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Crown_Beach.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-14278146",
+   "file": "/photos/wm-14278146"
+  },
+  "Mount Diablo State Park": {
+   "alt": "Contra Costa County, Mount Diablo State Park.",
+   "credit": "Effeietsanders",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Contra_Costa_County_-_Mount_Diablo_State_Park_-_20230416101225.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-138869285",
+   "file": "/photos/wm-138869285"
+  },
+  "Livermore Valley Wine Country": {
+   "alt": "Historic bottles from the Livermore Valley producers Wente and Cresta Blanca in California",
+   "credit": "Agne27",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Historic_Wente_and_Cresta_Blanca_bottles.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-20653711",
+   "file": "/photos/wm-20653711"
+  },
+  "Ardenwood Historic Farm": {
+   "alt": "Ardenwood and Patterson House (Fremont) from Flickr album \"Ardenwood and Patterson House (Fremont)\" by Emily Ramos.",
+   "credit": "Emily Ramos",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Ardenwood%27s_30th_Anniversary_Celebration,_Saturday,_July_25th_(2015-07-25_12.38.36_by_Emily_Ramos).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-42878967",
+   "file": "/photos/wm-42878967"
+  },
+  "Pillar Point Harbor & Half Moon Bay": {
+   "alt": "Dunlin Calidris alpina, Pillar Point Harbor, California, USA",
+   "credit": "Jason Crotty",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Calidris_alpina,_Pillar_Point_Harbor,_California_1.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-42966879",
+   "file": "/photos/wm-42966879"
+  },
+  "Fitzgerald Marine Reserve Tide Pools": {
+   "alt": "Coryphella cooperi from Fitzgerald Marine Reserve, California",
+   "credit": "ANudibranchMom",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2016-06-20_Fitzgerald_189_PS.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-49623720",
+   "file": "/photos/wm-49623720"
+  },
+  "CuriOdyssey": {
+   "alt": "CuriOdyssey Coyote Point Recreation Area San Mateo, Ca April 13, 2016",
+   "credit": "cifraser1",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:I%27m_here,_I%27ll_check_it_out._(25812242043).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-49204556",
+   "file": "/photos/wm-49204556"
+  },
+  "Filoli Historic House & Garden": {
+   "alt": "Filoli mansion - backyard view",
+   "credit": "Laurent Le Gourrierec",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Filoli_mansion_-_backyard_view.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-94970276",
+   "file": "/photos/wm-94970276"
+  },
+  "Hiller Aviation Museum": {
+   "alt": "Stanford electric-powered wind tunnel fan on display at the Hiller Aviation Museum in San Carlos, California.",
+   "credit": "BrokenSphere",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Stanford_wind_tunnel_fan_HAM.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+   "id": "wm-3811951",
+   "file": "/photos/wm-3811951"
+  },
+  "Mori Point": {
+   "alt": "The whale, exposed to the air, appeared to be melting.",
+   "credit": "brian washburn from Redwood City, CA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Crowd_of_onlookers_(16560376254).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-54931792",
+   "file": "/photos/wm-54931792"
+  },
+  "Winchester Mystery House": {
+   "alt": "2017.07.30-Winchester Mystery House Detail NRHP Reference No 74000559",
+   "credit": "Lyla0724",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2017.07.30-Winchester_Mystery_House_Detail_NRHP_Reference_No_74000559.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-95666151",
+   "file": "/photos/wm-95666151"
+  },
+  "The Tech Interactive": {
+   "alt": "Ignite Curiosity at the Tech Interactive; Take in an Exhibit at the San José Museum of Art",
+   "credit": "Mxn",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Ignite_Curiosity_at_the_Tech_Interactive;_Take_in_an_Exhibit_at_the_San_Jos%C3%A9_Museum_of_Art.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-163344593",
+   "file": "/photos/wm-163344593"
+  },
+  "Computer History Museum": {
+   "alt": "\"Make Friends with the robots. One day they'll be in charge.\" Computer History Museum",
+   "credit": "Marc Smith",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Computer_History_Museum_(1507092534).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-45428109",
+   "file": "/photos/wm-45428109"
+  },
+  "Children's Discovery Museum of San Jose": {
+   "alt": "A Wells-Fargo stagecoach display at the Children's Discovery Museum in San Jose, California. Photo by Jim Heaphy.",
+   "credit": "Cullen328",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Stagecoach_at_Children%27s_Discovery_Museum.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-84509194",
+   "file": "/photos/wm-84509194"
+  },
+  "Santana Row": {
+   "alt": "Santana Row, SJ",
+   "credit": "Payton Chung from DCA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Santana_Row_(15371236324).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-68044638",
+   "file": "/photos/wm-68044638"
+  },
+  "Shoreline Lake & Park": {
+   "alt": "Eyes in the landscape (35504862500)",
+   "credit": "bluesbby from Mountain View, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Eyes_in_the_landscape_(35504862500).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-113450393",
+   "file": "/photos/wm-113450393"
+  },
+  "Hakone Estate & Gardens": {
+   "alt": "A vivid dancer, Argia vivida, perched on a log at Hakone Gardens in Saratoga, California.",
+   "credit": "Grendelkhan",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Argia_vivida_facing_away_at_Hakone_Gardens.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-70110999",
+   "file": "/photos/wm-70110999"
+  },
+  "California's Great America": {
+   "alt": "Candy Café at California's Great Adventure.",
+   "credit": "Gregory Varnum",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:California%27s_Great_Adventure_-_Candy_Cafe_(4071).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-66619293",
+   "file": "/photos/wm-66619293"
+  },
+  "Rancho San Antonio Preserve": {
+   "alt": "Rancho San Antonio Open Space Preserve",
+   "credit": "Wizz4prep",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Rancho_San_Antonio_Open_Space_Preserve_18_02_37_518000.jpeg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-63076206",
+   "file": "/photos/wm-63076206"
+  },
+  "San Francisco 49ers at Levi's Stadium": {
+   "alt": "San Tomas Aquino Creek near Levi's Stadium, 2015",
+   "credit": "Thomson200",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Tomas_Aquino_Creek_near_Levi%27s_Stadium.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-41433298",
+   "file": "/photos/wm-41433298"
+  },
+  "San Jose Sharks at SAP Center": {
+   "alt": "Feel the Energy at SAP Center",
+   "credit": "Mxn",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Feel_the_Energy_at_SAP_Center.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-163344592",
+   "file": "/photos/wm-163344592"
+  },
+  "Muir Woods National Monument": {
+   "alt": "Muir Woods, Early Light, Walking Among the Quiet Giants - Flickr - dalecruse",
+   "credit": "Dale Cruse - 11M SF views from San Francisco, CA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Muir_Woods,_Early_Light,_Walking_Among_the_Quiet_Giants_-_Flickr_-_dalecruse.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-183072542",
+   "file": "/photos/wm-183072542"
+  },
+  "Sausalito Waterfront": {
+   "alt": "Gabrielson Memorial Park, Sausalito, California",
+   "credit": "(User:Wgreaves)",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Gabrielson_Park.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-13304432",
+   "file": "/photos/wm-13304432"
+  },
+  "Point Reyes National Seashore": {
+   "alt": "2008 Children’s Group Hon. Mention- Serpent Ship 1 (f8e8fb93-155d-4519-3eb6-6ad45ba06358)",
+   "credit": "NPS",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2008_Children%E2%80%99s_Group_Hon._Mention-_Serpent_Ship_1_(f8e8fb93-155d-4519-3eb6-6ad45ba06358).jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:2008_Children%E2%80%99s_Group_Hon._Mention-_Serpent_Ship_1_(f8e8fb93-155d-4519-3eb6-6ad45ba06358).jpg",
+   "id": "wm-155258055",
+   "file": "/photos/wm-155258055"
+  },
+  "Stinson Beach": {
+   "alt": "Bolinas Bay (left) and Stinson Beach (right) as seen from California State Route 1 looking northwest",
+   "credit": "Stepheng3 (talk)",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Stinson_Beach_3429.jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stinson_Beach_3429.jpg",
+   "id": "wm-8353481",
+   "file": "/photos/wm-8353481"
+  },
+  "Mount Tamalpais State Park": {
+   "alt": "Cataract Creek, Mount Tamalpais State Park, Marin County, California",
+   "credit": "Frank Schulenburg",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Cataract_Creek,_Mount_Tamalpais_State_Park.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-56810091",
+   "file": "/photos/wm-56810091"
+  },
+  "Bay Area Discovery Museum": {
+   "alt": "2022-03-27 16 10 18 View north along U.S. Route 101 and California State Route 1 (Redwood Highway) from the Marin Headlands within Golden Gate National Recreation Area in Marin County, California",
+   "credit": "Famartin",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2022-03-27_16_10_18_View_north_along_U.S._Route_101_and_California_State_Route_1_(Redwood_Highway)_from_the_Marin_Headlands_within_Golden_Gate_National_Recreation_Area_in_Marin_County,_California.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-116463361",
+   "file": "/photos/wm-116463361"
+  },
+  "Marin Country Mart": {
+   "alt": "Larkspur Landing viewed from Mount Tamalpais in April 2018",
+   "credit": "Pi.1415926535",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Larkspur_Landing_viewed_from_Mount_Tam,_April_2018.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-68775440",
+   "file": "/photos/wm-68775440"
+  },
+  "Napa Valley Wine Train": {
+   "alt": "Napa Valley Wine Train, Napa Valley, California, USA (6319723539)",
+   "credit": "Jim G from Silicon Valley, CA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Napa_Valley_Wine_Train,_Napa_Valley,_California,_USA_(6319723539).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-25376981",
+   "file": "/photos/wm-25376981"
+  },
+  "Oxbow Public Market": {
+   "alt": "Empress M pop-up at the Oxbow, Napa, California",
+   "credit": "Missvain",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Empress_M_Pop-up_-_March_2024_-_Sarah_Stierch_01.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-146780441",
+   "file": "/photos/wm-146780441"
+  },
+  "Charles M. Schulz Museum": {
+   "alt": "2000 Will Eisner Award for Peanuts - A Golden Celebration",
+   "credit": "BrokenSphere",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2000_Will_Eisner_Award_for_Peanuts_-_A_Golden_Celebration.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-3926834",
+   "file": "/photos/wm-3926834"
+  },
+  "Six Flags Discovery Kingdom": {
+   "alt": "People watching a show at Six Flags in Vallejo, California",
+   "credit": "Kiddo27",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:People_watching_a_show_at_Six_Flags_in_Vallejo,_California.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-121942202",
+   "file": "/photos/wm-121942202"
   }
  },
  "categories": {
   "live-music": [
    {
-    "id": "wm-134837966",
+    "alt": "Lucinda Williams and her band at the Star Stage",
+    "credit": "Btwashburn56",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Hardly_Strictly_Bluegrass_2014.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-72103376",
+    "file": "/photos/wm-72103376"
+   },
+   {
     "alt": "Hardly Strictly Crowd",
     "credit": "Jesse Wagstaff",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Hardly_Strictly_Crowd.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-134837966",
     "file": "/photos/wm-134837966"
    },
    {
-    "id": "wm-134838724",
+    "alt": "Hardly Strictly Crowd",
+    "credit": "Jesse Wagstaff",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Hardly_Strictly_Crowd_(cropped).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-134838338",
+    "file": "/photos/wm-134838338"
+   },
+   {
     "alt": "Hardly Strictly Bluegrass 2022",
     "credit": "btwashburn",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Crowd_scene.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-134838724",
     "file": "/photos/wm-134838724"
    },
    {
-    "id": "wm-58269405",
     "alt": "Early morning at the Banjo Stage -- HSB 2015",
     "credit": "NAParish from Oakland, CA",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Early_morning_at_the_Banjo_Stage_--_HSB_2015_(21792579020).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-58269405",
     "file": "/photos/wm-58269405"
    },
    {
-    "id": "wm-72103304",
     "alt": "Hardly Strictly Bluegrass 2013",
     "credit": "Btwashburn56",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Hardly_Strictly_Bluegrass_2013.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-72103304",
     "file": "/photos/wm-72103304"
    },
    {
-    "id": "wm-72103422",
     "alt": "Nick Lowe",
     "credit": "Btwashburn56",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Hardly_Strictly_Bluegrass_2015.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-72103422",
     "file": "/photos/wm-72103422"
    },
    {
-    "id": "wm-176174563",
     "alt": "Evolfo perform at Hardly Strictly Bluegrass in San Francisco October 5th 2025",
     "credit": "Jdlrobson",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Evolfo_perform_at_Hardly_Strictly_Bluegrass_in_San_Francisco.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-176174563",
     "file": "/photos/wm-176174563"
    }
   ],
+  "nightlife": [],
+  "comedy": [],
   "theater": [
    {
-    "id": "wm-83851744",
+    "alt": "Main entrance doors and (part of) the outside stairs on the east side of the War Memorial Opera House in San Francisco (facing Van Ness Avenue)",
+    "credit": "HaeB",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:War_Memorial_Opera_House,_San_Francisco_-_main_entrances_and_stairs_(east_side_at_Van_Ness_Avenue).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-126575691",
+    "file": "/photos/wm-126575691"
+   },
+   {
+    "alt": "San Francisco (2018)",
+    "credit": "Another Believer",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_(2018)_-_106.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-73429561",
+    "file": "/photos/wm-73429561"
+   },
+   {
+    "alt": "San Francisco (2018)",
+    "credit": "Another Believer",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_(2018)_-_151.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-73429675",
+    "file": "/photos/wm-73429675"
+   },
+   {
     "alt": "Opera House Tricolour",
     "credit": "Phliar from Republic of San Francisco",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Opera_House_Tricolour_(23146921521).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-83851744",
     "file": "/photos/wm-83851744"
    },
    {
-    "id": "wm-5052014",
+    "alt": "San Francisco War Memorial and Performing Arts Center, San Francisco, California (10754272665)",
+    "credit": "Ken Lund from Reno, Nevada, USA",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_War_Memorial_and_Performing_Arts_Center,_San_Francisco,_California_(10754272665).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-90117712",
+    "file": "/photos/wm-90117712"
+   },
+   {
+    "alt": "San Francisco City Hall, War Memorial Opera House, War Memorial Veterans Building",
+    "credit": "Yair-haklai",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_City_Hall,_War_Memorial_Opera_House,_War_Memorial_Veterans_Building.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-155016298",
+    "file": "/photos/wm-155016298"
+   },
+   {
     "alt": "War Memorial Opera House at night, San Francisco, California",
     "credit": "Photo: Andreas Praefcke",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:War_Memoria_Opera_House_at_night.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "id": "wm-5052014",
     "file": "/photos/wm-5052014"
+   },
+   {
+    "alt": "Side facade of the War Memorial Opera House, in San Francisco, California, USA",
+    "credit": "Photo: Andreas Praefcke",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:War_Memorial_Opera_House_side.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "id": "wm-5052106",
+    "file": "/photos/wm-5052106"
    }
   ],
   "arts": [
    {
-    "id": "wm-92937702",
+    "alt": "Carnaval San Francisco 2014 Parade Gamo's Rhythm Riders 115",
+    "credit": "Carnaval.com Studios from The Inner Mission San Francisco, Earth",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Carnaval_San_Francisco_2014_Parade_Gamo%27s_Rhythm_Riders_115_(14318836823).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-87947003",
+    "file": "/photos/wm-87947003"
+   },
+   {
     "alt": "Mission Mural - Political Art - 39364787244",
     "credit": "Fabrice Florin",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Mission_Mural_-_Political_Art_-_39364787244.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-92937702",
     "file": "/photos/wm-92937702"
    },
    {
-    "id": "wm-92938059",
     "alt": "Mission Mural - Political Art - 28295632829",
     "credit": "Fabrice Florin",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Mission_Mural_-_Political_Art_-_28295632829.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-92938059",
     "file": "/photos/wm-92938059"
    },
    {
-    "id": "wm-141963837",
+    "alt": "Mission Mural - Political Art - 28295632829 (cropped)",
+    "credit": "Fabrice Florin",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Mission_Mural_-_Political_Art_-_28295632829_(cropped).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-185542428",
+    "file": "/photos/wm-185542428"
+   },
+   {
     "alt": "Balmy Alley",
     "credit": "DestinationFearFan",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Balmy_Alley.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "id": "wm-141963837",
     "file": "/photos/wm-141963837"
    },
    {
-    "id": "wm-39287218",
     "alt": "Women's Building - Front",
     "credit": "Plateaueatplau",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Women%27s_Building_-_Front.JPG",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-39287218",
     "file": "/photos/wm-39287218"
    },
    {
-    "id": "wm-39287221",
+    "alt": "Women's Building - Side",
+    "credit": "Plateaueatplau",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Women%27s_Building_-_Side.JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-39287219",
+    "file": "/photos/wm-39287219"
+   },
+   {
     "alt": "Women's Building - Corner",
     "credit": "Plateaueatplau",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Women%27s_Building_-_Corner.JPG",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-39287221",
     "file": "/photos/wm-39287221"
    }
   ],
   "film": [
    {
-    "id": "wm-41256927",
     "alt": "Love Wins celebration in the Castro, San Francisco, June 26 2015.",
     "credit": "bhautik joshi",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:-lovewins_celebration_in_the_Castro_(19196312445).jpg",
     "source": "Wikimedia Commons",
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "id": "wm-41256927",
     "file": "/photos/wm-41256927"
    },
    {
-    "id": "wm-30223316",
+    "alt": "Chani Nicholas and ALOK Vaid-Menon on stage at the Lesbians Who Tech & Allies Summit at The Castro Theatre in San Francisco on October 20, 2023.",
+    "credit": "Lovemedead",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Chani_Nicholas_and_ALOK_Vaid-Menon_on_stage_at_the_Lesbians_Who_Tech_%26_Allies_Summit.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "id": "wm-139962356",
+    "file": "/photos/wm-139962356"
+   },
+   {
+    "alt": "Lexi Butler and B. Pagels-Minor during a keynote session at the Lesbians Who Tech & Allies Summit with accommodations for deaf and hard of hearing individuals",
+    "credit": "Lovemedead",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Lexi_Butler_and_B._Pagels-Minor_during_a_keynote_session_at_the_Lesbians_Who_Tech_%26_Allies_Summit_with_accommodations_for_deaf_and_hard_of_hearing_individuals.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "id": "wm-139962364",
+    "file": "/photos/wm-139962364"
+   },
+   {
     "alt": "Castro Theatre Marquee December 2013 (2)",
     "credit": "Gotanero",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Castro_Theatre_Marquee_December_2013_(2).JPG",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-30223316",
     "file": "/photos/wm-30223316"
+   },
+   {
+    "alt": "A view of the Castro Theatre in San Francisco",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Castro_Theatre_(San_Francisco)_(TK1).JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-52094236",
+    "file": "/photos/wm-52094236"
+   },
+   {
+    "alt": "Giant LGBT pride flag at The Castro in San Francisco",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Giant_LGBT_pride_flag_at_The_Castro_in_San_Francisco.JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-52094555",
+    "file": "/photos/wm-52094555"
+   },
+   {
+    "alt": "Rainbow pedestrian crossing in San Francisco, California",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Rainbow_pedestrian_crossing_in_San_Francisco_(TK1).JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-52094573",
+    "file": "/photos/wm-52094573"
+   },
+   {
+    "alt": "Lesbians Who Tech at The Castro Theater 2018 (42930867375)",
+    "credit": "Billie Grace Ward from New York, USA",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Lesbians_Who_Tech_at_The_Castro_Theater_2018_(42930867375).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-74143946",
+    "file": "/photos/wm-74143946"
    }
   ],
+  "food-drink": [],
+  "markets": [],
   "festivals": [
    {
-    "id": "wm-72692852",
     "alt": "A photo with young people joining 2018 SF Pride Parade",
     "credit": "SF Assessor",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Pride_APAPA_interns.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-72692852",
     "file": "/photos/wm-72692852"
    },
    {
-    "id": "wm-41617491",
     "alt": "1991-06 Jun Kodak Gold 100-2 Film 1991 June - San Francisco Pride Parade Roll 1990s",
     "credit": "niiicedave",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_(9683447573).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-41617491",
     "file": "/photos/wm-41617491"
    },
    {
-    "id": "wm-90908045",
+    "alt": "1991SFPrideKodak5095Gold100-2Film_0012 - Demand Dyke Visibility, Celebrate Queerness, Resist Homophobia - Bay Area Ple… Violence",
+    "credit": "David Prasad from Welches, OR., United States",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991SFPrideKodak5095Gold100-2Film_0012_-_Demand_Dyke_Visibility,_Celebrate_Queerness,_Resist_Homophobia_-_Bay_Area_Ple%E2%80%A6_Violence_(9852383935).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-60666771",
+    "file": "/photos/wm-60666771"
+   },
+   {
+    "alt": "1991JuneSFPride_Kodak5095Gold100-2_0004 Parade always starts with Women's Motorcycle Contingent",
+    "credit": "David Prasad from Welches, OR., United States",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_0004_Parade_always_starts_with_Women%27s_Motorcycle_Contingent_(9686678448).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-90908037",
+    "file": "/photos/wm-90908037"
+   },
+   {
+    "alt": "1991JuneSFPride_Kodak5095Gold100-2_0002 Parade always starts with Women's Motorcycle Contingent",
+    "credit": "David Prasad from Welches, OR., United States",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_0002_Parade_always_starts_with_Women%27s_Motorcycle_Contingent_(9683435271).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-90908042",
+    "file": "/photos/wm-90908042"
+   },
+   {
     "alt": "1991JuneSFPride_Kodak5095Gold100-2_0001 Lead Cycle! Parade always starts with Women's Motorcycle Contingent",
     "credit": "David Prasad from Welches, OR., United States",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_0001_Lead_Cycle!_Parade_always_starts_with_Women%27s_Motorcycle_Contingent_(9683434147).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-90908045",
     "file": "/photos/wm-90908045"
+   },
+   {
+    "alt": "1991JuneSFPride_Kodak5095Gold100-2_0006 Parade always starts with Women's Motorcycle Contingent",
+    "credit": "David Prasad from Welches, OR., United States",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_0006_Parade_always_starts_with_Women%27s_Motorcycle_Contingent_(9686680430).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-90908055",
+    "file": "/photos/wm-90908055"
+   },
+   {
+    "alt": "1991JuneSFPride Kodak5095Gold100-2 0007 Parade always starts with Women's Motorcycle Contingent (9686681540)",
+    "credit": "David Prasad from Welches, OR., United States",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_0007_Parade_always_starts_with_Women%27s_Motorcycle_Contingent_(9686681540).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-90908057",
+    "file": "/photos/wm-90908057"
    }
   ],
   "outdoors": [
    {
-    "id": "wm-139959987",
+    "alt": "Schild zu Crissy Field im Presidio von San Francisco , Naherholungspark, betreut vom National Park Service",
+    "credit": "Burkhard Mücke",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Crissy_Field,_Schild_am_Eingang.JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-45505099",
+    "file": "/photos/wm-45505099"
+   },
+   {
+    "alt": "Coyote brush (Baccharis pilularis) by the beach in San Francisco.",
+    "credit": "Rhododendrites",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Coyote_brush_on_the_beach_in_San_Francisco_1.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-51858241",
+    "file": "/photos/wm-51858241"
+   },
+   {
+    "alt": "San Francisco's Crissy Field at The Presidio in March 2018.",
+    "credit": "Gregory Varnum",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Crissy_Field_-_March_2018_(1440).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-67287813",
+    "file": "/photos/wm-67287813"
+   },
+   {
+    "alt": "San Francisco's Crissy Field at The Presidio in March 2018.",
+    "credit": "Gregory Varnum",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Crissy_Field_-_March_2018_(1436).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-67287814",
+    "file": "/photos/wm-67287814"
+   },
+   {
+    "alt": "Brewer's blackbird in Crissy Field, San Francisco",
+    "credit": "Rhododendrites",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Brewer%27s_blackbird_(16908).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-86892447",
+    "file": "/photos/wm-86892447"
+   },
+   {
     "alt": "California Coast Trail views in San francisco",
     "credit": "Alex Sirac",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:California_Coast_Trail_views_in_San_francisco_9.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "id": "wm-139959987",
     "file": "/photos/wm-139959987"
    },
    {
-    "id": "wm-165256542",
     "alt": "Defense Language Institute Foreign Language Center and World War II Nisei veterans on their 75th anniversary of the Military Intelligence Service at Crissy Field on the Presidio of San Francisco, California on November 12, 2016 - 2",
     "credit": "DLIFLC PAO",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Defense_Language_Institute_Foreign_Language_Center_and_World_War_II_Nisei_veterans_on_their_75th_anniversary_of_the_Military_Intelligence_Service_at_Crissy_Field_on_the_Presidio_of_San_Francisco,_California_on_November_12,_2016_-_2.jpg",
     "source": "Wikimedia Commons",
     "license": "Public domain",
     "licenseUrl": "https://commons.wikimedia.org/wiki/File:Defense_Language_Institute_Foreign_Language_Center_and_World_War_II_Nisei_veterans_on_their_75th_anniversary_of_the_Military_Intelligence_Service_at_Crissy_Field_on_the_Presidio_of_San_Francisco,_California_on_November_12,_2016_-_2.jpg",
+    "id": "wm-165256542",
     "file": "/photos/wm-165256542"
+   },
+   {
+    "alt": "Defense Language Institute Foreign Language Center and World War II Nisei veterans on their 75th anniversary of the Military Intelligence Service at Crissy Field on the Presidio of San Francisco, California on November 12, 2016 - 1",
+    "credit": "DLIFLC PAO",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Defense_Language_Institute_Foreign_Language_Center_and_World_War_II_Nisei_veterans_on_their_75th_anniversary_of_the_Military_Intelligence_Service_at_Crissy_Field_on_the_Presidio_of_San_Francisco,_California_on_November_12,_2016_-_1.jpg",
+    "source": "Wikimedia Commons",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Defense_Language_Institute_Foreign_Language_Center_and_World_War_II_Nisei_veterans_on_their_75th_anniversary_of_the_Military_Intelligence_Service_at_Crissy_Field_on_the_Presidio_of_San_Francisco,_California_on_November_12,_2016_-_1.jpg",
+    "id": "wm-165256543",
+    "file": "/photos/wm-165256543"
    }
   ],
   "sports": [
    {
-    "id": "wm-43494737",
+    "alt": "The archways where people can see the games for free.",
+    "credit": "Daniel Ramirez from Honolulu, USA",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_Tour_(4439731126).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-25326053",
+    "file": "/photos/wm-25326053"
+   },
+   {
+    "alt": "Cameraman and scoreboard at AT&T Park (TK)",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Cameraman_and_scoreboard_at_AT%26T_Park_(TK).JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-52530336",
+    "file": "/photos/wm-52530336"
+   },
+   {
+    "alt": "A gate handle at AT&T Park in San Francisco, California.",
+    "credit": "BrokenSphere",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_gate_handle.JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-10111618",
+    "file": "/photos/wm-10111618"
+   },
+   {
     "alt": "Empty AT&T Park in the day",
     "credit": "Jared Erondu",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:ATT_Stadium.jpeg",
     "source": "Wikimedia Commons",
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "id": "wm-43494737",
     "file": "/photos/wm-43494737"
    },
    {
-    "id": "wm-51095676",
     "alt": "Home of the San Francisco Giants.",
     "credit": "Amy K Posner",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_9-28-2015.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-51095676",
     "file": "/photos/wm-51095676"
+   },
+   {
+    "alt": "AT&T Park in San Francisco (TK3)",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_in_San_Francisco_(TK3).JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-52530288",
+    "file": "/photos/wm-52530288"
+   },
+   {
+    "alt": "AT&T Park Sign with clock (TK1)",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_Sign_with_clock_(TK1).JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-52530295",
+    "file": "/photos/wm-52530295"
+   },
+   {
+    "alt": "AT&T Park Sign (TK2)",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:AT%26T_Park_Sign_(TK2).JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "id": "wm-52530312",
+    "file": "/photos/wm-52530312"
    }
   ],
+  "wellness": [],
+  "learning": [],
   "tech": [
    {
-    "id": "wm-123176792",
     "alt": "An entrance to Dreamforce in 2022, Salesforce's primary convention for the year",
     "credit": "InvadingInvader",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Dreamforce_2022_Entrance.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-123176792",
     "file": "/photos/wm-123176792"
    },
    {
-    "id": "wm-58257150",
+    "alt": "The entrance of the 59th DAC in Moscone Center, San Francisco",
+    "credit": "Neuzelaar",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:DACMoscone2022.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-129223363",
+    "file": "/photos/wm-129223363"
+   },
+   {
+    "alt": "Olympus XA Zuiko 35mm/f2.8 Walgreens 200 10/13/2011",
+    "credit": "Michael Fraley from San Francisco, US",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_Center_11_(6341179575).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-58257088",
+    "file": "/photos/wm-58257088"
+   },
+   {
+    "alt": "Olympus XA Zuiko 35mm/f2.8 Walgreens 200 10/13/2011",
+    "credit": "Michael Fraley from San Francisco, US",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_Center_15_(6341174467).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-58257096",
+    "file": "/photos/wm-58257096"
+   },
+   {
     "alt": "Olympus XA Zuiko 35mm/f2.8 Walgreens 200 10/13/2011",
     "credit": "Michael Fraley from San Francisco, US",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_Center_12_(6341926838).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-58257150",
     "file": "/photos/wm-58257150"
+   },
+   {
+    "alt": "Moscone Center North Konica Auto S2 Hexanon 45mm/f1.8 Fuji Acros 100 04/15/2010",
+    "credit": "Michael Fraley from San Francisco, US",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_Center_(4856619289).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-58275192",
+    "file": "/photos/wm-58275192"
+   },
+   {
+    "alt": "Konica Auto S2 Hexanon 45mm/f1.8 Fuji Acros 100 04/15/2010",
+    "credit": "Michael Fraley from San Francisco, US",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_Center_(4856620199).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "id": "wm-58275221",
+    "file": "/photos/wm-58275221"
+   },
+   {
+    "alt": "Moscone Center",
+    "credit": "Sergiy Galyonkin from Raleigh, USA",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_(52797889425).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-130544656",
+    "file": "/photos/wm-130544656"
    }
   ],
+  "community": [],
   "family": [
    {
-    "id": "wm-60715870",
+    "alt": "Childrens Fairyland Oakland 7315 (6525735831)",
+    "credit": "Ted Eytan",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Childrens_Fairyland_Oakland_7315_(6525735831).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-23144222",
+    "file": "/photos/wm-23144222"
+   },
+   {
     "alt": "Entrance to Children's Fairyland",
     "credit": "Wordworking",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Fairyland_shoe_entrance.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "id": "wm-60715870",
     "file": "/photos/wm-60715870"
    },
    {
-    "id": "wm-83786153",
+    "alt": "2012 MLK Day of Service 8806 (6796960655)",
+    "credit": "Ted Eytan",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:2012_MLK_Day_of_Service_8806_(6796960655).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-83786147",
+    "file": "/photos/wm-83786147"
+   },
+   {
+    "alt": "2012 MLK Day of Service 8808 (6796962787)",
+    "credit": "Ted Eytan",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:2012_MLK_Day_of_Service_8808_(6796962787).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-83786148",
+    "file": "/photos/wm-83786148"
+   },
+   {
     "alt": "2012 MLK Day of Service 8813 (6796969085)",
     "credit": "Ted Eytan",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:2012_MLK_Day_of_Service_8813_(6796969085).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "id": "wm-83786153",
     "file": "/photos/wm-83786153"
    },
    {
-    "id": "wm-198448375",
     "alt": "Display of puppets from Fairyland, 2010-2025",
     "credit": "E mln e",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Historic_puppets_display.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "id": "wm-198448375",
     "file": "/photos/wm-198448375"
+   },
+   {
+    "alt": "Display of puppets from the 1980s at Children's Fairyland",
+    "credit": "E mln e",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Puppets_from_the_1980s_at_Children%27s_Fairyland.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "id": "wm-198448465",
+    "file": "/photos/wm-198448465"
+   },
+   {
+    "alt": "Display of puppets from the 1970s at Children's Fairyland in Oakland, California",
+    "credit": "E mln e",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Puppets_from_the_1970s_at_Children%27s_Fairyland.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "id": "wm-198448673",
+    "file": "/photos/wm-198448673"
    }
   ]
  },
  "regions": {
   "san-francisco": {
-   "id": "wm-36225249",
    "alt": "Golden Gate Bridge from the Presidio, San Francisco.",
    "credit": "Photograph by Mike Peel (www.mikepeel.net).",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge,_San_Francisco_13.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-36225249",
    "file": "/photos/wm-36225249"
   },
   "east-bay": {
-   "id": "wm-62583862",
    "alt": "Gondola on Lake Merritt, Oakland, CA, USA",
    "credit": "Chamberednautilus",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Gondola_on_Lake_Merritt.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-62583862",
    "file": "/photos/wm-62583862"
+  },
+  "peninsula": {
+   "alt": "An immature Red-tailed Hawk at Pillar Point Harbor, California, USA.",
+   "credit": "Jason Crotty",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Buteo_jamaicensis_-Pillar_Point_Harbor,_California,_USA-8.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-17156565",
+   "file": "/photos/wm-17156565"
+  },
+  "south-bay": {
+   "alt": "Mt Umunhum_Quicksilver_Leyland_Coyote_DSC_0148",
+   "credit": "Bill Abbott",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Mt_Umunhum_Quicksilver_Leyland_Coyote_DSC_0148_(47065071294).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-97235590",
+   "file": "/photos/wm-97235590"
+  },
+  "north-bay": {
+   "alt": "Cité de Sausalito (Californie).- États Unis",
+   "credit": "© Pierre André",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_City_of_Sausalito_en2012_(8).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-68729178",
+   "file": "/photos/wm-68729178"
   }
  },
  "cities": {
+  "san-francisco": {
+   "alt": "San Francisco 2011",
+   "credit": "Rodrigo Paredes from Ciudad Autónoma de Buenos Aires, Argentina",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Alone_or_not%3F_(23262134533).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-65143298",
+   "file": "/photos/wm-65143298"
+  },
+  "oakland": {
+   "alt": "Transportation (20161230-OC-LSC-0038)",
+   "credit": "USDAgov",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Transportation_(20161230-OC-LSC-0038).jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Transportation_(20161230-OC-LSC-0038).jpg",
+   "id": "wm-185092016",
+   "file": "/photos/wm-185092016"
+  },
+  "berkeley": {
+   "alt": "Wet foliage of coast live oak (Quercus agrifolia) during dense summer fog in the Berkeley Hills, California. Lichens are visible on the surrounding branches.",
+   "credit": "Awinch1001",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Quercus_agrifolia_fog_Picnic_View_Ridge_Berkeley_Hills_5.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-198829298",
+   "file": "/photos/wm-198829298"
+  },
+  "alameda": {
+   "alt": "American Herring Gull 8424 (Larus smithsonianus)",
+   "credit": "George Murre",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:American_Herring_Gull_8424_(Larus_smithsonianus).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-114516937",
+   "file": "/photos/wm-114516937"
+  },
+  "emeryville": {
+   "alt": "A plethora of food from IKEA in Emeryville, California",
+   "credit": "Missvain",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Food_at_IKEA_-_December_2022_-_Sarah_Stierch.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-126913152",
+   "file": "/photos/wm-126913152"
+  },
+  "albany": {
+   "alt": "J20150602-0034—Melaleuca linariifolia—Albany (18470782561)",
+   "credit": "John Rusk from Berkeley, CA, United States of America",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:J20150602-0034%E2%80%94Melaleuca_linariifolia%E2%80%94Albany_(18470782561).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-59290210",
+   "file": "/photos/wm-59290210"
+  },
+  "piedmont": {
+   "alt": "The Yacht Rockers, a Northern California party band, performing at the outdoor concert for Piedmont, CA's official 4th of July Picnic in 2026",
+   "credit": "ECTran71",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Piedmont,_CA_4th_of_July_250_02.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-195655380",
+   "file": "/photos/wm-195655380"
+  },
+  "el-cerrito": {
+   "alt": "Fountain. A water feature photographed in a private garden in El Cerrito, CA.",
+   "credit": "John Rusk from Berkeley, CA, United States of America",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:J20160412-0025%E2%80%94fountain%E2%80%94Bertha_(25891290963).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-59288726",
+   "file": "/photos/wm-59288726"
+  },
+  "richmond": {
+   "alt": "Starlight Home 01",
+   "credit": "Mark DeSaulnier",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Starlight_Home_01.jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Starlight_Home_01.jpg",
+   "id": "wm-92878532",
+   "file": "/photos/wm-92878532"
+  },
+  "san-leandro": {
+   "alt": "San Leandro Cherry Festival in 2024",
+   "credit": "Mx. Granger",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Leandro_Cherry_Festival_3.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-149565263",
+   "file": "/photos/wm-149565263"
+  },
+  "castro-valley": {
+   "alt": "Marketplace with various eateries in Castro Valley, CA",
+   "credit": "Lights and freedom",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Lake_Chabot_Public_Market.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-120199354",
+   "file": "/photos/wm-120199354"
+  },
+  "hayward": {
+   "alt": "Chorizo, El Salvador style, made at Chavez Market in Hayward, California, 2016. uncooked, contents not known. tasty",
+   "credit": "Mercurywoodrose",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Salvadorean_style_chorizo.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-48630438",
+   "file": "/photos/wm-48630438"
+  },
   "union-city": {
-   "id": "wm-130166228",
    "alt": "Union City Farmers' Market in 2015. Originally posted to Flickr: https://flickr.com/photos/ixfd64/20577173794",
    "credit": "Ixfd64",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Union_City_Farmers%27_Market.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-130166228",
    "file": "/photos/wm-130166228"
   },
-  "walnut-creek": {
-   "id": "wm-166938204",
-   "alt": "Walnut Creek Art and Wine Festival at Civic Park during 2025",
-   "credit": "Tellurium6",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Walnut_Creek_Art_and_Wine_2025.jpg",
+  "fremont": {
+   "alt": "South San Francisco Bay viewed from Mission Peak in Fremont, California",
+   "credit": "Oleg Alexandrov",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:South_San_Francisco_Bay_viewed_from_Mission_Peak_in_Fremont,_California.JPG",
    "source": "Wikimedia Commons",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-166938204"
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-23296875",
+   "file": "/photos/wm-23296875"
+  },
+  "newark": {
+   "alt": "99 Ranch Market (Chinese supermarket) at Newark, California",
+   "credit": "Suiren2022",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:99_Ranch_Market_(Newark,_CA)_-_outdoor_bulletin_board.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-136264687",
+   "file": "/photos/wm-136264687"
+  },
+  "dublin": {
+   "alt": "View of the family housing accommodations at Camp Parks",
+   "credit": "GreenMeansGo",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Camp_Parks_family_housing.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-80829175",
+   "file": "/photos/wm-80829175"
+  },
+  "pleasanton": {
+   "alt": "Phoebe Apperson Hearst Elementary School in Pleasanton, California",
+   "credit": "Cullen328",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Phoebe_Apperson_Hearst_Elementary_School.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-199902193",
+   "file": "/photos/wm-199902193"
   },
   "livermore": {
-   "id": "wm-111183026",
    "alt": "Livermore's Farmer's Market at Carnegie Park",
    "credit": "Dm91 (talk)",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:LivermoreFarmersMarket.JPG",
    "source": "Wikimedia Commons",
    "license": "Public domain",
    "licenseUrl": "https://commons.wikimedia.org/wiki/File:LivermoreFarmersMarket.JPG",
+   "id": "wm-111183026",
    "file": "/photos/wm-111183026"
   },
-  "belmont": {
-   "id": "wm-2815478",
-   "alt": "People performing a Greek line dance at the Greek festival in Belmont, California.",
-   "credit": "Dvortygirl",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Greek_line_dancers_Belmont_California.jpg",
+  "san-ramon": {
+   "alt": "Entrance to the U-shaped driveway and bus bays for San Ramon",
+   "credit": "Mliu92",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Ramon_Intermodal_Transit_Center_01.jpg",
    "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-2815478"
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-165766260",
+   "file": "/photos/wm-165766260"
   },
-  "half-moon-bay": {
-   "id": "wm-198329558",
-   "alt": "Giant Pumpkin On Parade Float",
-   "credit": "MegalithAgency",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Half_Moon_Bay_Art_%26_Pumpkin_Festival_Great_Pumpkin_Parade.jpg",
+  "danville": {
+   "alt": "A sign in Danville, California, indicating its friendship cities: Danville, Kentucky, and New Ross, Ireland.",
+   "credit": "Dogman15",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Danville_Friendship_Cities.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-128647556",
+   "file": "/photos/wm-128647556"
+  },
+  "walnut-creek": {
+   "alt": "Walnut Creek Art and Wine Festival at Civic Park during 2025",
+   "credit": "Tellurium6",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Walnut_Creek_Art_and_Wine_2025.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-198329558"
+   "id": "wm-166938204",
+   "file": "/photos/wm-166938204"
   },
-  "menlo-park": {
-   "id": "wm-76127943",
-   "alt": "Sunday morning at the Menlo Park farmers market.",
-   "credit": "TravelerNickR",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Menlo_Park_Farmers_Market.jpg",
+  "lafayette": {
+   "alt": "Eastbound on CA Route 24 near Lafayette, CA.",
+   "credit": "Chevy111",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:CA_Route_24.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-76127943"
+   "id": "wm-46749052",
+   "file": "/photos/wm-46749052"
   },
-  "san-jose": {
-   "id": "wm-118796573",
-   "alt": "The place where the meeting with Mạnh An took place.",
-   "credit": "Song Toàn Võ",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_m%E1%BA%B7t_v%E1%BB%9Bi_M%E1%BA%A1nh_An-Song_To%C3%A0n_V%C3%B5_(San_Jose,_California,_Hoa_K%E1%BB%B3)2.jpg",
+  "orinda": {
+   "alt": "The Berkeley Hills as seen from CA 24 near Orinda, CA.",
+   "credit": "Chevy111",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Berkeley_Hills_Orinda.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-118796573"
+   "id": "wm-46748957",
+   "file": "/photos/wm-46748957"
   },
-  "campbell": {
-   "id": "wm-55220685",
-   "alt": "A vendor selling various types of mushrooms at the farmers' market in downtown Campbell, California.",
-   "credit": "Grendelkhan",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Mushroom_stand_at_the_Campbell_farmers%27_market.gk.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-55220685"
-  },
-  "los-gatos": {
-   "id": "wm-121873011",
-   "alt": "Six13 at Jewish Music Fest in Los Gatos, California",
-   "credit": "Kiddo27",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Six13_at_Jewish_Music_Fest_in_Los_Gatos,_California_2.jpg",
+  "moraga": {
+   "alt": "View northwest and down from an airplane towards the cities of Moraga, Lafayette and Orinda in Contra Costa County, California",
+   "credit": "Famartin",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2022-03-28_13_32_20_View_northwest_and_down_from_an_airplane_towards_the_cities_of_Moraga,_Lafayette_and_Orinda_in_Contra_Costa_County,_California.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-121873011"
+   "id": "wm-116489915",
+   "file": "/photos/wm-116489915"
   },
-  "mill-valley": {
-   "id": "wm-19378994",
-   "alt": "Depot Plaza in Mill Valley, California (as seen in March 2012).",
-   "credit": "Frank Schulenburg",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Mill_Valley,_Depot_Plaza_(2012).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-19378994"
-  },
-  "corte-madera": {
-   "id": "wm-134061343",
-   "alt": "San Francisco Lesbian/Gay Freedom Band at the Corte Madera-Larkspur 4th of July Parade and Festival in 2023.",
-   "credit": "Mx. Granger",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:SFLGFB_2.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "file": "/photos/wm-134061343"
-  },
-  "tiburon": {
-   "id": "wm-38040882",
-   "alt": "Swing at the Hippie Tree in Tiburon (California, USA) with views to San Francisco and the Golden Gate Bridge.",
-   "credit": "QuimGil",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Hippie_Tree_in_Tiburon.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "file": "/photos/wm-38040882"
-  },
-  "stinson-beach": {
-   "id": "wm-26120532",
-   "alt": "Stinson Beach, California on June 27, 2009, seen from the south.",
-   "credit": "jenly from Oakland, CA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Crowded_day_at_Stinson_Beach.jpg",
+  "pleasant-hill": {
+   "alt": "PH's 50th Anniversary dinner celebration at the golf club.",
+   "credit": "Bill Larkins",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:PH_Citys_50th_Anniversary_(6444800489).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-   "file": "/photos/wm-26120532"
+   "id": "wm-29357152",
+   "file": "/photos/wm-29357152"
   },
-  "petaluma": {
-   "id": "wm-57009681",
-   "alt": "The Sound of Fun Going Away (5488116778)",
-   "credit": "cogdogblog",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Sound_of_Fun_Going_Away_(5488116778).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-57009681"
-  },
-  "sonoma": {
-   "id": "wm-39230807",
-   "alt": "Promotional sign on the Sonoma Plaza during the 2015 Sonoma International Film Festival. Photo by Jim Heaphy.",
-   "credit": "Cullen328",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Sonoma_International_Film_Festival_2015.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "file": "/photos/wm-39230807"
-  },
-  "vallejo": {
-   "id": "wm-185569161",
-   "alt": "Smokey Bear and the mobile ranger station made an appearance in the Mad Hatter parade on December 7, 2024 (20241207-FS-ASA--01)",
-   "credit": "Region 5 Photography",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Smokey_Bear_and_the_mobile_ranger_station_made_an_appearance_in_the_Mad_Hatter_parade_on_December_7,_2024_(20241207-FS-ASA--01).jpg",
+  "concord": {
+   "alt": "Drought Mitigation - Park Land Rancher Ned Wood uses Solar Powered Well System (20150724-NRCS-LSC-0376)",
+   "credit": "USDAgov",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Drought_Mitigation_-_Park_Land_Rancher_Ned_Wood_uses_Solar_Powered_Well_System_(20150724-NRCS-LSC-0376).jpg",
    "source": "Wikimedia Commons",
    "license": "Public domain",
-   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Smokey_Bear_and_the_mobile_ranger_station_made_an_appearance_in_the_Mad_Hatter_parade_on_December_7,_2024_(20241207-FS-ASA--01).jpg",
-   "file": "/photos/wm-185569161"
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Drought_Mitigation_-_Park_Land_Rancher_Ned_Wood_uses_Solar_Powered_Well_System_(20150724-NRCS-LSC-0376).jpg",
+   "id": "wm-185311107",
+   "file": "/photos/wm-185311107"
   },
-  "mountain-view": {
-   "id": "wm-92946582",
-   "alt": "My town - Flickr - bluesbby",
-   "credit": "bluesbby from Mountain View, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:My_town_-_Flickr_-_bluesbby.jpg",
+  "martinez": {
+   "alt": "A part of the John Muir National Historic Site, the Martinez Adobe was built in 1849 by the family for whom the town of Martinez (d322550e-b83f-6b1b-dcd8-531619a07216)",
+   "credit": "NPS Photo",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:A_part_of_the_John_Muir_National_Historic_Site,_the_Martinez_Adobe_was_built_in_1849_by_the_family_for_whom_the_town_of_Martinez_(d322550e-b83f-6b1b-dcd8-531619a07216).jpg",
    "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-92946582"
-  },
-  "cupertino": {
-   "id": "wm-113450363",
-   "alt": "This is in the hills of Cupertino. One of these houses has a small winery in the yard. There is also a winery up there, it has been there since the 1800's.",
-   "credit": "bluesbby from Mountain View, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:In_the_hills_(25433458638).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-113450363"
-  },
-  "milpitas": {
-   "id": "wm-113450815",
-   "alt": "Here I'm in Milpitas at a lake, when I looked up and saw a line of people walking. I liked the look, and just had to have a photo.",
-   "credit": "bluesbby from Mountain View, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Colorful_reflections_(14417917738).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-113450815"
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:A_part_of_the_John_Muir_National_Historic_Site,_the_Martinez_Adobe_was_built_in_1849_by_the_family_for_whom_the_town_of_Martinez_(d322550e-b83f-6b1b-dcd8-531619a07216).jpg",
+   "id": "wm-148367393",
+   "file": "/photos/wm-148367393"
   },
   "pittsburg": {
-   "id": "wm-143236851",
    "alt": "John Buckley Square & Pittsburg Power Plant, Pittsburg California",
    "credit": "Armenshirazd",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:John_Buckley_Square,_Pittsburg_California.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-143236851",
    "file": "/photos/wm-143236851"
+  },
+  "antioch": {
+   "alt": "Stamm Theatre (former movie theater in Antioch, California, United States)",
+   "credit": "Mliu92",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Stamm_Theatre.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-165085211",
+   "file": "/photos/wm-165085211"
+  },
+  "brentwood": {
+   "alt": "Power Market gas station in Brentwood, California.",
+   "credit": "Thomasfan1916",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Power_Market_gas_station_in_Brentwood,_California.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-194569657",
+   "file": "/photos/wm-194569657"
+  },
+  "daly-city": {
+   "alt": "Jackie Speier volunteering at Second Harvest Food Bank in Daly City - 2020",
+   "credit": "Jackie Speier",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Jackie_Speier_volunteering_at_Second_Harvest_Food_Bank_in_Daly_City_-_2020.jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Jackie_Speier_volunteering_at_Second_Harvest_Food_Bank_in_Daly_City_-_2020.jpg",
+   "id": "wm-92916099",
+   "file": "/photos/wm-92916099"
+  },
+  "brisbane": {
+   "alt": "Brisbane Library in California illuminated at night.",
+   "credit": "BriefEdits",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Brisbane_Library,_exterior,_night_(November_2024)_02.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-155343024",
+   "file": "/photos/wm-155343024"
+  },
+  "south-san-francisco": {
+   "alt": "View of South San Francisco from the Embassy Suites hotel in that city.",
+   "credit": "Supercarwaar",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:View_of_South_San_Francisco.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-42151854",
+   "file": "/photos/wm-42151854"
+  },
+  "san-bruno": {
+   "alt": "Mid East Market sign in San Bruno CA",
+   "credit": "Suiren2022",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Mid_East_Market_sign_in_San_Bruno_CA.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-136802262",
+   "file": "/photos/wm-136802262"
+  },
+  "pacifica": {
+   "alt": "Power pole, powerlines, and tree seen in Pacifica, CA on \"The day the sky turned orange\" 9/9/2020",
+   "credit": "FuriousYogi",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Power_pole_and_lines_on_orange_sky.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-111878747",
+   "file": "/photos/wm-111878747"
+  },
+  "millbrae": {
+   "alt": "Spur Trail, Millbrae, California. This is part of the southern section of the trail, photographed near the corner of Millbrae and Magnolia Drive.",
+   "credit": "Mx. Granger",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Spur_Trail,_Millbrae_(southern_section).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-56199000",
+   "file": "/photos/wm-56199000"
+  },
+  "burlingame": {
+   "alt": "433 is where the old Kee Joon's Restaurant was.",
+   "credit": "mliu92",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:433_Airport_Blvd,_Burlingame_California_(50420094943).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-94784126",
+   "file": "/photos/wm-94784126"
+  },
+  "san-mateo": {
+   "alt": "Empty Shelves at Trader Joe's",
+   "credit": "FASTILY",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Empty_Shelves_at_Trader_Joe%27s_2_2023-02-11.jpeg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-128611858",
+   "file": "/photos/wm-128611858"
+  },
+  "foster-city": {
+   "alt": "The Straw Bale Building at Shorebird Park Nature Center. The building was constructed in the late 1990s using bales of rice straw.",
+   "credit": "John Rusk from Berkeley, CA, United States of America",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:H20151110-0019%E2%80%94Straw_Bale_Building%E2%80%94Shorebird_Park_Nature_Center_DxO_(22927577776).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-59289464",
+   "file": "/photos/wm-59289464"
+  },
+  "belmont": {
+   "alt": "People performing a Greek line dance at the Greek festival in Belmont, California.",
+   "credit": "Dvortygirl",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Greek_line_dancers_Belmont_California.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-2815478",
+   "file": "/photos/wm-2815478"
+  },
+  "san-carlos": {
+   "alt": "Entrance of the San Carlos Library in San Carlos, California",
+   "credit": "YonderStone",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Carlos_Library.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-71334311",
+   "file": "/photos/wm-71334311"
+  },
+  "redwood-city": {
+   "alt": "Bust of Soledad Ortega de Argüello in Redwood City, CA and the surrounding area",
+   "credit": "BrokenSegue",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Bust_of_Soledad_Ortega_de_Arg%C3%BCello_(2026,_landscape).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-194417643",
+   "file": "/photos/wm-194417643"
+  },
+  "half-moon-bay": {
+   "alt": "Giant Pumpkin On Parade Float",
+   "credit": "MegalithAgency",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Half_Moon_Bay_Art_%26_Pumpkin_Festival_Great_Pumpkin_Parade.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-198329558",
+   "file": "/photos/wm-198329558"
+  },
+  "woodside": {
+   "alt": "Zuckerberg meets Obama",
+   "credit": "White House (Pete Souza) / Maison Blanche (Pete Souza)",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Zuckerberg_meets_Obama.jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Zuckerberg_meets_Obama.jpg",
+   "id": "wm-13364839",
+   "file": "/photos/wm-13364839"
+  },
+  "atherton": {
+   "alt": "Exterior of the road entrance to the Menlo Circus Club, lawns are visible down the road",
+   "credit": "BrokenSegue",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Exterior_entrance_of_the_Menlo_Circus_Club_2.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-194431138",
+   "file": "/photos/wm-194431138"
+  },
+  "menlo-park": {
+   "alt": "Sunday morning at the Menlo Park farmers market.",
+   "credit": "TravelerNickR",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Menlo_Park_Farmers_Market.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-76127943",
+   "file": "/photos/wm-76127943"
+  },
+  "east-palo-alto": {
+   "alt": "A photo of a sign welcoming people to East Palo Alto",
+   "credit": "Ardenmachro",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Welcome_To_East_Palo_Alto_Sign.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-144900082",
+   "file": "/photos/wm-144900082"
+  },
+  "palo-alto": {
+   "alt": "MA7 Ninja Challenge, Palo Alto, California",
+   "credit": "Yusuke Kawasaki",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Ito-en_booth_(6268930914).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-46213457",
+   "file": "/photos/wm-46213457"
+  },
+  "mountain-view": {
+   "alt": "My town - Flickr - bluesbby",
+   "credit": "bluesbby from Mountain View, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:My_town_-_Flickr_-_bluesbby.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-92946582",
+   "file": "/photos/wm-92946582"
+  },
+  "los-altos": {
+   "alt": "Porsche 718 Cayman (982) parked on a street in Los Altos, California, United States, on July 6, 2026.",
+   "credit": "Daniel Lu (User:dllu)",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Porsche_718_Cayman_982_Los_Altos_California_2026_dllu.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-195200835",
+   "file": "/photos/wm-195200835"
+  },
+  "sunnyvale": {
+   "alt": "A Caterpillar 815F soil compactor at a job site in Sunnyvale, California.",
+   "credit": "Grendelkhan",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Caterpillar_815F_soil_compactor_on_site_in_Sunnyvale,_facing_left.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-149390185",
+   "file": "/photos/wm-149390185"
+  },
+  "santa-clara": {
+   "alt": "This was at the Art and Wine Festival in Santa Clara.",
+   "credit": "bluesbby from Mountain View, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Colorful_fountain_(15246535052).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-113450782",
+   "file": "/photos/wm-113450782"
+  },
+  "cupertino": {
+   "alt": "This is in the hills of Cupertino. One of these houses has a small winery in the yard. There is also a winery up there, it has been there since the 1800's.",
+   "credit": "bluesbby from Mountain View, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:In_the_hills_(25433458638).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-113450363",
+   "file": "/photos/wm-113450363"
+  },
+  "san-jose": {
+   "alt": "The place where the meeting with Mạnh An took place.",
+   "credit": "Song Toàn Võ",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_m%E1%BA%B7t_v%E1%BB%9Bi_M%E1%BA%A1nh_An-Song_To%C3%A0n_V%C3%B5_(San_Jose,_California,_Hoa_K%E1%BB%B3)2.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-118796573",
+   "file": "/photos/wm-118796573"
+  },
+  "milpitas": {
+   "alt": "Here I'm in Milpitas at a lake, when I looked up and saw a line of people walking. I liked the look, and just had to have a photo.",
+   "credit": "bluesbby from Mountain View, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Colorful_reflections_(14417917738).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-113450815",
+   "file": "/photos/wm-113450815"
+  },
+  "campbell": {
+   "alt": "A vendor selling various types of mushrooms at the farmers' market in downtown Campbell, California.",
+   "credit": "Grendelkhan",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Mushroom_stand_at_the_Campbell_farmers%27_market.gk.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-55220685",
+   "file": "/photos/wm-55220685"
+  },
+  "saratoga": {
+   "alt": "View of a parking lot and trees from the back of a delicatessen in Saratoga, California.",
+   "credit": "Tomwsulcer",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:View_from_delicatessen_in_Saratoga,_California.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-46053538",
+   "file": "/photos/wm-46053538"
+  },
+  "los-gatos": {
+   "alt": "Six13 at Jewish Music Fest in Los Gatos, California",
+   "credit": "Kiddo27",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Six13_at_Jewish_Music_Fest_in_Los_Gatos,_California_2.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-121873011",
+   "file": "/photos/wm-121873011"
+  },
+  "morgan-hill": {
+   "alt": "MorganHill and Family",
+   "credit": "Sooriyajeevan",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:MorganHill_and_Family.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-82700483",
+   "file": "/photos/wm-82700483"
+  },
+  "gilroy": {
+   "alt": "A flyer at downtown Gilroy, CA about a rally to protect Juristac (Amah Mutsun Tribal Band’s ancestral lands) against a proposed mining operation",
+   "credit": "Suiren2022",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Rally_for_Juristac_flyer_at_Gilroy_-_1.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-126327588",
+   "file": "/photos/wm-126327588"
+  },
+  "sausalito": {
+   "alt": "Duplexes on the west side of Bridgeway in downtown Sausalito",
+   "credit": "Alfred Twu",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Sausalito-duplexes.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-106287900",
+   "file": "/photos/wm-106287900"
+  },
+  "tiburon": {
+   "alt": "Swing at the Hippie Tree in Tiburon (California, USA) with views to San Francisco and the Golden Gate Bridge.",
+   "credit": "QuimGil",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Hippie_Tree_in_Tiburon.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-38040882",
+   "file": "/photos/wm-38040882"
+  },
+  "mill-valley": {
+   "alt": "Depot Plaza in Mill Valley, California (as seen in March 2012).",
+   "credit": "Frank Schulenburg",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Mill_Valley,_Depot_Plaza_(2012).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-19378994",
+   "file": "/photos/wm-19378994"
+  },
+  "corte-madera": {
+   "alt": "San Francisco Lesbian/Gay Freedom Band at the Corte Madera-Larkspur 4th of July Parade and Festival in 2023.",
+   "credit": "Mx. Granger",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:SFLGFB_2.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-134061343",
+   "file": "/photos/wm-134061343"
+  },
+  "larkspur": {
+   "alt": "Highway bridges over Corte Madera Creek in December 2019",
+   "credit": "Pi.1415926535",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Corte_Madera_Creek_bridges,_December_2019.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-85526486",
+   "file": "/photos/wm-85526486"
+  },
+  "san-anselmo": {
+   "alt": "Sorich Ranch Open Space Park in San Anselmo, California.",
+   "credit": "Mx. Granger",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Sorich_Ranch_Open_Space_Park.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-50192240",
+   "file": "/photos/wm-50192240"
+  },
+  "fairfax": {
+   "alt": "Eastern Gray Squirrel | Fairfax Inn | CA|2018-09-16|13-41-42",
+   "credit": "Bettina Arrigoni",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Eastern_Gray_Squirrel_Fairfax_Inn_CA_2018-09-16_13-41-42_(31822525388).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-75175620",
+   "file": "/photos/wm-75175620"
+  },
+  "san-rafael": {
+   "alt": "The Sunday Marin Farmers Market, San Rafael, United States",
+   "credit": "Jessica Ruscello jruscello",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Sunday_Marin_Farmers_Market,_San_Rafael,_United_States_(Unsplash).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-61860222",
+   "file": "/photos/wm-61860222"
+  },
+  "novato": {
+   "alt": "Cali-02-barking men",
+   "credit": "Weldon Kennedy from London, UK",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Cali-02-barking_men_(6558566789).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-104315765",
+   "file": "/photos/wm-104315765"
+  },
+  "stinson-beach": {
+   "alt": "Stinson Beach, California on June 27, 2009, seen from the south.",
+   "credit": "jenly from Oakland, CA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Crowded_day_at_Stinson_Beach.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-26120532",
+   "file": "/photos/wm-26120532"
+  },
+  "petaluma": {
+   "alt": "The Sound of Fun Going Away (5488116778)",
+   "credit": "cogdogblog",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Sound_of_Fun_Going_Away_(5488116778).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-57009681",
+   "file": "/photos/wm-57009681"
+  },
+  "sonoma": {
+   "alt": "Promotional sign on the Sonoma Plaza during the 2015 Sonoma International Film Festival. Photo by Jim Heaphy.",
+   "credit": "Cullen328",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Sonoma_International_Film_Festival_2015.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-39230807",
+   "file": "/photos/wm-39230807"
+  },
+  "santa-rosa": {
+   "alt": "Santa Rosa Seafood, Napa Farmers Market, Napa, California",
+   "credit": "Missvain",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Santa_Rosa_Seafood_-_August_2023_-_Sarah_Stierch.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-135906004",
+   "file": "/photos/wm-135906004"
+  },
+  "healdsburg": {
+   "alt": "Dry Creek Valley from Quivira Vineyards",
+   "credit": "myself",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:DryCreekValley.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "id": "wm-61373984",
+   "file": "/photos/wm-61373984"
+  },
+  "napa": {
+   "alt": "Dueces Market in Napa, California",
+   "credit": "Missvain",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Dueces_Market_-_August_2023_-_Sarah_Stierch.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-135874574",
+   "file": "/photos/wm-135874574"
+  },
+  "yountville": {
+   "alt": "A Garton Mercury 1938 pedal car on display in Yountville, California",
+   "credit": "Cullen328",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Garton_Mercury_1938_pedal_car.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-18351635",
+   "file": "/photos/wm-18351635"
+  },
+  "st-helena": {
+   "alt": "Gott's Roadside front of building in St. Helena",
+   "credit": "Kiddo27",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Gott%27s_Roadside_front_of_building_in_St._Helena.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-121945232",
+   "file": "/photos/wm-121945232"
+  },
+  "calistoga": {
+   "alt": "Napa River in Calistoga",
+   "credit": "Missvain",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Napa_River_in_Calistoga_-_December_2022_-_Sarah_Stierch.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-128357722",
+   "file": "/photos/wm-128357722"
+  },
+  "vallejo": {
+   "alt": "Smokey Bear and the mobile ranger station made an appearance in the Mad Hatter parade on December 7, 2024 (20241207-FS-ASA--01)",
+   "credit": "Region 5 Photography",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Smokey_Bear_and_the_mobile_ranger_station_made_an_appearance_in_the_Mad_Hatter_parade_on_December_7,_2024_(20241207-FS-ASA--01).jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Smokey_Bear_and_the_mobile_ranger_station_made_an_appearance_in_the_Mad_Hatter_parade_on_December_7,_2024_(20241207-FS-ASA--01).jpg",
+   "id": "wm-185569161",
+   "file": "/photos/wm-185569161"
+  },
+  "benicia": {
+   "alt": "Benicia Poet Laureate Joel Fallon",
+   "credit": "Diana Lang",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Benicia_Poet_Laureate_Joel_Fallon.jpg",
+   "source": "Wikimedia Commons",
+   "license": "Public domain",
+   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Benicia_Poet_Laureate_Joel_Fallon.jpg",
+   "id": "wm-121474439",
+   "file": "/photos/wm-121474439"
   }
  },
  "hoods": {
   "mission-district": {
-   "id": "wm-42182213",
    "alt": "Bi-Rite Market, 18th St in 2008",
    "credit": "Eric Heath",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Bi-Rite_Market,_18th_St_in_2008.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-42182213",
    "file": "/photos/wm-42182213"
   },
   "noe-valley": {
-   "id": "wm-17666545",
    "alt": "Halloween 2010 at Noe Valley, San Francisco",
    "credit": "Team at Carnaval.com Studios",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Halloween_2010_Noe_Valley_to_SF_Mission_45.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-17666545",
    "file": "/photos/wm-17666545"
   },
   "lower-haight": {
-   "id": "wm-13250915",
    "alt": "Low Cost Fist & Meat Market at the corner of Haight and Fillmore in the Lower Haight neighborhood of San Francisco, California.",
    "credit": "Christopher Bowns",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Low_Cost_Meat_and_Fish_Lower_Haight.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-13250915",
    "file": "/photos/wm-13250915"
   },
+  "hayes-valley": {
+   "alt": "Jump (199751599)",
+   "credit": "Wenchao Wang",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Jump_(199751599).jpeg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "id": "wm-71467900",
+   "file": "/photos/wm-71467900"
+  },
+  "soma": {
+   "alt": "Former railroad siding in an unnamed alley off 3rd Street, photographed in July 2017",
+   "credit": "Pi.1415926535",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Former_freight_siding_off_Third_Street,_July_2017.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-65058176",
+   "file": "/photos/wm-65058176"
+  },
+  "financial-district": {
+   "alt": "The entrance to E*Trade Financial at 532 Market Street in San Francisco.",
+   "credit": "BrokenSphere",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:ETrade,_532_Market_St.,_SF_entrance.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-4801416",
+   "file": "/photos/wm-4801416"
+  },
+  "embarcadero": {
+   "alt": "KGO-TV antennas. Very short focal length. San Francisco, California, USA",
+   "credit": "Photograph by Mike Peel (www.mikepeel.net).",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:At_San_Francisco_2015_031.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-46749125",
+   "file": "/photos/wm-46749125"
+  },
   "north-beach": {
-   "id": "wm-131380758",
    "alt": "The outside sign of Lombard Heights Market in or close to North Beach (Little Italy) in San Francisco, California",
    "credit": "Exploratorium efimeros",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Lombard_Heights_Market.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-131380758",
    "file": "/photos/wm-131380758"
   },
   "chinatown": {
-   "id": "wm-185319512",
    "alt": "View of the corner Commercial St. and Grant Ave. in the Chinatown of San Francisco, late February 2026",
    "credit": "Frank Schulenburg",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Commercial_and_Grant,_San_Francisco_(2026)-L1000523.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-185319512",
    "file": "/photos/wm-185319512"
   },
   "nob-hill": {
-   "id": "wm-66696015",
    "alt": "Asian mothers with children sitting in a Powell/Mason Street line cable car in January 2017. On Mason Street before Jackson Street in San Francisco.",
    "credit": "Mitch Altman from San Francisco, USA",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Inside_a_cable_car_on_Mason_Street,_San_Francisco_(January_2017)(32508453422).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "id": "wm-66696015",
    "file": "/photos/wm-66696015"
   },
+  "russian-hill": {
+   "alt": "Life in San Francisco (16067631916)",
+   "credit": "Giuseppe Milo from Lisbon, Portugal",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Life_in_San_Francisco_(16067631916).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-146148147",
+   "file": "/photos/wm-146148147"
+  },
   "fishermans-wharf": {
-   "id": "wm-4392489",
    "alt": "F Market & Wharves Bay and The Embarcadero station",
    "credit": "Kurykh",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Bay_and_The_Embarcadero.JPG",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-4392489",
    "file": "/photos/wm-4392489"
   },
+  "marina": {
+   "alt": "Fog over San Francisco Bay obscures the view of the Golden Gate Bridge. View is from San Francisco Bay Trail.",
+   "credit": "Rhododendrites",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_behind_the_fog.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-51858232",
+   "file": "/photos/wm-51858232"
+  },
   "pacific-heights": {
-   "id": "wm-49696996",
    "alt": "Apartments at 2870–78 Washington Street, San Francisco, California",
    "credit": "Yngvadottir",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:2870-78_Washington.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-49696996",
    "file": "/photos/wm-49696996"
   },
+  "union-square": {
+   "alt": "Barricades at Union Square, San Francisco.",
+   "credit": "BrokenSphere",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Barricades_at_Union_Square,_SF.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-10905994",
+   "file": "/photos/wm-10905994"
+  },
   "tenderloin": {
-   "id": "wm-20251802",
    "alt": "People playing chess at Market Street, San Francisco,",
    "credit": "Yair Haklai",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:People_playing_chess-Tenderloin-San_Francisco.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-20251802",
    "file": "/photos/wm-20251802"
   },
   "civic-center": {
-   "id": "wm-52073255",
    "alt": "Farmer´s Market at Civic Center in San Francisco (TK1)",
    "credit": "Tobias Kleinlercher / Wikipedia",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Farmer%C2%B4s_Market_at_UN_Plaza-Civic_Center_in_San_Francisco_(TK1).JPG",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-52073255",
    "file": "/photos/wm-52073255"
   },
+  "japantown": {
+   "alt": "San Francisco, 2017 photography.kenwalton.com FACEBOOK | TUMBLR | IG | TWITTER | FLICKR | EyeEm",
+   "credit": "Ken Walton from San Francisco, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Untitled_-_Flickr_-_kenwalton_(5).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-93008785",
+   "file": "/photos/wm-93008785"
+  },
   "outer-richmond": {
-   "id": "wm-161330375",
    "alt": "Gunde Maersk off of Lands End, San Francisco, California.",
    "credit": "Joe Mabel",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Gunde_Maersk_off_of_Lands_End,_San_Francisco.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-161330375",
    "file": "/photos/wm-161330375"
   },
+  "golden-gate-park": {
+   "alt": "Green Houses inside of Golden Gate Park Nursery",
+   "credit": "Reyesedit",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Green_Houses.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-45403921",
+   "file": "/photos/wm-45403921"
+  },
+  "presidio": {
+   "alt": "The Korean War Memorial at the Presidio of San Francisco",
+   "credit": "Frank Schulenburg",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Korean_War_Memorial_at_the_Presidio_of_San_Francisco.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-54062202",
+   "file": "/photos/wm-54062202"
+  },
   "potrero-hill": {
-   "id": "wm-53179771",
    "alt": "Sunset in San Francisco from Potrero Hill facing West",
    "credit": "Jeffthechimp",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Sunset_in_San_Francisco_Nov_2016.jpg",
    "source": "Wikimedia Commons",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-53179771",
    "file": "/photos/wm-53179771"
   },
+  "dogpatch": {
+   "alt": "The Dogpatch Ropewalk, November 2018",
+   "credit": "Pi.1415926535",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Dogpatch_Ropewalk,_November_2018.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-74620754",
+   "file": "/photos/wm-74620754"
+  },
   "mission-bay": {
-   "id": "wm-196546100",
    "alt": "Gus's Community Market in Mission Bay, San Francisco. Photographed in July 2026.",
    "credit": "Lexi Mattick",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Gus%27s_Community_Market,_Mission_Bay.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-196546100",
    "file": "/photos/wm-196546100"
   },
+  "bernal-heights": {
+   "alt": "There seems to be about a 10\" difference between the garages.",
+   "credit": "Daniel Ramirez from Honolulu, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Steep_street_(49271081398).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-85959663",
+   "file": "/photos/wm-85959663"
+  },
   "glen-park": {
-   "id": "wm-151434799",
    "alt": "Muni streetcar #1077 near Glen Park pulling out for service on the F Market & Wharves in August 2024",
    "credit": "Pi.1415926535",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Muni_1077_near_Glen_Park,_August_2024.JPG",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-151434799",
    "file": "/photos/wm-151434799"
   },
   "west-portal": {
-   "id": "wm-62298561",
    "alt": "A foggy day on Ulloa Street in West Portal, San Francisco in June 2017",
    "credit": "Pi.1415926535",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Foggy_day_in_West_Portal,_June_2017.JPG",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-62298561",
    "file": "/photos/wm-62298561"
   },
   "treasure-island": {
-   "id": "wm-53831704",
    "alt": "Nuevo puente en la Bahía de San Francisco",
    "credit": "Elraton",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Puente_San_Fco.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-53831704",
    "file": "/photos/wm-53831704"
   },
   "lake-merritt": {
-   "id": "wm-121878907",
    "alt": "A man raises an American flag at Lake Merritt in Oakland",
    "credit": "Kiddo27",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:A_man_raises_an_American_flag_at_Lake_Merritt_in_Oakland.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-121878907",
    "file": "/photos/wm-121878907"
   },
   "temescal": {
-   "id": "wm-128201502",
    "alt": "Oakland Public Library Temescal Branch, Oakland, California, United States.",
    "credit": "Mx. Granger",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Oakland_Public_Library_Temescal_Branch.jpg",
    "source": "Wikimedia Commons",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-128201502",
    "file": "/photos/wm-128201502"
   },
   "rockridge": {
-   "id": "wm-128219337",
    "alt": "Rockridge, Oakland (October 20, 2013) Farmers Market",
    "credit": "Sharon Hahn Darlin",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Rockridge,_Oakland_(October_20,_2013)_Farmers_Market_2.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-128219337",
    "file": "/photos/wm-128219337"
   },
+  "fruitvale": {
+   "alt": "Food at Wahpepah's Kitchen, a restaurant in Oakland, California, United States",
+   "credit": "Mx. Granger",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Food_at_Wahpepah%27s_Kitchen.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-172001725",
+   "file": "/photos/wm-172001725"
+  },
+  "willow-glen": {
+   "alt": "Willow Glen city limit sign. Roberto Adobe and Suñol House Museum. 770 Lincoln Avenue. San Jose, California, USA.",
+   "credit": "Eugene Zelenko",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:USA-San_Jose-Roberto_Adobe_and_Su%C3%B1ol_House_Museum-Willow_Glen_City_Limit_Sign.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-82635542",
+   "file": "/photos/wm-82635542"
+  },
   "santana-row": {
-   "id": "wm-108365270",
    "alt": "Intersection of Olin Ave & Winchester Blvd in Santana Row",
    "credit": "Cristiano Tomás",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Intersection_of_Olin_Ave_%26_Winchester_Blvd_in_Santana_Row.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "id": "wm-108365270",
    "file": "/photos/wm-108365270"
   }
  },
  "vibes": {
   "kid-friendly": {
-   "id": "wm-198449130",
    "alt": "Display of puppets from the 2010s at Children's Fairyland",
    "credit": "E mln e",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Display_of_puppets_from_the_2010s_at_Children%27s_Fairyland.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-198449130",
    "file": "/photos/wm-198449130"
   },
   "hot-day": {
-   "id": "wm-26120670",
    "alt": "People having a birthday celebration on Stinson Beach, Marin County, California.",
    "credit": "Lindsay Eyink from San Francisco, CA, USA",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:People_celebrating_on_Stinson_Beach.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-26120670",
    "file": "/photos/wm-26120670"
   },
+  "rainy-day": {
+   "alt": "Luristan Newt (Neurergus kaiseri) at the California Academy of Sciences. Please attribute to Evan Baldonado // AquariumKids.org",
+   "credit": "EvanBaldonado",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Luristan_Newt_(Neurergus_kaiseri)_at_the_California_Academy_of_Sciences_02.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "id": "wm-151461662",
+   "file": "/photos/wm-151461662"
+  },
   "fog-escape": {
-   "id": "wm-61839286",
    "alt": "Bernal Heights, San Francisco, United States",
    "credit": "Kace Rodriguez kace",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Bernal_Heights,_San_Francisco,_United_States_(Unsplash_p8F32o-S8iA).jpg",
    "source": "Wikimedia Commons",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "id": "wm-61839286",
    "file": "/photos/wm-61839286"
   },
   "date-night": {
-   "id": "wm-105370680",
    "alt": "I've had people requesting images &gt;1600, so I'm going to reupload a few at higher resolutions.",
    "credit": "trophygeek from San Francisco",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Bay_Bridge_in_Golden_IR_(15095894988).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "id": "wm-105370680",
    "file": "/photos/wm-105370680"
+  },
+  "near-bart": {
+   "alt": "The separate headhouse for the elevator at North Berkeley station in April 2018",
+   "credit": "Pi.1415926535",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Elevator_headhouse_at_North_Berkeley_station,_April_2018.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "id": "wm-68001462",
+   "file": "/photos/wm-68001462"
   }
  },
- "generatedAt": "2026-10-18T16:45:09.781Z"
+ "generatedAt": "2026-10-18T16:45:41.642Z"
 }
