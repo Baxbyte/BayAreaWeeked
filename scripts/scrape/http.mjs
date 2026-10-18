@@ -4,18 +4,21 @@ export const USER_AGENT = process.env.SCRAPER_USER_AGENT ||
 
 const robotsCache = new Map();
 const lastHit = new Map();
-const MIN_GAP_MS = Number(process.env.SCRAPER_MIN_GAP_MS || 1200);
+const MIN_GAP_MS = Number(process.env.SCRAPER_MIN_GAP_MS || 900);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function rawFetch(url, { timeoutMs = 25000, headers = {}, method = 'GET', body } = {}) {
+async function rawFetch(url, { timeoutMs = 15000, headers = {}, method = 'GET', body } = {}) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
-    return await fetch(url, {
+    const res = await fetch(url, {
       method, body, signal: ctrl.signal, redirect: 'follow',
       headers: { 'User-Agent': USER_AGENT, 'Accept-Language': 'en-US,en;q=0.9', ...headers },
     });
+    // Read the body under the same deadline so a slow-dribbling server can't hang the run.
+    const text = await res.text();
+    return { ok: res.ok, status: res.status, text: async () => text };
   } finally {
     clearTimeout(t);
   }
@@ -55,7 +58,7 @@ export async function allowedByRobots(url) {
   let rules = robotsCache.get(u.origin);
   if (!rules) {
     try {
-      const res = await rawFetch(`${u.origin}/robots.txt`, { timeoutMs: 10000 });
+      const res = await rawFetch(`${u.origin}/robots.txt`, { timeoutMs: 7000 });
       rules = res.ok ? parseRobots(await res.text()) : [];
     } catch {
       rules = [];
@@ -81,7 +84,7 @@ async function politeWait(url) {
 export async function fetchText(url, opts = {}) {
   if (!opts.skipRobots && !(await allowedByRobots(url))) throw new Error(`robots.txt disallows ${url}`);
   let lastErr;
-  for (let attempt = 0; attempt < (opts.retries ?? 2) + 1; attempt++) {
+  for (let attempt = 0; attempt < (opts.retries ?? 1) + 1; attempt++) {
     await politeWait(url);
     try {
       const res = await rawFetch(url, opts);

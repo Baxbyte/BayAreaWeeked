@@ -2,6 +2,7 @@
 import { categoryBySlug } from './taxonomy.mjs';
 import { cityBySlug, hoodBySlug } from './geo.mjs';
 import { formatWhen, fmtMonthDay, TZ } from './time.mjs';
+import { photoFor } from './images.mjs';
 
 export const primaryCat = (i) => categoryBySlug[i.categories?.[0]] || categoryBySlug.community;
 export const emojiFor = (i) => primaryCat(i).emoji;
@@ -41,12 +42,13 @@ export { formatWhen };
 /** Compact record for client-side search, map and plan features. */
 export function toIndexRecord(i, linkFn) {
   const f = i.flags;
+  const ph = photoFor(i);
   return {
     id: i.id, t: i.title, u: linkFn(i.path), ty: i.type === 'activity' ? 'a' : 'e',
     s: i.start || null, e: i.end || null, ad: i.allDay ? 1 : 0, sc: i.schedule || null,
     c: i.city, r: i.region, n: i.neighborhood || null, cat: i.categories,
     v: i.venue?.name || null, la: i.venue?.lat, lo: i.venue?.lng,
-    img: i.image || null, p: i.priceText || null, pm: i.priceMin,
+    img: ph?.srcSmall || null, fb: ph?.fallback?.srcSmall || null, p: i.priceText || null, pm: i.priceMin,
     d: (i.description || '').slice(0, 160),
     f: [f.kids && 'k', f.nightlife && 'n', f.adult && 'a', f.free && 'f', f.hot && 'h', f.rainy && 'r', f.fog && 'g', f.date && 'd', f.bart && 'b'].filter(Boolean).join(''),
     bart: f.bart || null,

@@ -8,6 +8,7 @@ import { applyFilters, cardHTML, escHtml, loadIndex, placeOf, sortItems } from '
 import { describe, parseQuery } from './smart.js';
 import { formatWhen } from '../lib/time.mjs';
 import { fetchForecast, suggestMood } from './weather.js';
+import boundaries from '../data/boundaries.json';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -152,29 +153,55 @@ export async function initExplore() {
   }
 
   // ---------- Map ----------
-  const map = L.map('map', { zoomControl: true, scrollWheelZoom: true }).setView([37.75, -122.25], 9);
+  const map = L.map('map', { zoomControl: true, scrollWheelZoom: true, zoomSnap: 0.25 }).setView([37.75, -122.25], 9);
   L.tileLayer(root.dataset.tiles, { attribution: root.dataset.attr, subdomains: 'abcd', maxZoom: 19 }).addTo(map);
-  const regionLayer = L.layerGroup().addTo(map);
-  for (const r of REGIONS) {
-    const circle = L.circle([r.lat, r.lng], { radius: r.radiusKm * 1000, color: '#ef4b25', weight: 1.5, opacity: 0.5, fillOpacity: 0.05, dashArray: '6 6' });
-    circle.on('click', () => { st.region = st.region === r.slug ? '' : r.slug; st.city = ''; st.hood = ''; changed(); flyToRegion(); });
-    circle.on('mouseover', () => circle.setStyle({ fillOpacity: 0.14 }));
-    circle.on('mouseout', () => circle.setStyle({ fillOpacity: st.region === r.slug ? 0.12 : 0.05 }));
-    circle.bindTooltip(`${r.emoji} ${r.name} — tap to filter`, { sticky: true });
-    circle.addTo(regionLayer);
-    circle._slug = r.slug;
-  }
+  // Real region (county) boundaries — click to filter by region.
+  const regionStyle = (slug) => ({ color: '#ef4b25', weight: st.region === slug ? 3 : 1.2, opacity: st.region === slug ? 0.9 : 0.5, fillColor: '#ef4b25', fillOpacity: st.region === slug ? 0.08 : 0.03, dashArray: st.region === slug ? null : '5 5' });
+  const regionLayer = L.geoJSON(boundaries.regions, {
+    style: (f) => regionStyle(f.properties.region),
+    onEachFeature: (f, layer) => {
+      const r = REGIONS.find((x) => x.slug === f.properties.region);
+      layer.bindTooltip(`${r.emoji} ${r.name} — tap to filter`, { sticky: true });
+      layer.on('click', () => { st.region = st.region === r.slug ? '' : r.slug; st.city = ''; st.hood = ''; changed(); flyToRegion(); });
+      layer.on('mouseover', () => layer.setStyle({ fillOpacity: 0.12 }));
+      layer.on('mouseout', () => layer.setStyle(regionStyle(r.slug)));
+    },
+  }).addTo(map);
+  // Real neighborhood boundaries (SF, Oakland, San Jose) — appear when zoomed in; click to filter.
+  const hoodStyle = (slug) => ({ color: '#131a2e', weight: st.hood && st.hood === slug ? 2.5 : 0.8, opacity: 0.55, fillColor: '#12a594', fillOpacity: st.hood && st.hood === slug ? 0.18 : 0.02 });
+  const hoodLayer = L.geoJSON(boundaries.hoods, {
+    style: (f) => hoodStyle(f.properties.slug),
+    onEachFeature: (f, layer) => {
+      layer.bindTooltip(f.properties.name, { sticky: true, className: 'hood-label' });
+      layer.on('mouseover', () => layer.setStyle({ fillOpacity: 0.14 }));
+      layer.on('mouseout', () => layer.setStyle(hoodStyle(f.properties.slug)));
+      layer.on('click', () => {
+        if (!f.properties.slug) return;
+        const city = CITIES.find((c) => c.slug === f.properties.city);
+        st.hood = st.hood === f.properties.slug ? '' : f.properties.slug;
+        st.city = city.slug; st.region = city.region;
+        changed();
+      });
+    },
+  });
   const clusters = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 46, spiderfyOnMaxZoom: true });
   map.addLayer(clusters);
-  map.on('zoomend', () => { if (map.getZoom() >= 12) map.removeLayer(regionLayer); else if (!map.hasLayer(regionLayer)) map.addLayer(regionLayer); });
+  const syncLayers = () => {
+    const z = map.getZoom();
+    if (z >= 12) { if (map.hasLayer(regionLayer)) map.removeLayer(regionLayer); if (!map.hasLayer(hoodLayer)) hoodLayer.addTo(map); hoodLayer.bringToBack(); }
+    else { if (map.hasLayer(hoodLayer)) map.removeLayer(hoodLayer); if (!map.hasLayer(regionLayer)) regionLayer.addTo(map); regionLayer.bringToBack(); }
+  };
+  map.on('zoomend', syncLayers);
 
   function flyToRegion() {
     const r = REGIONS.find((x) => x.slug === st.region);
-    regionLayer.eachLayer((c) => c.setStyle({ fillOpacity: c._slug === st.region ? 0.12 : 0.05, weight: c._slug === st.region ? 3 : 1.5 }));
-    if (r) map.flyTo([r.lat, r.lng], r.slug === 'san-francisco' ? 12 : 10, { duration: 0.8 });
-    else map.flyTo([37.75, -122.25], 9, { duration: 0.8 });
+    regionLayer.eachLayer((l) => l.setStyle(regionStyle(l.feature.properties.region)));
+    if (r) {
+      const b = L.featureGroup(regionLayer.getLayers().filter((l) => l.feature.properties.region === r.slug)).getBounds();
+      map.flyToBounds(b, { padding: [20, 20], duration: 0.8, maxZoom: r.slug === 'san-francisco' ? 12.5 : 11 });
+    } else map.flyTo([37.75, -122.25], 9, { duration: 0.8 });
   }
-  function flyToCity(c) { if (c) map.flyTo([c.lat, c.lng], c.slug === 'san-francisco' ? 12 : 13, { duration: 0.8 }); }
+  function flyToCity(c) { if (c) map.flyTo([c.lat, c.lng], c.slug === 'san-francisco' ? 12.5 : 13, { duration: 0.8 }); }
 
   function renderMap(list) {
     clusters.clearLayers();
@@ -183,7 +210,7 @@ export async function initExplore() {
       const cls = i.sp ? 'pin gold' : i.ty === 'a' ? 'pin activity' : 'pin';
       const m = L.marker([i.la, i.lo], { icon: L.divIcon({ className: '', html: `<div class="${cls}"><span>${cat.emoji}</span></div>`, iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28] }), zIndexOffset: i.sp ? 1000 : 0 });
       const when = i.s ? formatWhen({ start: i.s, end: i.e, allDay: !!i.ad }) : (i.sc || 'Open regularly');
-      m.bindPopup(`<div class="popup">${i.sp ? '<span class="tag sponsored">★ Sponsored</span><br>' : ''}<a href="${escHtml(i.u)}">${escHtml(i.t)}</a><br><small>${escHtml(when)}</small><br><small>${escHtml(placeOf(i))}</small>${i.deal ? `<br><b>🎟️ ${escHtml(i.deal)}</b>` : ''}</div>`);
+      m.bindPopup(`<div class="popup">${i.img ? `<img src="${escHtml(i.img)}" alt="" referrerpolicy="no-referrer" style="width:220px;height:120px;object-fit:cover;border-radius:10px;margin-bottom:6px;display:block" onerror="this.remove()">` : ''}${i.sp ? '<span class="tag sponsored">★ Sponsored</span><br>' : ''}<a href="${escHtml(i.u)}">${escHtml(i.t)}</a><br><small>${escHtml(when)}</small><br><small>${escHtml(placeOf(i))}</small>${i.deal ? `<br><b>🎟️ ${escHtml(i.deal)}</b>` : ''}</div>`);
       return m;
     });
     clusters.addLayers(markers);
@@ -200,6 +227,7 @@ export async function initExplore() {
 
   function update() {
     syncURL();
+    hoodLayer.eachLayer((l) => l.setStyle(hoodStyle(l.feature.properties.slug)));
     const textIds = st.q && mini ? new Set(mini.search(st.q, { prefix: true, fuzzy: 0.2, combineWith: 'AND' }).map((r) => r.id)) : null;
     const filtered = applyFilters(items, { ...st, vibes: [...st.vibes, ...st.moods], textIds });
     results = sortItems(filtered, st.sort, st.origin);

@@ -5,6 +5,7 @@ import Crumbs from './Crumbs.astro';
 import { SITE, link, absolute } from '../lib/site.mjs';
 import { EVENTS, ACTIVITIES, filterItems, collapseRepeats, W, cityBySlug, hoodBySlug, regionBySlug, categoryBySlug } from '../lib/data.mjs';
 import { emojiFor, hueFor, primaryCat } from '../lib/format.mjs';
+import { photoFor } from '../lib/images.mjs';
 import { fmtLongDay, fmtTime, formatWhen } from '../lib/time.mjs';
 
 interface Props { item: any }
@@ -13,6 +14,7 @@ const city = cityBySlug[i.city];
 const region = regionBySlug[i.region];
 const hood = i.neighborhood ? hoodBySlug[i.neighborhood] : null;
 const cat = primaryCat(i);
+const photo = photoFor(i);
 const isEvent = i.type === 'event';
 const where = hood ? `${hood.name}, ${city.name}` : city.name;
 const start = i.start ? new Date(i.start) : null;
@@ -34,7 +36,7 @@ const ld = isEvent ? {
   '@context': 'https://schema.org', '@type': typeMap[i.categories[0]] || 'Event', name: i.title,
   description: i.description || `${i.title} in ${where}.`, startDate: i.start, endDate: i.end || undefined,
   eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  location: place, image: i.image ? [i.image] : [absolute('/og-default.png')], url: absolute(i.path),
+  location: place, image: [photo?.src || absolute('/og-default.png')], url: absolute(i.path),
   isAccessibleForFree: i.flags.free || undefined,
   typicalAgeRange: i.flags.adult ? '21-' : i.flags.kids ? '0-' : undefined,
   offers: { '@type': 'Offer', url: i.ticketUrl || i.url || absolute(i.path), price: i.priceMin ?? (i.flags.free ? 0 : undefined), priceCurrency: 'USD',
@@ -43,7 +45,7 @@ const ld = isEvent ? {
   performer: i.categories.includes('live-music') ? { '@type': 'PerformingGroup', name: i.title.split(/[:@|–-]/)[0].trim() } : undefined,
 } : {
   '@context': 'https://schema.org', '@type': 'TouristAttraction', name: i.title, description: i.description, url: absolute(i.path), sameAs: i.url || undefined,
-  address: place.address, geo: place.geo, image: i.image || undefined, isAccessibleForFree: i.flags.free || undefined, publicAccess: true,
+  address: place.address, geo: place.geo, image: photo?.src || undefined, isAccessibleForFree: i.flags.free || undefined, publicAccess: true,
   touristType: i.flags.kids ? ['Families', 'Kids'] : undefined,
 };
 
@@ -70,17 +72,20 @@ const desc = `${isEvent ? `${whenLong} · ` : ''}${i.venue?.name ? `${i.venue.na
 const seoTitle = isEvent ? `${i.title} — ${formatWhen(i).split(' · ')[0]}, ${city.name}` : `${i.title} — ${where}: Hours, Tips & Things to Know`;
 const save = JSON.stringify({ id: i.id, t: i.title, u: link(i.path), s: i.start, c: i.city, img: i.image });
 ---
-<Base title={seoTitle} description={desc} path={i.path} image={i.image || undefined} jsonld={[ld, faqLd]} noindex={i.past} ogType={isEvent ? 'article' : 'website'}>
+<Base title={seoTitle} description={desc} path={i.path} image={photo?.src || undefined} jsonld={[ld, faqLd]} noindex={i.past} ogType={isEvent ? 'article' : 'website'}>
   <div class="wrap">
     <div style="padding-top:22px"><Crumbs items={crumbs} /></div>
     {i.past && <div class="notice">This event has ended. <a href={link(`/city/${city.slug}/`)}>See what’s on in {city.name} this weekend →</a></div>}
     {i.sponsor && <div class="notice" style="background:#fff4cc;color:#7a5b00">★ Sponsored listing{i.sponsor.deal ? ` · 🎟️ ${i.sponsor.deal.headline}${i.sponsor.deal.code ? ` with code ${i.sponsor.deal.code}` : ''}` : ''}</div>}
     <div class="detail">
       <article>
-        <div class="hero-media">
-          {i.image && <img src={i.image} alt={i.title} width="1200" height="675" loading="eager" referrerpolicy="no-referrer" onerror="this.remove()" style="position:relative;z-index:1" />}
-          <div class="art" style={`--h:${hueFor(i)}`} aria-hidden="true"><span>{emojiFor(i)}</span></div>
-        </div>
+        <figure class="hero-media">
+          <div class="ph" style={`--h:${hueFor(i)}`} aria-hidden="true"><span>{cat.name}</span></div>
+          {photo && <img src={photo.src} data-fb={photo.fallback?.src} alt={photo.alt || i.title} width="1280" height="720" loading="eager" fetchpriority="high" referrerpolicy="no-referrer" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}else{this.remove()}" />}
+          {photo && photo.source !== 'organizer' && (
+            <figcaption class="photo-credit">{photo.source === 'organizer' ? '' : 'Photo: '}<a href={photo.creditUrl} rel="nofollow noopener" target="_blank">{photo.credit}</a> / {photo.source}{photo.license && photo.source !== 'Pexels' ? ` (${photo.license})` : ''}{i.type === 'event' ? ' · representative photo' : ''}</figcaption>
+          )}
+        </figure>
         <div class="eyebrow" style="margin-top:22px">{cat.emoji} {cat.name} · {where}</div>
         <h1 style="font-size:clamp(1.9rem,4.4vw,3rem)">{i.title}</h1>
         <div class="chips" style="margin:6px 0 18px">

@@ -1,0 +1,64 @@
+name: Refresh Bay Area photos
+
+on:
+  workflow_dispatch:
+    inputs:
+      refresh:
+        description: 'Re-pick every photo (otherwise only fills in missing ones)'
+        type: boolean
+        default: false
+  schedule:
+    - cron: '23 13 * * 1'   # weekly, Monday morning Pacific
+  push:
+    branches: [main]
+    paths: ['scripts/images/**', 'data/evergreen.json', '.github/workflows/images.yml']
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: images
+  cancel-in-progress: false
+
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Find photos (Wikimedia Commons + Pexels)
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/images/build-images.mjs ${{ inputs.refresh && '--refresh' || '' }}
+      - name: Save photo list
+        run: |
+          git config user.name "bayarea-weekend-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/images.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data: refresh Bay Area photos"
+            git pull --rebase origin main && git push origin HEAD:main
+          fi
+      - name: Rebuild the site with the new photos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run daily.yml --ref main -f skip_scrape=true || true
+      - name: Render contact sheets for review
+        run: |
+          npm i --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+          node scripts/images/contact-sheet.mjs review
+      - name: Publish contact sheets to the image-review branch
+        run: |
+          cd review
+          git init -q -b image-review
+          git config user.name "bayarea-weekend-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add . && git commit -qm "Photo review sheets"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" image-review

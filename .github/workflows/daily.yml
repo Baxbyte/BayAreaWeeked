@@ -12,7 +12,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths-ignore: ['data/events.json', 'data/scrape-report.json', 'data/geocache.json', 'data/indexnow-state.json', '**.md']
+    paths-ignore: ['data/events.json', 'data/scrape-report.json', 'data/geocache.json', 'data/indexnow-state.json', 'data/images.json', '**.md']
 
 permissions:
   contents: write
@@ -40,21 +40,31 @@ jobs:
 
       - name: Scrape event sources
         if: ${{ !inputs.skip_scrape }}
+        timeout-minutes: 20
+        continue-on-error: true
         env:
           TICKETMASTER_API_KEY: ${{ secrets.TICKETMASTER_API_KEY }}
           SEATGEEK_CLIENT_ID: ${{ secrets.SEATGEEK_CLIENT_ID }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
           GEOCODE: '1'
-          GEOCODE_MAX: '200'
+          GEOCODE_MAX: '120'
         run: npm run scrape
+
+      - name: Fill in photos for anything new
+        if: ${{ !inputs.skip_scrape }}
+        timeout-minutes: 10
+        continue-on-error: true
+        env:
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: node scripts/images/build-images.mjs
 
       - name: Save fresh data to the repo
         if: ${{ !inputs.skip_scrape }}
         run: |
           git config user.name "bayarea-weekend-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/events.json data/scrape-report.json data/geocache.json 2>/dev/null || true
+          git add data/events.json data/scrape-report.json data/geocache.json data/images.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "data: daily event refresh $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase origin main && git push origin HEAD:main

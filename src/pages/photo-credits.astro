@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Crumbs from '../components/Crumbs.astro';
+import { allCredits } from '../lib/images.mjs';
+const credits = allCredits();
+---
+<Base title="Photo credits" description="Credits and licenses for the photos used on Bay Area Weekend." path="/photo-credits/">
+  <div class="wrap" style="max-width:980px">
+    <header class="page-head"><Crumbs items={[['Photo credits', '/photo-credits/']]} /><h1>Photo credits</h1>
+      <p class="lead">Our photos come from Wikimedia Commons (Creative Commons / public domain) and Pexels (free to use). Thank you to every photographer. Event photos come from the organizers' own listings.</p></header>
+    {credits.length ? (
+      <div class="table-wrap panel" style="padding:6px 12px">
+        <table class="table">
+          <thead><tr><th>Photo</th><th>Used for</th><th>By</th><th>License</th></tr></thead>
+          <tbody>{credits.map((c) => (
+            <tr>
+              <td><img src={c.srcSmall} alt={c.alt} width="96" height="60" loading="lazy" referrerpolicy="no-referrer" style="width:96px;height:60px;object-fit:cover;border-radius:8px" /></td>
+              <td>{c.label}</td>
+              <td><a href={c.creditUrl} rel="nofollow noopener" target="_blank">{c.credit}</a> · {c.source}</td>
+              <td><a href={c.licenseUrl} rel="nofollow noopener" target="_blank">{c.license}</a></td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
+    ) : <p class="muted">Photo credits will appear here after the next photo refresh.</p>}
+  </div>
+</Base>

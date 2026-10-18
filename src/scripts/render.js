@@ -106,8 +106,7 @@ export function cardHTML(i) {
   const save = escHtml(JSON.stringify({ id: i.id, t: i.t, u: i.u, s: i.s, c: i.c, img: i.img }));
   const when = i.s ? formatWhen({ start: i.s, end: i.e, allDay: !!i.ad }) : i.sc || 'Open regularly';
   return `<article class="card${i.sp ? ' sponsored' : ''}">
-    <div class="media">${i.img ? `<img src="${escHtml(i.img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" style="position:relative;z-index:1" onerror="this.remove()">` : ''}
-      <div class="art" style="--h:${cat.hue}" aria-hidden="true"><span>${cat.emoji}</span></div>${pill(i)}
+    <div class="media"><div class="ph" style="--h:${cat.hue}" aria-hidden="true"><span>${escHtml(cat.name)}</span></div>${i.img ? `<img src="${escHtml(i.img)}"${i.fb ? ` data-fb="${escHtml(i.fb)}"` : ''} alt="${escHtml(i.t)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}else{this.remove()}">` : ''}${pill(i)}
       <button class="save-btn" type="button" data-save="${save}" aria-pressed="false" aria-label="Save ${escHtml(i.t)}"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9.2C1.2 8.6 3.4 5 7 5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3.6 0 5.8 3.6 4.5 6.8C19.5 16.4 12 21 12 21z"/></svg></button>
     </div>
     <div class="body"><h3><a href="${escHtml(i.u)}">${escHtml(i.t)}</a></h3>

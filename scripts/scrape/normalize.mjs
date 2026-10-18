@@ -3,6 +3,7 @@ import crypto from 'node:crypto';
 import { classify } from '../../src/lib/classify.mjs';
 import { cityBySlug, cityFromText, hoodFromText, inBayArea, nearestCity, nearestHood } from '../../src/lib/geo.mjs';
 import { parseWhen, toPTISO } from '../../src/lib/time.mjs';
+import { hoodAt } from './hoods.mjs';
 
 export const hash = (s, n = 10) => crypto.createHash('sha1').update(String(s)).digest('hex').slice(0, n);
 
@@ -90,7 +91,10 @@ export function resolveGeo(raw, defaults = {}) {
     approx = true;
   }
   const hoodText = [raw.venueName, raw.address, raw.title].filter(Boolean).join(' ');
+  // Curated name matches first (e.g. "Dolores Park" → Mission), then real boundaries, then nearest center.
   let hood = hoodFromText(hoodText, city.slug);
+  const polyHood = hood || approx ? null : hoodAt(lat, lng, city.slug);
+  if (polyHood) hood = { slug: polyHood };
   if (!hood && !approx) hood = nearestHood(lat, lng, city.slug);
   return { city: city.slug, region: city.region, neighborhood: hood?.slug || null, lat, lng, approxGeo: approx };
 }

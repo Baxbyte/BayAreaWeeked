@@ -10,6 +10,7 @@ import { classify } from '../../src/lib/classify.mjs';
 import { nearestHood } from '../../src/lib/geo.mjs';
 import { toPTISO } from '../../src/lib/time.mjs';
 import { geocode, saveGeocache } from './geocode.mjs';
+import { hoodAt } from './hoods.mjs';
 import { hash, mergeDuplicates, normalize } from './normalize.mjs';
 
 const ADAPTERS = {
@@ -34,7 +35,7 @@ const offline = args.includes('--offline');
 const only = (args.find((a) => a.startsWith('--only=')) || '').slice(7).split(',').filter(Boolean);
 const now = process.env.SCRAPE_NOW ? new Date(process.env.SCRAPE_NOW) : new Date();
 const HORIZON_DAYS = 45;
-const SOURCE_TIMEOUT_MS = Number(process.env.SOURCE_TIMEOUT_MS || 8 * 60000);
+const SOURCE_TIMEOUT_MS = Number(process.env.SOURCE_TIMEOUT_MS || 4 * 60000);
 
 function withTimeout(p, ms, label) {
   return Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error(`${label} timed out after ${ms / 1000}s`)), ms))]);
@@ -49,6 +50,7 @@ async function runSource(src) {
     skip: (reason) => { report.status = 'skipped'; report.reason = reason; return []; },
   };
   let raw = [];
+  console.log(`→ ${src.id} …`);
   try {
     const mod = await ADAPTERS[src.type]();
     raw = (await withTimeout(mod.run(src, ctx), SOURCE_TIMEOUT_MS, src.id)) || [];
@@ -95,7 +97,7 @@ async function improveGeo(items) {
     const g = await geocode(q.includes('CA') ? q : `${q}, CA`);
     if (!g) continue;
     Object.assign(it.venue, { lat: g.lat, lng: g.lng, approx: false });
-    it.neighborhood ||= nearestHood(g.lat, g.lng, it.city)?.slug || null;
+    it.neighborhood = hoodAt(g.lat, g.lng, it.city) || it.neighborhood || nearestHood(g.lat, g.lng, it.city)?.slug || null;
     const { flags } = classify(it);
     it.flags.bart = flags.bart;
   }
@@ -108,7 +110,7 @@ async function main() {
   const prevById = new Map(previous.items.map((it) => [it.id, it]));
 
   const enabled = sources.filter((s) => s.enabled !== false && (!only.length || only.includes(s.id)));
-  const results = offline ? [] : await pool(enabled, 4, runSource);
+  const results = offline ? [] : await pool(enabled, 6, runSource);
   const reports = results.map((r) => r.report);
   for (const r of results) r.report.kept = r.items.filter(isUpcoming).length;
   for (const r of reports) console.log(`${r.status.padEnd(7)} ${r.id.padEnd(22)} raw=${String(r.raw).padStart(4)} kept=${String(r.kept).padStart(4)} ${r.error || r.reason || ''}`);

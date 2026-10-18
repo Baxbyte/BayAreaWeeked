@@ -1,17 +1,18 @@
 ---
 import { link } from '../lib/site.mjs';
-import { datePill, emojiFor, hueFor, placeLine, tagsFor, formatWhen } from '../lib/format.mjs';
+import { datePill, hueFor, placeLine, primaryCat, tagsFor, formatWhen } from '../lib/format.mjs';
+import { photoFor } from '../lib/images.mjs';
 interface Props { item: any; eager?: boolean; compact?: boolean; showDeal?: boolean }
 const { item: i, eager = false, compact = false, showDeal = false } = Astro.props;
 const pill = datePill(i);
-const save = JSON.stringify({ id: i.id, t: i.title, u: link(i.path), s: i.start, c: i.city, img: i.image });
+const photo = photoFor(i);
+const save = JSON.stringify({ id: i.id, t: i.title, u: link(i.path), s: i.start, c: i.city, img: photo?.srcSmall || null });
+const onerr = "if(this.dataset.fb&&this.src!==this.dataset.fb){this.src=this.dataset.fb}else{this.remove()}";
 ---
 <article class:list={['card', { sponsored: !!i.sponsor, compact }]}>
   <div class="media">
-    {i.image
-      ? <img src={i.image} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width="640" height="400" referrerpolicy="no-referrer" onerror="this.remove()" />
-      : null}
-    <div class="art" style={`--h:${hueFor(i)}`} aria-hidden="true" data-fallback><span>{emojiFor(i)}</span></div>
+    <div class="ph" style={`--h:${hueFor(i)}`} aria-hidden="true"><span>{primaryCat(i).name}</span></div>
+    {photo && <img src={photo.srcSmall} data-fb={photo.fallback?.srcSmall} alt={photo.alt || i.title} loading={eager ? 'eager' : 'lazy'} decoding="async" width="640" height="400" referrerpolicy="no-referrer" onerror={onerr} />}
     {!compact && pill && <div class="date-pill"><small>{pill.wd}</small><b>{pill.day}</b><small>{pill.mon}</small></div>}
     <button class="save-btn" type="button" data-save={save} aria-pressed="false" aria-label={`Save ${i.title} to my plan`}>
       <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9.2C1.2 8.6 3.4 5 7 5c2 0 3.5 1.1 5 3 1.5-1.9 3-3 5-3 3.6 0 5.8 3.6 4.5 6.8C19.5 16.4 12 21 12 21z"/></svg>
@@ -27,6 +28,3 @@ const save = JSON.stringify({ id: i.id, t: i.title, u: link(i.path), s: i.start,
     <div class="tags">{tagsFor(i).map(([cls, label]) => <span class={`tag ${cls}`}>{label}</span>)}</div>
   </div>
 </article>
-<style>
-  .media img { position: relative; z-index: 1; }
-</style>

@@ -8,6 +8,7 @@ import { SITE, link, absolute } from '../lib/site.mjs';
 import { EVENTS, ACTIVITIES, REGIONS, VIBES, CATEGORIES, COUNTS, W, UPDATED, inWindow, topPicks, sponsoredFor, filterItems, DEALS, DATA } from '../lib/data.mjs';
 import { formatRange, fmtDay, fmtLongDay } from '../lib/time.mjs';
 import { placeLine } from '../lib/format.mjs';
+import { IMAGES, regionPhoto, vibePhoto } from '../lib/images.mjs';
 
 const wk = formatRange(W.weekend.fri, W.weekend.end);
 const weekend = inWindow(EVENTS, W.weekend);
@@ -22,6 +23,7 @@ const classics = topPicks(ACTIVITIES, 10);
 const kidsPick = topPicks(filterItems([...weekend, ...ACTIVITIES], { vibe: 'kid-friendly' }), 4);
 const nightPick = topPicks(filterItems(weekend, { vibe: 'nightlife' }), 4);
 const answerPicks = topPicks(weekend.length ? weekend : ACTIVITIES, 6);
+const heroPhoto = IMAGES.categories.festivals?.[0] || IMAGES.vibes.free || regionPhoto('san-francisco');
 const vibeColors = { 'kid-friendly': '#ffe9a8', nightlife: '#e1d8ff', free: '#c9f2ea', 'hot-day': '#ffd9b8', 'rainy-day': '#d3e4ff', 'fog-escape': '#e6e9ef', 'date-night': '#ffd6e0', 'near-bart': '#d6e6ff' };
 const examples = ['free kids stuff in Oakland Saturday', 'techno tonight in the Mission', 'rainy day ideas in San Jose', 'date night in North Beach under $60', 'hikes near me this weekend', 'jazz in Berkeley next week', 'fog escape with the kids'];
 
@@ -41,7 +43,9 @@ const faq = [
 ];
 ---
 <Base title={`${SITE.name}: Things to Do in the Bay Area This Weekend (${wk})`} description={`What to do in San Francisco, Oakland, San Jose and the whole Bay Area this weekend (${wk}): ${COUNTS.weekend} events plus kid-friendly picks, nightlife, free events, and hot- or rainy-day ideas. Updated daily.`} path="/" jsonld={ld}>
-  <section class="hero">
+  <section class:list={['hero', { 'has-photo': !!heroPhoto }]}>
+    {heroPhoto && <img class="hero-bg" src={heroPhoto.src} alt={heroPhoto.alt} width="1280" height="720" fetchpriority="high" referrerpolicy="no-referrer" onerror="this.parentElement.classList.remove('has-photo');this.remove()" />}
+    {heroPhoto && <span class="photo-credit">Photo: <a href={heroPhoto.creditUrl} rel="nofollow noopener" target="_blank">{heroPhoto.credit}</a> / {heroPhoto.source}</span>}
     <div class="wrap">
       <div class="eyebrow">🌉 {wk} · {COUNTS.weekend} events this weekend</div>
       <h1>What are we doing <span class="hl">this weekend</span>, Bay Area?</h1>
@@ -95,7 +99,7 @@ const faq = [
         <div class="region-list">
           {REGIONS.map((r) => (
             <a class="region-link" href={link(`/region/${r.slug}/`)}>
-              <span class="emoji">{r.emoji}</span>
+              {regionPhoto(r.slug) ? <img class="thumb" src={regionPhoto(r.slug).srcSmall} alt={regionPhoto(r.slug).alt} loading="lazy" width="96" height="72" referrerpolicy="no-referrer" /> : <span class="emoji">{r.emoji}</span>}
               <span><strong>{r.name}</strong><small>{r.blurb}</small></span>
               <span class="n">{COUNTS.region[r.slug] || 0}</span>
             </a>
@@ -109,7 +113,8 @@ const faq = [
       <div class="section-head"><div><div class="eyebrow">✨ Choose your vibe</div><h2 id="vibe-h">What kind of day is it?</h2></div></div>
       <div class="vibes">
         {VIBES.map((v) => (
-          <a class="vibe" href={link(`/${v.slug}/`)} style={`--vc:${vibeColors[v.slug]}`}>
+          <a class:list={['vibe', { 'has-photo': !!vibePhoto(v.slug) }]} href={link(`/${v.slug}/`)} style={`--vc:${vibeColors[v.slug]}`}>
+            {vibePhoto(v.slug) && <img src={vibePhoto(v.slug).srcSmall} alt={vibePhoto(v.slug).alt} loading="lazy" width="640" height="400" referrerpolicy="no-referrer" onerror="this.parentElement.classList.remove('has-photo');this.remove()" />}
             <span class="e">{v.emoji}</span>
             <span><strong>{v.name}</strong><br /><small>{COUNTS.vibe[v.slug]} picks</small></span>
           </a>

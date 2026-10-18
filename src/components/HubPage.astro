@@ -8,6 +8,7 @@ import { link, absolute, SITE } from '../lib/site.mjs';
 import { sectionsFor, collapseRepeats, topPicks, sponsoredFor, W, UPDATED, MIN_INDEXABLE } from '../lib/data.mjs';
 import { formatRange, fmtDay, fmtLongDay } from '../lib/time.mjs';
 import { placeLine } from '../lib/format.mjs';
+import { pagePhoto } from '../lib/images.mjs';
 
 interface Props {
   h1: string;
@@ -30,6 +31,7 @@ interface Props {
   windowLabel?: string;
 }
 const p = Astro.props;
+const hero = pagePhoto(p.filter || {});
 const s = p.sections || sectionsFor(p.filter || {});
 const weekendLabel = formatRange(W.weekend.fri, W.weekend.end);
 const nextWeekLabel = formatRange(W.nextWeek.start, W.nextWeek.end);
@@ -77,14 +79,20 @@ const defaultFaq = [
 ];
 const faq = [...(p.faq || []), ...defaultFaq];
 ---
-<Base title={p.seoTitle} description={p.description} path={p.path} jsonld={jsonld} noindex={total < MIN_INDEXABLE}>
+<Base title={p.seoTitle} description={p.description} path={p.path} jsonld={jsonld} noindex={total < MIN_INDEXABLE} image={hero?.src}>
   <div class="wrap">
     <header class="page-head">
       <Crumbs items={p.crumbs} />
-      {p.eyebrow && <div class="eyebrow">{p.eyebrow}</div>}
-      <h1>{p.h1}</h1>
-      {p.lead && <p class="lead">{p.lead}</p>}
-      <p class="updated">Updated {fmtLongDay.format(UPDATED)} · {total} listings</p>
+      <div class:list={['page-hero', { 'has-photo': !!hero }]}>
+        {hero && <img src={hero.src} alt={hero.alt} width="1280" height="720" fetchpriority="high" referrerpolicy="no-referrer" onerror="this.parentElement.classList.remove('has-photo');this.remove()" />}
+        <div class="page-hero-text">
+          {p.eyebrow && <div class="eyebrow">{p.eyebrow}</div>}
+          <h1>{p.h1}</h1>
+          {p.lead && <p class="lead">{p.lead}</p>}
+          <p class="updated">Updated {fmtLongDay.format(UPDATED)} · {total} listings</p>
+        </div>
+        {hero && <span class="photo-credit">Photo: <a href={hero.creditUrl} rel="nofollow noopener" target="_blank">{hero.credit}</a> / {hero.source}</span>}
+      </div>
 
       <div class="answer">
         <h2>Quick answer</h2>
