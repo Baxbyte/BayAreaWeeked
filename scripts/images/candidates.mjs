@@ -4,7 +4,7 @@
 //   node scripts/images/candidates.mjs <outDir>     (needs `playwright`)
 import fs from 'node:fs';
 import { chromium } from 'playwright';
-import { fromCategory, fromSearch } from './commons.mjs';
+import { UA, fromCategory, fromSearch, sleep } from './commons.mjs';
 import { CATEGORY_SRC, HOOD_CATS, PLACE_CATS, REGION_SRC, VIBE_SRC } from './plans.mjs';
 
 const out = process.argv[2] || 'candidates';
@@ -67,21 +67,41 @@ for (const [key, specs, n] of targets) {
 }
 fs.writeFileSync(`${out}/candidates.json`, JSON.stringify(result, null, 1));
 
+// Download thumbnails one at a time (Wikimedia throttles bursts), then render from local files.
+fs.mkdirSync(`${out}/thumbs`, { recursive: true });
+async function grab(c) {
+  const file = `${out}/thumbs/${c.pageid}.jpg`;
+  for (let i = 0; i < 4; i++) {
+    try {
+      const res = await fetch(c.thumb, { headers: { 'User-Agent': UA } });
+      if (res.status === 429) { await sleep(4000 * (i + 1)); continue; }
+      if (!res.ok) return null;
+      fs.writeFileSync(file, Buffer.from(await res.arrayBuffer()));
+      await sleep(150);
+      return `file://${process.cwd()}/${file}`;
+    } catch { await sleep(2000); }
+  }
+  return null;
+}
+for (const list of Object.values(result)) for (const c of list) c.local = await grab(c);
+
 const esc = (s) => String(s).replace(/[<&]/g, (c) => (c === '<' ? '&lt;' : '&amp;'));
 const rows = Object.entries(result);
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1800, height: 1000 } });
-for (let s = 0; s * 8 < rows.length; s++) {
-  const chunk = rows.slice(s * 8, s * 8 + 8);
+const per = 6;
+for (let s = 0; s * per < rows.length; s++) {
+  const chunk = rows.slice(s * per, s * per + per);
   const html = `<html><body style="margin:0;background:#111;color:#eee;font:13px system-ui">${chunk.map(([key, list]) => `
     <div style="padding:4px 6px 2px;font-weight:700;color:#ffd166">${esc(key)}</div>
-    <div style="display:grid;grid-template-columns:repeat(10,1fr);gap:3px;padding:0 4px 6px">${Array.from({ length: 10 }, (_, i) => list[i]).map((c, i) => c
-      ? `<div style="position:relative"><img src="${c.thumb}" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block"><span style="position:absolute;left:3px;top:3px;background:#ef4b25;color:#fff;font-weight:800;padding:1px 6px;border-radius:6px">${i}</span></div>`
-      : '<div></div>').join('')}</div>`).join('')}</body></html>`;
+     <div style="display:grid;grid-template-columns:repeat(10,1fr);gap:3px;padding:0 4px 6px">${list.map((c, i) => c.local
+      ? `<div style="position:relative"><img src="${c.local}" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block"><span style="position:absolute;left:3px;top:3px;background:#ef4b25;color:#fff;font-weight:800;padding:1px 6px;border-radius:6px">${i}</span></div>`
+      : `<div style="aspect-ratio:16/10;background:#333;color:#888;display:grid;place-items:center">${i} n/a</div>`).join('')}</div>`).join('')}</body></html>`;
   fs.writeFileSync(`${out}/_tmp.html`, html);
-  await page.goto(`file://${process.cwd()}/${out}/_tmp.html`, { waitUntil: 'networkidle', timeout: 120000 }).catch(() => {});
+  await page.goto(`file://${process.cwd()}/${out}/_tmp.html`, { waitUntil: 'load', timeout: 120000 }).catch(() => {});
   await page.screenshot({ path: `${out}/cand-${String(s + 1).padStart(2, '0')}.jpg`, fullPage: true, type: 'jpeg', quality: 72 });
 }
 fs.rmSync(`${out}/_tmp.html`, { force: true });
 await browser.close();
-console.log(`${rows.length} targets → ${Math.ceil(rows.length / 8)} sheets`);
+fs.rmSync(`${out}/thumbs`, { recursive: true, force: true });
+console.log(`${rows.length} targets → ${Math.ceil(rows.length / per)} sheets`);

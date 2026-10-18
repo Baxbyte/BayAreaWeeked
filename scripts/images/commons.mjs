@@ -4,7 +4,7 @@ export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 export const strip = (s) => String(s || '').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'").replace(/\s+/g, ' ').trim();
 
 // Never show these (checked against title, description AND Commons categories).
-export const NSFW = /\b(nude|nudity|naked|nudist|naturist|topless|lingerie|bikini|bikinis|swimsuit|swimwear|underwear|glamour|pin-?up|sexy|erotic|fetish|bdsm|models? \(people\)|boudoir)\b/i;
+export const NSFW = /\b(nude|nudity|naked|nudist|naturist|topless|lingerie|bikini|bikinis|swimsuit|swimwear|underwear|glamour|pin-?up|sexy|erotic|fetish|bdsm|models? \(people\)|boudoir|bay to breakers|folsom street fair|dore alley|up your alley)\b/i;
 // Usually not attractive as a lead image.
 export const DULL = /\b(map|logo|diagram|seal|flag of|chart|floor plan|svg|icon|drawing|illustration|engraving|poster|postcard|lithograph|sketch|blueprint|habs|haer|construction|demolition|aerial|satellite|screenshot|document|letter|plaque|sign|signage|placard|label|text|dead|carcass|corpse|injured|accident|crash|fire|smoke|protest|riot|police|arrest|homeless|grave|cemetery|funeral)\b/i;
 export const PEOPLE = /\b(crowd|crowds|people|visitors|tourists|festival|parade|fans|audience|families|family|children|kids|market|runners|dancers|dancing|performers|band|concert|shoppers|picnic|friends|spectators|participants|marchers|celebrat|cyclists|hikers|surfers|diners|couple)/i;
