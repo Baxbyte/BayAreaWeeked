@@ -642,16 +642,6 @@
   ],
   "festivals": [
    {
-    "id": "wm-72692852",
-    "alt": "A photo with young people joining 2018 SF Pride Parade",
-    "credit": "SF Assessor",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Pride_APAPA_interns.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-72692852"
-   },
-   {
     "id": "wm-99800497",
     "alt": "Dance performance during Cherry Blossom Festival in Japan Town of San Fransisco",
     "credit": "Ramesh Lalwani",
@@ -660,16 +650,6 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "file": "/photos/wm-99800497"
-   },
-   {
-    "id": "wm-41617491",
-    "alt": "1991-06 Jun Kodak Gold 100-2 Film 1991 June - San Francisco Pride Parade Roll 1990s",
-    "credit": "niiicedave",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_(9683447573).jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "file": "/photos/wm-41617491"
    },
    {
     "id": "wm-90908045",
@@ -1429,5 +1409,5 @@
    "file": "/photos/wm-13665311"
   }
  },
- "generatedAt": "2026-10-18T17:05:26.979Z"
+ "generatedAt": "2026-10-18T17:10:54.697Z"
 }
