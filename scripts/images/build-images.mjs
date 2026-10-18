@@ -9,6 +9,7 @@ import path from 'node:path';
 import sharp from 'sharp';
 import { NSFW, UA, byPageIds, getJSON, sleep } from './commons.mjs';
 import { CATEGORY_SRC } from './plans.mjs';
+import { checkImage } from '../safety/image-safety.mjs';
 
 const ROOT = path.resolve(new URL('../..', import.meta.url).pathname);
 const OUT = path.join(ROOT, 'data/images.json');
@@ -28,7 +29,11 @@ async function download(id, url) {
     const res = await fetch(url, { headers: { 'User-Agent': UA }, signal: ctrl.signal });
     clearTimeout(t);
     if (!res.ok || !(res.headers.get('content-type') || '').startsWith('image/')) return false;
-    const img = sharp(Buffer.from(await res.arrayBuffer())).rotate();
+    const buf = Buffer.from(await res.arrayBuffer());
+    // Family-friendly gate: even hand-picked photos must pass the image-safety check.
+    const verdict = await checkImage(buf);
+    if (!verdict.safe) { console.log(`✘ rejected ${id} (${verdict.reason})`); return false; }
+    const img = sharp(buf).rotate();
     if (((await img.metadata()).width || 0) < 1000) return false;
     await img.clone().resize(1280, 720, { fit: 'cover', position: 'attention' }).webp({ quality: 78 }).toFile(large);
     await img.clone().resize(640, 400, { fit: 'cover', position: 'attention' }).webp({ quality: 72 }).toFile(small);

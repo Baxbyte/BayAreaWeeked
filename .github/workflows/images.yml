@@ -32,12 +32,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Fast image-safety engine
+        run: npm i --no-save @tensorflow/tfjs-node@4.22.0 || true
       - name: Find photos (Wikimedia Commons + Pexels)
         timeout-minutes: 45
         continue-on-error: true
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: node scripts/images/build-images.mjs ${{ inputs.refresh && '--refresh' || '' }}
+      - name: Family-friendly image check (nothing is saved unless every photo passes)
+        run: npm run safety
       - name: Save photo list
         run: |
           git config user.name "bayarea-weekend-bot"

@@ -1,4 +1,5 @@
 // Build-time data access for pages. Everything is computed once per build.
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { normalize } from '../../scripts/scrape/normalize.mjs';
@@ -13,6 +14,8 @@ const read = (p, fb) => {
 
 export const DATA = read(process.env.EVENTS_FILE || 'data/events.json', { generatedAt: null, items: [], sources: [] });
 export const SPONSORS = read('data/sponsors.json', { slots: [], campaigns: [] });
+const SAFETY = read('data/image-safety.json', {});
+const imageKey = (url) => crypto.createHash('sha1').update(url).digest('hex').slice(0, 16);
 export const NOW = process.env.BUILD_NOW ? new Date(process.env.BUILD_NOW) : new Date();
 export const W = windows(NOW);
 export const UPDATED = DATA.generatedAt ? new Date(DATA.generatedAt) : NOW;
@@ -34,10 +37,14 @@ for (const c of activeCampaigns) {
   const e = c.event;
   const it = normalize({ ...e, sourceId: `sponsor-${c.id}`, sourceName: c.sponsor, sourceHome: e.url, citySlug: e.city, venueName: e.venueName,
     forceCategories: e.categories, externalId: c.id });
-  if (it) { it.firstSeen = DATA.generatedAt; sponsorItems.push(it); }
+  if (it) { it.firstSeen = DATA.generatedAt; it.imageSafe = !!(it.image && SAFETY[imageKey(it.image)]?.safe); sponsorItems.push(it); }
 }
 
-export const ALL = [...(DATA.items || []), ...sponsorItems].map((i) => ({ ...i, path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime() }));
+// Family-friendly gate: organizer images that haven't passed the image-safety check are removed here,
+// so no page, feed or API can ever show them.
+export const ALL = [...(DATA.items || []), ...sponsorItems].map((i) => ({
+  ...i, image: i.imageSafe === true ? i.image : null, path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime(),
+}));
 export const byId = new Map(ALL.map((i) => [i.id, i]));
 
 for (const c of activeCampaigns) {

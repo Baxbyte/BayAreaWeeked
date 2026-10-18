@@ -11,6 +11,7 @@ import { nearestHood } from '../../src/lib/geo.mjs';
 import { toPTISO } from '../../src/lib/time.mjs';
 import { geocode, saveGeocache } from './geocode.mjs';
 import { hoodAt } from './hoods.mjs';
+import { moderateImages } from '../safety/moderate-events.mjs';
 import { hash, mergeDuplicates, normalize } from './normalize.mjs';
 
 const ADAPTERS = {
@@ -152,6 +153,8 @@ async function main() {
   });
 
   const events = mergeDuplicates([...fresh, ...carried]).sort((a, b) => a.start.localeCompare(b.start));
+  // Family-friendly gate: organizers' images are only shown after passing the image-safety check.
+  await moderateImages(events, { offline });
   const items = [...events, ...activities];
 
   const out = {

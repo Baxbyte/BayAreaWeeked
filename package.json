@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "scrape": "node scripts/scrape/index.mjs",
     "indexnow": "node scripts/indexnow.mjs",
-    "test": "node --test scripts/test/*.test.mjs"
+    "test": "node --test scripts/test/*.test.mjs",
+    "safety": "node scripts/safety/check-repo.mjs"
   },
   "dependencies": {
     "astro": "^7.4.0",
@@ -18,9 +19,12 @@
     "minisearch": "^7.2.0"
   },
   "devDependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "buffer": "^6.0.3",
     "cheerio": "^1.2.0",
     "fast-xml-parser": "^5.11.2",
     "node-ical": "^0.27.3",
+    "nsfwjs": "^4.4.0",
     "sharp": "^0.35.5"
   }
 }

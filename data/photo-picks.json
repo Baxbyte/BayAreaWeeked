@@ -3,16 +3,24 @@
  "genre:live-music": [
   134837966,
   134838724,
+  99368549,
+  75873133,
+  86063800,
+  186389470,
   58269405,
-  72103304,
-  72103422,
-  176174563
+  72103304
  ],
  "genre:theater": [
+  68553778,
+  7513503,
+  7572948,
+  30223316,
   83851744,
   5052014
  ],
  "genre:arts": [
+  139442947,
+  146472221,
   92937702,
   92938059,
   141963837,
@@ -21,33 +29,43 @@
  ],
  "genre:film": [
   41256927,
+  190560086,
+  191422242,
   30223316
  ],
  "genre:festivals": [
   72692852,
+  99800497,
   41617491,
   90908045
  ],
  "genre:outdoors": [
+  46688123,
+  11944885,
+  116405201,
   139959987,
   165256542
  ],
  "genre:sports": [
+  117772419,
   43494737,
   51095676
  ],
  "genre:tech": [
+  26599691,
+  56386179,
   123176792,
   58257150
  ],
  "genre:family": [
+  83786148,
+  198448375,
   60715870,
-  83786153,
-  198448375
+  83786153
  ],
  "genre:markets": [],
  "region:san-francisco": [
-  36225249
+  63537930
  ],
  "region:east-bay": [
   62583862
@@ -59,16 +77,16 @@
   26120670
  ],
  "vibe:fog-escape": [
-  61839286
+  199193832
  ],
  "vibe:date-night": [
-  105370680
+  46348560
  ],
  "place:Lands End Trail & Sutro Baths": [
-  141536507
+  62225599
  ],
  "place:Japanese Tea Garden": [
-  99892387
+  52562797
  ],
  "place:Presidio Tunnel Tops": [
   120738657
@@ -77,16 +95,16 @@
   53169657
  ],
  "place:Alcatraz Island": [
-  94657599
+  97461621
  ],
  "place:Coit Tower & Telegraph Hill": [
   46749101
  ],
  "place:Chinatown Walk from the Dragon Gate": [
-  185319507
+  182044100
  ],
  "place:The Fillmore": [
-  78600311
+  78600348
  ],
  "place:San Francisco Symphony at Davies Symphony Hall": [
   109257808
@@ -95,7 +113,7 @@
   81992614
  ],
  "place:San Francisco Giants at Oracle Park": [
-  52530331
+  43494737
  ],
  "place:Children's Creativity Museum": [
   47413891
@@ -170,13 +188,13 @@
   49623720
  ],
  "place:Conservatory of Flowers": [
-  164145021
+  68829856
  ],
  "place:Tilden Regional Park": [
   59289505
  ],
  "place:Castro Theatre": [
-  74143947
+  30223316
  ],
  "hood:mission-district": [
   42182213
@@ -297,5 +315,51 @@
  ],
  "city:pittsburg": [
   143236851
+ ],
+ "genre:nightlife": [
+  49454682,
+  46227181,
+  6029750,
+  115274405,
+  2788036
+ ],
+ "genre:comedy": [
+  79120808,
+  99303428,
+  99301703,
+  8383799
+ ],
+ "genre:food-drink": [
+  124765073,
+  89334592,
+  90023738,
+  13665311
+ ],
+ "genre:wellness": [
+  118814771
+ ],
+ "genre:learning": [
+  146386163
+ ],
+ "genre:community": [
+  183717348
+ ],
+ "region:peninsula": [
+  198329558
+ ],
+ "vibe:nightlife": [
+  8656172
+ ],
+ "vibe:rainy-day": [
+  13665311
+ ],
+ "place:de Young Museum & Hamon Observation Tower": [
+  139442947
+ ],
+ "place:Legion of Honor": [
+  157627812
+ ],
+ "place:SFMOMA": [
+  60388981
  ]
 }

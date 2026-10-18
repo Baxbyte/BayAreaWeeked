@@ -36,7 +36,8 @@ export function poolPhoto(i) {
  */
 export function photoFor(i) {
   const pool = poolPhoto(i);
-  if (i.image) {
+  // Organizers' images are shown only after passing the family-friendly image check (see scripts/safety/).
+  if (i.image && i.imageSafe === true) {
     return { src: i.image, srcSmall: i.image, alt: i.title, credit: i.sources?.[0]?.name || 'Event organizer', creditUrl: i.url, source: 'organizer', fallback: pool };
   }
   const place = i.type === 'activity' ? DB.places[i.title] : null;

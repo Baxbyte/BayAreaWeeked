@@ -11,5 +11,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Fast image-safety engine
+        run: npm i --no-save @tensorflow/tfjs-node@4.22.0 || true
       - run: npm test
+      - name: Family-friendly image check
+        run: npm run safety
       - run: npm run build

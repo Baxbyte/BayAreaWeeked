@@ -4,6 +4,7 @@ import { classify } from '../../src/lib/classify.mjs';
 import { cityBySlug, cityFromText, hoodFromText, inBayArea, nearestCity, nearestHood } from '../../src/lib/geo.mjs';
 import { parseWhen, toPTISO } from '../../src/lib/time.mjs';
 import { hoodAt } from './hoods.mjs';
+import { clean, isExplicit } from '../../src/lib/policy.mjs';
 
 export const hash = (s, n = 10) => crypto.createHash('sha1').update(String(s)).digest('hex').slice(0, n);
 
@@ -104,8 +105,10 @@ export function resolveGeo(raw, defaults = {}) {
  *             venueName, address, city, lat, lng, priceMin, priceMax, priceText, tags, forceFlags, forceCategories, type}
  */
 export function normalize(raw, defaults = {}) {
-  const title = cleanTitle(raw.title);
+  const title = clean(cleanTitle(raw.title));
   if (!title || title.length < 3) return null;
+  // Family-friendly policy: sexually explicit listings are never included.
+  if (isExplicit(raw.title, raw.description, raw.venueName, (raw.tags || []).join(' '), raw.organizer)) return null;
   const isActivity = raw.type === 'activity';
 
   let start = null;
@@ -125,7 +128,7 @@ export function normalize(raw, defaults = {}) {
   if (!geo) return null;
 
   const price = raw.priceMin != null ? { priceMin: raw.priceMin, priceMax: raw.priceMax ?? raw.priceMin } : parsePrice(raw.priceText);
-  const description = truncate(raw.description || '', 600);
+  const description = clean(truncate(raw.description || '', 600));
   const url = absUrl(raw.url, raw.baseUrl);
   const keyBase = raw.externalId ? `${raw.sourceId}:${raw.externalId}` : `${raw.sourceId}:${url || ''}:${title}:${start?.toISOString() || ''}`;
   const id = hash(keyBase, 12);
@@ -143,12 +146,12 @@ export function normalize(raw, defaults = {}) {
     allDay,
     schedule: raw.schedule || null,
     tip: raw.tip || null,
-    venue: { name: cleanText(raw.venueName || '') || null, address: cleanText(raw.address || '') || null, lat: geo.lat, lng: geo.lng, approx: geo.approxGeo },
+    venue: { name: clean(cleanText(raw.venueName || '')) || null, address: cleanText(raw.address || '') || null, lat: geo.lat, lng: geo.lng, approx: geo.approxGeo },
     city: geo.city, region: geo.region, neighborhood: geo.neighborhood,
     priceMin: price.priceMin ?? null, priceMax: price.priceMax ?? null,
     priceText: raw.priceText ? cleanText(raw.priceText).slice(0, 80) : (price.priceMin === 0 ? 'Free' : price.priceMin != null ? (price.priceMax > price.priceMin ? `$${price.priceMin}–$${price.priceMax}` : `$${price.priceMin}`) : null),
-    organizer: raw.organizer ? cleanText(raw.organizer).slice(0, 100) : null,
-    sourceTags: (raw.tags || []).map((t) => cleanText(t)).filter(Boolean).slice(0, 12),
+    organizer: raw.organizer ? clean(cleanText(raw.organizer)).slice(0, 100) : null,
+    sourceTags: (raw.tags || []).map((t) => clean(cleanText(t))).filter(Boolean).slice(0, 12),
     sources: [{ id: raw.sourceId, name: raw.sourceName, url: url || raw.sourceHome || null }],
   };
   const { categories, flags } = classify({ ...item, forceFlags: raw.forceFlags, forceCategories: raw.forceCategories });

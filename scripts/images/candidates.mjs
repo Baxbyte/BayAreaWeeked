@@ -5,6 +5,7 @@
 import fs from 'node:fs';
 import { chromium } from 'playwright';
 import { UA, fromCategory, fromSearch, sleep } from './commons.mjs';
+import { checkImage } from '../safety/image-safety.mjs';
 import { CATEGORY_SRC, HOOD_CATS, PLACE_CATS, REGION_SRC, VIBE_SRC } from './plans.mjs';
 
 const out = process.argv[2] || 'candidates';
@@ -76,7 +77,10 @@ async function grab(c) {
       const res = await fetch(c.thumb, { headers: { 'User-Agent': UA } });
       if (res.status === 429) { await sleep(4000 * (i + 1)); continue; }
       if (!res.ok) return null;
-      fs.writeFileSync(file, Buffer.from(await res.arrayBuffer()));
+      const buf = Buffer.from(await res.arrayBuffer());
+      // Family-friendly gate: flagged photos are never written, rendered or offered for picking.
+      if (!(await checkImage(buf)).safe) { c.blocked = true; return null; }
+      fs.writeFileSync(file, buf);
       await sleep(150);
       return `file://${process.cwd()}/${file}`;
     } catch { await sleep(2000); }
@@ -84,6 +88,8 @@ async function grab(c) {
   return null;
 }
 for (const list of Object.values(result)) for (const c of list) c.local = await grab(c);
+for (const k of Object.keys(result)) result[k] = result[k].filter((c) => !c.blocked);
+fs.writeFileSync(`${out}/candidates.json`, JSON.stringify(result, null, 1));
 
 const esc = (s) => String(s).replace(/[<&]/g, (c) => (c === '<' ? '&lt;' : '&amp;'));
 const rows = Object.entries(result);
