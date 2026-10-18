@@ -9,6 +9,7 @@ import { checkImage } from '../safety/image-safety.mjs';
 import { CATEGORY_SRC, HOOD_CATS, PLACE_CATS, REGION_SRC, VIBE_SRC } from './plans.mjs';
 
 const out = process.argv[2] || 'candidates';
+const BLOCKED = new Set(JSON.parse(fs.readFileSync('data/photo-blocklist.json', 'utf8')).ids);
 const only = process.env.ONLY ? new RegExp(process.env.ONLY) : null;
 fs.mkdirSync(out, { recursive: true });
 
@@ -74,7 +75,7 @@ for (const [key, specs, n] of targets) {
     else if (spec.startsWith('q:')) { const [q, must] = spec.slice(2).split('|'); pool = pool.concat(await fromSearch(q, (must || '').split(',').filter(Boolean), { width: 330 })); }
   }
   const seen = new Set();
-  pool = pool.filter((p) => !seen.has(p.pageid) && seen.add(p.pageid)).sort((a, b) => b.score - a.score).slice(0, n);
+  pool = pool.filter((p) => !BLOCKED.has(p.pageid) && !seen.has(p.pageid) && seen.add(p.pageid)).sort((a, b) => b.score - a.score).slice(0, n);
   result[key] = pool.map((p, i) => ({ n: i, pageid: p.pageid, title: p.title, thumb: p.url }));
   console.log(`${key}: ${pool.length}`);
 }

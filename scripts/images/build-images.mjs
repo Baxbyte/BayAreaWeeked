@@ -15,6 +15,7 @@ const ROOT = path.resolve(new URL('../..', import.meta.url).pathname);
 const OUT = path.join(ROOT, 'data/images.json');
 const PICKS = path.join(ROOT, 'data/photo-picks.json');
 const PHOTO_DIR = path.join(ROOT, 'public/photos');
+const BLOCKED = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/photo-blocklist.json'), 'utf8')).ids);
 const PEXELS = process.env.PEXELS_API_KEY || process.env.PEXELS_KEY || '';
 const PER_GENRE = 6;
 fs.mkdirSync(PHOTO_DIR, { recursive: true });
@@ -71,8 +72,13 @@ async function pexels(query, n, used) {
 
 async function main() {
   const picks = JSON.parse(fs.readFileSync(PICKS, 'utf8'));
-  const ids = [...new Set(Object.entries(picks).filter(([k]) => !k.startsWith('_')).flatMap(([, v]) => v))];
+  const ids = [...new Set(Object.entries(picks).filter(([k]) => !k.startsWith('_')).flatMap(([, v]) => v))].filter((id) => !BLOCKED.has(id));
   const meta = new Map((await byPageIds(ids)).map((p) => [p.pageid, p]));
+  // If Wikimedia can't be reached, stop before touching anything (otherwise every photo would look "missing" and be deleted).
+  if (meta.size < ids.length * 0.5) {
+    console.error(`Only ${meta.size}/${ids.length} picked photos could be looked up — Wikimedia unreachable? Leaving photos unchanged.`);
+    process.exit(1);
+  }
   const db = { places: {}, categories: {}, regions: {}, cities: {}, hoods: {}, vibes: {} };
   const group = { genre: 'categories', place: 'places', region: 'regions', city: 'cities', hood: 'hoods', vibe: 'vibes' };
   const used = new Set();
@@ -83,6 +89,7 @@ async function main() {
     const name = rest.join(':');
     const recs = [];
     for (const pid of list) {
+      if (BLOCKED.has(pid)) continue;
       const m = meta.get(pid);
       if (!m) { missing++; console.log(`· ${key}: page ${pid} unavailable`); continue; }
       if (!(await download(m.id, m.url))) { missing++; continue; }

@@ -41,13 +41,11 @@
   11944885,
   139959987,
   165256542,
-  46688123,
   86892448
  ],
  "genre:sports": [
   43494737,
   51095676,
-  117772419,
   81992614
  ],
  "genre:tech": [
@@ -60,7 +58,6 @@
   198448375,
   83786153,
   83786147,
-  60715870,
   4353045
  ],
  "region:san-francisco": [
@@ -374,9 +371,6 @@
  "place:Chabot Space & Science Center": [
   80488021
  ],
- "place:Children's Fairyland": [
-  83786148
- ],
  "place:Lawrence Hall of Science": [
   71696449
  ],
@@ -484,9 +478,6 @@
  ],
  "city:berkeley": [
   10768198
- ],
- "city:walnut-creek": [
-  166938204
  ],
  "city:napa": [
   185040411
