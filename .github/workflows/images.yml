@@ -3,6 +3,10 @@ name: Refresh Bay Area photos
 on:
   workflow_dispatch:
     inputs:
+      force:
+        description: 'Ignore the failure limit (circuit breaker) for this run'
+        type: boolean
+        default: false
       refresh:
         description: 'Re-pick every photo (otherwise only fills in missing ones)'
         type: boolean
@@ -22,7 +26,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      paused: ${{ steps.breaker.outputs.paused }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+      - id: breaker
+        name: Circuit breaker (max 3 failures per 24h, then pause 24h)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WORKFLOW_FILE: images.yml
+          FORCE: ${{ inputs.force && 'true' || 'false' }}
+        run: node .github/scripts/circuit-breaker.mjs
+
   photos:
+    needs: guard
+    if: needs.guard.outputs.paused != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:

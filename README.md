@@ -30,6 +30,9 @@ npm run build           # static site → dist/
 
 Prefer Vercel/Netlify/Cloudflare? Import the repo there (build `npm run build`, output `dist`) and set repo variable `DEPLOY_TARGET=external`. The daily workflow still scrapes and commits fresh data, which triggers your host's rebuild.
 
+## Failure limit (test mode)
+The daily, photo and photo-candidate workflows have a **circuit breaker**: if a workflow fails 3 times within 24 hours, every further run is skipped until 24 hours after that 3rd failure. To run anyway, use **Actions → (workflow) → Run workflow** and tick **force**. The rule lives in `.github/scripts/circuit-breaker.mjs`.
+
 ## Settings
 Repo **variables** (Settings → Secrets and variables → Actions → Variables): `SITE_URL`, `SITE_NAME`, `PUBLIC_SIGNUP_ENDPOINT`, `PUBLIC_SPONSOR_ENDPOINT`, `PUBLIC_CONTACT_EMAIL`, `GOOGLE_SITE_VERIFICATION`, `BING_SITE_VERIFICATION`, `INDEXNOW_KEY`, `OPENROUTER_MODEL`, `DEPLOY_TARGET`.
 

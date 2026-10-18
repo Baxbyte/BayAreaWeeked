@@ -2,6 +2,10 @@ name: Photo candidates for hand-picking
 on:
   workflow_dispatch:
     inputs:
+      force:
+        description: 'Ignore the failure limit (circuit breaker) for this run'
+        type: boolean
+        default: false
       only:
         description: 'Regex of targets to gather (e.g. ^genre:). Empty = all'
         required: false
@@ -9,12 +13,32 @@ on:
     branches: [main]
     paths: ['scripts/images/candidates.mjs', 'scripts/images/commons.mjs', 'scripts/images/plans.mjs']
 permissions:
+  actions: read
   contents: write
 concurrency:
   group: photo-candidates
   cancel-in-progress: true
 jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      paused: ${{ steps.breaker.outputs.paused }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+      - id: breaker
+        name: Circuit breaker (max 3 failures per 24h, then pause 24h)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WORKFLOW_FILE: photo-candidates.yml
+          FORCE: ${{ inputs.force && 'true' || 'false' }}
+        run: node .github/scripts/circuit-breaker.mjs
+
   candidates:
+    needs: guard
+    if: needs.guard.outputs.paused != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

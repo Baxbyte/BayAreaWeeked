@@ -6,6 +6,10 @@ on:
     - cron: '47 0 * * *'    # ~5pm Pacific: evening refresh (new "tonight" + weekend listings)
   workflow_dispatch:
     inputs:
+      force:
+        description: 'Ignore the failure limit (circuit breaker) for this run'
+        type: boolean
+        default: false
       skip_scrape:
         description: 'Rebuild from committed data without scraping'
         type: boolean
@@ -15,6 +19,7 @@ on:
     paths-ignore: ['data/events.json', 'data/scrape-report.json', 'data/geocache.json', 'data/indexnow-state.json', 'data/images.json', '**.md']
 
 permissions:
+  actions: read
   contents: write
   pages: write
   id-token: write
@@ -24,7 +29,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      paused: ${{ steps.breaker.outputs.paused }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+      - id: breaker
+        name: Circuit breaker (max 3 failures per 24h, then pause 24h)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WORKFLOW_FILE: daily.yml
+          FORCE: ${{ inputs.force && 'true' || 'false' }}
+        run: node .github/scripts/circuit-breaker.mjs
+
   build:
+    needs: guard
+    if: needs.guard.outputs.paused != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     outputs:
