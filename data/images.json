@@ -30,7 +30,7 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-120738657"
   },
-  "Mus\u00e9e M\u00e9canique": {
+  "Musée Mécanique": {
    "id": "wm-53169657",
    "alt": "A row of machines at Musee Mecanique in San Francisco.",
    "credit": "Rhododendrites",
@@ -133,7 +133,7 @@
   "Grace Cathedral": {
    "id": "wm-197606619",
    "alt": "California Street - James Flood Mansion and Grace Cathedral, San Francisco",
-   "credit": "Rados\u0142aw Botev",
+   "credit": "Radosław Botev",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:California_Street_-_James_Flood_Mansion_and_Grace_Cathedral,_San_Francisco.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 3.0 pl",
@@ -352,7 +352,7 @@
   },
   "Tilden Regional Park": {
    "id": "wm-59289505",
-   "alt": "H20151103-0001\u2014Mount Diablo from Inspiration Point\u2014Tilden Regional Park-1 (22573645050)",
+   "alt": "H20151103-0001—Mount Diablo from Inspiration Point—Tilden Regional Park-1 (22573645050)",
    "credit": "John Rusk from Berkeley, CA, United States of America",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:H20151103-0001%E2%80%94Mount_Diablo_from_Inspiration_Point%E2%80%94Tilden_Regional_Park-1_(22573645050).jpg",
    "source": "Wikimedia Commons",
@@ -373,7 +373,7 @@
   "de Young Museum & Hamon Observation Tower": {
    "id": "wm-139442947",
    "alt": "De Young Museum with Keith Haring's Three Dancing Figures",
-   "credit": "Luiz Pantoja from S\u00e3o Paulo",
+   "credit": "Luiz Pantoja from São Paulo",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:De_Young_Museum_(2)_(21043282819).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
@@ -530,7 +530,7 @@
    {
     "id": "wm-139442947",
     "alt": "De Young Museum with Keith Haring's Three Dancing Figures",
-    "credit": "Luiz Pantoja from S\u00e3o Paulo",
+    "credit": "Luiz Pantoja from São Paulo",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:De_Young_Museum_(2)_(21043282819).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 2.0",
@@ -894,7 +894,7 @@
  "regions": {
   "san-francisco": {
    "id": "wm-63537930",
-   "alt": "The Golden Gate Bridge as seen from Marshall\u2019s Beach, October 2017",
+   "alt": "The Golden Gate Bridge as seen from Marshall’s Beach, October 2017",
    "credit": "Frank Schulenburg",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach,_October_2017.jpg",
    "source": "Wikimedia Commons",
@@ -976,8 +976,8 @@
   },
   "san-jose": {
    "id": "wm-118796573",
-   "alt": "The place where the meeting with M\u1ea1nh An took place.",
-   "credit": "Song To\u00e0n V\u00f5",
+   "alt": "The place where the meeting with Mạnh An took place.",
+   "credit": "Song Toàn Võ",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_m%E1%BA%B7t_v%E1%BB%9Bi_M%E1%BA%A1nh_An-Song_To%C3%A0n_V%C3%B5_(San_Jose,_California,_Hoa_K%E1%BB%B3)2.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -1168,7 +1168,7 @@
   },
   "pacific-heights": {
    "id": "wm-49696996",
-   "alt": "Apartments at 2870\u201378 Washington Street, San Francisco, California",
+   "alt": "Apartments at 2870–78 Washington Street, San Francisco, California",
    "credit": "Yngvadottir",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:2870-78_Washington.jpg",
    "source": "Wikimedia Commons",
@@ -1188,7 +1188,7 @@
   },
   "civic-center": {
    "id": "wm-52073255",
-   "alt": "Farmer\u00b4s Market at Civic Center in San Francisco (TK1)",
+   "alt": "Farmer´s Market at Civic Center in San Francisco (TK1)",
    "credit": "Tobias Kleinlercher / Wikipedia",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Farmer%C2%B4s_Market_at_UN_Plaza-Civic_Center_in_San_Francisco_(TK1).JPG",
    "source": "Wikimedia Commons",
@@ -1279,7 +1279,7 @@
   "santana-row": {
    "id": "wm-108365270",
    "alt": "Intersection of Olin Ave & Winchester Blvd in Santana Row",
-   "credit": "Cristiano Tom\u00e1s",
+   "credit": "Cristiano Tomás",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Intersection_of_Olin_Ave_%26_Winchester_Blvd_in_Santana_Row.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -1349,5 +1349,5 @@
    "file": "/photos/wm-13665311"
   }
  },
- "generatedAt": "2026-10-18T17:10:54.697Z"
+ "generatedAt": "2026-10-18T17:16:57.785Z"
 }
