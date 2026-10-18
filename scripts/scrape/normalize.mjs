@@ -127,6 +127,8 @@ export function normalize(raw, defaults = {}) {
   const geo = resolveGeo({ ...raw, title }, defaults);
   if (!geo) return null;
 
+  // Price text must look like a price (no links or long blurbs).
+  if (raw.priceText && (/https?:|www\.|\.(org|com)\b/i.test(raw.priceText) || raw.priceText.length > 60)) raw = { ...raw, priceText: null };
   const price = raw.priceMin != null ? { priceMin: raw.priceMin, priceMax: raw.priceMax ?? raw.priceMin } : parsePrice(raw.priceText);
   const description = clean(truncate(raw.description || '', 600));
   const url = absUrl(raw.url, raw.baseUrl);

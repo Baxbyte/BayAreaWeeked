@@ -14,7 +14,7 @@ const width = ((VIEW.e - VIEW.w) * K * S).toFixed(0);
 const height = ((VIEW.n - VIEW.s) * S).toFixed(0);
 const toPath = (g) => g.coordinates.map((poly) => poly.map((r) => `M${r.map(([x, y]) => P(x, y).join(',')).join('L')}Z`).join('')).join('');
 const fills = { 'san-francisco': '#ffd2c2', 'east-bay': '#ffe7a3', peninsula: '#c4efe6', 'south-bay': '#cfe0ff', 'north-bay': '#e6dbff' };
-const labelAt = { 'north-bay': [-122.62, 38.3], 'san-francisco': [-122.44, 37.765], peninsula: [-122.36, 37.48], 'south-bay': [-121.87, 37.25], 'east-bay': [-122.02, 37.8] };
+const labelAt = { 'north-bay': [-122.62, 38.3], 'san-francisco': [-122.44, 37.765], peninsula: [-122.33, 37.39], 'south-bay': [-121.87, 37.25], 'east-bay': [-122.02, 37.8] };
 const cityDots = ['oakland', 'berkeley', 'san-jose', 'palo-alto', 'san-mateo', 'walnut-creek', 'fremont', 'san-rafael', 'napa', 'santa-rosa', 'half-moon-bay', 'mountain-view', 'sausalito', 'livermore', 'petaluma', 'redwood-city']
   .map((s) => CITIES.find((c) => c.slug === s)).filter(Boolean);
 const mapData = {

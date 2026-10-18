@@ -23,7 +23,8 @@ const classics = topPicks(ACTIVITIES, 10);
 const kidsPick = topPicks(filterItems([...weekend, ...ACTIVITIES], { vibe: 'kid-friendly' }), 4);
 const nightPick = topPicks(filterItems(weekend, { vibe: 'nightlife' }), 4);
 const answerPicks = topPicks(weekend.length ? weekend : ACTIVITIES, 6);
-const heroPhoto = IMAGES.categories.festivals?.[0] || IMAGES.vibes.free || regionPhoto('san-francisco');
+// A people-filled, text-free shot (festival banners clash with the headline).
+const heroPhoto = IMAGES.categories['live-music']?.[0] || IMAGES.vibes['hot-day'] || regionPhoto('san-francisco');
 const vibeColors = { 'kid-friendly': '#ffe9a8', nightlife: '#e1d8ff', free: '#c9f2ea', 'hot-day': '#ffd9b8', 'rainy-day': '#d3e4ff', 'fog-escape': '#e6e9ef', 'date-night': '#ffd6e0', 'near-bart': '#d6e6ff' };
 const examples = ['free kids stuff in Oakland Saturday', 'techno tonight in the Mission', 'rainy day ideas in San Jose', 'date night in North Beach under $60', 'hikes near me this weekend', 'jazz in Berkeley next week', 'fog escape with the kids'];
 

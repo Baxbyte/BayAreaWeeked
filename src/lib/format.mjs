@@ -33,7 +33,7 @@ export function tagsFor(i, max = 3) {
   if (i.flags.bart) t.push(['bart', '🚇 BART']);
   if (i.flags.rainy && t.length < max) t.push(['rainy', '☔ Rainy-day']);
   if (i.flags.hot && t.length < max) t.push(['hot', '☀️ Hot-day']);
-  if (t.length < max && i.priceText && !i.flags.free) t.push(['', i.priceText.length > 18 ? i.priceText.slice(0, 16) + '…' : i.priceText]);
+  if (t.length < max && i.priceText && !i.flags.free && !/https?:|www\./i.test(i.priceText)) t.push(['', i.priceText.length > 18 ? i.priceText.slice(0, 16) + '…' : i.priceText]);
   return t.slice(0, max + (i.sponsor ? 1 : 0));
 }
 
