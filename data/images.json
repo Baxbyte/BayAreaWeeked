@@ -1,5 +1,25 @@
 {
  "places": {
+  "Lands End Trail & Sutro Baths": {
+   "id": "wm-62225599",
+   "alt": "Lands End, San Francisco, United States",
+   "credit": "Saksham Gangwar saksham",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Lands_End,_San_Francisco,_United_States_(Unsplash_J4aLKW3T0FE).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "file": "/photos/wm-62225599"
+  },
+  "Japanese Tea Garden": {
+   "id": "wm-52562797",
+   "alt": "Gate at Japanese Tea Garden (San Francisco) (TK1)",
+   "credit": "Tobias Kleinlercher / Wikipedia",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Gate_at_Japanese_Tea_Garden_(San_Francisco)_(TK1).JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "file": "/photos/wm-52562797"
+  },
   "Presidio Tunnel Tops": {
    "id": "wm-120738657",
    "alt": "Presidio Tunnel Tops park view, with Alcatraz Island in the background, on July 18, 2022, the day after it opened to the public",
@@ -10,7 +30,7 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-120738657"
   },
-  "Mus\u00e9e M\u00e9canique": {
+  "Musée Mécanique": {
    "id": "wm-53169657",
    "alt": "A row of machines at Musee Mecanique in San Francisco.",
    "credit": "Rhododendrites",
@@ -19,6 +39,16 @@
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-53169657"
+  },
+  "Alcatraz Island": {
+   "id": "wm-97461621",
+   "alt": "Alcatraz Island (39495489730)",
+   "credit": "Bernard Spragg. NZ from Christchurch, New Zealand",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_Island_(39495489730).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "file": "/photos/wm-97461621"
   },
   "Coit Tower & Telegraph Hill": {
    "id": "wm-46749101",
@@ -29,6 +59,26 @@
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-46749101"
+  },
+  "Chinatown Walk from the Dragon Gate": {
+   "id": "wm-182044100",
+   "alt": "Chinatown, San Francisco",
+   "credit": "Ligocsicnarf89",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Chinatown,_SF_(2025)-1.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "file": "/photos/wm-182044100"
+  },
+  "The Fillmore": {
+   "id": "wm-78600348",
+   "alt": "Ingrid Michaelson performing live at The Fillmore in San Francisco, California, on Monday, October 24, 2016.",
+   "credit": "Justin Higuchi from Los Angeles, CA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Ingrid_Michaelson_10_24_2016_-16_(30780183095).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "file": "/photos/wm-78600348"
   },
   "San Francisco Symphony at Davies Symphony Hall": {
    "id": "wm-109257808",
@@ -83,7 +133,7 @@
   "Grace Cathedral": {
    "id": "wm-197606619",
    "alt": "California Street - James Flood Mansion and Grace Cathedral, San Francisco",
-   "credit": "Rados\u0142aw Botev",
+   "credit": "Radosław Botev",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:California_Street_-_James_Flood_Mansion_and_Grace_Cathedral,_San_Francisco.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 3.0 pl",
@@ -290,9 +340,19 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-49623720"
   },
+  "Conservatory of Flowers": {
+   "id": "wm-68829856",
+   "alt": "San Francisco Golden Gate Park's Conservatory of Flowers in March 2018.",
+   "credit": "Gregory Varnum",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Conservatory_of_Flowers_-_March_2018_(5314).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "file": "/photos/wm-68829856"
+  },
   "Tilden Regional Park": {
    "id": "wm-59289505",
-   "alt": "H20151103-0001\u2014Mount Diablo from Inspiration Point\u2014Tilden Regional Park-1 (22573645050)",
+   "alt": "H20151103-0001—Mount Diablo from Inspiration Point—Tilden Regional Park-1 (22573645050)",
    "credit": "John Rusk from Berkeley, CA, United States of America",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:H20151103-0001%E2%80%94Mount_Diablo_from_Inspiration_Point%E2%80%94Tilden_Regional_Park-1_(22573645050).jpg",
    "source": "Wikimedia Commons",
@@ -309,6 +369,36 @@
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "file": "/photos/wm-30223316"
+  },
+  "de Young Museum & Hamon Observation Tower": {
+   "id": "wm-139442947",
+   "alt": "De Young Museum with Keith Haring's Three Dancing Figures",
+   "credit": "Luiz Pantoja from São Paulo",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:De_Young_Museum_(2)_(21043282819).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "file": "/photos/wm-139442947"
+  },
+  "Legion of Honor": {
+   "id": "wm-157627812",
+   "alt": "Anna Hyatt Huntington--El Cid Campeador--1927--Legion of Honor--San Francisco--photo by Steven Saylor",
+   "credit": "Stevensaylor",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Anna_Hyatt_Huntington--El_Cid_Campeador--1927--Legion_of_Honor--San_Francisco--photo_by_Steven_Saylor.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "file": "/photos/wm-157627812"
+  },
+  "SFMOMA": {
+   "id": "wm-60388981",
+   "alt": "2017 SFMOMA from Yerba Buena Gardens",
+   "credit": "Beyond My Ken",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:2017_SFMOMA_from_Yerba_Buena_Gardens.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "file": "/photos/wm-60388981"
   }
  },
  "categories": {
@@ -334,6 +424,46 @@
     "file": "/photos/wm-134838724"
    },
    {
+    "id": "wm-99368549",
+    "alt": "Large crowd attending a concert at Yerba Buena Gardens Festival",
+    "credit": "Stonestageybgf",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:2016_PedritoMartinez_Crowd_CreditTomErlich.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-99368549"
+   },
+   {
+    "id": "wm-75873133",
+    "alt": "The Belle Sounds playing at The Great American Music Hall in San Francisco on May 27, 2016",
+    "credit": "Stuart Maschwitz",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:The_Belle_Sounds_playing_at_The_Great_American_Music_Hall_in_San_Francisco_on_May_27,_2016.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-75873133"
+   },
+   {
+    "id": "wm-86063800",
+    "alt": "Miniature Tigers at the Rickshaw Stop, January 2020",
+    "credit": "Pi.1415926535",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Miniature_Tigers_at_the_Rickshaw_Stop,_January_2020.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "file": "/photos/wm-86063800"
+   },
+   {
+    "id": "wm-186389470",
+    "alt": "Brian Doherty playing electric bass at the final Brass Tax party at Amnesia (853 Valencia Street), San Francisco, California",
+    "credit": "Dohertyswong",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Brian_Doherty_at_Brass_Tax_Party_Amnesia_San_Francisco_2015.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "file": "/photos/wm-186389470"
+   },
+   {
     "id": "wm-58269405",
     "alt": "Early morning at the Banjo Stage -- HSB 2015",
     "credit": "NAParish from Oakland, CA",
@@ -355,6 +485,26 @@
    }
   ],
   "theater": [
+   {
+    "id": "wm-68553778",
+    "alt": "Judas Priest at The Warfield Theater in San Francisco on the Firepower tour, April 19, 2018",
+    "credit": "Aaron Rubin",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Judas_Priest_at_The_Warfield_Theater_in_San_Francisco.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-68553778"
+   },
+   {
+    "id": "wm-7513503",
+    "alt": "Box office and entrance, Orpheum Theatre, 1192 Market Street, San Francisco, California, USA.",
+    "credit": "Joe Mabel",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_Orpheum_Theatre_box_office.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "file": "/photos/wm-7513503"
+   },
    {
     "id": "wm-30223316",
     "alt": "Castro Theatre Marquee December 2013 (2)",
@@ -387,6 +537,16 @@
    }
   ],
   "arts": [
+   {
+    "id": "wm-139442947",
+    "alt": "De Young Museum with Keith Haring's Three Dancing Figures",
+    "credit": "Luiz Pantoja from São Paulo",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:De_Young_Museum_(2)_(21043282819).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "/photos/wm-139442947"
+   },
    {
     "id": "wm-92937702",
     "alt": "Mission Mural - Political Art - 39364787244",
@@ -450,6 +610,26 @@
     "file": "/photos/wm-41256927"
    },
    {
+    "id": "wm-190560086",
+    "alt": "People at the San Francisco International Film Festival in 2026",
+    "credit": "Jesse Kornblum",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:SFFILM_2026_Group_Shots_01.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-190560086"
+   },
+   {
+    "id": "wm-191422242",
+    "alt": "Alfie Koetter Nezza Cristina Costantini at the San Francisco International Film Festival in 2026",
+    "credit": "Jesse Kornblum",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Alfie_Koetter_Nezza_Cristina_Costantini_SFFILM_May_2026_01.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-191422242"
+   },
+   {
     "id": "wm-30223316",
     "alt": "Castro Theatre Marquee December 2013 (2)",
     "credit": "Gotanero",
@@ -462,6 +642,36 @@
   ],
   "festivals": [
    {
+    "id": "wm-72692852",
+    "alt": "A photo with young people joining 2018 SF Pride Parade",
+    "credit": "SF Assessor",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Pride_APAPA_interns.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-72692852"
+   },
+   {
+    "id": "wm-99800497",
+    "alt": "Dance performance during Cherry Blossom Festival in Japan Town of San Fransisco",
+    "credit": "Ramesh Lalwani",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:C_herry_Blossom_Festival_Japan_Town_SF.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "/photos/wm-99800497"
+   },
+   {
+    "id": "wm-41617491",
+    "alt": "1991-06 Jun Kodak Gold 100-2 Film 1991 June - San Francisco Pride Parade Roll 1990s",
+    "credit": "niiicedave",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_(9683447573).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "file": "/photos/wm-41617491"
+   },
+   {
     "id": "wm-90908045",
     "alt": "1991JuneSFPride_Kodak5095Gold100-2_0001 Lead Cycle! Parade always starts with Women's Motorcycle Contingent",
     "credit": "David Prasad from Welches, OR., United States",
@@ -473,6 +683,26 @@
    }
   ],
   "outdoors": [
+   {
+    "id": "wm-11944885",
+    "alt": "Golden Gate Bridge seen from Crissy Field, San Francisco, California. People canoeing in the foreground.",
+    "credit": "Guillaume Paumier",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_seen_from_Crissy_Field,_San_Francisco_15.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "file": "/photos/wm-11944885"
+   },
+   {
+    "id": "wm-116405201",
+    "alt": "Visitors without camping reservations need to walk down to Kirby Cove from the parking area on Conzelman Road that runs along the Marin Headlands.",
+    "credit": "Matthewobrien",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Hike_out_from_Kirby_Cove.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-116405201"
+   },
    {
     "id": "wm-139959987",
     "alt": "California Coast Trail views in San francisco",
@@ -496,6 +726,16 @@
   ],
   "sports": [
    {
+    "id": "wm-117772419",
+    "alt": "Zack Short playing the infield for the Tennessee Smokies during an April 2018 game.",
+    "credit": "Jeffrey Hayes",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Zack_Short_(51011175646).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "/photos/wm-117772419"
+   },
+   {
     "id": "wm-43494737",
     "alt": "Empty AT&T Park in the day",
     "credit": "Jared Erondu",
@@ -517,6 +757,26 @@
    }
   ],
   "tech": [
+   {
+    "id": "wm-26599691",
+    "alt": "Crowds queuing on the first day of Apple's WWDC 2013.",
+    "credit": "User:glwx",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:WWDC_2013.jpeg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "file": "/photos/wm-26599691"
+   },
+   {
+    "id": "wm-56386179",
+    "alt": "The SPIE Photonics West conference in San Francisco at Moscone Center in 2017.",
+    "credit": "Dllu",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:SPIE_Photonics_West_2017.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-56386179"
+   },
    {
     "id": "wm-123176792",
     "alt": "An entrance to Dreamforce in 2022, Salesforce's primary convention for the year",
@@ -540,6 +800,16 @@
   ],
   "family": [
    {
+    "id": "wm-83786148",
+    "alt": "2012 MLK Day of Service 8808 (6796962787)",
+    "credit": "Ted Eytan",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:2012_MLK_Day_of_Service_8808_(6796962787).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "file": "/photos/wm-83786148"
+   },
+   {
     "id": "wm-198448375",
     "alt": "Display of puppets from Fairyland, 2010-2025",
     "credit": "E mln e",
@@ -559,9 +829,139 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
     "file": "/photos/wm-83786153"
    }
+  ],
+  "nightlife": [
+   {
+    "id": "wm-49454682",
+    "alt": "Marchers walk by San Francisco City Hall, lit in the rainbow colors of the Pride flag, during a vigil for the victims of the 2016 Orlando nightclub shooting.",
+    "credit": "Pax Ahimsa Gethen",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_vigil_for_Orlando_-_5.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-49454682"
+   },
+   {
+    "id": "wm-46227181",
+    "alt": "Evan Brewer of The Faceless @ DNA Lounge",
+    "credit": "Maclyn Bean",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Evan_Brewer_of_The_Faceless_@_DNA_Lounge_(7069644731).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "/photos/wm-46227181"
+   },
+   {
+    "id": "wm-6029750",
+    "alt": "fear the fiasco concert at the DNA Lounge",
+    "credit": "Derekjoel",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Fearthefiascoconcert.JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "file": "/photos/wm-6029750"
+   },
+   {
+    "id": "wm-2788036",
+    "alt": "DJ Doc Martin spinning at Taste Ultra Lounge in San Jose, California.",
+    "credit": "Frederick Manligas Nacino (Opusdeiphotography)",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Dj_Doc_Martin_070303_1.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "file": "/photos/wm-2788036"
+   }
+  ],
+  "comedy": [
+   {
+    "id": "wm-99303428",
+    "alt": "Imah's first hour show to a full house last 27th Nov. 2020",
+    "credit": "Dubaicomedycom",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Imah%27s_Day_Off_1.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-99303428"
+   },
+   {
+    "id": "wm-8383799",
+    "alt": "Comedian Lewis Black performs at the 2009 USO Gala at the Marriott Wardman Park in Washington, D.C., October 7, 2009. Lewis Black is the event's emcee.",
+    "credit": "Chad J. McNeeley, U.S. Navy",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Stand-up_comedian_Lewis_Black,_2009.JPG",
+    "source": "Wikimedia Commons",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stand-up_comedian_Lewis_Black,_2009.JPG",
+    "file": "/photos/wm-8383799"
+   }
+  ],
+  "food-drink": [
+   {
+    "id": "wm-89334592",
+    "alt": "Food trucks at Mid-Autumn Festival, San Francisco Chinatown",
+    "credit": "Gary Stevens",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Food_trucks_at_Mid-Autumn_Festival,_San_Francisco_Chinatown_(6138801867).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "/photos/wm-89334592"
+   },
+   {
+    "id": "wm-90023738",
+    "alt": "McDonald's truck at Mid-Autumn Festival, San Francisco Chinatown",
+    "credit": "Gary Stevens",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:McDonald%27s_truck_at_Mid-Autumn_Festival,_San_Francisco_Chinatown_(6139349350).jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "/photos/wm-90023738"
+   },
+   {
+    "id": "wm-13665311",
+    "alt": "Chinatown, San Francisco. Street view with umbrellas on a rainy day.",
+    "credit": "Ed Schipul",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Chinatown_San_Francisco_Umbrellas.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "file": "/photos/wm-13665311"
+   }
+  ],
+  "wellness": [
+   {
+    "id": "wm-118814771",
+    "alt": "Runners completing the third leg of the 2022 Escape From Alcatraz Triathlon on the Marina Green of San Francisco, California.",
+    "credit": "9yz",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Escape_from_alcatraz_finish_line_22.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-118814771"
+   }
+  ],
+  "community": [
+   {
+    "id": "wm-183717348",
+    "alt": "Volunteers smiling at WIkipedia Day 2026",
+    "credit": "E mln e",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Volunteers_smiling_at_WIkipedia_Day_2026.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-183717348"
+   }
   ]
  },
  "regions": {
+  "san-francisco": {
+   "id": "wm-63537930",
+   "alt": "The Golden Gate Bridge as seen from Marshall’s Beach, October 2017",
+   "credit": "Frank Schulenburg",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach,_October_2017.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "file": "/photos/wm-63537930"
+  },
   "east-bay": {
    "id": "wm-62583862",
    "alt": "Gondola on Lake Merritt, Oakland, CA, USA",
@@ -636,8 +1036,8 @@
   },
   "san-jose": {
    "id": "wm-118796573",
-   "alt": "The place where the meeting with M\u1ea1nh An took place.",
-   "credit": "Song To\u00e0n V\u00f5",
+   "alt": "The place where the meeting with Mạnh An took place.",
+   "credit": "Song Toàn Võ",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_m%E1%BA%B7t_v%E1%BB%9Bi_M%E1%BA%A1nh_An-Song_To%C3%A0n_V%C3%B5_(San_Jose,_California,_Hoa_K%E1%BB%B3)2.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -838,7 +1238,7 @@
   },
   "pacific-heights": {
    "id": "wm-49696996",
-   "alt": "Apartments at 2870\u201378 Washington Street, San Francisco, California",
+   "alt": "Apartments at 2870–78 Washington Street, San Francisco, California",
    "credit": "Yngvadottir",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:2870-78_Washington.jpg",
    "source": "Wikimedia Commons",
@@ -858,7 +1258,7 @@
   },
   "civic-center": {
    "id": "wm-52073255",
-   "alt": "Farmer\u00b4s Market at Civic Center in San Francisco (TK1)",
+   "alt": "Farmer´s Market at Civic Center in San Francisco (TK1)",
    "credit": "Tobias Kleinlercher / Wikipedia",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Farmer%C2%B4s_Market_at_UN_Plaza-Civic_Center_in_San_Francisco_(TK1).JPG",
    "source": "Wikimedia Commons",
@@ -916,6 +1316,16 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "file": "/photos/wm-62298561"
   },
+  "treasure-island": {
+   "id": "wm-53831704",
+   "alt": "Nuevo puente en la Bahía de San Francisco",
+   "credit": "Elraton",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Puente_San_Fco.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "file": "/photos/wm-53831704"
+  },
   "lake-merritt": {
    "id": "wm-121878907",
    "alt": "A man raises an American flag at Lake Merritt in Oakland",
@@ -949,7 +1359,7 @@
   "santana-row": {
    "id": "wm-108365270",
    "alt": "Intersection of Olin Ave & Winchester Blvd in Santana Row",
-   "credit": "Cristiano Tom\u00e1s",
+   "credit": "Cristiano Tomás",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Intersection_of_Olin_Ave_%26_Winchester_Blvd_in_Santana_Row.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -977,7 +1387,47 @@
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "file": "/photos/wm-26120670"
+  },
+  "fog-escape": {
+   "id": "wm-199193832",
+   "alt": "Golden Gate Bridge Emerging from Fog, San Francisco",
+   "credit": "Dongmin03",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_Emerging_from_Fog,_San_Francisco.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+   "file": "/photos/wm-199193832"
+  },
+  "date-night": {
+   "id": "wm-46348560",
+   "alt": "Sunset from Alcatraz",
+   "credit": "Emily Mathews from Ann Arbor, MI",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Alcatraz_(22768270377).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "file": "/photos/wm-46348560"
+  },
+  "nightlife": {
+   "id": "wm-8656172",
+   "alt": "The american doom metal band Pentagram live at the DNA lounge, San Francisco, USA in 2009",
+   "credit": "brandi666",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Pentagram_live_2009.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "file": "/photos/wm-8656172"
+  },
+  "rainy-day": {
+   "id": "wm-13665311",
+   "alt": "Chinatown, San Francisco. Street view with umbrellas on a rainy day.",
+   "credit": "Ed Schipul",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Chinatown_San_Francisco_Umbrellas.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "file": "/photos/wm-13665311"
   }
  },
- "generatedAt": "rebuilt-from-picks"
+ "generatedAt": "2026-10-18T17:05:26.979Z"
 }

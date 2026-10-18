@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T09:46:00-07:00",
+  "generatedAt": "2026-10-18T09:55:00-07:00",
   "offline": false,
   "reports": [
     {
@@ -10,7 +10,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 126,
+      "ms": 60,
       "reason": "TICKETMASTER_API_KEY not set"
     },
     {
@@ -21,7 +21,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 121,
+      "ms": 59,
       "reason": "SEATGEEK_CLIENT_ID not set"
     },
     {
@@ -29,13 +29,13 @@
       "name": "AllEvents",
       "type": "jsonld",
       "status": "ok",
-      "raw": 1259,
-      "kept": 1138,
+      "raw": 1257,
+      "kept": 1135,
       "warnings": [
         "allevents: HTTP 404 for https://allevents.in/napa/all",
         "allevents: HTTP 404 for https://allevents.in/campbell/all"
       ],
-      "ms": 45815
+      "ms": 45812
     },
     {
       "id": "luma-sf",
@@ -45,7 +45,7 @@
       "raw": 20,
       "kept": 20,
       "warnings": [],
-      "ms": 1104
+      "ms": 932
     },
     {
       "id": "ferry-building",
@@ -55,7 +55,7 @@
       "raw": 11,
       "kept": 0,
       "warnings": [],
-      "ms": 562
+      "ms": 523
     },
     {
       "id": "ucsf",
@@ -65,7 +65,7 @@
       "raw": 18,
       "kept": 17,
       "warnings": [],
-      "ms": 2266
+      "ms": 6312
     },
     {
       "id": "sjsu",
@@ -75,7 +75,7 @@
       "raw": 257,
       "kept": 248,
       "warnings": [],
-      "ms": 12899
+      "ms": 13178
     },
     {
       "id": "funcheap",
@@ -85,7 +85,7 @@
       "raw": 10,
       "kept": 0,
       "warnings": [],
-      "ms": 887
+      "ms": 799
     },
     {
       "id": "funcheap-days",
@@ -93,9 +93,9 @@
       "type": "jsonld",
       "status": "ok",
       "raw": 271,
-      "kept": 271,
+      "kept": 270,
       "warnings": [],
-      "ms": 12817
+      "ms": 12975
     },
     {
       "id": "19hz",
@@ -103,9 +103,9 @@
       "type": "nineteenhz",
       "status": "ok",
       "raw": 337,
-      "kept": 279,
+      "kept": 278,
       "warnings": [],
-      "ms": 1043
+      "ms": 917
     },
     {
       "id": "stanford",
@@ -115,7 +115,7 @@
       "raw": 209,
       "kept": 207,
       "warnings": [],
-      "ms": 15066
+      "ms": 23263
     },
     {
       "id": "roundups",
