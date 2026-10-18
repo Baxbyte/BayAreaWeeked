@@ -34,9 +34,7 @@
   30223316
  ],
  "genre:festivals": [
-  72692852,
   99800497,
-  41617491,
   90908045
  ],
  "genre:outdoors": [
@@ -58,12 +56,9 @@
   58257150
  ],
  "genre:family": [
-  83786148,
   198448375,
-  60715870,
   83786153
  ],
- "genre:markets": [],
  "region:san-francisco": [
   63537930
  ],
@@ -135,9 +130,6 @@
  ],
  "place:Oakland Museum of California": [
   149329435
- ],
- "place:Children's Fairyland": [
-  198449132
  ],
  "place:Oakland Zoo": [
   106122800
@@ -241,9 +233,6 @@
  "hood:west-portal": [
   62298561
  ],
- "hood:treasure-island": [
-  53831704
- ],
  "hood:lake-merritt": [
   121878907
  ],
@@ -259,9 +248,6 @@
  "city:union-city": [
   130166228
  ],
- "city:walnut-creek": [
-  166938204
- ],
  "city:livermore": [
   111183026
  ],
@@ -276,9 +262,6 @@
  ],
  "city:san-jose": [
   118796573
- ],
- "city:campbell": [
-  55220685
  ],
  "city:los-gatos": [
   121873011

@@ -130,16 +130,6 @@
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "file": "/photos/wm-149329435"
   },
-  "Children's Fairyland": {
-   "id": "wm-198449132",
-   "alt": "Display of puppets from the 2000s at Children's Fairyland",
-   "credit": "E mln e",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Display_of_puppets_from_the_2000s_at_Children%27s_Fairyland.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-198449132"
-  },
   "Oakland Zoo": {
    "id": "wm-106122800",
    "alt": "This pond had a series of stepping stones decorated as lilypads. They seemed to be made of rubber or plastic and moved a bit when stepping on them.",
@@ -472,26 +462,6 @@
   ],
   "festivals": [
    {
-    "id": "wm-72692852",
-    "alt": "A photo with young people joining 2018 SF Pride Parade",
-    "credit": "SF Assessor",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Pride_APAPA_interns.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-72692852"
-   },
-   {
-    "id": "wm-41617491",
-    "alt": "1991-06 Jun Kodak Gold 100-2 Film 1991 June - San Francisco Pride Parade Roll 1990s",
-    "credit": "niiicedave",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_(9683447573).jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "file": "/photos/wm-41617491"
-   },
-   {
     "id": "wm-90908045",
     "alt": "1991JuneSFPride_Kodak5095Gold100-2_0001 Lead Cycle! Parade always starts with Women's Motorcycle Contingent",
     "credit": "David Prasad from Welches, OR., United States",
@@ -580,16 +550,6 @@
     "file": "/photos/wm-198448375"
    },
    {
-    "id": "wm-60715870",
-    "alt": "Entrance to Children's Fairyland",
-    "credit": "Wordworking",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Fairyland_shoe_entrance.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-60715870"
-   },
-   {
     "id": "wm-83786153",
     "alt": "2012 MLK Day of Service 8813 (6796969085)",
     "credit": "Ted Eytan",
@@ -633,16 +593,6 @@
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-130166228"
-  },
-  "walnut-creek": {
-   "id": "wm-166938204",
-   "alt": "Walnut Creek Art and Wine Festival at Civic Park during 2025",
-   "credit": "Tellurium6",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Walnut_Creek_Art_and_Wine_2025.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-166938204"
   },
   "livermore": {
    "id": "wm-111183026",
@@ -693,16 +643,6 @@
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-118796573"
-  },
-  "campbell": {
-   "id": "wm-55220685",
-   "alt": "A vendor selling various types of mushrooms at the farmers' market in downtown Campbell, California.",
-   "credit": "Grendelkhan",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Mushroom_stand_at_the_Campbell_farmers%27_market.gk.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-55220685"
   },
   "los-gatos": {
    "id": "wm-121873011",
@@ -975,16 +915,6 @@
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "file": "/photos/wm-62298561"
-  },
-  "treasure-island": {
-   "id": "wm-53831704",
-   "alt": "Nuevo puente en la Bah\u00eda de San Francisco",
-   "credit": "Elraton",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Puente_San_Fco.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-53831704"
   },
   "lake-merritt": {
    "id": "wm-121878907",
