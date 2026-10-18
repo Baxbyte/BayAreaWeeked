@@ -11,6 +11,7 @@
    "file": "/photos/wm-120738657"
   },
   "Mus\u00e9e M\u00e9canique": {
+   "id": "wm-53169657",
    "alt": "A row of machines at Musee Mecanique in San Francisco.",
    "credit": "Rhododendrites",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Musee_Mecanique.jpg",
@@ -50,13 +51,13 @@
    "file": "/photos/wm-81992614"
   },
   "San Francisco Giants at Oracle Park": {
+   "id": "wm-43494737",
    "alt": "Empty AT&T Park in the day",
    "credit": "Jared Erondu",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:ATT_Stadium.jpeg",
    "source": "Wikimedia Commons",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "id": "wm-43494737",
    "file": "/photos/wm-43494737"
   },
   "Children's Creativity Museum": {
@@ -290,39 +291,40 @@
    "file": "/photos/wm-121942202"
   },
   "Fitzgerald Marine Reserve Tide Pools": {
+   "id": "wm-49623720",
    "alt": "Coryphella cooperi from Fitzgerald Marine Reserve, California",
    "credit": "ANudibranchMom",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:2016-06-20_Fitzgerald_189_PS.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "id": "wm-49623720",
    "file": "/photos/wm-49623720"
   },
   "Tilden Regional Park": {
+   "id": "wm-59289505",
    "alt": "H20151103-0001\u2014Mount Diablo from Inspiration Point\u2014Tilden Regional Park-1 (22573645050)",
    "credit": "John Rusk from Berkeley, CA, United States of America",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:H20151103-0001%E2%80%94Mount_Diablo_from_Inspiration_Point%E2%80%94Tilden_Regional_Park-1_(22573645050).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "id": "wm-59289505",
    "file": "/photos/wm-59289505"
   },
   "Castro Theatre": {
+   "id": "wm-30223316",
    "alt": "Castro Theatre Marquee December 2013 (2)",
    "credit": "Gotanero",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Castro_Theatre_Marquee_December_2013_(2).JPG",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "id": "wm-30223316",
    "file": "/photos/wm-30223316"
   }
  },
  "categories": {
   "live-music": [
    {
+    "id": "wm-134837966",
     "alt": "Hardly Strictly Crowd",
     "credit": "Jesse Wagstaff",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Hardly_Strictly_Crowd.jpg",
@@ -332,6 +334,7 @@
     "file": "/photos/wm-134837966"
    },
    {
+    "id": "wm-134838724",
     "alt": "Hardly Strictly Bluegrass 2022",
     "credit": "btwashburn",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Crowd_scene.jpg",
@@ -363,16 +366,17 @@
   ],
   "theater": [
    {
+    "id": "wm-30223316",
     "alt": "Castro Theatre Marquee December 2013 (2)",
     "credit": "Gotanero",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Castro_Theatre_Marquee_December_2013_(2).JPG",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 3.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "id": "wm-30223316",
     "file": "/photos/wm-30223316"
    },
    {
+    "id": "wm-83851744",
     "alt": "Opera House Tricolour",
     "credit": "Phliar from Republic of San Francisco",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Opera_House_Tricolour_(23146921521).jpg",
@@ -382,6 +386,7 @@
     "file": "/photos/wm-83851744"
    },
    {
+    "id": "wm-5052014",
     "alt": "War Memorial Opera House at night, San Francisco, California",
     "credit": "Photo: Andreas Praefcke",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:War_Memoria_Opera_House_at_night.jpg",
@@ -393,6 +398,7 @@
   ],
   "arts": [
    {
+    "id": "wm-92937702",
     "alt": "Mission Mural - Political Art - 39364787244",
     "credit": "Fabrice Florin",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Mission_Mural_-_Political_Art_-_39364787244.jpg",
@@ -412,6 +418,7 @@
     "file": "/photos/wm-92938059"
    },
    {
+    "id": "wm-141963837",
     "alt": "Balmy Alley",
     "credit": "DestinationFearFan",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Balmy_Alley.jpg",
@@ -431,6 +438,7 @@
     "file": "/photos/wm-39287218"
    },
    {
+    "id": "wm-39287221",
     "alt": "Women's Building - Corner",
     "credit": "Plateaueatplau",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Women%27s_Building_-_Corner.JPG",
@@ -452,6 +460,7 @@
     "file": "/photos/wm-41256927"
    },
    {
+    "id": "wm-30223316",
     "alt": "Castro Theatre Marquee December 2013 (2)",
     "credit": "Gotanero",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Castro_Theatre_Marquee_December_2013_(2).JPG",
@@ -483,6 +492,7 @@
     "file": "/photos/wm-41617491"
    },
    {
+    "id": "wm-90908045",
     "alt": "1991JuneSFPride_Kodak5095Gold100-2_0001 Lead Cycle! Parade always starts with Women's Motorcycle Contingent",
     "credit": "David Prasad from Welches, OR., United States",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_0001_Lead_Cycle!_Parade_always_starts_with_Women%27s_Motorcycle_Contingent_(9683434147).jpg",
@@ -494,6 +504,7 @@
   ],
   "outdoors": [
    {
+    "id": "wm-139959987",
     "alt": "California Coast Trail views in San francisco",
     "credit": "Alex Sirac",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:California_Coast_Trail_views_in_San_francisco_9.jpg",
@@ -515,6 +526,7 @@
   ],
   "sports": [
    {
+    "id": "wm-43494737",
     "alt": "Empty AT&T Park in the day",
     "credit": "Jared Erondu",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:ATT_Stadium.jpeg",
@@ -546,6 +558,7 @@
     "file": "/photos/wm-123176792"
    },
    {
+    "id": "wm-58257150",
     "alt": "Olympus XA Zuiko 35mm/f2.8 Walgreens 200 10/13/2011",
     "credit": "Michael Fraley from San Francisco, US",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_Center_12_(6341926838).jpg",
@@ -557,16 +570,7 @@
   ],
   "family": [
    {
-    "alt": "2012 MLK Day of Service 8808 (6796962787)",
-    "credit": "Ted Eytan",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:2012_MLK_Day_of_Service_8808_(6796962787).jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "id": "wm-83786148",
-    "file": "/photos/wm-83786148"
-   },
-   {
+    "id": "wm-198448375",
     "alt": "Display of puppets from Fairyland, 2010-2025",
     "credit": "E mln e",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Historic_puppets_display.jpg",
@@ -576,23 +580,23 @@
     "file": "/photos/wm-198448375"
    },
    {
+    "id": "wm-60715870",
     "alt": "Entrance to Children's Fairyland",
     "credit": "Wordworking",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:Fairyland_shoe_entrance.jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "id": "wm-60715870",
     "file": "/photos/wm-60715870"
    },
    {
+    "id": "wm-83786153",
     "alt": "2012 MLK Day of Service 8813 (6796969085)",
     "credit": "Ted Eytan",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:2012_MLK_Day_of_Service_8813_(6796969085).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY-SA 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "id": "wm-83786153",
     "file": "/photos/wm-83786153"
    }
   ]
@@ -609,13 +613,13 @@
    "file": "/photos/wm-62583862"
   },
   "peninsula": {
+   "id": "wm-198329558",
    "alt": "Giant Pumpkin On Parade Float",
    "credit": "MegalithAgency",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Half_Moon_Bay_Art_%26_Pumpkin_Festival_Great_Pumpkin_Parade.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "id": "wm-198329558",
    "file": "/photos/wm-198329558"
   }
  },
@@ -641,13 +645,13 @@
    "file": "/photos/wm-166938204"
   },
   "livermore": {
+   "id": "wm-111183026",
    "alt": "Livermore's Farmer's Market at Carnegie Park",
    "credit": "Dm91 (talk)",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:LivermoreFarmersMarket.JPG",
    "source": "Wikimedia Commons",
    "license": "Public domain",
    "licenseUrl": "https://commons.wikimedia.org/wiki/File:LivermoreFarmersMarket.JPG",
-   "id": "wm-111183026",
    "file": "/photos/wm-111183026"
   },
   "belmont": {
@@ -681,6 +685,7 @@
    "file": "/photos/wm-76127943"
   },
   "san-jose": {
+   "id": "wm-118796573",
    "alt": "The place where the meeting with M\u1ea1nh An took place.",
    "credit": "Song To\u00e0n V\u00f5",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_m%E1%BA%B7t_v%E1%BB%9Bi_M%E1%BA%A1nh_An-Song_To%C3%A0n_V%C3%B5_(San_Jose,_California,_Hoa_K%E1%BB%B3)2.jpg",
@@ -730,13 +735,13 @@
    "file": "/photos/wm-134061343"
   },
   "tiburon": {
+   "id": "wm-38040882",
    "alt": "Swing at the Hippie Tree in Tiburon (California, USA) with views to San Francisco and the Golden Gate Bridge.",
    "credit": "QuimGil",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Hippie_Tree_in_Tiburon.jpg",
    "source": "Wikimedia Commons",
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "id": "wm-38040882",
    "file": "/photos/wm-38040882"
   },
   "stinson-beach": {
@@ -780,43 +785,43 @@
    "file": "/photos/wm-185569161"
   },
   "mountain-view": {
+   "id": "wm-92946582",
    "alt": "My town - Flickr - bluesbby",
    "credit": "bluesbby from Mountain View, USA",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:My_town_-_Flickr_-_bluesbby.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "id": "wm-92946582",
    "file": "/photos/wm-92946582"
   },
   "cupertino": {
+   "id": "wm-113450363",
    "alt": "This is in the hills of Cupertino. One of these houses has a small winery in the yard. There is also a winery up there, it has been there since the 1800's.",
    "credit": "bluesbby from Mountain View, USA",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:In_the_hills_(25433458638).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "id": "wm-113450363",
    "file": "/photos/wm-113450363"
   },
   "milpitas": {
+   "id": "wm-113450815",
    "alt": "Here I'm in Milpitas at a lake, when I looked up and saw a line of people walking. I liked the look, and just had to have a photo.",
    "credit": "bluesbby from Mountain View, USA",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Colorful_reflections_(14417917738).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "id": "wm-113450815",
    "file": "/photos/wm-113450815"
   },
   "pittsburg": {
+   "id": "wm-143236851",
    "alt": "John Buckley Square & Pittsburg Power Plant, Pittsburg California",
    "credit": "Armenshirazd",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:John_Buckley_Square,_Pittsburg_California.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "id": "wm-143236851",
    "file": "/photos/wm-143236851"
   }
  },
@@ -892,6 +897,7 @@
    "file": "/photos/wm-4392489"
   },
   "pacific-heights": {
+   "id": "wm-49696996",
    "alt": "Apartments at 2870\u201378 Washington Street, San Francisco, California",
    "credit": "Yngvadottir",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:2870-78_Washington.jpg",
@@ -911,6 +917,7 @@
    "file": "/photos/wm-20251802"
   },
   "civic-center": {
+   "id": "wm-52073255",
    "alt": "Farmer\u00b4s Market at Civic Center in San Francisco (TK1)",
    "credit": "Tobias Kleinlercher / Wikipedia",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Farmer%C2%B4s_Market_at_UN_Plaza-Civic_Center_in_San_Francisco_(TK1).JPG",
@@ -970,6 +977,7 @@
    "file": "/photos/wm-62298561"
   },
   "treasure-island": {
+   "id": "wm-53831704",
    "alt": "Nuevo puente en la Bah\u00eda de San Francisco",
    "credit": "Elraton",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Puente_San_Fco.jpg",
@@ -1041,5 +1049,5 @@
    "file": "/photos/wm-26120670"
   }
  },
- "generatedAt": "local-cleanup"
+ "generatedAt": "rebuilt-from-picks"
 }
