@@ -24,7 +24,7 @@ concurrency:
 jobs:
   photos:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name "bayarea-weekend-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/images.json
+          git add data/images.json public/photos
           if ! git diff --cached --quiet; then
             git commit -m "data: refresh Bay Area photos"
             git pull --rebase origin main && git push origin HEAD:main

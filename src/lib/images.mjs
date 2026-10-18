@@ -2,8 +2,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import { link } from './site.mjs';
+
 let DB = { places: {}, categories: {}, regions: {}, cities: {}, hoods: {}, vibes: {} };
 try { DB = { ...DB, ...JSON.parse(fs.readFileSync(path.resolve(process.cwd(), process.env.IMAGES_FILE || 'data/images.json'), 'utf8')) }; } catch { /* no photos yet */ }
+
+// Self-hosted photos: { file: '/photos/wm-123' } → /photos/wm-123-l.webp (1280×720) and -s.webp (640×400).
+const withUrls = (p) => (p && p.file ? { ...p, src: link(`${p.file}-l.webp`), srcSmall: link(`${p.file}-s.webp`) } : p?.src ? p : null);
+for (const g of ['places', 'regions', 'cities', 'hoods', 'vibes']) for (const k of Object.keys(DB[g])) DB[g][k] = withUrls(DB[g][k]);
+for (const k of Object.keys(DB.categories)) DB.categories[k] = (DB.categories[k] || []).map(withUrls).filter(Boolean);
 export const IMAGES = DB;
 
 function h(s) {

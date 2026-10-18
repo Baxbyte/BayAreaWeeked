@@ -566,7 +566,8 @@
   },
   "price": "Ticketed (21+ or 18+ depending on show)",
   "schedule": "Most nights",
-  "tip": "Weeknight showcases are cheap and often have surprise headliners."
+  "tip": "Weeknight showcases are cheap and often have surprise headliners.",
+  "pexelsQuery": "comedy club audience laughing"
  },
  {
   "title": "Smuggler's Cove",
@@ -591,7 +592,8 @@
   },
   "price": "$$",
   "schedule": "Nightly (21+)",
-  "tip": "Arrive right at opening to skip the line."
+  "tip": "Arrive right at opening to skip the line.",
+  "pexelsQuery": "tiki cocktail bar"
  },
  {
   "title": "Bourbon & Branch",
@@ -616,7 +618,8 @@
   },
   "price": "$$$",
   "schedule": "Nightly (21+)",
-  "tip": "Book the library room for a date night."
+  "tip": "Book the library room for a date night.",
+  "pexelsQuery": "speakeasy cocktail bar dim lights"
  },
  {
   "title": "The Midway",
@@ -640,7 +643,8 @@
   },
   "price": "Ticketed",
   "schedule": "Event nights",
-  "tip": "Check the calendar — themed parties sell out."
+  "tip": "Check the calendar — themed parties sell out.",
+  "pexelsQuery": "dance party crowd lights warehouse"
  },
  {
   "title": "Golden State Warriors at Chase Center",
@@ -853,7 +857,8 @@
   },
   "price": "Day pass",
   "schedule": "Daily",
-  "tip": "Intro classes include gear and belay basics."
+  "tip": "Intro classes include gear and belay basics.",
+  "pexelsQuery": "indoor rock climbing gym"
  },
  {
   "title": "Kabuki Springs & Spa",
@@ -877,7 +882,8 @@
   },
   "price": "$$",
   "schedule": "Daily; check co-ed and gender days",
-  "tip": "Reserve bath entry ahead on weekends."
+  "tip": "Reserve bath entry ahead on weekends.",
+  "pexelsQuery": "japanese spa bath relaxing"
  },
  {
   "title": "Yerba Buena Gardens",
