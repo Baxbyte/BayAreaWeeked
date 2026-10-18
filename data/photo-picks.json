@@ -1,0 +1,301 @@
+{
+ "_readme": "Hand-picked photos (Wikimedia Commons page ids) per target. Choose from the numbered sheets on the photo-candidates branch. Only these are published.",
+ "genre:live-music": [
+  134837966,
+  134838724,
+  58269405,
+  72103304,
+  72103422,
+  176174563
+ ],
+ "genre:theater": [
+  83851744,
+  5052014
+ ],
+ "genre:arts": [
+  92937702,
+  92938059,
+  141963837,
+  39287218,
+  39287221
+ ],
+ "genre:film": [
+  41256927,
+  30223316
+ ],
+ "genre:festivals": [
+  72692852,
+  41617491,
+  90908045
+ ],
+ "genre:outdoors": [
+  139959987,
+  165256542
+ ],
+ "genre:sports": [
+  43494737,
+  51095676
+ ],
+ "genre:tech": [
+  123176792,
+  58257150
+ ],
+ "genre:family": [
+  60715870,
+  83786153,
+  198448375
+ ],
+ "genre:markets": [],
+ "region:san-francisco": [
+  36225249
+ ],
+ "region:east-bay": [
+  62583862
+ ],
+ "vibe:kid-friendly": [
+  198449130
+ ],
+ "vibe:hot-day": [
+  26120670
+ ],
+ "vibe:fog-escape": [
+  61839286
+ ],
+ "vibe:date-night": [
+  105370680
+ ],
+ "place:Lands End Trail & Sutro Baths": [
+  141536507
+ ],
+ "place:Japanese Tea Garden": [
+  99892387
+ ],
+ "place:Presidio Tunnel Tops": [
+  120738657
+ ],
+ "place:Musée Mécanique": [
+  53169657
+ ],
+ "place:Alcatraz Island": [
+  94657599
+ ],
+ "place:Coit Tower & Telegraph Hill": [
+  46749101
+ ],
+ "place:Chinatown Walk from the Dragon Gate": [
+  185319507
+ ],
+ "place:The Fillmore": [
+  78600311
+ ],
+ "place:San Francisco Symphony at Davies Symphony Hall": [
+  109257808
+ ],
+ "place:Golden State Warriors at Chase Center": [
+  81992614
+ ],
+ "place:San Francisco Giants at Oracle Park": [
+  52530331
+ ],
+ "place:Children's Creativity Museum": [
+  47413891
+ ],
+ "place:Yerba Buena Gardens": [
+  60388737
+ ],
+ "place:Grace Cathedral": [
+  197606619
+ ],
+ "place:The Walt Disney Family Museum": [
+  52162598
+ ],
+ "place:Golden Gate Bridge Walk": [
+  21764437
+ ],
+ "place:Lake Merritt Loop": [
+  105267975
+ ],
+ "place:Oakland Museum of California": [
+  149329435
+ ],
+ "place:Children's Fairyland": [
+  198449132
+ ],
+ "place:Oakland Zoo": [
+  106122800
+ ],
+ "place:Berkeley Repertory Theatre": [
+  5051893
+ ],
+ "place:Filoli Historic House & Garden": [
+  94970276
+ ],
+ "place:Winchester Mystery House": [
+  95666151
+ ],
+ "place:Children's Discovery Museum of San Jose": [
+  84509194
+ ],
+ "place:Santana Row": [
+  68044638
+ ],
+ "place:Shoreline Lake & Park": [
+  113450393
+ ],
+ "place:Muir Woods National Monument": [
+  183072542
+ ],
+ "place:Sausalito Waterfront": [
+  13304432
+ ],
+ "place:Stinson Beach": [
+  8353481
+ ],
+ "place:Mount Tamalpais State Park": [
+  56810091
+ ],
+ "place:Bay Area Discovery Museum": [
+  116463361
+ ],
+ "place:Napa Valley Wine Train": [
+  25376981
+ ],
+ "place:Oxbow Public Market": [
+  146780441
+ ],
+ "place:Six Flags Discovery Kingdom": [
+  121942202
+ ],
+ "place:Fitzgerald Marine Reserve Tide Pools": [
+  49623720
+ ],
+ "place:Conservatory of Flowers": [
+  164145021
+ ],
+ "place:Tilden Regional Park": [
+  59289505
+ ],
+ "place:Castro Theatre": [
+  74143947
+ ],
+ "hood:mission-district": [
+  42182213
+ ],
+ "hood:noe-valley": [
+  17666545
+ ],
+ "hood:lower-haight": [
+  13250915
+ ],
+ "hood:north-beach": [
+  131380758
+ ],
+ "hood:chinatown": [
+  185319512
+ ],
+ "hood:nob-hill": [
+  66696015
+ ],
+ "hood:fishermans-wharf": [
+  4392489
+ ],
+ "hood:pacific-heights": [
+  49696996
+ ],
+ "hood:tenderloin": [
+  20251802
+ ],
+ "hood:civic-center": [
+  52073255
+ ],
+ "hood:outer-richmond": [
+  161330375
+ ],
+ "hood:potrero-hill": [
+  53179771
+ ],
+ "hood:mission-bay": [
+  196546100
+ ],
+ "hood:glen-park": [
+  151434799
+ ],
+ "hood:west-portal": [
+  62298561
+ ],
+ "hood:treasure-island": [
+  53831704
+ ],
+ "hood:lake-merritt": [
+  121878907
+ ],
+ "hood:temescal": [
+  128201502
+ ],
+ "hood:rockridge": [
+  128219337
+ ],
+ "hood:santana-row": [
+  108365270
+ ],
+ "city:union-city": [
+  130166228
+ ],
+ "city:walnut-creek": [
+  166938204
+ ],
+ "city:livermore": [
+  111183026
+ ],
+ "city:belmont": [
+  2815478
+ ],
+ "city:half-moon-bay": [
+  198329558
+ ],
+ "city:menlo-park": [
+  76127943
+ ],
+ "city:san-jose": [
+  118796573
+ ],
+ "city:campbell": [
+  55220685
+ ],
+ "city:los-gatos": [
+  121873011
+ ],
+ "city:mill-valley": [
+  19378994
+ ],
+ "city:corte-madera": [
+  134061343
+ ],
+ "city:tiburon": [
+  38040882
+ ],
+ "city:stinson-beach": [
+  26120532
+ ],
+ "city:petaluma": [
+  57009681
+ ],
+ "city:sonoma": [
+  39230807
+ ],
+ "city:vallejo": [
+  185569161
+ ],
+ "city:mountain-view": [
+  92946582
+ ],
+ "city:cupertino": [
+  113450363
+ ],
+ "city:milpitas": [
+  113450815
+ ],
+ "city:pittsburg": [
+  143236851
+ ]
+}
