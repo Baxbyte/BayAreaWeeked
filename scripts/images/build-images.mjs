@@ -22,7 +22,14 @@ fs.mkdirSync(PHOTO_DIR, { recursive: true });
 async function download(id, url) {
   const large = path.join(PHOTO_DIR, `${id}-l.webp`);
   const small = path.join(PHOTO_DIR, `${id}-s.webp`);
-  if (fs.existsSync(large) && fs.existsSync(small)) return true;
+  if (fs.existsSync(large) && fs.existsSync(small)) {
+    // Existing files are re-checked every run (the safety rules can get stricter over time).
+    for (const f of [large, small]) {
+      const v = await checkImage(f);
+      if (!v.safe) { console.log(`✘ removed ${id} (${v.reason})`); fs.rmSync(large, { force: true }); fs.rmSync(small, { force: true }); return false; }
+    }
+    return true;
+  }
   try {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), 30000);
