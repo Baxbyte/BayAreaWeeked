@@ -28,9 +28,9 @@ export const CATEGORIES = [
   { slug: 'learning', name: 'Talks & Classes', emoji: '📚', hue: 225,
     words: ['workshop', 'class', 'lecture', 'talk', 'panel', 'seminar', 'book', 'author', 'reading', 'library', 'lesson', 'course', 'discussion', 'poetry', 'science', 'history', 'conversation'] },
   { slug: 'tech', name: 'Tech & Startups', emoji: '💻', hue: 190,
-    words: ['tech', 'startup', 'ai ', ' ai', 'artificial intelligence', 'hackathon', 'developer', 'coding', 'founder', 'networking', 'meetup', 'product', 'crypto', 'web3', 'demo day', 'pitch'] },
+    words: ['tech meetup', 'tech talk', 'technology', 'startup', 'startups', 'ai', 'artificial intelligence', 'hackathon', 'developer', 'developers', 'coding', 'founder', 'founders', 'crypto', 'web3', 'demo day', 'pitch night', 'product managers'] },
   { slug: 'community', name: 'Community & Causes', emoji: '🤝', hue: 160,
-    words: ['volunteer', 'community', 'fundraiser', 'benefit', 'cleanup', 'clean-up', 'charity', 'rally', 'town hall', 'meet and greet', 'gala', 'donation', 'mixer'] },
+    words: ['volunteer', 'community', 'job fair', 'career fair', 'resource fair', 'fundraiser', 'benefit', 'cleanup', 'clean-up', 'charity', 'rally', 'town hall', 'meet and greet', 'gala', 'donation', 'mixer'] },
   { slug: 'family', name: 'Family & Kids', emoji: '🧸', hue: 50,
     words: ['kids', 'family', 'children', 'toddler', 'storytime', 'story time', 'puppet', 'petting zoo', 'zoo', 'aquarium', 'teen', 'baby', 'all ages fun', 'carousel', 'face painting'] },
 ];

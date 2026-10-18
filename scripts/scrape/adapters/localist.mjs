@@ -4,6 +4,11 @@ import { fetchJSON } from '../http.mjs';
 export function mapLocalist(e, src) {
   const inst = e.event_instances?.[0]?.event_instance || {};
   if (e.experience === 'virtual') return null;
+  if (src.excludeTitle && new RegExp(src.excludeTitle, 'i').test(e.title || '')) return null;
+  const audience = (e.filters?.event_audience || []).map((a) => a.name).join(' ');
+  if (src.audience && audience && !new RegExp(src.audience, 'i').test(audience)) return null;
+  const typeNames = (e.filters?.event_types || []).map((t) => t.name).join(' ');
+  if (src.includeTypes && !new RegExp(src.includeTypes, 'i').test(`${typeNames} ${e.title}`)) return null;
   const types = (e.filters?.event_types || []).map((t) => t.name);
   return {
     sourceId: src.id, sourceName: src.name, sourceHome: src.home,

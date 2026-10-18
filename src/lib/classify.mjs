@@ -70,7 +70,11 @@ export function classify(e) {
     if (re.test(desc)) s += 1;
     if (s) scores[slug] = s;
   }
+  if (/\b(job|career|resource|health|benefits|college) fair\b/i.test(title)) { delete scores.festivals; scores.community = (scores.community || 0) + 3; }
+  if (/tech[- ]house/i.test(`${title} ${srcTags}`)) delete scores.tech;
   for (const c of e.forceCategories || []) scores[c] = 10;
+  // Club/DJ listings: "talk", "tech" or "community" words are almost always artist names, not topics.
+  if ((e.forceCategories || []).includes('nightlife')) for (const c of ['learning', 'tech', 'community', 'wellness']) delete scores[c];
   let categories = Object.entries(scores).sort((a, b) => b[1] - a[1]).map(([s]) => s);
   // Avoid the generic "learning" and "community" tags dominating when stronger signals exist.
   if (categories.length > 1) categories = categories.filter((c, i) => i === 0 || scores[c] >= 2 || !['learning', 'community', 'tech'].includes(c));

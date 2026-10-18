@@ -1,46 +1,456 @@
 {
   "_readme": "Event sources scraped daily by scripts/scrape/index.mjs. Set enabled:false to pause one. Adapter types: jsonld, rss, ical, localist, tribe, ticketmaster, seatgeek, nineteenhz, roundups. See docs/SOURCES.md.",
   "sources": [
-    { "id": "ticketmaster", "type": "ticketmaster", "name": "Ticketmaster", "home": "https://www.ticketmaster.com", "enabled": true, "weeks": 4, "pages": 4, "radiusMiles": 55 },
-    { "id": "seatgeek", "type": "seatgeek", "name": "SeatGeek", "home": "https://seatgeek.com", "enabled": true, "days": 28 },
-
-    { "id": "eventbrite-sf", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-francisco",
-      "urls": ["https://www.eventbrite.com/d/ca--san-francisco/events--this-weekend/", "https://www.eventbrite.com/d/ca--san-francisco/events--next-week/", "https://www.eventbrite.com/d/ca--san-francisco/all-events/?page={page}"], "pages": 3 },
-    { "id": "eventbrite-oakland", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "oakland",
-      "urls": ["https://www.eventbrite.com/d/ca--oakland/events--this-weekend/", "https://www.eventbrite.com/d/ca--berkeley/events--this-weekend/", "https://www.eventbrite.com/d/ca--oakland/events--next-week/"] },
-    { "id": "eventbrite-southbay", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-jose",
-      "urls": ["https://www.eventbrite.com/d/ca--san-jose/events--this-weekend/", "https://www.eventbrite.com/d/ca--san-jose/events--next-week/", "https://www.eventbrite.com/d/ca--palo-alto/events--this-weekend/", "https://www.eventbrite.com/d/ca--mountain-view/events--this-weekend/"] },
-    { "id": "eventbrite-peninsula", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-mateo",
-      "urls": ["https://www.eventbrite.com/d/ca--san-mateo/events--this-weekend/", "https://www.eventbrite.com/d/ca--redwood-city/events--this-weekend/"] },
-    { "id": "eventbrite-northbay", "type": "jsonld", "name": "Eventbrite", "home": "https://www.eventbrite.com", "enabled": true, "defaultCity": "san-rafael",
-      "urls": ["https://www.eventbrite.com/d/ca--san-rafael/events--this-weekend/", "https://www.eventbrite.com/d/ca--santa-rosa/events--this-weekend/", "https://www.eventbrite.com/d/ca--napa/events--this-weekend/"] },
-
-    { "id": "dothebay", "type": "jsonld", "name": "DoTheBay", "home": "https://dothebay.com", "enabled": true, "defaultCity": "san-francisco",
-      "urlTemplate": "https://dothebay.com/events/{yyyy}/{mm}/{dd}", "days": 10 },
-    { "id": "allevents", "type": "jsonld", "name": "AllEvents", "home": "https://allevents.in", "enabled": true,
-      "urls": ["https://allevents.in/san-francisco/all", "https://allevents.in/oakland/all", "https://allevents.in/san-jose/all", "https://allevents.in/berkeley/all"] },
-    { "id": "sfstation", "type": "jsonld", "name": "SF Station", "home": "https://www.sfstation.com", "enabled": true, "defaultCity": "san-francisco",
-      "urls": ["https://www.sfstation.com/calendar/"] },
-    { "id": "funcheap", "type": "rss", "name": "SF Funcheap", "home": "https://sf.funcheap.com", "enabled": true, "pubDateIsEventDate": true,
-      "urls": ["https://sf.funcheap.com/feed/"] },
-    { "id": "funcheap-days", "type": "jsonld", "name": "SF Funcheap", "home": "https://sf.funcheap.com", "enabled": true, "defaultCity": "san-francisco",
-      "urlTemplate": "https://sf.funcheap.com/{yyyy}/{mm}/{dd}/", "days": 7 },
-    { "id": "19hz", "type": "nineteenhz", "name": "19hz", "home": "https://19hz.info", "enabled": true,
-      "url": "https://19hz.info/eventlisting_BayArea.php", "days": 21 },
-    { "id": "stanford", "type": "localist", "name": "Stanford Events", "home": "https://events.stanford.edu", "enabled": true,
-      "base": "https://events.stanford.edu", "defaultCityName": "Stanford", "days": 21, "pages": 4 },
-
-    { "id": "roundups", "type": "roundups", "name": "News roundups", "enabled": true, "maxArticles": 14,
+    {
+      "id": "ticketmaster",
+      "type": "ticketmaster",
+      "name": "Ticketmaster",
+      "home": "https://www.ticketmaster.com",
+      "enabled": true,
+      "weeks": 4,
+      "pages": 4,
+      "radiusMiles": 55
+    },
+    {
+      "id": "seatgeek",
+      "type": "seatgeek",
+      "name": "SeatGeek",
+      "home": "https://seatgeek.com",
+      "enabled": true,
+      "days": 28
+    },
+    {
+      "id": "eventbrite-sf",
+      "type": "jsonld",
+      "name": "Eventbrite",
+      "home": "https://www.eventbrite.com",
+      "enabled": false,
+      "defaultCity": "san-francisco",
+      "urls": [
+        "https://www.eventbrite.com/d/ca--san-francisco/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--san-francisco/events--next-week/",
+        "https://www.eventbrite.com/d/ca--san-francisco/all-events/?page={page}"
+      ],
+      "pages": 3,
+      "note": "Blocks automated access (403/405) — disabled to respect the site."
+    },
+    {
+      "id": "eventbrite-oakland",
+      "type": "jsonld",
+      "name": "Eventbrite",
+      "home": "https://www.eventbrite.com",
+      "enabled": false,
+      "defaultCity": "oakland",
+      "urls": [
+        "https://www.eventbrite.com/d/ca--oakland/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--berkeley/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--oakland/events--next-week/"
+      ],
+      "note": "Blocks automated access (403/405) — disabled to respect the site."
+    },
+    {
+      "id": "eventbrite-southbay",
+      "type": "jsonld",
+      "name": "Eventbrite",
+      "home": "https://www.eventbrite.com",
+      "enabled": false,
+      "defaultCity": "san-jose",
+      "urls": [
+        "https://www.eventbrite.com/d/ca--san-jose/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--san-jose/events--next-week/",
+        "https://www.eventbrite.com/d/ca--palo-alto/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--mountain-view/events--this-weekend/"
+      ],
+      "note": "Blocks automated access (403/405) — disabled to respect the site."
+    },
+    {
+      "id": "eventbrite-peninsula",
+      "type": "jsonld",
+      "name": "Eventbrite",
+      "home": "https://www.eventbrite.com",
+      "enabled": false,
+      "defaultCity": "san-mateo",
+      "urls": [
+        "https://www.eventbrite.com/d/ca--san-mateo/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--redwood-city/events--this-weekend/"
+      ],
+      "note": "Blocks automated access (403/405) — disabled to respect the site."
+    },
+    {
+      "id": "eventbrite-northbay",
+      "type": "jsonld",
+      "name": "Eventbrite",
+      "home": "https://www.eventbrite.com",
+      "enabled": false,
+      "defaultCity": "san-rafael",
+      "urls": [
+        "https://www.eventbrite.com/d/ca--san-rafael/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--santa-rosa/events--this-weekend/",
+        "https://www.eventbrite.com/d/ca--napa/events--this-weekend/"
+      ],
+      "note": "Blocks automated access (403/405) — disabled to respect the site."
+    },
+    {
+      "id": "dothebay",
+      "type": "jsonld",
+      "name": "DoTheBay",
+      "home": "https://dothebay.com",
+      "enabled": false,
+      "defaultCity": "san-francisco",
+      "urlTemplate": "https://dothebay.com/events/{yyyy}/{mm}/{dd}",
+      "days": 10,
+      "note": "Blocks automated access (403/405) — disabled to respect the site."
+    },
+    {
+      "id": "allevents",
+      "type": "jsonld",
+      "name": "AllEvents",
+      "home": "https://allevents.in",
+      "enabled": true,
+      "urls": [
+        "https://allevents.in/san-francisco/all",
+        "https://allevents.in/oakland/all",
+        "https://allevents.in/san-jose/all",
+        "https://allevents.in/berkeley/all",
+        "https://allevents.in/palo-alto/all",
+        "https://allevents.in/san-mateo/all",
+        "https://allevents.in/walnut-creek/all",
+        "https://allevents.in/santa-rosa/all",
+        "https://allevents.in/fremont/all",
+        "https://allevents.in/hayward/all",
+        "https://allevents.in/sunnyvale/all",
+        "https://allevents.in/mountain-view/all",
+        "https://allevents.in/santa-clara/all",
+        "https://allevents.in/napa/all",
+        "https://allevents.in/san-rafael/all",
+        "https://allevents.in/petaluma/all",
+        "https://allevents.in/redwood-city/all",
+        "https://allevents.in/concord/all",
+        "https://allevents.in/pleasanton/all",
+        "https://allevents.in/livermore/all",
+        "https://allevents.in/alameda/all",
+        "https://allevents.in/half-moon-bay/all",
+        "https://allevents.in/mill-valley/all",
+        "https://allevents.in/sausalito/all",
+        "https://allevents.in/richmond/all",
+        "https://allevents.in/campbell/all",
+        "https://allevents.in/los-gatos/all",
+        "https://allevents.in/cupertino/all",
+        "https://allevents.in/daly-city/all",
+        "https://allevents.in/south-san-francisco/all",
+        "https://allevents.in/vallejo/all",
+        "https://allevents.in/sonoma/all",
+        "https://allevents.in/san-francisco/all?page=2",
+        "https://allevents.in/san-francisco/all?page=3",
+        "https://allevents.in/oakland/all?page=2",
+        "https://allevents.in/san-jose/all?page=2",
+        "https://allevents.in/san-francisco/kids",
+        "https://allevents.in/san-francisco/music",
+        "https://allevents.in/san-francisco/comedy",
+        "https://allevents.in/san-francisco/parties",
+        "https://allevents.in/san-francisco/food-drinks",
+        "https://allevents.in/san-francisco/art",
+        "https://allevents.in/san-francisco/sports",
+        "https://allevents.in/san-francisco/festivals",
+        "https://allevents.in/san-francisco/workshops",
+        "https://allevents.in/san-francisco/performances",
+        "https://allevents.in/oakland/kids",
+        "https://allevents.in/san-jose/kids",
+        "https://allevents.in/berkeley/kids",
+        "https://allevents.in/palo-alto/kids",
+        "https://allevents.in/walnut-creek/kids"
+      ]
+    },
+    {
+      "id": "luma-sf",
+      "type": "jsonld",
+      "name": "Luma",
+      "home": "https://lu.ma",
+      "enabled": true,
+      "defaultCity": "san-francisco",
+      "urls": [
+        "https://lu.ma/sf"
+      ]
+    },
+    {
+      "id": "ferry-building",
+      "type": "jsonld",
+      "name": "Ferry Building Marketplace",
+      "home": "https://www.ferrybuildingmarketplace.com",
+      "enabled": true,
+      "defaultCity": "san-francisco",
+      "urls": [
+        "https://www.ferrybuildingmarketplace.com/events/"
+      ]
+    },
+    {
+      "id": "ucsf",
+      "type": "localist",
+      "name": "UCSF Events",
+      "home": "https://calendar.ucsf.edu",
+      "enabled": true,
+      "base": "https://calendar.ucsf.edu",
+      "defaultCityName": "San Francisco",
+      "days": 21,
+      "pages": 3,
+      "audience": "public|everyone|community",
+      "excludeTitle": "seminar|grand rounds|colloquium|training|orientation|defense|webinar|meeting|office hours|journal club|faculty|staff|students|zoom"
+    },
+    {
+      "id": "sjsu",
+      "type": "localist",
+      "name": "San José State Events",
+      "home": "https://events.sjsu.edu",
+      "enabled": true,
+      "base": "https://events.sjsu.edu",
+      "defaultCityName": "San Jose",
+      "days": 21,
+      "pages": 3,
+      "audience": "public|everyone|community",
+      "excludeTitle": "seminar|colloquium|training|orientation|defense|webinar|meeting|office hours|workshop for|faculty|staff|students only|deadline|zoom"
+    },
+    {
+      "id": "sfstation",
+      "type": "jsonld",
+      "name": "SF Station",
+      "home": "https://www.sfstation.com",
+      "enabled": false,
+      "defaultCity": "san-francisco",
+      "urls": [
+        "https://www.sfstation.com/calendar/"
+      ],
+      "note": "Blocks automated access (403/405) — disabled to respect the site."
+    },
+    {
+      "id": "funcheap",
+      "type": "rss",
+      "name": "SF Funcheap",
+      "home": "https://sf.funcheap.com",
+      "enabled": true,
+      "pubDateIsEventDate": true,
+      "urls": [
+        "https://sf.funcheap.com/feed/"
+      ]
+    },
+    {
+      "id": "funcheap-days",
+      "type": "jsonld",
+      "name": "SF Funcheap",
+      "home": "https://sf.funcheap.com",
+      "enabled": true,
+      "defaultCity": "san-francisco",
+      "urlTemplate": "https://sf.funcheap.com/{yyyy}/{mm}/{dd}/",
+      "days": 14
+    },
+    {
+      "id": "19hz",
+      "type": "nineteenhz",
+      "name": "19hz",
+      "home": "https://19hz.info",
+      "enabled": true,
+      "url": "https://19hz.info/eventlisting_BayArea.php",
+      "days": 21
+    },
+    {
+      "id": "stanford",
+      "type": "localist",
+      "name": "Stanford Events",
+      "home": "https://events.stanford.edu",
+      "enabled": true,
+      "base": "https://events.stanford.edu",
+      "defaultCityName": "Stanford",
+      "days": 21,
+      "pages": 4,
+      "audience": "general public|everyone|public",
+      "excludeTitle": "seminar|colloquium|dissertation|defense|office hours|training|orientation|info session|information session|webinar|workshop for|faculty|staff|students only|deadline|registration|meeting|app\\b|course|lab |lecture series - |thesis|qualifying|symposium|retreat|reception for",
+      "includeTypes": "concert|music|performance|exhibition|exhibit|film|screening|reading|festival|tour|family|theater|dance|art|talk|lecture|sports|game|outdoor|garden|market"
+    },
+    {
+      "id": "roundups",
+      "type": "roundups",
+      "name": "News roundups",
+      "enabled": true,
+      "maxArticles": 40,
       "feeds": [
-        { "id": "sfist", "name": "SFist", "url": "https://sfist.com/rss/", "max": 3 },
-        { "id": "secretsf", "name": "Secret San Francisco", "url": "https://secretsanfrancisco.com/feed/", "max": 3 },
-        { "id": "kqed", "name": "KQED Arts", "url": "https://www.kqed.org/arts/feed", "max": 2 },
-        { "id": "oaklandside", "name": "The Oaklandside", "url": "https://oaklandside.org/feed/", "max": 2 },
-        { "id": "berkeleyside", "name": "Berkeleyside", "url": "https://www.berkeleyside.org/feed", "max": 2 },
-        { "id": "funcheap-blog", "name": "SF Funcheap", "url": "https://sf.funcheap.com/feed/", "max": 2 }
-      ] },
-
-    { "id": "example-ical", "type": "ical", "name": "Example iCal feed", "enabled": false, "urls": ["https://example.org/calendar.ics"], "days": 30 },
-    { "id": "example-tribe", "type": "tribe", "name": "Example WordPress events site", "enabled": false, "sites": ["https://example.org"], "defaultCityName": "Oakland" }
+        {
+          "id": "sfist",
+          "name": "SFist",
+          "url": "https://sfist.com/rss/",
+          "max": 3
+        },
+        {
+          "id": "secretsf",
+          "name": "Secret San Francisco",
+          "url": "https://secretsanfrancisco.com/feed/",
+          "max": 3
+        },
+        {
+          "id": "kqed",
+          "name": "KQED Arts",
+          "url": "https://www.kqed.org/arts/feed",
+          "max": 2
+        },
+        {
+          "id": "oaklandside",
+          "name": "The Oaklandside",
+          "url": "https://oaklandside.org/feed/",
+          "max": 2
+        },
+        {
+          "id": "berkeleyside",
+          "name": "Berkeleyside",
+          "url": "https://www.berkeleyside.org/feed",
+          "max": 2
+        },
+        {
+          "id": "funcheap-blog",
+          "name": "SF Funcheap",
+          "url": "https://sf.funcheap.com/feed/",
+          "max": 2
+        }
+      ],
+      "pages": [
+        {
+          "id": "calacademy",
+          "name": "California Academy of Sciences",
+          "url": "https://www.calacademy.org/events"
+        },
+        {
+          "id": "sfmoma",
+          "name": "SFMOMA",
+          "url": "https://www.sfmoma.org/events/"
+        },
+        {
+          "id": "kqed-events",
+          "name": "KQED Events",
+          "url": "https://www.kqed.org/events"
+        },
+        {
+          "id": "sfsymphony",
+          "name": "San Francisco Symphony",
+          "url": "https://www.sfsymphony.org/Calendar"
+        },
+        {
+          "id": "bottomofthehill",
+          "name": "Bottom of the Hill",
+          "url": "https://www.bottomofthehill.com/calendar.html"
+        },
+        {
+          "id": "thechapel",
+          "name": "The Chapel",
+          "url": "https://www.thechapelsf.com/music/"
+        },
+        {
+          "id": "independent",
+          "name": "The Independent",
+          "url": "https://www.theindependentsf.com/"
+        },
+        {
+          "id": "cobbs",
+          "name": "Cobb's Comedy Club",
+          "url": "https://www.cobbscomedy.com/events"
+        },
+        {
+          "id": "punchline",
+          "name": "Punch Line SF",
+          "url": "https://www.punchlinecomedyclub.com/events"
+        },
+        {
+          "id": "yoshis",
+          "name": "Yoshi's Oakland",
+          "url": "https://www.yoshis.com/calendar"
+        },
+        {
+          "id": "oakland-library",
+          "name": "Oakland Public Library",
+          "url": "https://oaklandlibrary.org/events/"
+        },
+        {
+          "id": "sfpl",
+          "name": "SF Public Library",
+          "url": "https://www.sfpl.org/events"
+        },
+        {
+          "id": "ebparks",
+          "name": "East Bay Regional Parks",
+          "url": "https://www.ebparks.org/calendar"
+        },
+        {
+          "id": "openspace",
+          "name": "Midpeninsula Open Space",
+          "url": "https://www.openspace.org/events"
+        },
+        {
+          "id": "offthegrid",
+          "name": "Off the Grid",
+          "url": "https://www.offthegrid.com/events"
+        },
+        {
+          "id": "cuesa",
+          "name": "CUESA Farmers Markets",
+          "url": "https://www.cuesa.org/events"
+        },
+        {
+          "id": "visitoakland",
+          "name": "Visit Oakland",
+          "url": "https://www.visitoakland.com/events/"
+        },
+        {
+          "id": "sanjose-org",
+          "name": "Visit San José",
+          "url": "https://www.sanjose.org/events"
+        },
+        {
+          "id": "bayareaparent",
+          "name": "Bay Area Parent",
+          "url": "https://www.bayareaparent.com/calendar/"
+        },
+        {
+          "id": "timeout-weekend",
+          "name": "Time Out San Francisco",
+          "url": "https://www.timeout.com/san-francisco/things-to-do/things-to-do-in-san-francisco-this-weekend"
+        },
+        {
+          "id": "sfgate-events",
+          "name": "SFGATE",
+          "url": "https://www.sfgate.com/events/"
+        },
+        {
+          "id": "berkeleyside-events",
+          "name": "Berkeleyside",
+          "url": "https://www.berkeleyside.org/events"
+        },
+        {
+          "id": "oaklandside-events",
+          "name": "The Oaklandside",
+          "url": "https://oaklandside.org/events/"
+        },
+        {
+          "id": "sfrecpark",
+          "name": "SF Rec & Park",
+          "url": "https://www.sfrecpark.org/Calendar.aspx"
+        }
+      ]
+    },
+    {
+      "id": "example-ical",
+      "type": "ical",
+      "name": "Example iCal feed",
+      "enabled": false,
+      "urls": [
+        "https://example.org/calendar.ics"
+      ],
+      "days": 30
+    },
+    {
+      "id": "example-tribe",
+      "type": "tribe",
+      "name": "Example WordPress events site",
+      "enabled": false,
+      "sites": [
+        "https://example.org"
+      ],
+      "defaultCityName": "Oakland"
+    }
   ]
 }

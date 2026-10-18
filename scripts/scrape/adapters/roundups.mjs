@@ -21,7 +21,7 @@ function articleText(html) {
 }
 
 async function extract(article, meta, model) {
-  const prompt = `You extract Bay Area (California) events from a news/blog roundup article.
+  const prompt = `You extract Bay Area (California) events from a news/blog roundup article or an events calendar page.
 Article title: ${meta.title}
 Published: ${meta.published}
 Today (Pacific): ${meta.today}
@@ -48,6 +48,27 @@ export async function run(src, ctx) {
   const model = process.env.OPENROUTER_MODEL || src.model || 'anthropic/claude-haiku-5.5';
   const out = [];
   let budget = src.maxArticles || 12;
+  // Venue / organization calendar pages that don't publish structured data: read the page directly.
+  for (const page of src.pages || []) {
+    if (budget-- <= 0) break;
+    try {
+      const text = articleText(await fetchText(page.url));
+      const events = await extract(text, { title: `${page.name} events calendar`, published: 'current', today: toPTISO(ctx.now).slice(0, 10) }, model);
+      for (const e of events) {
+        if (!e.title || !e.date) continue;
+        out.push({
+          sourceId: `${src.id}-${page.id}`, sourceName: page.name, sourceHome: page.url,
+          externalId: `${e.title}:${e.date}`, title: e.title, description: e.summary || '', url: e.url ? new URL(e.url, page.url).toString() : page.url,
+          start: e.time ? `${e.date}T${e.time}` : e.date, end: e.end_date || null,
+          venueName: e.venue || null, address: [e.address, e.city].filter(Boolean).join(', '), city: e.city || null,
+          priceText: e.price || null, tags: [],
+          forceFlags: { ...(e.kid_friendly ? { kids: true } : {}), ...(e.adults_only ? { adult: true, kids: false } : {}) },
+        });
+      }
+    } catch (e) {
+      ctx.warn(`${src.id}/${page.id}: ${e.message}`);
+    }
+  }
   for (const feed of src.feeds || []) {
     let items;
     try {
