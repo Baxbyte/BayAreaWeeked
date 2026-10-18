@@ -3,7 +3,9 @@
 A fast, fun, SEO-first directory of things to do across the San Francisco Bay Area — rebuilt automatically twice a day from dozens of event sources.
 
 **What's inside**
-- **Daily scraper** (`scripts/scrape/`) — Ticketmaster, SeatGeek, Eventbrite, DoTheBay, AllEvents, SF Station, SF Funcheap, 19hz (nightlife), Stanford events, optional AI-read news roundups (SFist, KQED, Oaklandside, Berkeleyside…), plus any iCal / RSS / WordPress calendar you add. Everything is cleaned, de-duplicated, geocoded and tagged.
+- **Daily scraper** (`scripts/scrape/`) — AllEvents (30+ cities), SF Funcheap, 19hz (nightlife), Luma, Ferry Building, Stanford / UCSF / SJSU public calendars, plus Ticketmaster & SeatGeek (free keys) and an optional AI reader for news roundups and venue calendars (Cal Academy, SFMOMA, Cobb's, Yoshi's, libraries, parks…). Sites that block automated access (Eventbrite, DoTheBay, SF Station) are respected and left off. Everything is cleaned, de-duplicated, geocoded, placed in real neighborhood boundaries and tagged.
+- **Real photos** (`scripts/images/`) — Wikimedia Commons (real Bay Area places & events) + Pexels, quality-checked and credited (`/photo-credits/`). A contact sheet of every chosen photo is published to the `image-review` branch for a quick visual check.
+- **Real map** — live street map (Leaflet + OpenStreetMap/CARTO) with official county and SF/Oakland/San José neighborhood boundaries (`scripts/geo/`).
 - **Directory pages** for 5 regions, ~80 cities, SF/Oakland/San Jose neighborhoods, 16 genres and 8 vibes (Kid-Friendly, Nightlife, Free, Hot Day, Rainy Day, Fog Escape, Date Night, Near BART) — plus every combination that has enough listings.
 - **Explore map** (`/explore/`) — Leaflet map with clickable regions, filters, and plain-English search (“free kids stuff in Oakland Saturday”), Spin the Bay 🎰, Near me, and a live weather hint.
 - **My Plan** — heart events, see a day-by-day timeline with clash warnings, export to calendar, share a link.
@@ -21,16 +23,17 @@ npm run build           # static site → dist/
 ```
 
 ## Going live (GitHub Pages, free)
-1. Repo **Settings → Pages → Source: GitHub Actions**.
-2. Push to `main`. The **Daily scrape, build & deploy** workflow runs at ~5am and ~5pm Pacific (or run it by hand from the Actions tab).
-3. Strongly recommended for SEO: add a **custom domain** (Settings → Pages), then set the repo variable `SITE_URL` (e.g. `https://bayareaweekend.com`).
+1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions** (required — deploys fail until this is set).
+2. Repo **Settings → Secrets and variables → Actions → New repository secret**: `PEXELS_API_KEY` (your Pexels key) for more photo variety. Optional: `TICKETMASTER_API_KEY`, `SEATGEEK_CLIENT_ID` (both free, add hundreds of concerts & games), `OPENROUTER_API_KEY` (AI reader for venue calendars & news roundups).
+3. Push to `main`. The **Daily scrape, build & deploy** workflow runs at ~5am and ~5pm Pacific (or run it by hand from the Actions tab).
+4. Strongly recommended for SEO: add a **custom domain** (Settings → Pages), then set the repo variable `SITE_URL` (e.g. `https://bayareaweekend.com`).
 
 Prefer Vercel/Netlify/Cloudflare? Import the repo there (build `npm run build`, output `dist`) and set repo variable `DEPLOY_TARGET=external`. The daily workflow still scrapes and commits fresh data, which triggers your host's rebuild.
 
 ## Settings
 Repo **variables** (Settings → Secrets and variables → Actions → Variables): `SITE_URL`, `SITE_NAME`, `PUBLIC_SIGNUP_ENDPOINT`, `PUBLIC_SPONSOR_ENDPOINT`, `PUBLIC_CONTACT_EMAIL`, `GOOGLE_SITE_VERIFICATION`, `BING_SITE_VERIFICATION`, `INDEXNOW_KEY`, `OPENROUTER_MODEL`, `DEPLOY_TARGET`.
 
-Repo **secrets** (all optional, each unlocks more events): `TICKETMASTER_API_KEY`, `SEATGEEK_CLIENT_ID`, `OPENROUTER_API_KEY`, `GOOGLE_INDEXING_SA_JSON`.
+Repo **secrets** (all optional): `PEXELS_API_KEY`, `TICKETMASTER_API_KEY`, `SEATGEEK_CLIENT_ID`, `OPENROUTER_API_KEY`, `GOOGLE_INDEXING_SA_JSON`.
 
 See `.env.example` and the guides in `docs/`:
 - [docs/SEO.md](docs/SEO.md) — the ranking + daily indexing checklist (do this first!)

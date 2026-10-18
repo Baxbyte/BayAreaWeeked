@@ -12,7 +12,7 @@
 | `ticketmaster` | Concerts, sports, theater | `TICKETMASTER_API_KEY` (free) |
 | `seatgeek` | Concerts, sports, comedy | `SEATGEEK_CLIENT_ID` (free) |
 | `nineteenhz` | Electronic music / nightlife | 19hz.info Bay Area list |
-| `roundups` | “Things to do this weekend” news articles | `OPENROUTER_API_KEY`; facts only, our own one-line summaries |
+| `roundups` | “Things to do this weekend” news articles **and** venue calendar pages without structured data (`pages`) | `OPENROUTER_API_KEY`; facts only, our own one-line summaries |
 
 **Good manners built in:** a clear bot User-Agent, robots.txt checks, 1+ second gaps between requests to the same site, retries with backoff, and links back to every original listing.
 
@@ -21,3 +21,7 @@
 **Add a source:** append an entry to `data/sources.json`, run `node scripts/scrape/index.mjs --only=<id>`, and check the report.
 
 **Always-on picks:** hand-curated favorites live in `data/evergreen.json` (96 places across all regions). Edit freely.
+
+**Find new sources:** `scripts/scrape/probe.mjs` (run from the *Probe event sources* workflow) tests candidate calendars from GitHub's servers and reports which return usable data.
+
+**Respecting sites:** sources that block automated visitors (currently Eventbrite, DoTheBay, SF Station) are disabled rather than worked around.
