@@ -338,3 +338,6 @@ dialog.spin::backdrop { background: rgba(10, 14, 28, .6); backdrop-filter: blur(
 [hidden] { display: none !important; }
 .baymap { max-height: 680px; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+.split > *, .detail > *, .baymap-wrap > * { min-width: 0; }
+.table-wrap { max-width: 100%; }
+.card.compact .body { min-width: 0; }
