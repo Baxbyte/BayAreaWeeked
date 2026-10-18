@@ -32,16 +32,23 @@
  ],
  "genre:festivals": [
   99800497,
-  90908045
+  90908045,
+  31724587,
+  10389259,
+  10389270
  ],
  "genre:outdoors": [
   11944885,
   139959987,
-  165256542
+  165256542,
+  46688123,
+  86892448
  ],
  "genre:sports": [
   43494737,
-  51095676
+  51095676,
+  117772419,
+  81992614
  ],
  "genre:tech": [
   26599691,
@@ -51,7 +58,10 @@
  ],
  "genre:family": [
   198448375,
-  83786153
+  83786153,
+  83786147,
+  60715870,
+  4353045
  ],
  "region:san-francisco": [
   63537930
@@ -303,13 +313,17 @@
  "genre:food-drink": [
   89334592,
   90023738,
-  13665311
+  13665311,
+  194341457,
+  194414005
  ],
  "genre:wellness": [
   118814771
  ],
  "genre:community": [
-  183717348
+  183717348,
+  14032678,
+  4980695
  ],
  "region:peninsula": [
   198329558
@@ -328,5 +342,156 @@
  ],
  "place:SFMOMA": [
   60388981
+ ],
+ "genre:learning": [
+  109314349,
+  9920063
+ ],
+ "region:south-bay": [
+  68044638
+ ],
+ "region:north-bay": [
+  13304432
+ ],
+ "vibe:free": [
+  16299256
+ ],
+ "place:Exploratorium": [
+  46749117
+ ],
+ "place:California Academy of Sciences": [
+  151461663
+ ],
+ "place:Japantown & Japan Center Malls": [
+  24268621
+ ],
+ "place:Aquarium of the Bay": [
+  93557497
+ ],
+ "place:Baker Beach": [
+  139442948
+ ],
+ "place:Chabot Space & Science Center": [
+  80488021
+ ],
+ "place:Children's Fairyland": [
+  83786148
+ ],
+ "place:Lawrence Hall of Science": [
+  71696449
+ ],
+ "place:UC Botanical Garden at Berkeley": [
+  15808620
+ ],
+ "place:Paramount Theatre Oakland": [
+  180823667
+ ],
+ "place:Mount Diablo State Park": [
+  36825932
+ ],
+ "place:Livermore Valley Wine Country": [
+  20653970
+ ],
+ "place:Ardenwood Historic Farm": [
+  83349051
+ ],
+ "place:Pillar Point Harbor & Half Moon Bay": [
+  56641889
+ ],
+ "place:CuriOdyssey": [
+  49204556
+ ],
+ "place:Hiller Aviation Museum": [
+  50205122
+ ],
+ "place:Mori Point": [
+  54929805
+ ],
+ "place:The Tech Interactive": [
+  108186422
+ ],
+ "place:Computer History Museum": [
+  178485798
+ ],
+ "place:Hakone Estate & Gardens": [
+  10786602
+ ],
+ "place:California's Great America": [
+  115996769
+ ],
+ "place:Rancho San Antonio Preserve": [
+  10359984
+ ],
+ "place:San Francisco 49ers at Levi's Stadium": [
+  59192322
+ ],
+ "place:San Jose Sharks at SAP Center": [
+  5994204
+ ],
+ "place:Point Reyes National Seashore": [
+  46348707
+ ],
+ "hood:hayes-valley": [
+  25942277
+ ],
+ "hood:soma": [
+  85619143
+ ],
+ "hood:financial-district": [
+  63929058
+ ],
+ "hood:embarcadero": [
+  59523532
+ ],
+ "hood:nob-hill": [
+  92838679
+ ],
+ "hood:russian-hill": [
+  116484626
+ ],
+ "hood:marina": [
+  61703157
+ ],
+ "hood:union-square": [
+  60691604
+ ],
+ "hood:japantown": [
+  90167947
+ ],
+ "hood:golden-gate-park": [
+  57602868
+ ],
+ "hood:presidio": [
+  45505093
+ ],
+ "hood:dogpatch": [
+  44526194
+ ],
+ "hood:bernal-heights": [
+  86892292
+ ],
+ "hood:treasure-island": [
+  95713601
+ ],
+ "hood:fruitvale": [
+  165040995
+ ],
+ "hood:willow-glen": [
+  27850478
+ ],
+ "city:oakland": [
+  185092016
+ ],
+ "city:berkeley": [
+  10768198
+ ],
+ "city:walnut-creek": [
+  166938204
+ ],
+ "city:napa": [
+  185040411
+ ],
+ "city:sausalito": [
+  177712253
  ]
 }
