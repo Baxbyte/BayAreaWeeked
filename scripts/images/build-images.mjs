@@ -21,6 +21,8 @@ const PEXELS = process.env.PEXELS_API_KEY || process.env.PEXELS_KEY || process.e
 const PER_GENRE = 6;
 fs.mkdirSync(PHOTO_DIR, { recursive: true });
 
+const UNSAFE = new Set(); // photo ids that failed the G/PG check this run
+
 async function download(id, url) {
   const large = path.join(PHOTO_DIR, `${id}-l.webp`);
   const small = path.join(PHOTO_DIR, `${id}-s.webp`);
@@ -28,7 +30,7 @@ async function download(id, url) {
     // Existing files are re-checked every run (the safety rules can get stricter over time).
     for (const f of [large, small]) {
       const v = await checkImage(f);
-      if (!v.safe) { console.log(`✘ removed ${id} (${v.reason})`); fs.rmSync(large, { force: true }); fs.rmSync(small, { force: true }); return false; }
+      if (!v.safe) { UNSAFE.add(id); console.log(`✘ removed ${id} (${v.reason})`); fs.rmSync(large, { force: true }); fs.rmSync(small, { force: true }); return false; }
     }
     return true;
   }
@@ -41,7 +43,7 @@ async function download(id, url) {
     const buf = Buffer.from(await res.arrayBuffer());
     // Family-friendly gate: even hand-picked photos must pass the image-safety check.
     const verdict = await checkImage(buf);
-    if (!verdict.safe) { console.log(`✘ rejected ${id} (${verdict.reason})`); return false; }
+    if (!verdict.safe) { UNSAFE.add(id); console.log(`✘ rejected ${id} (${verdict.reason})`); return false; }
     const img = sharp(buf).rotate();
     if (((await img.metadata()).width || 0) < 1000) return false;
     await img.clone().resize(1280, 720, { fit: 'cover', position: 'attention' }).webp({ quality: 78 }).toFile(large);
@@ -49,7 +51,7 @@ async function download(id, url) {
     // Re-check the exact crops the site will show (cropping can change what's in frame).
     for (const f of [large, small]) {
       const v = await checkImage(f);
-      if (!v.safe) { console.log(`✘ rejected ${id} after crop (${v.reason})`); fs.rmSync(large, { force: true }); fs.rmSync(small, { force: true }); return false; }
+      if (!v.safe) { UNSAFE.add(id); console.log(`✘ rejected ${id} after crop (${v.reason})`); fs.rmSync(large, { force: true }); fs.rmSync(small, { force: true }); return false; }
     }
     await sleep(200);
     return true;
@@ -114,6 +116,15 @@ async function main() {
       }
       if (have.length) db.categories[slug] = have;
     }
+  }
+  // Photos that failed the G/PG check go on the permanent blocklist and come out of the picks, in the same run.
+  const bad = [...UNSAFE].filter((id) => id.startsWith('wm-')).map((id) => Number(id.slice(3)));
+  if (bad.length) {
+    BLOCKLIST.ids = [...new Set([...BLOCKLIST.ids, ...bad])].sort((a, b) => a - b);
+    fs.writeFileSync(path.join(ROOT, 'data/photo-blocklist.json'), `${JSON.stringify(BLOCKLIST, null, 1)}\n`);
+    for (const [k, v] of Object.entries(picks)) if (Array.isArray(v)) picks[k] = v.filter((id) => !bad.includes(id));
+    fs.writeFileSync(PICKS, `${JSON.stringify(picks, null, 1)}\n`);
+    console.log(`blocked ${bad.length} photo(s) that failed the G/PG check: ${bad.join(', ')}`);
   }
   db.generatedAt = new Date().toISOString();
   fs.writeFileSync(OUT, JSON.stringify(db, null, 1));
