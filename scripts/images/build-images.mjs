@@ -16,7 +16,7 @@ const OUT = path.join(ROOT, 'data/images.json');
 const PICKS = path.join(ROOT, 'data/photo-picks.json');
 const PHOTO_DIR = path.join(ROOT, 'public/photos');
 const BLOCKED = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/photo-blocklist.json'), 'utf8')).ids);
-const PEXELS = process.env.PEXELS_API_KEY || process.env.PEXELS_KEY || '';
+const PEXELS = process.env.PEXELS_API_KEY || process.env.PEXELS_KEY || process.env.Pexels_API || '';
 const PER_GENRE = 6;
 fs.mkdirSync(PHOTO_DIR, { recursive: true });
 

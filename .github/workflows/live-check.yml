@@ -1,0 +1,46 @@
+name: Live site check
+
+# Runs the browser test suite against the live site after each Vercel production deploy (or on demand).
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Site to test'
+        default: 'https://bayareaweeked.vercel.app'
+
+permissions:
+  contents: read
+
+jobs:
+  live:
+    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Install browser
+        run: |
+          npm i --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Public access (not behind a Vercel login)
+        env:
+          LIVE_URL: ${{ inputs.url || vars.SITE_URL || 'https://bayareaweeked.vercel.app' }}
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$LIVE_URL/")
+          echo "Home page: HTTP $code"
+          if [ "$code" != "200" ]; then echo "::error::$LIVE_URL returned $code — if 401, turn off Vercel Deployment Protection for production"; exit 1; fi
+          for p in /explore/ /this-weekend/ /sitemap.xml /robots.txt /rss.xml /data/search.json; do
+            c=$(curl -s -o /dev/null -w '%{http_code}' "$LIVE_URL$p"); echo "$p → $c"; [ "$c" = "200" ] || exit 1
+          done
+          curl -s "$LIVE_URL/robots.txt" | grep -i sitemap
+          curl -s "$LIVE_URL/" | grep -o '<link rel="canonical" href="[^"]*"'
+      - name: Browser test suite on the live site
+        env:
+          LIVE_URL: ${{ inputs.url || vars.SITE_URL || 'https://bayareaweeked.vercel.app' }}
+        run: node scripts/test/smoke-browser.mjs

@@ -22,13 +22,13 @@ npm test                # scraper + digest tests
 npm run build           # static site → dist/
 ```
 
-## Going live (GitHub Pages, free)
-1. Repo **Settings → Pages → Build and deployment → Source: GitHub Actions** (required — deploys fail until this is set).
-2. Repo **Settings → Secrets and variables → Actions → New repository secret**: `PEXELS_API_KEY` (your Pexels key) for more photo variety. Optional: `TICKETMASTER_API_KEY`, `SEATGEEK_CLIENT_ID` (both free, add hundreds of concerts & games), `OPENROUTER_API_KEY` (AI reader for venue calendars & news roundups).
-3. Push to `main`. The **Daily scrape, build & deploy** workflow runs at ~5am and ~5pm Pacific (or run it by hand from the Actions tab).
-4. Strongly recommended for SEO: add a **custom domain** (Settings → Pages), then set the repo variable `SITE_URL` (e.g. `https://bayareaweekend.com`).
-
-Prefer Vercel/Netlify/Cloudflare? Import the repo there (build `npm run build`, output `dist`) and set repo variable `DEPLOY_TARGET=external`. The daily workflow still scrapes and commits fresh data, which triggers your host's rebuild.
+## Going live (Vercel)
+The site is hosted on Vercel (project `bayareaweeked`, https://bayareaweeked.vercel.app). Vercel rebuilds and publishes on every push to `main`, including the bot's twice-daily data commits.
+1. Vercel finds its own address automatically, custom domains included. Set `SITE_URL` (in Vercel *and* as a GitHub repo variable) only if you want to override it.
+2. Vercel **Deployment Protection** must leave production public, or Google can't see the site. The **Live site check** workflow fails loudly if it's behind a login.
+3. Photos are built and safety-checked on GitHub, so add the Pexels key as a GitHub secret `PEXELS_API_KEY` (Settings → Secrets and variables → Actions). A Vercel env var `Pexels_API` is only checked at build time (`pexels-check:` line in the Vercel build log). Optional secrets: `TICKETMASTER_API_KEY`, `SEATGEEK_CLIENT_ID` (concerts & games), `OPENROUTER_API_KEY` (AI reader for venue calendars & news roundups).
+4. **Daily scrape, build & deploy** runs ~5am and ~5pm Pacific: scrape → G/PG check → commit data (Vercel deploys it) → wait until the live site has the new data → IndexNow/WebSub pings.
+5. **Live site check** runs the browser test suite against the live site after every Vercel production deploy.
 
 ## Failure limit (test mode)
 The daily, photo and photo-candidate workflows have a **circuit breaker**: if a workflow fails 3 times within 24 hours, every further run is skipped until 24 hours after that 3rd failure. To run anyway, use **Actions → (workflow) → Run workflow** and tick **force**. The rule lives in `.github/scripts/circuit-breaker.mjs`.

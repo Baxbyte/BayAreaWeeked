@@ -21,8 +21,6 @@ on:
 permissions:
   actions: read
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: daily-site
@@ -91,19 +89,11 @@ jobs:
             git pull --rebase -X theirs origin main && git push origin HEAD:main
           fi
 
-      - name: Configure GitHub Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-        continue-on-error: true
-
       - name: Pick the public site URL
         id: url
         run: |
           URL="${{ vars.SITE_URL }}"
-          if [ -z "$URL" ]; then URL="${{ steps.pages.outputs.base_url }}"; fi
-          if [ -z "$URL" ]; then URL="https://${GITHUB_REPOSITORY_OWNER,,}.github.io/${GITHUB_REPOSITORY#*/}"; fi
+          if [ -z "$URL" ]; then URL="https://bayareaweeked.vercel.app"; fi
           echo "site_url=${URL%/}" >> "$GITHUB_OUTPUT"
           echo "Building for ${URL%/}"
 
@@ -120,29 +110,15 @@ jobs:
           PUBLIC_ANALYTICS_SNIPPET_URL: ${{ vars.PUBLIC_ANALYTICS_SNIPPET_URL }}
         run: npm run build
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
       - uses: actions/upload-artifact@v4
         with:
           name: sitemaps
           path: dist/sitemap*.xml
           retention-days: 3
 
-  deploy:
-    needs: build
-    if: ${{ vars.DEPLOY_TARGET == '' || vars.DEPLOY_TARGET == 'github-pages' }}
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
-
   ping-search-engines:
-    needs: [build, deploy]
-    if: ${{ always() && needs.build.result == 'success' && (needs.deploy.result == 'success' || needs.deploy.result == 'skipped') }}
+    needs: build
+    if: ${{ needs.build.result == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -155,8 +131,19 @@ jobs:
         with:
           name: sitemaps
           path: dist
-      - name: Wait for CDN to pick up the new deploy
-        run: sleep 60
+      - name: Wait for Vercel to publish the fresh data (it deploys every push to main)
+        env:
+          SITE_URL: ${{ needs.build.outputs.site_url }}
+        run: |
+          want=$(node -p "require('./data/events.json').generatedAt")
+          for i in $(seq 1 40); do
+            code=$(curl -s -o live.json -w '%{http_code}' "$SITE_URL/data/events.json?cb=$i" || true)
+            if [ "$code" = "401" ] || [ "$code" = "403" ]; then echo "::error::$SITE_URL is password-protected ($code) — turn off Vercel Deployment Protection for production so people and Google can see it"; exit 1; fi
+            got=$(node -p "try{require('./live.json').generatedAt}catch{''}" 2>/dev/null)
+            if [ "$code" = "200" ] && [ "$got" = "$want" ]; then echo "Live site has data from $want"; exit 0; fi
+            echo "waiting ($i): HTTP $code, live=$got want=$want"; sleep 15
+          done
+          echo "::warning::Live site did not show the new data within 10 minutes; pinging anyway"
       - name: IndexNow + WebSub (+ optional Google Indexing API)
         env:
           SITE_URL: ${{ needs.build.outputs.site_url }}

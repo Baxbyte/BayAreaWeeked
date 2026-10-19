@@ -1,13 +1,16 @@
 #!/usr/bin/env node
-// Browser smoke test of the built site (dist/): key pages, filters, map, search, forms, SEO files.
-//   npm run build && node scripts/test/smoke-browser.mjs [screenshotDir]
+// Browser smoke test: key pages, filters, map, search, forms, SEO files.
+//   npm run build && node scripts/test/smoke-browser.mjs [screenshotDir]      (tests dist/ locally)
+//   LIVE_URL=https://bayareaweeked.vercel.app node scripts/test/smoke-browser.mjs  (tests the live site)
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright';
+import { BASE_PATH } from '../../src/lib/site.mjs';
 
 const DIST = path.resolve('dist');
-const BASE = '/BayAreaWeeked';
+const BASE = BASE_PATH;
+const LIVE = (process.env.LIVE_URL || '').replace(/\/$/, '');
 const SHOTS = process.argv[2];
 const types = { html: 'text/html', js: 'text/javascript', css: 'text/css', json: 'application/json', xml: 'application/xml', svg: 'image/svg+xml', webp: 'image/webp', png: 'image/png', txt: 'text/plain' };
 const server = http.createServer((req, res) => {
@@ -17,8 +20,10 @@ const server = http.createServer((req, res) => {
   if (fs.existsSync(p) && fs.statSync(p).isDirectory()) p = path.join(p, 'index.html');
   if (!fs.existsSync(p)) { res.writeHead(404).end('nf'); return; }
   res.writeHead(200, { 'content-type': types[p.split('.').pop()] || 'application/octet-stream' }).end(fs.readFileSync(p));
-}).listen(4399);
-const U = (p) => `http://localhost:4399${BASE}${p}`;
+});
+if (!LIVE) server.listen(4399);
+const ORIGIN = LIVE || 'http://localhost:4399';
+const U = (p) => `${ORIGIN}${LIVE ? '' : BASE}${p}`;
 
 const results = [];
 const check = (name, ok, info = '') => { results.push({ name, ok }); console.log(`${ok ? '✔' : '✘'} ${name}${info ? ` — ${info}` : ''}`); };
@@ -77,7 +82,7 @@ await page.goto(U('/hot-day/'), { waitUntil: 'load' }); await shot('hot-day');
 
 // Event page
 const ev = await page.goto(U('/this-weekend/'), { waitUntil: 'load' }).then(() => page.$eval('a[href*="/events/"]', (a) => a.getAttribute('href')));
-await page.goto(`http://localhost:4399${ev}`, { waitUntil: 'load' });
+await page.goto(new URL(ev, ORIGIN).href, { waitUntil: 'load' });
 const evld = await page.$$eval('script[type="application/ld+json"]', (s) => s.map((x) => x.textContent).join(' '));
 check('event page: Event schema + breadcrumbs', /"@type":"(\w*Event|Event)"/.test(evld) && evld.includes('BreadcrumbList'));
 await shot('event');
@@ -97,7 +102,7 @@ for (const f of ['/sitemap.xml', '/sitemap-events.xml', '/robots.txt', '/rss.xml
   check(`SEO file ${f}`, r.status() === 200 && (await r.text()).length > 100);
 }
 check('no JavaScript errors', errors.length === 0, errors.slice(0, 3).join(' | '));
-await browser.close(); server.close();
+await browser.close(); if (!LIVE) server.close();
 const bad = results.filter((r) => !r.ok).length;
 console.log(`\n${results.length - bad}/${results.length} checks passed`);
 process.exit(bad ? 1 : 0);

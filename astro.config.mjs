@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
+import { SITE_URL } from './src/lib/site.mjs';
 
-const SITE_URL = (process.env.SITE_URL || 'https://baxbyte.github.io/BayAreaWeeked').replace(/\/$/, '');
 const base = new URL(SITE_URL).pathname.replace(/\/$/, '') || '/';
 
 export default defineConfig({

@@ -1,8 +1,10 @@
 // Site-wide settings. Override with environment variables at build time (see .env.example).
 const env = (k, d) => (typeof process !== 'undefined' && process.env[k]) || d;
 
-export const SITE_URL = env('SITE_URL', 'https://baxbyte.github.io/BayAreaWeeked').replace(/\/$/, '');
-export const BASE_PATH = new URL(SITE_URL).pathname.replace(/\/$/, ''); // '' or '/BayAreaWeeked'
+// SITE_URL wins; on Vercel the production domain is detected automatically (custom domain included).
+const VERCEL_PROD = env('VERCEL_PROJECT_PRODUCTION_URL', '');
+export const SITE_URL = env('SITE_URL', VERCEL_PROD ? `https://${VERCEL_PROD}` : 'https://bayareaweeked.vercel.app').replace(/\/$/, '');
+export const BASE_PATH = new URL(SITE_URL).pathname.replace(/\/$/, ''); // '' at a domain root, or e.g. '/BayAreaWeeked' under a sub-path
 
 export const SITE = {
   name: env('SITE_NAME', 'Bay Area Weekend'),
