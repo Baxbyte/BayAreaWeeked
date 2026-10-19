@@ -4,6 +4,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
 import { checkRemoteImage } from './image-safety.mjs';
+import { reviewImages } from './review-images.mjs';
 import { USER_AGENT } from '../scrape/http.mjs';
 
 const FILE = new URL('../../data/image-safety.json', import.meta.url);
@@ -27,6 +28,7 @@ export async function moderateImages(items, { offline = false, max = Number(proc
     if (!r.safe) flagged++;
   }
   for (const it of items) it.imageSafe = !!(it.image && db[key(it.image)]?.safe);
+  await reviewImages(items, key);
   // Keep the cache small: forget entries older than 60 days.
   const cutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10);
   for (const [k, v] of Object.entries(db)) if (v.at < cutoff) delete db[k];

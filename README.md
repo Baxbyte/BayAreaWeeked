@@ -30,6 +30,11 @@ The site is hosted on Vercel (project `bayareaweeked`, https://bayareaweeked.ver
 4. **Daily scrape, build & deploy** runs ~5am and ~5pm Pacific: scrape → G/PG check → commit data (Vercel deploys it) → wait until the live site has the new data → IndexNow/WebSub pings.
 5. **Live site check** waits for Vercel to publish each push to `main`, then runs the browser test suite on the live site.
 
+## Photos & maps quality
+- **Organizer images** are shown only if they pass the G/PG check *and* the content review in `data/image-review.json` (no logos, text-only flyers, off-topic or adult-themed graphics). With an `OPENROUTER_API_KEY` secret (a normal inference key), the daily job reviews new images with a vision model; without it, new images stay hidden and the listing uses a real venue or genre photo. Listings whose title has masked profanity never show their image.
+- **Site Audit** workflow publishes review sheets of every photo plus live map screenshots to the `site-audit` branch.
+- **Maps:** venue pages embed Google Maps (no key needed). The explore/region maps use OpenStreetMap tiles (Esri as automatic backup), or Google Maps when `PUBLIC_GOOGLE_MAPS_API_KEY` is set in Vercel (enable the *Map Tiles API* and restrict the key to your domain).
+
 ## Failure limit (test mode)
 The daily, photo and photo-candidate workflows have a **circuit breaker**: if a workflow fails 3 times within 24 hours, every further run is skipped until 24 hours after that 3rd failure. To run anyway, use **Actions → (workflow) → Run workflow** and tick **force**. The rule lives in `.github/scripts/circuit-breaker.mjs`.
 

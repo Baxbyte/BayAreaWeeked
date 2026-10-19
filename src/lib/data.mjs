@@ -17,6 +17,11 @@ const read = (p, fb) => {
 export const DATA = read(process.env.EVENTS_FILE || 'data/events.json', { generatedAt: null, items: [], sources: [] });
 export const SPONSORS = read('data/sponsors.json', { slots: [], campaigns: [] });
 const SAFETY = read('data/image-safety.json', {});
+// Content review (scripts/safety/review-images.mjs): logos, text-only flyers and off-topic images are never shown.
+const REVIEW = read('data/image-review.json', {});
+// Titles/descriptions with masked profanity ("F*****") usually carry it on the flyer too: never show those images.
+const MASKED = /\w\*{2,}/;
+const showImage = (i) => i.imageSafe === true && (String(i.sources?.[0]?.id || '').startsWith('sponsor-') || REVIEW[imageKey(i.image)]?.ok === true) && !MASKED.test(`${i.title} ${i.description || ''}`);
 const imageKey = (url) => crypto.createHash('sha1').update(url).digest('hex').slice(0, 16);
 export const NOW = process.env.BUILD_NOW ? new Date(process.env.BUILD_NOW) : new Date();
 export const W = windows(NOW);
@@ -58,7 +63,7 @@ function fixVenue(i) {
 }
 
 export const ALL = [...(DATA.items || []).filter((i) => !isOutOfArea(i.venue?.name)), ...sponsorItems].map((i) => ({
-  ...i, venue: fixVenue(i), image: i.imageSafe === true ? i.image : null, priceText: tidyPrice(i.priceText, i.priceMin, i.priceMax), path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime(),
+  ...i, venue: fixVenue(i), image: i.image && showImage(i) ? i.image : null, priceText: tidyPrice(i.priceText, i.priceMin, i.priceMax), path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime(),
 }));
 export const byId = new Map(ALL.map((i) => [i.id, i]));
 

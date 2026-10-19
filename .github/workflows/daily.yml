@@ -83,7 +83,7 @@ jobs:
         run: |
           git config user.name "bayarea-weekend-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/events.json data/scrape-report.json data/geocache.json data/image-safety.json 2>/dev/null || true
+          git add data/events.json data/scrape-report.json data/geocache.json data/image-safety.json data/image-review.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "data: daily event refresh $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase -X theirs origin main && git push origin HEAD:main
