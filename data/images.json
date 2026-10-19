@@ -739,6 +739,70 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "file": "/photos/wm-183717348"
    }
+  ],
+  "markets": [
+   {
+    "id": "wm-111183026",
+    "alt": "Livermore's Farmer's Market at Carnegie Park",
+    "credit": "Dm91 (talk)",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:LivermoreFarmersMarket.JPG",
+    "source": "Wikimedia Commons",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:LivermoreFarmersMarket.JPG",
+    "file": "/photos/wm-111183026"
+   },
+   {
+    "id": "wm-130166228",
+    "alt": "Union City Farmers' Market in 2015. Originally posted to Flickr: https://flickr.com/photos/ixfd64/20577173794",
+    "credit": "Ixfd64",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Union_City_Farmers%27_Market.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-130166228"
+   },
+   {
+    "id": "wm-76127943",
+    "alt": "Sunday morning at the Menlo Park farmers market.",
+    "credit": "TravelerNickR",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Menlo_Park_Farmers_Market.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "file": "/photos/wm-76127943"
+   },
+   {
+    "id": "wm-52073255",
+    "alt": "Farmer\u00b4s Market at Civic Center in San Francisco (TK1)",
+    "credit": "Tobias Kleinlercher / Wikipedia",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Farmer%C2%B4s_Market_at_UN_Plaza-Civic_Center_in_San_Francisco_(TK1).JPG",
+    "source": "Wikimedia Commons",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "file": "/photos/wm-52073255"
+   },
+   {
+    "id": "wm-128219337",
+    "alt": "Rockridge, Oakland (October 20, 2013) Farmers Market",
+    "credit": "Sharon Hahn Darlin",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Rockridge,_Oakland_(October_20,_2013)_Farmers_Market_2.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "file": "/photos/wm-128219337"
+   }
+  ],
+  "learning": [
+   {
+    "id": "wm-128201502",
+    "alt": "Oakland Public Library Temescal Branch, Oakland, California, United States.",
+    "credit": "Mx. Granger",
+    "creditUrl": "https://commons.wikimedia.org/wiki/File:Oakland_Public_Library_Temescal_Branch.jpg",
+    "source": "Wikimedia Commons",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "file": "/photos/wm-128201502"
+   }
   ]
  },
  "regions": {
@@ -771,6 +835,26 @@
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "file": "/photos/wm-198329558"
+  },
+  "south-bay": {
+   "id": "wm-68044638",
+   "alt": "Santana Row, SJ",
+   "credit": "Payton Chung from DCA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Santana_Row_(15371236324).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "file": "/photos/wm-68044638"
+  },
+  "north-bay": {
+   "id": "wm-13304432",
+   "alt": "Gabrielson Memorial Park, Sausalito, California",
+   "credit": "(User:Wgreaves)",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Gabrielson_Park.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "file": "/photos/wm-13304432"
   }
  },
  "cities": {
@@ -1137,6 +1221,36 @@
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "file": "/photos/wm-13665311"
+  },
+  "hot-day": {
+   "id": "wm-26120532",
+   "alt": "Stinson Beach, California on June 27, 2009, seen from the south.",
+   "credit": "jenly from Oakland, CA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Crowded_day_at_Stinson_Beach.jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "file": "/photos/wm-26120532"
+  },
+  "free": {
+   "id": "wm-62225599",
+   "alt": "Lands End, San Francisco, United States",
+   "credit": "Saksham Gangwar saksham",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Lands_End,_San_Francisco,_United_States_(Unsplash_J4aLKW3T0FE).jpg",
+   "source": "Wikimedia Commons",
+   "license": "CC0",
+   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "file": "/photos/wm-62225599"
+  },
+  "near-bart": {
+   "id": "wm-4392489",
+   "alt": "F Market & Wharves Bay and The Embarcadero station",
+   "credit": "Kurykh",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Bay_and_The_Embarcadero.JPG",
+   "source": "Wikimedia Commons",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "file": "/photos/wm-4392489"
   }
  },
  "generatedAt": "2026-10-18T17:16:57.785Z"
