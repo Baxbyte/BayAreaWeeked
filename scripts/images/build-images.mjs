@@ -91,6 +91,8 @@ async function main() {
     const recs = [];
     for (const pid of list) {
       if (BLOCKED.has(pid)) continue;
+      // Places, regions, cities, hoods and vibes show one photo: later picks are backups, used only if earlier ones fail.
+      if (kind !== 'genre' && recs.length) break;
       const m = meta.get(pid);
       if (!m) { missing++; console.log(`· ${key}: page ${pid} unavailable`); continue; }
       if (!(await download(m.id, m.url))) { missing++; continue; }

@@ -39,14 +39,21 @@ async function post(url, body, headers = {}) {
   return res;
 }
 
+// Any IndexNow engine shares submissions with the others; try the next one if an endpoint refuses.
+const ENDPOINTS = ['https://api.indexnow.org/indexnow', 'https://www.bing.com/indexnow', 'https://yandex.com/indexnow'];
+
 async function indexNow() {
   // keyLocation may sit in a sub-folder (e.g. GitHub Pages project sites); URLs must live under that folder.
   for (let i = 0; i < toSend.length; i += 10000) {
-    const res = await post('https://api.indexnow.org/indexnow', {
-      host, key: SITE.indexNowKey, keyLocation: `${SITE_URL}/${SITE.indexNowKey}.txt`, urlList: toSend.slice(i, i + 10000),
-    });
-    console.log(`IndexNow → HTTP ${res.status}`);
-    if (!(res.ok || res.status === 202)) return false;
+    const body = { host, key: SITE.indexNowKey, keyLocation: `${SITE_URL}/${SITE.indexNowKey}.txt`, urlList: toSend.slice(i, i + 10000) };
+    let accepted = false;
+    for (const endpoint of ENDPOINTS) {
+      const res = await post(endpoint, body);
+      const detail = res.text ? (await res.text().catch(() => '')).slice(0, 200).replace(/\s+/g, ' ') : '';
+      console.log(`IndexNow ${new URL(endpoint).host} → HTTP ${res.status}${detail ? ` ${detail}` : ''}`);
+      if (res.ok || res.status === 202) { accepted = true; break; }
+    }
+    if (!accepted) return false;
   }
   return true;
 }
@@ -78,6 +85,7 @@ async function googleIndexing() {
 }
 
 const okIndexNow = await indexNow().catch((e) => { console.error('IndexNow failed:', e.message); return false; });
+if (!okIndexNow && !dry) console.log('::warning::IndexNow refused the submission (see replies above); URLs will be retried next run');
 await webSub().catch((e) => console.error('WebSub failed:', e.message));
 await googleIndexing().catch((e) => console.error('Google Indexing API failed:', e.message));
 
