@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Card from './Card.astro';
 import Crumbs from './Crumbs.astro';
 import { SITE, link, absolute } from '../lib/site.mjs';
+import { isPlaceholderVenue, isSecretVenue } from '../lib/venue.mjs';
 import { EVENTS, ACTIVITIES, filterItems, collapseRepeats, W, cityBySlug, hoodBySlug, regionBySlug, categoryBySlug } from '../lib/data.mjs';
 import { hueFor, primaryCat } from '../lib/format.mjs';
 import { photoFor } from '../lib/images.mjs';
@@ -66,10 +67,12 @@ const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity
 const pool = isEvent ? EVENTS : ACTIVITIES;
 const sameCity = collapseRepeats(filterItems(EVENTS, { city: i.city })).filter((x) => x.id !== i.id && x.title !== i.title).slice(0, 4);
 const sameCat = collapseRepeats(filterItems(pool, { category: i.categories[0], region: i.region })).filter((x) => x.id !== i.id && x.title !== i.title && !sameCity.includes(x)).slice(0, 4);
-// Google Maps embed (no key needed): exact pin when we have real coordinates, else the venue by name.
-const embedQ = i.venue?.approx ? `${i.venue?.name || ''} ${where}`.trim() : `${i.venue.lat},${i.venue.lng} (${i.venue?.name || i.title})`;
-const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(embedQ)}&z=15&output=embed`;
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i.venue?.approx ? `${i.venue?.name || ''} ${where}` : `${i.venue.lat},${i.venue.lng}`)}`;
+// Google Maps (no key needed): exact pin when we have real coordinates; otherwise the venue by name in its city,
+// or just the city when the listing has no usable venue (placeholders and "secret location" parties).
+const mapPlace = isPlaceholderVenue(i.venue?.name) || isSecretVenue(i.venue?.name) ? '' : i.venue.name;
+const mapQ = i.venue?.approx ? [mapPlace, `${city.name}, CA`].filter(Boolean).join(', ') : `${i.venue.lat},${i.venue.lng}`;
+const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(i.venue?.approx ? mapQ : `${mapQ} (${mapPlace || i.title})`)}&z=${i.venue?.approx && !mapPlace ? 12 : 15}&output=embed`;
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQ)}`;
 const gcal = start ? `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(i.title)}&dates=${start.toISOString().replace(/[-:]|\.\d{3}/g, '')}/${(end || new Date(+start + 2 * 3600000)).toISOString().replace(/[-:]|\.\d{3}/g, '')}&details=${encodeURIComponent(absolute(i.path))}&location=${encodeURIComponent([i.venue?.name, where].filter(Boolean).join(', '))}` : null;
 const desc = `${isEvent ? `${whenLong} · ` : ''}${i.venue?.name ? `${i.venue.name}, ` : ''}${where}. ${priceLabel}. ${(i.description || summary).slice(0, 110)}`.slice(0, 158);
 const seoTitle = isEvent ? `${i.title} — ${formatWhen(i).split(' · ')[0]}, ${city.name}` : `${i.title} — ${where}: Hours, Tips & Things to Know`;

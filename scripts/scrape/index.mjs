@@ -64,7 +64,7 @@ async function runSource(src) {
   const items = [];
   for (const r of raw) {
     try {
-      const it = normalize(r, { city: src.defaultCity });
+      const it = normalize(r, { city: src.defaultCity, venue: src.defaultVenue });
       if (it) items.push(it);
     } catch (e) {
       ctx.warn(`normalize: ${e.message}`);

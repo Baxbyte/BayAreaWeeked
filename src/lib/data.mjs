@@ -1,6 +1,7 @@
 // Build-time data access for pages. Everything is computed once per build.
 import crypto from 'node:crypto';
 import { tidyPrice } from './price.mjs';
+import { isOutOfArea, isPlaceholderVenue } from './venue.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { normalize } from '../../scripts/scrape/normalize.mjs';
@@ -43,8 +44,21 @@ for (const c of activeCampaigns) {
 
 // Family-friendly gate: organizer images that haven't passed the image-safety check are removed here,
 // so no page, feed or API can ever show them.
-export const ALL = [...(DATA.items || []), ...sponsorItems].map((i) => ({
-  ...i, image: i.imageSafe === true ? i.image : null, priceText: tidyPrice(i.priceText, i.priceMin, i.priceMax), path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime(),
+// Same venue cleanup the scraper applies, for data scraped before it existed.
+const SOURCE_VENUE = (() => {
+  try {
+    const s = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'data/sources.json'), 'utf8'));
+    return Object.fromEntries((s.sources || s).filter((x) => x.defaultVenue).map((x) => [x.id, x.defaultVenue]));
+  } catch { return {}; }
+})();
+function fixVenue(i) {
+  if (!i.venue || !isPlaceholderVenue(i.venue.name)) return i.venue;
+  const d = SOURCE_VENUE[i.sources?.[0]?.id];
+  return d && i.venue.approx ? { ...i.venue, name: d.name, lat: d.lat, lng: d.lng, approx: false } : { ...i.venue, name: null };
+}
+
+export const ALL = [...(DATA.items || []).filter((i) => !isOutOfArea(i.venue?.name)), ...sponsorItems].map((i) => ({
+  ...i, venue: fixVenue(i), image: i.imageSafe === true ? i.image : null, priceText: tidyPrice(i.priceText, i.priceMin, i.priceMax), path: itemPath(i), past: i.type === 'event' && endTime(i) < NOW.getTime(),
 }));
 export const byId = new Map(ALL.map((i) => [i.id, i]));
 

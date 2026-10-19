@@ -207,7 +207,12 @@
       "days": 21,
       "pages": 3,
       "audience": "public|everyone|community",
-      "excludeTitle": "seminar|colloquium|training|orientation|defense|webinar|meeting|office hours|workshop for|faculty|staff|students only|deadline|zoom"
+      "excludeTitle": "seminar|colloquium|training|orientation|defense|webinar|meeting|office hours|workshop for|faculty|staff|students only|deadline|zoom|san jos[eé] state at ",
+      "defaultVenue": {
+        "name": "San José State University",
+        "lat": 37.3352,
+        "lng": -121.8811
+      }
     },
     {
       "id": "sfstation",

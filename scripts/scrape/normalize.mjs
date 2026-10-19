@@ -1,6 +1,7 @@
 // Turns raw adapter output into clean, classified, geo-tagged directory items.
 import crypto from 'node:crypto';
 import { tidyPrice } from '../../src/lib/price.mjs';
+import { isOutOfArea, isPlaceholderVenue } from '../../src/lib/venue.mjs';
 import { classify } from '../../src/lib/classify.mjs';
 import { cityBySlug, cityFromText, hoodFromText, inBayArea, nearestCity, nearestHood } from '../../src/lib/geo.mjs';
 import { parseWhen, toPTISO } from '../../src/lib/time.mjs';
@@ -111,6 +112,11 @@ export function normalize(raw, defaults = {}) {
   // Family-friendly policy: sexually explicit listings are never included.
   if (isExplicit(raw.title, raw.description, raw.venueName, (raw.tags || []).join(' '), raw.organizer)) return null;
   const isActivity = raw.type === 'activity';
+  if (isOutOfArea(raw.venueName)) return null;
+  // Placeholder venues ("Sign in to download the location", "TBA") → the source's own venue if it has one (e.g. a campus), else none.
+  if (isPlaceholderVenue(raw.venueName)) {
+    raw = defaults.venue && raw.lat == null ? { ...raw, venueName: defaults.venue.name, lat: defaults.venue.lat, lng: defaults.venue.lng } : { ...raw, venueName: raw.venueName && null };
+  }
 
   let start = null;
   let end = null;
