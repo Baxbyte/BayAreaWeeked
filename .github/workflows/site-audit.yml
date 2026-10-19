@@ -1,0 +1,55 @@
+name: Site audit (photos + maps)
+
+# Renders review sheets of every photo on the live site and screenshots of the maps,
+# then publishes them to the `site-audit` branch for review.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/audit/**', '.github/workflows/site-audit.yml', 'data/images.json', 'data/photo-picks.json']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      LIVE_URL: ${{ vars.SITE_URL || 'https://bayareaweeked.vercel.app' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Install browser
+        run: |
+          npm i --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Wait for Vercel to serve this commit
+        run: |
+          for i in $(seq 1 40); do
+            live=$(curl -s "$LIVE_URL/version.txt?cb=$i" | tr -d '[:space:]')
+            [ "$live" = "$GITHUB_SHA" ] && exit 0
+            echo "waiting ($i): live=$live"; sleep 15
+          done
+          echo "::warning::Live site is not on this commit yet; auditing what is live"
+      - name: Map screenshots + browser checks on the live site
+        continue-on-error: true
+        run: mkdir -p audit && node scripts/test/smoke-browser.mjs audit
+      - name: Photo audit
+        run: node scripts/audit/photo-audit.mjs audit
+      - name: Publish to the site-audit branch
+        run: |
+          cd audit
+          git init -q -b site-audit
+          git config user.name "bayarea-weekend-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add . && git commit -qm "Site audit $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" site-audit

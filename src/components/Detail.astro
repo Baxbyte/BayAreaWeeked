@@ -4,7 +4,7 @@ import Card from './Card.astro';
 import Crumbs from './Crumbs.astro';
 import { SITE, link, absolute } from '../lib/site.mjs';
 import { EVENTS, ACTIVITIES, filterItems, collapseRepeats, W, cityBySlug, hoodBySlug, regionBySlug, categoryBySlug } from '../lib/data.mjs';
-import { emojiFor, hueFor, primaryCat } from '../lib/format.mjs';
+import { hueFor, primaryCat } from '../lib/format.mjs';
 import { photoFor } from '../lib/images.mjs';
 import { fmtLongDay, fmtTime, formatWhen } from '../lib/time.mjs';
 
@@ -66,6 +66,9 @@ const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity
 const pool = isEvent ? EVENTS : ACTIVITIES;
 const sameCity = collapseRepeats(filterItems(EVENTS, { city: i.city })).filter((x) => x.id !== i.id && x.title !== i.title).slice(0, 4);
 const sameCat = collapseRepeats(filterItems(pool, { category: i.categories[0], region: i.region })).filter((x) => x.id !== i.id && x.title !== i.title && !sameCity.includes(x)).slice(0, 4);
+// Google Maps embed (no key needed): exact pin when we have real coordinates, else the venue by name.
+const embedQ = i.venue?.approx ? `${i.venue?.name || ''} ${where}`.trim() : `${i.venue.lat},${i.venue.lng} (${i.venue?.name || i.title})`;
+const embedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(embedQ)}&z=15&output=embed`;
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i.venue?.approx ? `${i.venue?.name || ''} ${where}` : `${i.venue.lat},${i.venue.lng}`)}`;
 const gcal = start ? `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(i.title)}&dates=${start.toISOString().replace(/[-:]|\.\d{3}/g, '')}/${(end || new Date(+start + 2 * 3600000)).toISOString().replace(/[-:]|\.\d{3}/g, '')}&details=${encodeURIComponent(absolute(i.path))}&location=${encodeURIComponent([i.venue?.name, where].filter(Boolean).join(', '))}` : null;
 const desc = `${isEvent ? `${whenLong} · ` : ''}${i.venue?.name ? `${i.venue.name}, ` : ''}${where}. ${priceLabel}. ${(i.description || summary).slice(0, 110)}`.slice(0, 158);
@@ -142,7 +145,7 @@ const save = JSON.stringify({ id: i.id, t: i.title, u: link(i.path), s: i.start,
             )}
             <a class="btn btn-ghost btn-sm" href={mapsUrl} target="_blank" rel="noopener">🗺️ Directions</a>
           </div>
-          <div class="mini-map" id="mini-map" data-lat={i.venue.lat} data-lng={i.venue.lng} data-emoji={emojiFor(i)} data-tiles={SITE.tiles} data-attr={SITE.tilesAttribution}></div>
+          <iframe class="mini-map" title={`Map: ${i.venue?.name || where}`} src={embedUrl} loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </aside>
     </div>

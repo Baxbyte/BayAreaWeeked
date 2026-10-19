@@ -9,6 +9,7 @@ import { describe, parseQuery } from './smart.js';
 import { formatWhen } from '../lib/time.mjs';
 import { fetchForecast, suggestMood } from './weather.js';
 import boundaries from '../data/boundaries.json';
+import { addBaseMap } from './basemap.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -154,7 +155,7 @@ export async function initExplore() {
 
   // ---------- Map ----------
   const map = L.map('map', { zoomControl: true, scrollWheelZoom: true, zoomSnap: 0.25 }).setView([37.75, -122.25], 9);
-  L.tileLayer(root.dataset.tiles, { attribution: root.dataset.attr, subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+  addBaseMap(L, map, { gkey: root.dataset.gkey, tiles: root.dataset.tiles });
   // Real region (county) boundaries — click to filter by region.
   const regionStyle = (slug) => ({ color: '#ef4b25', weight: st.region === slug ? 3 : 1.2, opacity: st.region === slug ? 0.9 : 0.5, fillColor: '#ef4b25', fillOpacity: st.region === slug ? 0.08 : 0.03, dashArray: st.region === slug ? null : '5 5' });
   const regionLayer = L.geoJSON(boundaries.regions, {
@@ -210,7 +211,7 @@ export async function initExplore() {
       const cls = i.sp ? 'pin gold' : i.ty === 'a' ? 'pin activity' : 'pin';
       const m = L.marker([i.la, i.lo], { icon: L.divIcon({ className: '', html: `<div class="${cls}"><span>${cat.emoji}</span></div>`, iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28] }), zIndexOffset: i.sp ? 1000 : 0 });
       const when = i.s ? formatWhen({ start: i.s, end: i.e, allDay: !!i.ad }) : (i.sc || 'Open regularly');
-      m.bindPopup(`<div class="popup">${i.img ? `<img src="${escHtml(i.img)}" alt="" referrerpolicy="no-referrer" style="width:220px;height:120px;object-fit:cover;border-radius:10px;margin-bottom:6px;display:block" onerror="this.remove()">` : ''}${i.sp ? '<span class="tag sponsored">★ Sponsored</span><br>' : ''}<a href="${escHtml(i.u)}">${escHtml(i.t)}</a><br><small>${escHtml(when)}</small><br><small>${escHtml(placeOf(i))}</small>${i.deal ? `<br><b>🎟️ ${escHtml(i.deal)}</b>` : ''}</div>`);
+      m.bindPopup(`<div class="popup">${i.img ? `<img src="${escHtml(i.img)}" alt="" referrerpolicy="no-referrer" style="width:220px;height:120px;object-fit:cover;border-radius:10px;margin-bottom:6px;display:block" onerror="this.remove()">` : ''}${i.sp ? '<span class="tag sponsored">★ Sponsored</span><br>' : ''}<a href="${escHtml(i.u)}">${escHtml(i.t)}</a><br><small>${escHtml(when)}</small><br><small>${escHtml(placeOf(i))}</small>${i.deal ? `<br><b>🎟️ ${escHtml(i.deal)}</b>` : ''}<br><a class="popup-gmaps" href="https://www.google.com/maps/search/?api=1&query=${i.la},${i.lo}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>`);
       return m;
     });
     clusters.addLayers(markers);

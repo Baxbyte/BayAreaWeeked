@@ -10,7 +10,6 @@
   72103304
  ],
  "genre:theater": [
-  68553778,
   7513503,
   30223316,
   83851744,
@@ -26,13 +25,10 @@
  ],
  "genre:film": [
   41256927,
-  190560086,
-  191422242,
   30223316
  ],
  "genre:festivals": [
   99800497,
-  90908045,
   31724587,
   10389259,
   10389270
@@ -49,10 +45,8 @@
   81992614
  ],
  "genre:tech": [
-  26599691,
   56386179,
-  123176792,
-  58257150
+  123176792
  ],
  "genre:family": [
   198448375,
@@ -69,9 +63,6 @@
  "vibe:kid-friendly": [
   198449130
  ],
- "vibe:hot-day": [
-  26120670
- ],
  "vibe:fog-escape": [
   199193832
  ],
@@ -87,7 +78,7 @@
  "place:Presidio Tunnel Tops": [
   120738657
  ],
- "place:Musée Mécanique": [
+ "place:Mus\u00e9e M\u00e9canique": [
   53169657
  ],
  "place:Alcatraz Island": [
@@ -117,9 +108,6 @@
  "place:Yerba Buena Gardens": [
   60388737
  ],
- "place:Grace Cathedral": [
-  197606619
- ],
  "place:The Walt Disney Family Museum": [
   52162598
  ],
@@ -144,14 +132,8 @@
  "place:Winchester Mystery House": [
   95666151
  ],
- "place:Children's Discovery Museum of San Jose": [
-  84509194
- ],
  "place:Santana Row": [
   68044638
- ],
- "place:Shoreline Lake & Park": [
-  113450393
  ],
  "place:Muir Woods National Monument": [
   183072542
@@ -164,9 +146,6 @@
  ],
  "place:Mount Tamalpais State Park": [
   56810091
- ],
- "place:Bay Area Discovery Museum": [
-  116463361
  ],
  "place:Napa Valley Wine Train": [
   25376981
@@ -183,26 +162,14 @@
  "place:Conservatory of Flowers": [
   68829856
  ],
- "place:Tilden Regional Park": [
-  59289505
- ],
  "place:Castro Theatre": [
   30223316
  ],
  "hood:mission-district": [
   42182213
  ],
- "hood:noe-valley": [
-  17666545
- ],
  "hood:lower-haight": [
   13250915
- ],
- "hood:north-beach": [
-  131380758
- ],
- "hood:chinatown": [
-  185319512
  ],
  "hood:fishermans-wharf": [
   4392489
@@ -267,9 +234,6 @@
  "city:mill-valley": [
   19378994
  ],
- "city:corte-madera": [
-  134061343
- ],
  "city:tiburon": [
   38040882
  ],
@@ -281,9 +245,6 @@
  ],
  "city:sonoma": [
   39230807
- ],
- "city:vallejo": [
-  185569161
  ],
  "city:mountain-view": [
   92946582
@@ -298,19 +259,15 @@
   143236851
  ],
  "genre:nightlife": [
-  49454682,
   46227181,
   6029750,
   2788036
  ],
  "genre:comedy": [
-  99303428,
-  8383799
+  99303428
  ],
  "genre:food-drink": [
   89334592,
-  90023738,
-  13665311,
   194341457,
   194414005
  ],

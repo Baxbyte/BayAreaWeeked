@@ -30,7 +30,7 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-120738657"
   },
-  "Musée Mécanique": {
+  "Mus\u00e9e M\u00e9canique": {
    "id": "wm-53169657",
    "alt": "A row of machines at Musee Mecanique in San Francisco.",
    "credit": "Rhododendrites",
@@ -130,16 +130,6 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-60388737"
   },
-  "Grace Cathedral": {
-   "id": "wm-197606619",
-   "alt": "California Street - James Flood Mansion and Grace Cathedral, San Francisco",
-   "credit": "Radosław Botev",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:California_Street_-_James_Flood_Mansion_and_Grace_Cathedral,_San_Francisco.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 3.0 pl",
-   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
-   "file": "/photos/wm-197606619"
-  },
   "The Walt Disney Family Museum": {
    "id": "wm-52162598",
    "alt": "The Walt Disney Family Museum in the Presidio, San Francisco (TK1)",
@@ -220,16 +210,6 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-95666151"
   },
-  "Children's Discovery Museum of San Jose": {
-   "id": "wm-84509194",
-   "alt": "A Wells-Fargo stagecoach display at the Children's Discovery Museum in San Jose, California. Photo by Jim Heaphy.",
-   "credit": "Cullen328",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Stagecoach_at_Children%27s_Discovery_Museum.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-   "file": "/photos/wm-84509194"
-  },
   "Santana Row": {
    "id": "wm-68044638",
    "alt": "Santana Row, SJ",
@@ -239,16 +219,6 @@
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "file": "/photos/wm-68044638"
-  },
-  "Shoreline Lake & Park": {
-   "id": "wm-113450393",
-   "alt": "Eyes in the landscape (35504862500)",
-   "credit": "bluesbby from Mountain View, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Eyes_in_the_landscape_(35504862500).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-113450393"
   },
   "Muir Woods National Monument": {
    "id": "wm-183072542",
@@ -289,16 +259,6 @@
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-56810091"
-  },
-  "Bay Area Discovery Museum": {
-   "id": "wm-116463361",
-   "alt": "2022-03-27 16 10 18 View north along U.S. Route 101 and California State Route 1 (Redwood Highway) from the Marin Headlands within Golden Gate National Recreation Area in Marin County, California",
-   "credit": "Famartin",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:2022-03-27_16_10_18_View_north_along_U.S._Route_101_and_California_State_Route_1_(Redwood_Highway)_from_the_Marin_Headlands_within_Golden_Gate_National_Recreation_Area_in_Marin_County,_California.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-116463361"
   },
   "Napa Valley Wine Train": {
    "id": "wm-25376981",
@@ -350,16 +310,6 @@
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "file": "/photos/wm-68829856"
   },
-  "Tilden Regional Park": {
-   "id": "wm-59289505",
-   "alt": "H20151103-0001—Mount Diablo from Inspiration Point—Tilden Regional Park-1 (22573645050)",
-   "credit": "John Rusk from Berkeley, CA, United States of America",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:H20151103-0001%E2%80%94Mount_Diablo_from_Inspiration_Point%E2%80%94Tilden_Regional_Park-1_(22573645050).jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-59289505"
-  },
   "Castro Theatre": {
    "id": "wm-30223316",
    "alt": "Castro Theatre Marquee December 2013 (2)",
@@ -373,7 +323,7 @@
   "de Young Museum & Hamon Observation Tower": {
    "id": "wm-139442947",
    "alt": "De Young Museum with Keith Haring's Three Dancing Figures",
-   "credit": "Luiz Pantoja from São Paulo",
+   "credit": "Luiz Pantoja from S\u00e3o Paulo",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:De_Young_Museum_(2)_(21043282819).jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY 2.0",
@@ -476,16 +426,6 @@
   ],
   "theater": [
    {
-    "id": "wm-68553778",
-    "alt": "Judas Priest at The Warfield Theater in San Francisco on the Firepower tour, April 19, 2018",
-    "credit": "Aaron Rubin",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Judas_Priest_at_The_Warfield_Theater_in_San_Francisco.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-68553778"
-   },
-   {
     "id": "wm-7513503",
     "alt": "Box office and entrance, Orpheum Theatre, 1192 Market Street, San Francisco, California, USA.",
     "credit": "Joe Mabel",
@@ -530,7 +470,7 @@
    {
     "id": "wm-139442947",
     "alt": "De Young Museum with Keith Haring's Three Dancing Figures",
-    "credit": "Luiz Pantoja from São Paulo",
+    "credit": "Luiz Pantoja from S\u00e3o Paulo",
     "creditUrl": "https://commons.wikimedia.org/wiki/File:De_Young_Museum_(2)_(21043282819).jpg",
     "source": "Wikimedia Commons",
     "license": "CC BY 2.0",
@@ -600,26 +540,6 @@
     "file": "/photos/wm-41256927"
    },
    {
-    "id": "wm-190560086",
-    "alt": "People at the San Francisco International Film Festival in 2026",
-    "credit": "Jesse Kornblum",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:SFFILM_2026_Group_Shots_01.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-190560086"
-   },
-   {
-    "id": "wm-191422242",
-    "alt": "Alfie Koetter Nezza Cristina Costantini at the San Francisco International Film Festival in 2026",
-    "credit": "Jesse Kornblum",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Alfie_Koetter_Nezza_Cristina_Costantini_SFFILM_May_2026_01.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-191422242"
-   },
-   {
     "id": "wm-30223316",
     "alt": "Castro Theatre Marquee December 2013 (2)",
     "credit": "Gotanero",
@@ -640,16 +560,6 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "file": "/photos/wm-99800497"
-   },
-   {
-    "id": "wm-90908045",
-    "alt": "1991JuneSFPride_Kodak5095Gold100-2_0001 Lead Cycle! Parade always starts with Women's Motorcycle Contingent",
-    "credit": "David Prasad from Welches, OR., United States",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:1991JuneSFPride_Kodak5095Gold100-2_0001_Lead_Cycle!_Parade_always_starts_with_Women%27s_Motorcycle_Contingent_(9683434147).jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "file": "/photos/wm-90908045"
    }
   ],
   "outdoors": [
@@ -708,16 +618,6 @@
   ],
   "tech": [
    {
-    "id": "wm-26599691",
-    "alt": "Crowds queuing on the first day of Apple's WWDC 2013.",
-    "credit": "User:glwx",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:WWDC_2013.jpeg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "file": "/photos/wm-26599691"
-   },
-   {
     "id": "wm-56386179",
     "alt": "The SPIE Photonics West conference in San Francisco at Moscone Center in 2017.",
     "credit": "Dllu",
@@ -736,16 +636,6 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "file": "/photos/wm-123176792"
-   },
-   {
-    "id": "wm-58257150",
-    "alt": "Olympus XA Zuiko 35mm/f2.8 Walgreens 200 10/13/2011",
-    "credit": "Michael Fraley from San Francisco, US",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Moscone_Center_12_(6341926838).jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "file": "/photos/wm-58257150"
    }
   ],
   "family": [
@@ -771,16 +661,6 @@
    }
   ],
   "nightlife": [
-   {
-    "id": "wm-49454682",
-    "alt": "Marchers walk by San Francisco City Hall, lit in the rainbow colors of the Pride flag, during a vigil for the victims of the 2016 Orlando nightclub shooting.",
-    "credit": "Pax Ahimsa Gethen",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:San_Francisco_vigil_for_Orlando_-_5.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-49454682"
-   },
    {
     "id": "wm-46227181",
     "alt": "Evan Brewer of The Faceless @ DNA Lounge",
@@ -822,16 +702,6 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "file": "/photos/wm-99303428"
-   },
-   {
-    "id": "wm-8383799",
-    "alt": "Comedian Lewis Black performs at the 2009 USO Gala at the Marriott Wardman Park in Washington, D.C., October 7, 2009. Lewis Black is the event's emcee.",
-    "credit": "Chad J. McNeeley, U.S. Navy",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Stand-up_comedian_Lewis_Black,_2009.JPG",
-    "source": "Wikimedia Commons",
-    "license": "Public domain",
-    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stand-up_comedian_Lewis_Black,_2009.JPG",
-    "file": "/photos/wm-8383799"
    }
   ],
   "food-drink": [
@@ -844,26 +714,6 @@
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "file": "/photos/wm-89334592"
-   },
-   {
-    "id": "wm-90023738",
-    "alt": "McDonald's truck at Mid-Autumn Festival, San Francisco Chinatown",
-    "credit": "Gary Stevens",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:McDonald%27s_truck_at_Mid-Autumn_Festival,_San_Francisco_Chinatown_(6139349350).jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "file": "/photos/wm-90023738"
-   },
-   {
-    "id": "wm-13665311",
-    "alt": "Chinatown, San Francisco. Street view with umbrellas on a rainy day.",
-    "credit": "Ed Schipul",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Chinatown_San_Francisco_Umbrellas.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "file": "/photos/wm-13665311"
    }
   ],
   "wellness": [
@@ -894,7 +744,7 @@
  "regions": {
   "san-francisco": {
    "id": "wm-63537930",
-   "alt": "The Golden Gate Bridge as seen from Marshall’s Beach, October 2017",
+   "alt": "The Golden Gate Bridge as seen from Marshall\u2019s Beach, October 2017",
    "credit": "Frank Schulenburg",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_as_seen_from_Marshall%E2%80%99s_Beach,_October_2017.jpg",
    "source": "Wikimedia Commons",
@@ -976,8 +826,8 @@
   },
   "san-jose": {
    "id": "wm-118796573",
-   "alt": "The place where the meeting with Mạnh An took place.",
-   "credit": "Song Toàn Võ",
+   "alt": "The place where the meeting with M\u1ea1nh An took place.",
+   "credit": "Song To\u00e0n V\u00f5",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_m%E1%BA%B7t_v%E1%BB%9Bi_M%E1%BA%A1nh_An-Song_To%C3%A0n_V%C3%B5_(San_Jose,_California,_Hoa_K%E1%BB%B3)2.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -1003,16 +853,6 @@
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "file": "/photos/wm-19378994"
-  },
-  "corte-madera": {
-   "id": "wm-134061343",
-   "alt": "San Francisco Lesbian/Gay Freedom Band at the Corte Madera-Larkspur 4th of July Parade and Festival in 2023.",
-   "credit": "Mx. Granger",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:SFLGFB_2.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC0",
-   "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-   "file": "/photos/wm-134061343"
   },
   "tiburon": {
    "id": "wm-38040882",
@@ -1053,16 +893,6 @@
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "file": "/photos/wm-39230807"
-  },
-  "vallejo": {
-   "id": "wm-185569161",
-   "alt": "Smokey Bear and the mobile ranger station made an appearance in the Mad Hatter parade on December 7, 2024 (20241207-FS-ASA--01)",
-   "credit": "Region 5 Photography",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Smokey_Bear_and_the_mobile_ranger_station_made_an_appearance_in_the_Mad_Hatter_parade_on_December_7,_2024_(20241207-FS-ASA--01).jpg",
-   "source": "Wikimedia Commons",
-   "license": "Public domain",
-   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Smokey_Bear_and_the_mobile_ranger_station_made_an_appearance_in_the_Mad_Hatter_parade_on_December_7,_2024_(20241207-FS-ASA--01).jpg",
-   "file": "/photos/wm-185569161"
   },
   "mountain-view": {
    "id": "wm-92946582",
@@ -1116,16 +946,6 @@
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "file": "/photos/wm-42182213"
   },
-  "noe-valley": {
-   "id": "wm-17666545",
-   "alt": "Halloween 2010 at Noe Valley, San Francisco",
-   "credit": "Team at Carnaval.com Studios",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Halloween_2010_Noe_Valley_to_SF_Mission_45.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-17666545"
-  },
   "lower-haight": {
    "id": "wm-13250915",
    "alt": "Low Cost Fist & Meat Market at the corner of Haight and Fillmore in the Lower Haight neighborhood of San Francisco, California.",
@@ -1135,26 +955,6 @@
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "file": "/photos/wm-13250915"
-  },
-  "north-beach": {
-   "id": "wm-131380758",
-   "alt": "The outside sign of Lombard Heights Market in or close to North Beach (Little Italy) in San Francisco, California",
-   "credit": "Exploratorium efimeros",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Lombard_Heights_Market.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-131380758"
-  },
-  "chinatown": {
-   "id": "wm-185319512",
-   "alt": "View of the corner Commercial St. and Grant Ave. in the Chinatown of San Francisco, late February 2026",
-   "credit": "Frank Schulenburg",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Commercial_and_Grant,_San_Francisco_(2026)-L1000523.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-185319512"
   },
   "fishermans-wharf": {
    "id": "wm-4392489",
@@ -1168,7 +968,7 @@
   },
   "pacific-heights": {
    "id": "wm-49696996",
-   "alt": "Apartments at 2870–78 Washington Street, San Francisco, California",
+   "alt": "Apartments at 2870\u201378 Washington Street, San Francisco, California",
    "credit": "Yngvadottir",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:2870-78_Washington.jpg",
    "source": "Wikimedia Commons",
@@ -1188,7 +988,7 @@
   },
   "civic-center": {
    "id": "wm-52073255",
-   "alt": "Farmer´s Market at Civic Center in San Francisco (TK1)",
+   "alt": "Farmer\u00b4s Market at Civic Center in San Francisco (TK1)",
    "credit": "Tobias Kleinlercher / Wikipedia",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Farmer%C2%B4s_Market_at_UN_Plaza-Civic_Center_in_San_Francisco_(TK1).JPG",
    "source": "Wikimedia Commons",
@@ -1279,7 +1079,7 @@
   "santana-row": {
    "id": "wm-108365270",
    "alt": "Intersection of Olin Ave & Winchester Blvd in Santana Row",
-   "credit": "Cristiano Tomás",
+   "credit": "Cristiano Tom\u00e1s",
    "creditUrl": "https://commons.wikimedia.org/wiki/File:Intersection_of_Olin_Ave_%26_Winchester_Blvd_in_Santana_Row.jpg",
    "source": "Wikimedia Commons",
    "license": "CC BY-SA 4.0",
@@ -1297,16 +1097,6 @@
    "license": "CC BY 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
    "file": "/photos/wm-198449130"
-  },
-  "hot-day": {
-   "id": "wm-26120670",
-   "alt": "People having a birthday celebration on Stinson Beach, Marin County, California.",
-   "credit": "Lindsay Eyink from San Francisco, CA, USA",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:People_celebrating_on_Stinson_Beach.jpg",
-   "source": "Wikimedia Commons",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "file": "/photos/wm-26120670"
   },
   "fog-escape": {
    "id": "wm-199193832",

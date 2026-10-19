@@ -15,6 +15,23 @@ const NIGHT_RE = wordRe(['nightclub', 'club night', 'dj', 'djs', 'rave', 'techno
   'after-party', 'late night', 'late-night', 'bar crawl', 'pub crawl', 'burlesque', 'cocktail', 'cocktails', 'happy hour', 'speakeasy', 'lounge', 'karaoke',
   'drag show', 'nightlife', 'after dark', 'disco', 'dance floor', 'bottle service', 'drum and bass', 'dnb', 'dubstep', 'edm']);
 const BAR_VENUE_RE = wordRe(['bar', 'club', 'lounge', 'tavern', 'saloon', 'pub', 'nightclub', 'brewery', 'taproom', 'cocktail', 'speakeasy']);
+// Well-known Bay Area venues: what happens there when a listing doesn't say (e.g. a bare "Rakim" at Yoshi's).
+const VENUE_CATS = [
+  ['live-music', wordRe(["yoshi's", 'yoshis', 'the fillmore', 'great american music hall', 'the independent', 'bottom of the hill', 'fox theater', 'fox theatre',
+    'the warfield', 'the chapel', 'rickshaw stop', 'freight & salvage', 'freight and salvage', 'sfjazz', 'uc theatre', "bimbo's", 'august hall', 'regency ballroom',
+    'the masonic', 'cafe du nord', 'brick & mortar', 'ivy room', 'the new parish', 'greek theatre', 'shoreline amphitheatre', 'frost amphitheater', 'mountain winery',
+    'guild theatre', '924 gilman', 'the knockout', 'thee parkside', 'hotel utah', 'boom boom room', 'biscuits and blues', 'keys jazz bistro', 'black cat',
+    'the ritz', 'bill graham civic', 'paramount theatre', 'the saloon', 'starline social club', 'cornerstone', 'the lost church', 'stern grove'])],
+  ['comedy', wordRe(['punch line', 'punchline', "cobb's comedy", 'cobbs comedy', 'san jose improv', 'rooster t. feathers', 'comedy oakland', 'cheaper than therapy',
+    'the setup', 'comedy club', 'comedy & cocktail', 'comedy and cocktail'])],
+  ['film', wordRe(['roxie', 'castro theatre', 'balboa theatre', 'alamo drafthouse', 'vogue theatre', 'bampfa', 'pacific film archive', 'stanford theatre',
+    'rafael film center', 'new parkway', 'smith rafael'])],
+  ['theater', wordRe(['curran', 'orpheum theatre', 'golden gate theatre', 'toni rembe', 'geary theater', 'berkeley rep', 'marines memorial', 'herbst theatre',
+    'shotgun players', 'z space', 'magic theatre', 'sf playhouse', 'tabard theatre', 'hillbarn', 'theatreworks', 'center rep', 'war memorial opera house'])],
+  ['nightlife', wordRe(['dna lounge', 'the endup', '1015 folsom', 'public works', 'audio sf', 'monarch', 'great northern', 'madrone art bar', 'the stud', 'f8'])],
+  ['sports', wordRe(['oracle park', 'chase center', "levi's stadium", 'levis stadium', 'sap center', 'paypal park', 'avaya stadium', 'kezar stadium', 'coliseum'])],
+];
+
 const FREE_TITLE_RE = /(^|[^a-z-])free([^a-z-]|$)|no cover|\$0(?![.\d])/i;
 const FREE_DESC_RE = /free admission|free entry|admission is free|free (and|&) open to (the|all)|free event|free to attend|no cover|free for all ages|always free|entry is free|free with rsvp|free, all ages/i;
 
@@ -70,6 +87,7 @@ export function classify(e) {
     if (re.test(desc)) s += 1;
     if (s) scores[slug] = s;
   }
+  for (const [slug, re] of VENUE_CATS) if (re.test(e.venue?.name || '')) scores[slug] = (scores[slug] || 0) + 2;
   if (/\b(job|career|resource|health|benefits|college) fair\b/i.test(title)) { delete scores.festivals; scores.community = (scores.community || 0) + 3; }
   if (/tech[- ]house/i.test(`${title} ${srcTags}`)) delete scores.tech;
   for (const c of e.forceCategories || []) scores[c] = 10;

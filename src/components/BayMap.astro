@@ -20,7 +20,7 @@ const cityDots = ['oakland', 'berkeley', 'san-jose', 'palo-alto', 'san-mateo', '
 const mapData = {
   regions: REGIONS.map((r) => ({ slug: r.slug, name: r.name, emoji: r.emoji, count: COUNTS.region[r.slug] || 0, href: link(`/region/${r.slug}/`), label: labelAt[r.slug], fill: fills[r.slug] })),
   cities: cityDots.map((c) => ({ name: c.name, lat: c.lat, lng: c.lng, href: link(`/city/${c.slug}/`), count: COUNTS.city[c.slug] || 0 })),
-  tiles: SITE.tiles, attr: SITE.tilesAttribution,
+  tiles: SITE.tiles, gkey: SITE.googleMapsKey,
 };
 ---
 <div class="realmap" data-realmap={JSON.stringify(mapData)}>

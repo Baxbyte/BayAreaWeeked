@@ -10,7 +10,7 @@ const hoods = NEIGHBORHOODS.filter((n) => (COUNTS.hood[n.slug] || 0) > 0);
 const ld = [{ '@context': 'https://schema.org', '@type': 'WebPage', name: 'Explore Bay Area events', url: absolute('/explore/') }];
 ---
 <Base title="Explore the Bay Area Events Map — Search by Neighborhood, Vibe & Date" description="Interactive map of Bay Area events and things to do. Filter by region, city, neighborhood, kid-friendly, nightlife, free, weather (hot or rainy day), genre and date — or just type what you’re in the mood for." path="/explore/" nav="explore" jsonld={ld} fullWidth>
-  <div class="explore" data-view="list" data-explore data-tiles={SITE.tiles} data-attr={SITE.tilesAttribution}>
+  <div class="explore" data-view="list" data-explore data-tiles={SITE.tiles} data-gkey={SITE.googleMapsKey}>
     <aside class="filters" data-collapsed="false" aria-label="Filters">
       <div>
         <h1 style="font-size:1.6rem;margin-bottom:6px">Explore the Bay 🗺️</h1>

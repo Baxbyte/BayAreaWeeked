@@ -47,6 +47,13 @@ await page.waitForFunction(() => /\d/.test(document.querySelector('[data-count]'
 const all = await count();
 check('explore: listings load', all > 100, `${all} results`);
 check('explore: interactive map', !!(await page.$('#map .leaflet-container, #map.leaflet-container')));
+if (LIVE) {
+  // Real map tiles must actually load on the live site (catches dead or key-only tile services).
+  const tiles = await page.waitForFunction(() => document.querySelectorAll('#map img.leaflet-tile-loaded').length >= 4, null, { timeout: 15000 }).then(() => true).catch(() => false);
+  const src = await page.$eval('#map img.leaflet-tile', (i) => new URL(i.src).host).catch(() => 'none');
+  check('map: street tiles load', tiles, src);
+  await shot('map-live');
+}
 await page.click('[data-region="east-bay"]'); await page.waitForTimeout(400);
 const east = await count();
 check('filter: East Bay region', east > 0 && east < all, `${east}`);
@@ -84,6 +91,7 @@ await page.goto(U('/hot-day/'), { waitUntil: 'load' }); await shot('hot-day');
 const ev = await page.goto(U('/this-weekend/'), { waitUntil: 'load' }).then(() => page.$eval('a[href*="/events/"]', (a) => a.getAttribute('href')));
 await page.goto(new URL(ev, ORIGIN).href, { waitUntil: 'load' });
 const evld = await page.$$eval('script[type="application/ld+json"]', (s) => s.map((x) => x.textContent).join(' '));
+check('event page: Google Map of the venue', !!(await page.$('iframe.mini-map[src*="google.com/maps"]')));
 check('event page: Event schema + breadcrumbs', /"@type":"(\w*Event|Event)"/.test(evld) && evld.includes('BreadcrumbList'));
 await shot('event');
 

@@ -21,8 +21,9 @@ export const SITE = {
   googleVerification: env('GOOGLE_SITE_VERIFICATION', ''),
   bingVerification: env('BING_SITE_VERIFICATION', ''),
   analyticsScript: env('PUBLIC_ANALYTICS_SNIPPET_URL', ''),
-  tiles: env('PUBLIC_MAP_TILES', 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'),
-  tilesAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+  // Maps: Google Maps when a browser key is set (restrict it to your domain in Google Cloud), else free OpenStreetMap.
+  googleMapsKey: env('PUBLIC_GOOGLE_MAPS_API_KEY', env('GOOGLE_MAPS_API_KEY', '')),
+  tiles: env('PUBLIC_MAP_TILES', ''), // optional custom tile URL template
 };
 
 /** Internal link that respects the deploy base path. Always ends with "/" for pages. */

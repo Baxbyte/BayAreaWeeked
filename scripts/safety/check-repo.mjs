@@ -16,8 +16,9 @@ const listed = [...Object.values(images.categories || {}).flat(), ...['places', 
 const listedIds = new Set(listed.map((p) => p.id));
 
 for (const p of listed) if (p.id.startsWith('wm-') && !picked.has(p.id)) problems.push(`${p.id} is listed but was not hand-picked`);
-const blocked = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, 'data/photo-blocklist.json'), 'utf8')).ids.map((n) => `wm-${n}`));
-for (const id of [...picked, ...listed.map((p) => p.id)]) if (blocked.has(id)) problems.push(`${id} is on the blocklist (failed the G/PG check before)`);
+const blocklist = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/photo-blocklist.json'), 'utf8'));
+const blocked = new Map([...blocklist.ids.map((n) => [`wm-${n}`, 'failed the G/PG check before']), ...(blocklist.unsuitable || []).map((n) => [`wm-${n}`, 'marked unsuitable (wrong subject, logo or misleading)'])]);
+for (const id of new Set([...picked, ...listed.map((p) => p.id)])) if (blocked.has(id)) problems.push(`${id} is on the blocklist (${blocked.get(id)})`);
 const dir = path.join(ROOT, 'public/photos');
 const files = fs.existsSync(dir) ? fs.readdirSync(dir) : [];
 for (const f of files) if (!listedIds.has(f.replace(/-[ls]\.webp$/, ''))) problems.push(`public/photos/${f} is not listed in data/images.json`);

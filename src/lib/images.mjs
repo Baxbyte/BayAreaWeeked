@@ -30,12 +30,24 @@ export function poolPhoto(i) {
   return DB.hoods[i.neighborhood] || DB.cities[i.city] || DB.regions[i.region] || null;
 }
 
+// Venue → place photo ("The Fillmore", "Castro Theatre"…), so events show the real venue instead of a generic photo.
+const norm = (s) => String(s || '').toLowerCase().replace(/&/g, 'and').replace(/^the\s+/, '').replace(/[^a-z0-9]+/g, ' ').trim();
+const PLACE_BY_NAME = new Map(Object.entries(DB.places).map(([k, p]) => [norm(k), p]));
+export function venuePhoto(i) {
+  const v = norm(i.venue?.name);
+  if (v.length < 5) return null;
+  if (PLACE_BY_NAME.has(v)) return PLACE_BY_NAME.get(v);
+  for (const [k, p] of PLACE_BY_NAME) if (k.length >= 8 && v.startsWith(`${k} `)) return p; // "Yerba Buena Gardens, Children’s Garden"
+  return null;
+}
+
 /**
- * Best photo for a listing: the organizer's own image, else a real photo of the place, else a matching
+ * Best photo for a listing: the organizer's own image, else a real photo of the place or venue, else a matching
  * real photo for its genre. Returns { src, srcSmall, alt, credit, creditUrl, source, license, licenseUrl, fallback }.
  */
 export function photoFor(i) {
-  const pool = poolPhoto(i);
+  const venue = i.type === 'event' ? venuePhoto(i) : null;
+  const pool = venue || poolPhoto(i);
   // Organizers' images are shown only after passing the family-friendly image check (see scripts/safety/).
   if (i.image && i.imageSafe === true) {
     return { src: i.image, srcSmall: i.image, alt: i.title, credit: i.sources?.[0]?.name || 'Event organizer', creditUrl: i.url, source: 'organizer', fallback: pool };

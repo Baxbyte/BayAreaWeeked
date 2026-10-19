@@ -9,7 +9,8 @@ import { checkImage } from '../safety/image-safety.mjs';
 import { CATEGORY_SRC, HOOD_CATS, PLACE_CATS, REGION_SRC, VIBE_SRC } from './plans.mjs';
 
 const out = process.argv[2] || 'candidates';
-const BLOCKED = new Set(JSON.parse(fs.readFileSync('data/photo-blocklist.json', 'utf8')).ids);
+const BLOCKLIST = JSON.parse(fs.readFileSync('data/photo-blocklist.json', 'utf8'));
+const BLOCKED = new Set([...BLOCKLIST.ids, ...(BLOCKLIST.unsuitable || [])]);
 const only = process.env.ONLY ? new RegExp(process.env.ONLY) : null;
 fs.mkdirSync(out, { recursive: true });
 

@@ -12,7 +12,7 @@ export const CATEGORIES = [
   { slug: 'arts', name: 'Art & Museums', emoji: '🎨', hue: 20,
     words: ['art', 'museum', 'gallery', 'exhibit', 'exhibition', 'artist', 'painting', 'sculpture', 'photography', 'mural', 'art walk', 'open studio', 'installation', 'design'] },
   { slug: 'film', name: 'Film', emoji: '🎬', hue: 210,
-    words: ['film', 'movie', 'cinema', 'screening', 'documentary', 'film festival', 'drive-in', 'premiere'] },
+    words: ['film', 'movie', 'cinema', 'screening', 'documentary', 'film festival', 'drive-in', 'premiere', 'sffilm', 'frameline'] },
   { slug: 'food-drink', name: 'Food & Drink', emoji: '🍜', hue: 30,
     words: ['food', 'tasting', 'wine', 'beer', 'brewery', 'cocktail', 'dinner', 'brunch', 'chef', 'cooking', 'food truck', 'restaurant', 'coffee', 'oyster', 'bbq', 'taco', 'dumpling', 'pop-up', 'popup', 'winery', 'cider', 'sake', 'whiskey', 'mezcal'] },
   { slug: 'markets', name: 'Markets & Shopping', emoji: '🛍️', hue: 140,
