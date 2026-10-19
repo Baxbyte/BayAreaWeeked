@@ -50,7 +50,7 @@ fs.writeFileSync(path.join(DIST, 'sitemap.xml'), `<?xml version="1.0" encoding="
 
 // IndexNow ownership proof: https://<host>/<key>.txt must contain the key.
 fs.writeFileSync(path.join(DIST, `${SITE.indexNowKey}.txt`), SITE.indexNowKey);
-// GitHub Pages: disable Jekyll processing so every file is served as-is.
-fs.writeFileSync(path.join(DIST, '.nojekyll'), '');
+// Which commit is live (the Live site check waits for this before testing).
+fs.writeFileSync(path.join(DIST, 'version.txt'), `${process.env.VERCEL_GIT_COMMIT_SHA || process.env.GITHUB_SHA || 'local'}\n`);
 
 console.log(`postbuild: ${groups.pages.length} pages, ${groups.events.length} events, ${groups.places.length} places in sitemaps (base: ${BASE_PATH || '/'})`);

@@ -28,7 +28,7 @@ The site is hosted on Vercel (project `bayareaweeked`, https://bayareaweeked.ver
 2. Vercel **Deployment Protection** must leave production public, or Google can't see the site. The **Live site check** workflow fails loudly if it's behind a login.
 3. Photos are built and safety-checked on GitHub, so add the Pexels key as a GitHub secret `PEXELS_API_KEY` (Settings → Secrets and variables → Actions). A Vercel env var `Pexels_API` is only checked at build time (`pexels-check:` line in the Vercel build log). Optional secrets: `TICKETMASTER_API_KEY`, `SEATGEEK_CLIENT_ID` (concerts & games), `OPENROUTER_API_KEY` (AI reader for venue calendars & news roundups).
 4. **Daily scrape, build & deploy** runs ~5am and ~5pm Pacific: scrape → G/PG check → commit data (Vercel deploys it) → wait until the live site has the new data → IndexNow/WebSub pings.
-5. **Live site check** runs the browser test suite against the live site after every Vercel production deploy.
+5. **Live site check** waits for Vercel to publish each push to `main`, then runs the browser test suite on the live site.
 
 ## Failure limit (test mode)
 The daily, photo and photo-candidate workflows have a **circuit breaker**: if a workflow fails 3 times within 24 hours, every further run is skipped until 24 hours after that 3rd failure. To run anyway, use **Actions → (workflow) → Run workflow** and tick **force**. The rule lives in `.github/scripts/circuit-breaker.mjs`.

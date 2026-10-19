@@ -1,8 +1,9 @@
 name: Live site check
 
-# Runs the browser test suite against the live site after each Vercel production deploy (or on demand).
+# After each push to main: waits until Vercel serves that commit, then runs the browser test suite on the live site.
 on:
-  deployment_status:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       url:
@@ -14,7 +15,6 @@ permissions:
 
 jobs:
   live:
-    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production') }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -28,6 +28,17 @@ jobs:
         run: |
           npm i --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
+      - name: Wait for Vercel to serve this commit
+        if: ${{ github.event_name == 'push' }}
+        env:
+          LIVE_URL: ${{ vars.SITE_URL || 'https://bayareaweeked.vercel.app' }}
+        run: |
+          for i in $(seq 1 40); do
+            live=$(curl -s "$LIVE_URL/version.txt?cb=$i" | tr -d '[:space:]')
+            if [ "$live" = "$GITHUB_SHA" ]; then echo "Live site is on $GITHUB_SHA"; exit 0; fi
+            echo "waiting ($i): live=$live"; sleep 15
+          done
+          echo "::error::Vercel did not publish $GITHUB_SHA within 10 minutes"; exit 1
       - name: Public access (not behind a Vercel login)
         env:
           LIVE_URL: ${{ inputs.url || vars.SITE_URL || 'https://bayareaweeked.vercel.app' }}
