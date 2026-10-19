@@ -626,16 +626,6 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "file": "/photos/wm-56386179"
-   },
-   {
-    "id": "wm-123176792",
-    "alt": "An entrance to Dreamforce in 2022, Salesforce's primary convention for the year",
-    "credit": "InvadingInvader",
-    "creditUrl": "https://commons.wikimedia.org/wiki/File:Dreamforce_2022_Entrance.jpg",
-    "source": "Wikimedia Commons",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "file": "/photos/wm-123176792"
    }
   ],
   "family": [
@@ -827,14 +817,14 @@
    "file": "/photos/wm-62583862"
   },
   "peninsula": {
-   "id": "wm-198329558",
-   "alt": "Giant Pumpkin On Parade Float",
-   "credit": "MegalithAgency",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:Half_Moon_Bay_Art_%26_Pumpkin_Festival_Great_Pumpkin_Parade.jpg",
+   "id": "wm-94970276",
+   "alt": "Filoli mansion - backyard view",
+   "credit": "Laurent Le Gourrierec",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Filoli_mansion_-_backyard_view.jpg",
    "source": "Wikimedia Commons",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "file": "/photos/wm-198329558"
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "file": "/photos/wm-94970276"
   },
   "south-bay": {
    "id": "wm-68044638",
@@ -909,14 +899,14 @@
    "file": "/photos/wm-76127943"
   },
   "san-jose": {
-   "id": "wm-118796573",
-   "alt": "The place where the meeting with M\u1ea1nh An took place.",
-   "credit": "Song To\u00e0n V\u00f5",
-   "creditUrl": "https://commons.wikimedia.org/wiki/File:H%E1%BB%8Dp_m%E1%BA%B7t_v%E1%BB%9Bi_M%E1%BA%A1nh_An-Song_To%C3%A0n_V%C3%B5_(San_Jose,_California,_Hoa_K%E1%BB%B3)2.jpg",
+   "id": "wm-68044638",
+   "alt": "Santana Row, SJ",
+   "credit": "Payton Chung from DCA, USA",
+   "creditUrl": "https://commons.wikimedia.org/wiki/File:Santana_Row_(15371236324).jpg",
    "source": "Wikimedia Commons",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "file": "/photos/wm-118796573"
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "file": "/photos/wm-68044638"
   },
   "los-gatos": {
    "id": "wm-121873011",

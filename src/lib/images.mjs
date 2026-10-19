@@ -19,15 +19,22 @@ function h(s) {
   return Math.abs(x);
 }
 
-/** A stock/Commons photo that fits the item (category → vibe → region). */
+// Catch-all genres: one generic photo would repeat on every unrelated listing, so a photo of the place comes first.
+const BROAD = new Set(['community', 'learning']);
+const pick = (list, i) => list[h(i.id || i.title) % list.length];
+
+/** A real photo that fits the item: specific genre → vibe → neighborhood/city/region → broad genre. */
 export function poolPhoto(i) {
   for (const c of i.categories || []) {
     const list = DB.categories[c];
-    if (list?.length) return list[h(i.id || i.title) % list.length];
+    if (list?.length && !BROAD.has(c)) return pick(list, i);
   }
   if (i.flags?.kids && DB.vibes['kid-friendly']) return DB.vibes['kid-friendly'];
   if (i.flags?.nightlife && DB.vibes.nightlife) return DB.vibes.nightlife;
-  return DB.hoods[i.neighborhood] || DB.cities[i.city] || DB.regions[i.region] || null;
+  const place = DB.hoods[i.neighborhood] || DB.cities[i.city] || DB.regions[i.region];
+  if (place) return place;
+  for (const c of i.categories || []) if (DB.categories[c]?.length) return pick(DB.categories[c], i);
+  return null;
 }
 
 // Venue → place photo ("The Fillmore", "Castro Theatre"…), so events show the real venue instead of a generic photo.
