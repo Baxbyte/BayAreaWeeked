@@ -51,5 +51,6 @@ jobs:
           git init -q -b site-audit
           git config user.name "bayarea-weekend-bot"
           git config user.email "bot@users.noreply.github.com"
+          echo '{"git":{"deploymentEnabled":false}}' > vercel.json  # images only: no Vercel preview build
           git add . && git commit -qm "Site audit $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" site-audit

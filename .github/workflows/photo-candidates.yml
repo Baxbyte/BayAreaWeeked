@@ -33,7 +33,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           WORKFLOW_FILE: photo-candidates.yml
-          FORCE: ${{ inputs.force && 'true' || 'false' }}
+          # Manual override: tick "force" when running by hand, or put [force-run] in a pushed commit message.
+          FORCE: ${{ (inputs.force || contains(github.event.head_commit.message, '[force-run]')) && 'true' || 'false' }}
         run: node .github/scripts/circuit-breaker.mjs
 
   candidates:
@@ -63,5 +64,6 @@ jobs:
           git init -q -b photo-candidates
           git config user.name "bayarea-weekend-bot"
           git config user.email "bot@users.noreply.github.com"
+          echo '{"git":{"deploymentEnabled":false}}' > vercel.json  # images only: no Vercel preview build
           git add . && git commit -qm "Photo candidates"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" photo-candidates

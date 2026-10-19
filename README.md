@@ -36,7 +36,7 @@ The site is hosted on Vercel (project `bayareaweeked`, https://bayareaweeked.ver
 - **Maps:** venue pages embed Google Maps (no key needed). The explore/region maps use OpenStreetMap tiles (Esri as automatic backup), or Google Maps when `PUBLIC_GOOGLE_MAPS_API_KEY` is set in Vercel (enable the *Map Tiles API* and restrict the key to your domain).
 
 ## Failure limit (test mode)
-The daily, photo and photo-candidate workflows have a **circuit breaker**: if a workflow fails 3 times within 24 hours, every further run is skipped until 24 hours after that 3rd failure. To run anyway, use **Actions → (workflow) → Run workflow** and tick **force**. The rule lives in `.github/scripts/circuit-breaker.mjs`.
+The daily, photo and photo-candidate workflows have a **circuit breaker**: if a workflow fails 3 times within 24 hours, every further run is skipped until 24 hours after that 3rd failure. To run anyway, use **Actions → (workflow) → Run workflow** and tick **force**, or push a commit whose message contains `[force-run]`. The rule lives in `.github/scripts/circuit-breaker.mjs`.
 
 ## Settings
 Repo **variables** (Settings → Secrets and variables → Actions → Variables): `SITE_URL`, `SITE_NAME`, `PUBLIC_SIGNUP_ENDPOINT`, `PUBLIC_SPONSOR_ENDPOINT`, `PUBLIC_CONTACT_EMAIL`, `GOOGLE_SITE_VERIFICATION`, `BING_SITE_VERIFICATION`, `INDEXNOW_KEY`, `OPENROUTER_MODEL`, `DEPLOY_TARGET`.

@@ -15,7 +15,7 @@ on:
     - cron: '23 13 * * 1'   # weekly, Monday morning Pacific
   push:
     branches: [main]
-    paths: ['data/photo-picks.json', 'scripts/images/build-images.mjs']
+    paths: ['data/photo-picks.json', 'scripts/images/build-images.mjs', '.github/workflows/images.yml']
 
 permissions:
   contents: write
@@ -40,7 +40,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           WORKFLOW_FILE: images.yml
-          FORCE: ${{ inputs.force && 'true' || 'false' }}
+          # Manual override: tick "force" when running by hand, or put [force-run] in a pushed commit message.
+          FORCE: ${{ (inputs.force || contains(github.event.head_commit.message, '[force-run]')) && 'true' || 'false' }}
         run: node .github/scripts/circuit-breaker.mjs
 
   photos:
@@ -89,5 +90,6 @@ jobs:
           git init -q -b image-review
           git config user.name "bayarea-weekend-bot"
           git config user.email "bot@users.noreply.github.com"
+          echo '{"git":{"deploymentEnabled":false}}' > vercel.json  # images only: no Vercel preview build
           git add . && git commit -qm "Photo review sheets"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" image-review

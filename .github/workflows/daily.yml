@@ -41,7 +41,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           WORKFLOW_FILE: daily.yml
-          FORCE: ${{ inputs.force && 'true' || 'false' }}
+          # Manual override: tick "force" when running by hand, or put [force-run] in a pushed commit message.
+          FORCE: ${{ (inputs.force || contains(github.event.head_commit.message, '[force-run]')) && 'true' || 'false' }}
         run: node .github/scripts/circuit-breaker.mjs
 
   build:
