@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scripts/audit/**', '.github/workflows/site-audit.yml', 'data/images.json', 'data/photo-picks.json']
+    paths: ['scripts/audit/**', '.github/workflows/site-audit.yml', 'data/images.json', 'data/photo-picks.json', 'data/image-review.json']
 
 permissions:
   contents: write
