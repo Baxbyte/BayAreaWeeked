@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T22:20:00-07:00",
+  "generatedAt": "2026-10-21T10:18:00-07:00",
   "offline": false,
   "reports": [
     {
@@ -10,7 +10,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 64,
+      "ms": 60,
       "reason": "TICKETMASTER_API_KEY not set"
     },
     {
@@ -21,7 +21,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 64,
+      "ms": 59,
       "reason": "SEATGEEK_CLIENT_ID not set"
     },
     {
@@ -29,13 +29,13 @@
       "name": "AllEvents",
       "type": "jsonld",
       "status": "ok",
-      "raw": 1275,
-      "kept": 1156,
+      "raw": 1286,
+      "kept": 1187,
       "warnings": [
         "allevents: HTTP 404 for https://allevents.in/napa/all",
         "allevents: HTTP 404 for https://allevents.in/campbell/all"
       ],
-      "ms": 48720
+      "ms": 47811
     },
     {
       "id": "luma-sf",
@@ -45,7 +45,7 @@
       "raw": 20,
       "kept": 20,
       "warnings": [],
-      "ms": 1006
+      "ms": 1432
     },
     {
       "id": "ferry-building",
@@ -55,7 +55,7 @@
       "raw": 17,
       "kept": 0,
       "warnings": [],
-      "ms": 538
+      "ms": 675
     },
     {
       "id": "ucsf",
@@ -63,19 +63,19 @@
       "type": "localist",
       "status": "ok",
       "raw": 17,
-      "kept": 15,
+      "kept": 16,
       "warnings": [],
-      "ms": 5749
+      "ms": 10549
     },
     {
       "id": "sjsu",
       "name": "San José State Events",
       "type": "localist",
       "status": "ok",
-      "raw": 248,
-      "kept": 220,
+      "raw": 246,
+      "kept": 235,
       "warnings": [],
-      "ms": 12347
+      "ms": 18855
     },
     {
       "id": "funcheap",
@@ -83,39 +83,39 @@
       "type": "rss",
       "status": "ok",
       "raw": 10,
-      "kept": 2,
+      "kept": 0,
       "warnings": [],
-      "ms": 828
+      "ms": 934
     },
     {
       "id": "funcheap-days",
       "name": "SF Funcheap",
       "type": "jsonld",
       "status": "ok",
-      "raw": 298,
-      "kept": 297,
+      "raw": 305,
+      "kept": 304,
       "warnings": [],
-      "ms": 12962
+      "ms": 16756
     },
     {
       "id": "19hz",
       "name": "19hz",
       "type": "nineteenhz",
       "status": "ok",
-      "raw": 319,
-      "kept": 265,
+      "raw": 322,
+      "kept": 268,
       "warnings": [],
-      "ms": 1356
+      "ms": 1192
     },
     {
       "id": "stanford",
       "name": "Stanford Events",
       "type": "localist",
       "status": "ok",
-      "raw": 210,
-      "kept": 195,
+      "raw": 231,
+      "kept": 230,
       "warnings": [],
-      "ms": 24365
+      "ms": 21169
     },
     {
       "id": "roundups",
@@ -125,7 +125,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 2,
+      "ms": 1,
       "reason": "OPENROUTER_API_KEY not set"
     }
   ]
