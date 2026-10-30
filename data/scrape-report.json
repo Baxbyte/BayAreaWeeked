@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T11:31:00-07:00",
+  "generatedAt": "2026-10-29T23:28:00-07:00",
   "offline": false,
   "reports": [
     {
@@ -10,7 +10,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 58,
+      "ms": 79,
       "reason": "TICKETMASTER_API_KEY not set"
     },
     {
@@ -21,7 +21,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 57,
+      "ms": 78,
       "reason": "SEATGEEK_CLIENT_ID not set"
     },
     {
@@ -29,13 +29,13 @@
       "name": "AllEvents",
       "type": "jsonld",
       "status": "ok",
-      "raw": 1279,
-      "kept": 1194,
+      "raw": 1283,
+      "kept": 1197,
       "warnings": [
         "allevents: HTTP 404 for https://allevents.in/napa/all",
         "allevents: HTTP 404 for https://allevents.in/campbell/all"
       ],
-      "ms": 48966
+      "ms": 46509
     },
     {
       "id": "luma-sf",
@@ -45,37 +45,37 @@
       "raw": 20,
       "kept": 20,
       "warnings": [],
-      "ms": 977
+      "ms": 1041
     },
     {
       "id": "ferry-building",
       "name": "Ferry Building Marketplace",
       "type": "jsonld",
       "status": "ok",
-      "raw": 10,
+      "raw": 8,
       "kept": 0,
       "warnings": [],
-      "ms": 586
+      "ms": 624
     },
     {
       "id": "ucsf",
       "name": "UCSF Events",
       "type": "localist",
       "status": "ok",
-      "raw": 14,
-      "kept": 14,
+      "raw": 15,
+      "kept": 15,
       "warnings": [],
-      "ms": 6272
+      "ms": 3913
     },
     {
       "id": "sjsu",
       "name": "San José State Events",
       "type": "localist",
       "status": "ok",
-      "raw": 251,
-      "kept": 246,
+      "raw": 250,
+      "kept": 235,
       "warnings": [],
-      "ms": 12844
+      "ms": 30329
     },
     {
       "id": "funcheap",
@@ -83,38 +83,29 @@
       "type": "rss",
       "status": "ok",
       "raw": 10,
-      "kept": 1,
+      "kept": 0,
       "warnings": [],
-      "ms": 714
+      "ms": 611
     },
     {
       "id": "funcheap-days",
       "name": "SF Funcheap",
       "type": "jsonld",
       "status": "ok",
-      "raw": 164,
-      "kept": 163,
-      "warnings": [
-        "funcheap-days: This operation was aborted",
-        "funcheap-days: This operation was aborted",
-        "funcheap-days: HTTP 502",
-        "funcheap-days: HTTP 502",
-        "funcheap-days: HTTP 502",
-        "funcheap-days: HTTP 502",
-        "funcheap-days: HTTP 502",
-        "funcheap-days: This operation was aborted"
-      ],
-      "ms": 117504
+      "raw": 293,
+      "kept": 292,
+      "warnings": [],
+      "ms": 12564
     },
     {
       "id": "19hz",
       "name": "19hz",
       "type": "nineteenhz",
       "status": "ok",
-      "raw": 299,
-      "kept": 248,
+      "raw": 338,
+      "kept": 283,
       "warnings": [],
-      "ms": 2269
+      "ms": 6371
     },
     {
       "id": "stanford",
@@ -122,9 +113,9 @@
       "type": "localist",
       "status": "ok",
       "raw": 207,
-      "kept": 206,
+      "kept": 186,
       "warnings": [],
-      "ms": 28089
+      "ms": 11371
     },
     {
       "id": "roundups",
