@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T10:13:00-08:00",
+  "generatedAt": "2026-11-14T23:13:00-08:00",
   "offline": false,
   "reports": [
     {
@@ -10,7 +10,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 44,
+      "ms": 57,
       "reason": "TICKETMASTER_API_KEY not set"
     },
     {
@@ -21,7 +21,7 @@
       "raw": 0,
       "kept": 0,
       "warnings": [],
-      "ms": 43,
+      "ms": 57,
       "reason": "SEATGEEK_CLIENT_ID not set"
     },
     {
@@ -29,13 +29,13 @@
       "name": "AllEvents",
       "type": "jsonld",
       "status": "ok",
-      "raw": 1452,
-      "kept": 1340,
+      "raw": 1447,
+      "kept": 1325,
       "warnings": [
         "allevents: HTTP 404 for https://allevents.in/napa/all",
         "allevents: HTTP 404 for https://allevents.in/campbell/all"
       ],
-      "ms": 47626
+      "ms": 48282
     },
     {
       "id": "luma-sf",
@@ -45,7 +45,7 @@
       "raw": 20,
       "kept": 20,
       "warnings": [],
-      "ms": 924
+      "ms": 963
     },
     {
       "id": "ferry-building",
@@ -55,7 +55,7 @@
       "raw": 7,
       "kept": 0,
       "warnings": [],
-      "ms": 517
+      "ms": 439
     },
     {
       "id": "ucsf",
@@ -65,7 +65,7 @@
       "raw": 10,
       "kept": 8,
       "warnings": [],
-      "ms": 5824
+      "ms": 4319
     },
     {
       "id": "sjsu",
@@ -73,9 +73,9 @@
       "type": "localist",
       "status": "ok",
       "raw": 258,
-      "kept": 257,
+      "kept": 253,
       "warnings": [],
-      "ms": 6963
+      "ms": 8906
     },
     {
       "id": "funcheap",
@@ -85,27 +85,27 @@
       "raw": 10,
       "kept": 0,
       "warnings": [],
-      "ms": 748
+      "ms": 1087
     },
     {
       "id": "funcheap-days",
       "name": "SF Funcheap",
       "type": "jsonld",
       "status": "ok",
-      "raw": 203,
-      "kept": 201,
+      "raw": 199,
+      "kept": 197,
       "warnings": [],
-      "ms": 14637
+      "ms": 13052
     },
     {
       "id": "19hz",
       "name": "19hz",
       "type": "nineteenhz",
       "status": "ok",
-      "raw": 279,
-      "kept": 242,
+      "raw": 306,
+      "kept": 262,
       "warnings": [],
-      "ms": 1122
+      "ms": 956
     },
     {
       "id": "stanford",
@@ -113,9 +113,9 @@
       "type": "localist",
       "status": "ok",
       "raw": 210,
-      "kept": 208,
+      "kept": 197,
       "warnings": [],
-      "ms": 14607
+      "ms": 11506
     },
     {
       "id": "roundups",
